@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UserInterface.MenuActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:text="@string/text_popup_menu"
+            android:id="@+id/button_1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:text="@string/text_popup_menu_whith_icon"
+            android:id="@+id/button_2"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:text="@string/text_simple_drawer"
+            android:id="@+id/button_3"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:text="@string/t_drawer_gmail"
+            android:id="@+id/button_4"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:text="@string/t_drawer_admin"
+            android:id="@+id/button_5"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:text="@string/t_drawer_social"
+            android:id="@+id/button_6"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:text="@string/t_drawer_music"
+            android:id="@+id/button_7"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

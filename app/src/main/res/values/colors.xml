@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#365FF5</color>
+    <color name="color_divider">#BDBDBD</color>
+    <color name="color_title">#fff</color>
+    <color name="color_black">#000</color>
+    <color name="color_white">#fff</color>
+    <color name="color_red">#EF5350</color>
+    <color name="color_new_secret_chat">#FFA726</color>
+    <color name="color_new_channel">#5C6BC0</color>
+    <color name="color_new_contact">#42A5F5</color>
+    <color name="color_test_30">#7AF5CFCF</color>
+    <color name="color_back_camera_permission">#FFEB3B</color>
+
+    <color name="colorYellowPrimary">#FFC107</color>
+    <color name="colorYellowPrimaryDark">#FFA000</color>
+    <color name="colorYellowAccent">#FFEB3B</color>
+    <color name="color_blue_800">#1565C0</color>
+    <color name="colorPrimaryRed_500">#f44336</color>
+    <color name="colorPrimaryRedDark_500">#ba000d</color>
+    <color name="colorPrimaryRedAccent_500">#9c27b0</color>
+    <color name="colorPrimaryYellow">#FFB300</color>
+    <color name="blue_twitter">#0D47A1</color>
+    <color name="color_facebook">#2591F3</color>
+    <color name="color_google_plus">#F71515</color>
+    <color name="color_telegram">#0090FF</color>
+    <color name="brown_400">#8D6E63</color>
+    <color name="red_600">#F4511E</color>
+    <color name="pink_600">#D81B60</color>
+
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UIMore.Login.LoginSimpleActivity"
+    android:layout_marginStart="64dp">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/icon_main"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/black"
+        android:text="@string/t_welcome"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Display1"
+        android:text="sign in to continue"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        android:hint="Username"
+        android:gravity="center_vertical"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:inputType="textPassword"
+        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        android:hint="Password"
+        android:gravity="center_vertical"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Started"
+        android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
+        android:drawableTint="@android:color/white"
+        android:padding="12dp"
+        app:backgroundTint="@color/color_blue_800"
+        android:layout_marginTop="32dp"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

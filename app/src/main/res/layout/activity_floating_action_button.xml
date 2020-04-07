@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UserInterface.FloatingActionButtonActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_card_medium"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:text="@string/text_basic_fab" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fabSize="normal"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@drawable/ic_add_black_24dp"
+                android:tint="@color/color_white"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                app:fabSize="normal"
+                android:src="@drawable/ic_add_black_24dp"
+                app:backgroundTint="@color/color_white"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/color_white"
+                app:fabSize="normal"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@drawable/ic_add_black_24dp"
+                app:backgroundTint="@color/color_red"/>
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:text="@string/text_mini_fab" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@drawable/ic_add_black_24dp"
+                app:fabSize="mini"
+                android:tint="@color/color_white"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                app:fabSize="mini"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@drawable/ic_add_black_24dp"
+                app:backgroundTint="@color/color_white"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/color_white"
+                app:fabSize="mini"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@drawable/ic_add_black_24dp"
+                app:backgroundTint="@color/color_red"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:visibility="invisible"
+        android:id="@+id/view_click"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_test_30"/>
+
+    <LinearLayout
+        android:layout_margin="@dimen/fab_margin"
+        android:gravity="end"
+        android:layout_gravity="bottom|end"
+        app:layout_anchorGravity="top|center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:alpha="0"
+            android:gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/container">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_newGroup"
+                android:layout_margin="8dp"
+                android:padding="4dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="4dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:background="?attr/selectableItemBackground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="16sp"
+                        android:padding="4dp"
+                        android:text="@string/text_new_group"/>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@color/color_red"
+                    app:elevation="0dp"
+                    app:fabSize="mini"
+                    android:src="@drawable/ic_group_add_black_24dp"
+                    android:tint="@color/color_white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_newContact"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:padding="4dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="4dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:background="?attr/selectableItemBackground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="16sp"
+                        android:padding="4dp"
+                        android:text="@string/text_new_contact"/>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:elevation="0dp"
+                    app:backgroundTint="@color/color_new_contact"
+                    app:fabSize="mini"
+                    android:src="@drawable/ic_lock_black_24dp"
+                    android:tint="@color/color_white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_newChannel"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:padding="4dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="4dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:background="?attr/selectableItemBackground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="16sp"
+                        android:padding="4dp"
+                        android:text="@string/text_new_channel"/>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@color/color_new_channel"
+                    app:elevation="0dp"
+                    app:fabSize="mini"
+                    android:src="@drawable/ic_lock_black_24dp"
+                    android:tint="@color/color_white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_newSecretChat"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:padding="4dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="4dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:background="?attr/selectableItemBackground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="16sp"
+                        android:padding="4dp"
+                        android:text="@string/text_new_secret_chat"/>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@color/color_new_secret_chat"
+                    app:elevation="0dp"
+                    app:fabSize="mini"
+                    android:src="@drawable/ic_lock_black_24dp"
+                    android:tint="@color/color_white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            app:elevation="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fab"
+            android:src="@drawable/ic_add_black_24dp"
+            android:tint="@color/color_white"/>
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

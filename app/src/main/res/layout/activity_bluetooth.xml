@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.CodeMore.BluetoothActivity">
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:text="@string/enable"
+        android:padding="12dp"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        android:id="@+id/switch_bluetooth"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_divider"
+        android:background="@color/color_divider"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView_devices"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:text="@string/scan_devices"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:drawableEnd="@drawable/ic_navigate_next_black_24dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_divider"
+        android:background="@color/color_divider"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:text="@string/paired_devices"
+        android:gravity="center_vertical"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        android:paddingStart="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:paddingEnd="12dp"
+        android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/textView_paired"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_divider"
+        android:background="@color/color_divider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_name"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="12dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint="@string/new_name"
+            android:layout_weight="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_change"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_divider"
+        android:background="@color/color_divider"/>
+
+</LinearLayout>

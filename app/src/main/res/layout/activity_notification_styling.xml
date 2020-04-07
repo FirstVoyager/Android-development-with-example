@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    tools:context=".Activity.Basic.NotificationStylingActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_media_style"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/button_mediaStyle"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_messaging_style"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/button_messagingStyle"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_inbox_style"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/button_inboxStyle"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_big_picture_style"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/button_bigPictureStyle"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_bit_text_style"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/button_bigTextStyle"/>
+
+</LinearLayout>

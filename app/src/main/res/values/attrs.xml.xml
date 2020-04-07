@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomTextView">
+        <attr name="showStroke" format="boolean"/>
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="strokeColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="ShapeView">
+        <attr name="shape_type" format="enum">
+            <enum name="triangle" value="0"/>
+            <enum name="square" value="1"/>
+            <enum name="rectangle" value="2"/>
+            <enum name="parallelogram" value="3"/>
+            <enum name="octagon" value="4"/>
+            <enum name="circle" value="5"/>
+            <enum name="crescent" value="6"/>
+            <enum name="line" value="7"/>
+        </attr>
+        <attr name="shape_lineColor" format="color"/>
+        <attr name="shape_lineWidth" format="dimension"/>
+        <attr name="shape_backgroundColor" format="color"/>
+        <attr name="shape_stroke" format="boolean"/>
+        <attr name="shape_strokeColor" format="color"/>
+        <attr name="shape_strokeWidth" format="dimension"/>
+        <attr name="shape_strokeDashed" format="boolean"/>
+        <attr name="shape_strokeDashedHeight" format="dimension"/>
+        <attr name="shape_elevation" format="dimension"/>
+        <attr name="shape_rotationalSpeed" format="float"/>
+        <attr name="shape_shadowRadius" format="dimension"/>
+        <attr name="shape_shadowColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="ValueSelector">
+        <attr name="vs_currentValue" format="integer"/>
+        <attr name="vs_maxValue" format="integer"/>
+        <attr name="vs_minValue" format="integer"/>
+        <attr name="vs_color" format="color"/>
+        <attr name="vs_textColor" format="color"/>
+        <attr name="vs_backgroundColor" format="color"/>
+        <attr name="vs_increaseDrawable" format="reference"/>
+        <attr name="vs_decreaseDrawable" format="reference"/>
+        <attr name="vs_increaseTint" format="color"/>
+        <attr name="vs_decreaseTint" format="color"/>
+        <attr name="vs_soundPress" format="boolean"/>
+        <attr name="vs_soundType" format="enum">
+            <enum name="type_1" value="0"/>
+            <enum name="type_2" value="1"/>
+            <enum name="type_3" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

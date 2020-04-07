@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Basic.EnvironmentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_width="match_parent"
+            app:cardCornerRadius="@dimen/radius_card_medium"
+            app:cardElevation="@dimen/elevation_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            android:layout_marginBottom="@dimen/margin_card_medium"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:padding="@dimen/padding_card_inner_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/color_black"
+                    android:textSize="16sp"
+                    android:text="@string/text_type_ambient_temperature"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:padding="@dimen/padding_card_inner_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    tools:text="value"
+                    android:id="@+id/textView_ambient"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="@dimen/radius_card_medium"
+            app:cardElevation="@dimen/elevation_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            android:layout_marginBottom="@dimen/margin_card_medium"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:padding="@dimen/padding_card_inner_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/color_black"
+                    android:textSize="16sp"
+                    android:text="@string/text_type_light"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:padding="@dimen/padding_card_inner_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    tools:text="value"
+                    android:id="@+id/textView_light"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="@dimen/radius_card_medium"
+            app:cardElevation="@dimen/elevation_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            android:layout_marginBottom="@dimen/margin_card_medium"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:padding="@dimen/padding_card_inner_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/color_black"
+                    android:textSize="16sp"
+                    android:text="@string/text_type_pressure"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:padding="@dimen/padding_card_inner_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    tools:text="value"
+                    android:id="@+id/textView_pressure"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="@dimen/radius_card_medium"
+            app:cardElevation="@dimen/elevation_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            android:layout_marginBottom="@dimen/margin_card_medium"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:padding="@dimen/padding_card_inner_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/color_black"
+                    android:textSize="16sp"
+                    android:text="@string/text_type_relative_humidity"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:padding="@dimen/padding_card_inner_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    tools:text="value"
+                    android:id="@+id/textView_relativeHumidity"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="@dimen/radius_card_medium"
+            app:cardElevation="@dimen/elevation_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            android:layout_marginBottom="@dimen/margin_card_medium"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:padding="@dimen/padding_card_inner_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/color_black"
+                    android:textSize="16sp"
+                    android:text="@string/text_type_temperature"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:padding="@dimen/padding_card_inner_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    tools:text="value"
+                    android:id="@+id/textView_temperature"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

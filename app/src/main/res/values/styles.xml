@@ -1,0 +1,171 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/color_white</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="AppTheme.Yellow" parent="AppTheme">
+        <item name="colorPrimary">@color/colorYellowPrimary</item>
+        <item name="colorPrimaryDark">@color/colorYellowPrimaryDark</item>
+        <item name="colorAccent">@color/colorYellowAccent</item>
+    </style>
+
+    <style name="AppTheme.Light" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/color_white</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoToolbar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Gmail" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimaryDark">@color/color_white</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.DrawerAdmin" parent="AppTheme">
+        <item name="colorAccent">@color/color_blue_800</item>
+        <item name="colorPrimary">#F9A825</item>
+        <item name="colorPrimaryDark">#F57F17</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.About1" parent="AppTheme.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryRed_500</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryRedDark_500</item>
+        <item name="colorAccent">@color/colorPrimaryRedAccent_500</item>
+    </style>
+
+    <style name="AppTheme.InfiniteDevelopers" parent="AppTheme.NoActionBar">
+        <item name="colorPrimary">#039BE5</item>
+        <item name="colorPrimaryDark">#0277BD</item>
+        <item name="colorAccent">#EF6C00</item>
+        <item name="colorControlNormal">@color/color_white</item>
+    </style>
+
+    <style name="AppTheme.AboutFullScreen" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@color/color_black</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="editTextColor">@color/color_white</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="colorControlNormal">@color/color_white</item>
+    </style>
+
+    <style name="AppTheme.FullScreen" parent="AppTheme.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppTheme.AboutApplication" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimaryYellow</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkYellow</item>
+        <item name="colorAccent">#AB47BC</item>
+    </style>
+
+    <style name="AppTheme.ArticleBigHeader" parent="AppTheme.NoActionBar">
+        <item name="colorPrimaryDark">#4D041F20</item>
+    </style>
+
+    <style name="AppTheme.ArticleShortText" parent="AppTheme.NoActionBar">
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.ArticleCoding" parent="AppTheme.NoActionBar">
+        <item name="colorPrimaryDark">@android:color/black</item>
+        <item name="colorPrimary">@android:color/black</item>
+    </style>
+
+    <style name="AppTheme.ArticleWithVideo" parent="AppTheme.NoActionBar">
+        <item name="colorPrimaryDark">@android:color/black</item>
+        <item name="colorPrimary">@android:color/black</item>
+    </style>
+
+    <style name="AppTheme.DarkToolbar" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+    </style>
+
+    <style name="AppTheme.VerificationSimple" parent="AppTheme.NoActionBar">
+        <item name="colorPrimary">@color/gray_600</item>
+        <item name="colorPrimaryDark">@color/gray_600</item>
+        <item name="android:windowBackground">@color/gray_600</item>
+    </style>
+
+    <style name="AppTheme.VerificationCode" parent="AppTheme.NoActionBar">
+        <item name="colorPrimaryDark">@color/brown_400</item>
+        <item name="colorPrimary">@color/brown_400</item>
+        <item name="android:windowBackground">@color/brown_400</item>
+    </style>
+
+    <style name="AppTheme.CustomKeyboardLight" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="colorPrimaryDark">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.CustomKeyboardDark" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="colorPrimaryDark">@android:color/black</item>
+    </style>
+
+    <style name="AppTheme.ProfileDeveloper" parent="AppTheme.NoActionBar">
+        <item name="colorPrimaryDark">@color/color_blue_light_600</item>
+        <item name="colorPrimary">@color/color_blue_light_600</item>
+    </style>
+
+    <style name="AppTheme.WithPost" parent="AppTheme.NoActionBar">
+        <item name="colorPrimaryDark">#0277bd</item>
+        <item name="colorPrimary">#039be5</item>
+    </style>
+
+    <style name="AppTheme.Telegram" parent="AppTheme.NoActionBar">
+        <item name="colorPrimaryDark">#6e6092</item>
+        <item name="colorPrimary">#8a78b7</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.Withe" parent="AppTheme.NoActionBar">
+        <item name="colorPrimaryDark">@android:color/white</item>
+        <item name="colorPrimary">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.Withe1" parent="AppTheme.NoActionBar">
+        <item name="colorPrimaryDark">@android:color/white</item>
+        <item name="colorPrimary">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.Red_600" parent="AppTheme.NoActionBar">
+        <item name="colorPrimary">#e53935</item>
+        <item name="colorPrimaryDark">#c62828</item>
+        <item name="colorAccent">#1E88E5</item>
+    </style>
+
+    <style name="AppTheme.NewTask" parent="AppTheme.NoActionBar">
+        <item name="colorPrimaryDark">@android:color/white</item>
+        <item name="colorAccent">#1E88E5</item>
+    </style>
+
+    <color name="gray_600">#757575</color>
+    <color name="brown_600">#6D4C41</color>
+    <color name="colorPrimaryDarkYellow">#F9A825</color>
+    <color name="color_blue_light_500">#03A9F4</color>
+    <color name="color_blue_light_600">#039BE5</color>
+</resources>

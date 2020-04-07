@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UserInterface.AppbarBottomActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_labeled"
+            android:id="@+id/button_1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_shifting"
+            android:id="@+id/button_2"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_unlabeled"
+            android:id="@+id/button_3"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_overlapping_fab"
+            android:id="@+id/button_4"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_inset_fab"
+            android:id="@+id/button_5"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_hide_on_scroll"
+            android:id="@+id/button_6"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

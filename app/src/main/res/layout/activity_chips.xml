@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UserInterface.ChipsActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simple"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_margin="8dp"/>
+
+    <HorizontalScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chipGroup_1"
+            app:singleSelection="true"
+            app:checkedChip="@+id/chip_java"
+            app:singleLine="true"
+            app:selectionRequired="true">
+
+            <com.google.android.material.chip.Chip
+                android:layout_margin="8dp"
+                android:id="@+id/chip_java"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Java" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_cplus"
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C++"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_python"
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Python"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_php"
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHP"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_swift"
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Swift"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_javaScript"
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Java Script"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="With Icon"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_margin="8dp"/>
+
+    <HorizontalScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chipGroup_2"
+            app:singleSelection="true"
+            app:checkedChip="@+id/chip_java"
+            app:singleLine="true"
+            app:selectionRequired="true">
+
+            <com.google.android.material.chip.Chip
+                android:layout_margin="8dp"
+                android:id="@+id/chip_"
+                app:chipIcon="@drawable/language_java"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Java" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_instagram"
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instagram"
+                app:chipIcon="@drawable/instagram"/>
+
+            <com.google.android.material.chip.Chip
+                app:chipIcon="@drawable/twitter"
+                android:id="@+id/chip_twitter"
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Twitter"/>
+
+            <com.google.android.material.chip.Chip
+                app:chipIcon="@drawable/facebook"
+                android:id="@+id/chip_facebook"
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Facebook"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_telegram"
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telegram"
+                app:chipIcon="@drawable/telegram"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="With Close Icon"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_margin="8dp"/>
+
+    <HorizontalScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chipGroup_3"
+            app:singleSelection="true"
+            app:checkedChip="@+id/chip_java"
+            app:singleLine="true"
+            app:selectionRequired="true">
+
+            <com.google.android.material.chip.Chip
+                android:layout_margin="8dp"
+                android:id="@+id/chip__"
+                app:closeIcon="@drawable/ic_close_black_24dp"
+                app:closeIconEnabled="true"
+                app:chipIcon="@drawable/language_java"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Java" />
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_instagramC"
+                app:closeIcon="@drawable/ic_close_black_24dp"
+                app:closeIconEnabled="true"
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instagram"
+                app:chipIcon="@drawable/instagram"/>
+
+            <com.google.android.material.chip.Chip
+                app:chipIcon="@drawable/twitter"
+                android:id="@+id/chip_twitterC"
+                app:closeIcon="@drawable/ic_close_black_24dp"
+                app:closeIconEnabled="true"
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Twitter"/>
+
+            <com.google.android.material.chip.Chip
+                app:chipIcon="@drawable/facebook"
+                android:id="@+id/chip_facebookC"
+                android:layout_margin="8dp"
+                app:closeIcon="@drawable/ic_close_black_24dp"
+                app:closeIconEnabled="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Facebook"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_telegramC"
+                android:layout_margin="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telegram"
+                app:closeIcon="@drawable/ic_close_black_24dp"
+                app:closeIconEnabled="true"
+                app:chipIcon="@drawable/telegram"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Basic.RWCDFileActivity"
+    android:padding="8dp">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_name"
+        android:gravity="center"
+        android:hint="@string/text_file_name"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_body"
+        android:gravity="center"
+        android:lines="5"
+        android:hint="@string/text_text"
+        android:minHeight="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/button_create"
+            android:gravity="center"
+            android:text="@string/text_create"/>
+
+        <View
+            android:layout_width="@dimen/height_divider"
+            android:layout_height="match_parent"
+            android:background="@color/color_divider"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/button_write"
+            android:gravity="center"
+            android:text="@string/text_write"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_divider"
+        android:background="@color/color_divider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/button_read"
+            android:gravity="center"
+            android:text="@string/text_read"/>
+
+        <View
+            android:layout_width="@dimen/height_divider"
+            android:layout_height="match_parent"
+            android:background="@color/color_divider"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/button_delete"
+            android:gravity="center"
+            android:text="@string/text_delete"/>
+
+    </LinearLayout>
+
+</LinearLayout>

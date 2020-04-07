@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/color_white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:id="@+id/linearLayout_newGroup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_item_bottom_sheet"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="?attr/selectableItemBackground">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/height_mini_icon_bottom_sheet"
+            android:layout_height="@dimen/height_mini_icon_bottom_sheet"
+            android:src="@drawable/ic_group_add_black_24dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:singleLine="true"
+            android:layout_marginStart="14dp"
+            android:text="@string/text_new_group"
+            android:textColor="@color/color_black"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:id="@+id/linearLayout_newContact"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_item_bottom_sheet"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="?attr/selectableItemBackground">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/height_mini_icon_bottom_sheet"
+            android:layout_height="@dimen/height_mini_icon_bottom_sheet"
+            android:src="@drawable/account_circle_outline"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:singleLine="true"
+            android:layout_marginStart="14dp"
+            android:text="@string/text_new_contact"
+            android:textColor="@color/color_black"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:id="@+id/linearLayout_newChannel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_item_bottom_sheet"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="?attr/selectableItemBackground">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/height_mini_icon_bottom_sheet"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_circle_outline_black_24dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:singleLine="true"
+            android:layout_marginStart="14dp"
+            android:text="@string/text_new_channel"
+            android:textColor="@color/color_black"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:id="@+id/linearLayout_newSecretChat"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_item_bottom_sheet"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="?attr/selectableItemBackground">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/height_mini_icon_bottom_sheet"
+            android:layout_height="@dimen/height_mini_icon_bottom_sheet"
+            android:src="@drawable/ic_lock_black_24dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:singleLine="true"
+            android:layout_marginStart="14dp"
+            android:text="@string/text_new_secret_chat"
+            android:textColor="@color/color_black"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

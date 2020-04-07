@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UIMore.About.AboutRestaurantActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_about_image"
+        android:id="@+id/appbarLayout"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/colorPrimaryRed_500"
+            app:expandedTitleGravity="top"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/image_test_6"
+                android:scaleType="fitXY" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:layout_collapseMode="pin"
+                android:id="@+id/toolbar"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/color_red"
+        app:layout_anchorGravity="bottom|end"
+        app:layout_anchor="@id/appbarLayout"
+        android:src="@drawable/ic_call_black_24dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:drawablePadding="8dp"
+                android:textColor="@color/colorAccent"
+                app:drawableTint="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_about"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_gravity="start"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_resturant_1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                style="@style/TextAppearance.AppCompat.Medium"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="start"
+                android:textColor="@color/colorAccent"
+                app:drawableTint="@color/colorAccent"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:drawableStart="@drawable/ic_location_on_black_24dp"
+                android:drawablePadding="8dp"
+                android:text="@string/t_location"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/info_restaurant_location"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:drawableStart="@drawable/ic_access_time_black_24dp"
+                android:drawablePadding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="start"
+                android:textColor="@color/colorAccent"
+                app:drawableTint="@color/colorAccent"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:text="@string/t_opening_hours"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/info_restaurant"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

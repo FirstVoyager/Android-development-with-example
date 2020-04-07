@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UserInterface.DialogActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_basic_dialog"
+            android:id="@+id/button_1"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_basic_dialog_2"
+            android:id="@+id/button_2"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_single_choice_dialog"
+            android:id="@+id/button_3"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_multi_choice_dialog"
+            android:id="@+id/button_4"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_date_picker"
+            android:id="@+id/button_5"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_time_picker_dialog"
+            android:id="@+id/button_7"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"/>
+
+        <View
+            android:layout_margin="@dimen/margin_card_medium"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_divider"
+            android:background="@color/color_divider"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_custom_date_picker"
+            android:id="@+id/button_6"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_update_dialog"
+            android:id="@+id/button_8"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_cookie_dialog"
+            android:id="@+id/button_9"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/t_camera_permission_dialog"
+            android:id="@+id/button_10"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

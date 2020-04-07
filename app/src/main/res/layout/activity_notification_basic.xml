@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/padding_inner_item"
+    android:paddingEnd="@dimen/padding_inner_item"
+    tools:context=".Activity.Basic.BasicNotificationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginTop="@dimen/padding_inner_item"
+            android:text="@string/text_simple_notification"
+            android:id="@+id/button_notification"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginTop="@dimen/padding_inner_item"
+            android:text="@string/text_notification_with_open_url"
+            android:id="@+id/button_openUrl"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginTop="@dimen/padding_inner_item"
+            android:text="@string/text_notification_with_play_sound"
+            android:id="@+id/button_playSound"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginTop="@dimen/padding_inner_item"
+            android:text="@string/text_notification_with_open_app"
+            android:id="@+id/button_openApp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginTop="@dimen/padding_inner_item"
+            android:text="@string/text_expandable_notification"
+            android:id="@+id/button_expandable"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginTop="@dimen/padding_inner_item"
+            android:text="@string/text_action_button"
+            android:id="@+id/button_actionButton"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_marginTop="@dimen/padding_inner_item"
+            android:text="@string/text_reply_notification"
+            android:id="@+id/button_reply"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:id="@+id/button_downloadProgress"
+            android:text="@string/text_downloadProgress"
+            android:layout_marginTop="@dimen/padding_inner_item"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

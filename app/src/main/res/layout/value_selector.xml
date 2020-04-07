@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_minus_24dp"
+            style="@style/Widget.AppCompat.ActionButton"
+            android:id="@+id/imageButton_decrease"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:lines="1"
+            android:singleLine="true"
+            app:fontFamily="monospace"
+            tools:text="25"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:id="@+id/textView_value"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            style="@style/Widget.AppCompat.ActionButton"
+            android:id="@+id/imageButton_increase"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

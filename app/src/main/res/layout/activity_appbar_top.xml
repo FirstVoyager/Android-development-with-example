@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UserInterface.AppbarTopActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_card_medium"
+        android:layout_marginStart="@dimen/margin_card_medium"
+        android:layout_marginEnd="@dimen/margin_card_medium"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/button_1"
+        android:text="@string/text_regular"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_card_medium"
+        android:layout_marginStart="@dimen/margin_card_medium"
+        android:layout_marginEnd="@dimen/margin_card_medium"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/button_2"
+        android:text="@string/text_action_mode"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_card_medium"
+        android:layout_marginStart="@dimen/margin_card_medium"
+        android:layout_marginEnd="@dimen/margin_card_medium"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/button_3"
+        android:text="@string/text_collapse"/>
+
+
+</LinearLayout>

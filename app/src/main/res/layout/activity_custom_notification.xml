@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Basic.CustomNotificationActivity"
+    android:paddingStart="@dimen/padding_inner_item"
+    android:paddingEnd="@dimen/padding_inner_item">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/button_musicPlayer"
+        android:text="@string/text_music_player"
+        android:layout_marginTop="@dimen/padding_inner_item"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/button_imageSwitcher"
+        android:text="@string/text_image_switcher"
+        android:layout_marginTop="@dimen/padding_inner_item"/>
+
+</LinearLayout>

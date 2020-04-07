@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="@string/title_setting"
+        android:id="@+id/menu_nav_setting"
+        android:icon="@drawable/ic_settings_black_24dp"/>
+
+    <item
+        android:title="@string/title_about"
+        android:id="@+id/menu_nav_about"
+        android:icon="@drawable/ic_info_outline_black_24dp"/>
+
+    <item
+        android:title="@string/text_share"
+        android:id="@+id/menu_nav_share"
+        android:icon="@drawable/ic_share_black_24dp"/>
+
+    <item
+        android:title="@string/title_rate_us"
+        android:id="@+id/menu_nav_rate"
+        android:icon="@drawable/ic_star_half_black_24dp"/>
+
+    <item
+        android:title="@string/title_other_apps"
+        android:id="@+id/menu_nav_other_apps"
+        android:icon="@drawable/ic_apps_black_24dp"/>
+
+</menu>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:checked="true"
+            android:id="@+id/nav_dashboards"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="@string/menu_dashboards" />
+        <item
+            android:id="@+id/nav_requests"
+            android:icon="@drawable/ic_reply_black_24dp"
+            android:title="@string/menu_requests" />
+        <item
+            android:id="@+id/nav_reviews"
+            android:icon="@drawable/ic_rate_review_black_24dp"
+            android:title="@string/menu_reviews" />
+        <item
+            android:id="@+id/nav_payments"
+            android:icon="@drawable/ic_payment_black_24dp"
+            android:title="@string/menu_payments" />
+        <item
+            android:id="@+id/nav_last_actions"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/menu_last_actions" />
+        <item
+            android:id="@+id/nav_products"
+            android:icon="@drawable/ic_view_module_black_24dp"
+            android:title="@string/menu_products" />
+    </group>
+
+    <item android:title="@string/title_other">
+        <menu>
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/ic_settings_outline_24dp"
+                android:title="@string/menu_setting" />
+            <item
+                android:id="@+id/nav_security"
+                android:icon="@drawable/ic_lock_black_24dp"
+                android:title="@string/menu_security" />
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/account_circle_outline"
+                android:title="@string/menu_profile" />
+        </menu>
+    </item>
+
+</menu>

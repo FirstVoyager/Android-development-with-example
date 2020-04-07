@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Basic.HttpRequestActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginStart="@dimen/padding_inner_item"
+            android:layout_marginEnd="@dimen/padding_inner_item"
+            android:layout_marginTop="@dimen/padding_inner_item"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_downloadText"
+            android:id="@+id/button_downloadText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginStart="@dimen/padding_inner_item"
+            android:layout_marginEnd="@dimen/padding_inner_item"
+            android:layout_marginTop="@dimen/padding_inner_item"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_download_image"
+            android:id="@+id/button_downloadImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginStart="@dimen/padding_inner_item"
+            android:layout_marginEnd="@dimen/padding_inner_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:hint="@string/text_url"
+                    android:gravity="center"
+                    android:id="@+id/editText_url"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_marginTop="@dimen/padding_inner_item"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:text="@string/text_download_website_source_code"
+                    android:id="@+id/button_downloadWebsite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView_test"
+            android:layout_gravity="center_horizontal"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_test"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

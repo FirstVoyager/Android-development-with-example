@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/gray_600"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".Activity.UIMore.Verification.VerificationPhoneActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_message_512dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="64dp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        android:text="We need to text you the verify your account"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="USA(+1)"
+        android:padding="8dp"
+        android:minHeight="?actionBarSize"
+        android:gravity="center_vertical"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:lines="1"
+        android:singleLine="true"
+        android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+        android:drawableTint="@android:color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your phone number"
+        android:padding="8dp"
+        android:minHeight="?actionBarSize"
+        android:gravity="center_vertical"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:lines="1"
+        android:singleLine="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/color_blue_800"
+        android:textColor="@android:color/white"
+        android:text="Next"
+        android:layout_margin="16dp"/>
+
+</LinearLayout>

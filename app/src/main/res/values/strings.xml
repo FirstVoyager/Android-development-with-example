@@ -1,0 +1,660 @@
+<resources>
+
+    <string name="app_name">Android development</string>
+    <string name="title_ui">UI</string>
+    <string name="title_Basic">Basic</string>
+    <string name="title_user_interface">User interface</string>
+    <string name="title_ui_examples">UI examples</string>
+    <string name="title_ui_more">UI more</string>
+    <string name="title_code_more">Code more</string>
+    <string name="title_setting">Setting</string>
+    <string name="title_about">About</string>
+    <string name="text_share">Share</string>
+    <string name="title_rate_us">Rate us</string>
+    <string name="title_other_apps">Other apps</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_permissions">Permissions</string>
+    <string name="codecanyon_url">https://codecanyon.net/item/materialx-android-material-design-ui-components-10/20482674</string>
+    <string name="title_bluetooth">BLUETOOTH</string>
+    <string name="permission_read_phone_state">READ_PHONE_STATE</string>
+    <string name="permission_internet">INTERNET</string>
+    <string name="permission_access_network_state">ACCESS_NETWORK_STATE</string>
+    <string name="permission_wake_lock">WAKE_LOCK</string>
+    <string name="permission_receive_boot_completed">RECEIVE_BOOT_COMPLETED</string>
+    <string name="permission_vibrate">VIBRATE</string>
+    <string name="permission_access_coarse_location">ACCESS_COARSE_LOCATION</string>
+    <string name="permission_access_fine_location">ACCESS_FINE_LOCATION</string>
+    <string name="permission_install_shortcut">INSTALL_SHORTCUT</string>
+    <string name="permission_read_history_bookmarks">READ_HISTORY_BOOKMARKS</string>
+    <string name="permission_write_history_bookmarks">WRITE_HISTORY_BOOKMARKS</string>
+    <string name="permission_access_wifi_state">ACCESS_WIFI_STATE</string>
+    <string name="permission_change_wifi_state">CHANGE_WIFI_STATE</string>
+    <string name="permission_access_gps">ACCESS_GPS</string>
+    <string name="permission_access_assisted_gps">ACCESS_ASSISTED_GPS</string>
+    <string name="permission_access_location">ACCESS_LOCATION</string>
+    <string name="permission_write_external_storage">WRITE_EXTERNAL_STORAGE</string>
+    <string name="permission_read_external_storage">READ_EXTERNAL_STORAGE</string>
+    <string name="permission_set_wallpaper">SET_WALLPAPER</string>
+    <string name="permission_nfc">NFC</string>
+    <string name="permission_camera">CAMERA</string>
+    <string name="permission_send_sms">SEND_SMS</string>
+    <string name="permission_read_sms">READ_SMS</string>
+    <string name="permission_read_calendar">READ_CALENDAR</string>
+    <string name="permission_write_calendar">WRITE_CALENDAR</string>
+    <string name="permission_read_contacts">READ_CONTACTS</string>
+    <string name="permission_write_contacts">WRITE_CONTACTS</string>
+    <string name="permission_get_accounts">GET_ACCOUNTS</string>
+    <string name="permission_record_audio">RECORD_AUDIO</string>
+    <string name="permission_read_phone_numbers">READ_PHONE_NUMBERS</string>
+    <string name="permission_call_phone">CALL_PHONE</string>
+    <string name="permission_answer_phone_calls">ANSWER_PHONE_CALLS</string>
+    <string name="permission_read_call_log">READ_CALL_LOG</string>
+    <string name="permission_write_call_log">WRITE_CALL_LOG</string>
+    <string name="permission_add_voicemail">ADD_VOICEMAIL</string>
+    <string name="permission_use_sip">USE_SIP</string>
+    <string name="permission_process_outgoing_calls">PROCESS_OUTGOING_CALLS</string>
+    <string name="permission_body_sensors">BODY_SENSORS</string>
+    <string name="permission_receive_wap_push">RECEIVE_WAP_PUSH</string>
+    <string name="permission_receive_mms">RECEIVE_MMS</string>
+    <string name="title_dangerous_permissions">Dangerous permissions</string>
+    <string name="title_normal_permissions">Normal permissions</string>
+    <string name="info_normal_permissions">Normal permissions cover areas where your app needs to access data or resources outside the app\'s sandbox, but where there\'s very little risk to the user\'s privacy or the operation of other apps. For example, permission to set the time zone is a normal permission.  If an app declares in its manifest that it needs a normal permission, the system automatically grants the app that permission at install time. The system doesn\'t prompt the user to grant normal permissions, and users cannot revoke these permissions</string>
+    <string name="info_dangerous_permissions">Dangerous permissions cover areas where the app wants data or resources that involve the user\'s private information, or could potentially affect the user\'s stored data or the operation of other apps. For example, the ability to read the user\'s contacts is a dangerous permission. If an app declares that it needs a dangerous permission, the user has to explicitly grant the permission to the app. Until the user approves the permission, your app cannot provide functionality that depends on that permission.  To use a dangerous permission, your app must prompt the user to grant permission at runtime</string>
+    <string name="title_info">Info</string>
+    <string name="info_permissions">The purpose of a permission is to protect the privacy of an Android user. Android apps must request permission to access sensitive user data (such as contacts and SMS), as well as certain system features (such as camera and internet). Depending on the feature, the system might grant the permission automatically or might prompt the user to approve the request.  A central design point of the Android security architecture is that no app, by default, has permission to perform any operations that would adversely impact other apps, the operating system, or the user. This includes reading or writing the user\'s private data (such as contacts or emails), reading or writing another app\'s files, performing network access, keeping the device awake, and so on.  This page provides an overview to how Android permissions work, including: how permissions are presented to the user, the difference between install-time and runtime permission requests, how permissions are enforced, and the types of permissions and their groups</string>
+    <string name="info_normal_permissions_how_add">1. Add to manifest\n2. Allowed automatically\n3. Enjoy it</string>
+    <string name="title_broadcast_receiver">Broadcast receiver</string>
+    <string name="info_broadcast_receiver">A broadcast receiver (receiver) is an Android component which allows you to register for system or application events. All registered receivers for an event are notified by the Android runtime once this event happens.  For example, applications can register for the ACTION_BOOT_COMPLETED system event which is fired once the Android system has completed the boot process</string>
+    <string name="title_list_of_broadcast_receivers">List of broadcast receivers</string>
+    <string name="info_broadcast_receiver_how_add">1. Add to AndroidManifest.xml file.\n2. The implementing class for a receiver extends the BroadcastReceiver class.\n3. If the event for which the broadcast receiver has registered happens, the onReceive() method of the receiver is called by the Android system.</string>
+    <string name="title_screen_state">Screen state</string>
+    <string name="title_broadcast_text">Broadcast text</string>
+    <string name="title_your_message">your message</string>
+    <string name="title_send">Send</string>
+    <string name="title_broadcast_message">Broadcast message</string>
+    <string name="title_message">Message</string>
+    <string name="title_empty">Empty</string>
+    <string name="title_call_receiver">Call receiver</string>
+    <string name="text_call_receiver">Call receiver</string>
+    <string name="text_sms_receiver">SMS receiver</string>
+    <string name="text_last_sms_receive_date">Date of last received message</string>
+    <string name="text_basic_service">Basic service</string>
+    <string name="info_service">A service is a component which runs in the background without direct interaction with the user. As the service has no user interface, it is not bound to the lifecycle of an activity.  Services are used for repetitive and potentially long running operations, i.e., Internet downloads, checking for new data, data processing, updating content providers and the like.  Services run with a higher priority than inactive or invisible activities and therefore it is less likely that the Android system terminates them. Services can also be configured to be restarted if they get terminated by the Android system once sufficient system resources are available again.  It is possible to assign services the same priority as foreground activities. In this case it is required to have a visible notification active for the related service. It is frequently used for services which play videos or music.</string>
+    <string name="text_start_service">Start service</string>
+    <string name="text_stop_service">Stop service</string>
+    <string name="text_service_is_running">Service is running</string>
+    <string name="text_service_is_stopping">Service is stopping</string>
+    <string name="text_simple_image_downloader">Simple image downloader</string>
+    <string name="text_image_url">Image url</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="text_download">Download</string>
+    <string name="t_empty">Empty</string>
+    <string name="text_set_alarm_service">Set alarm service</string>
+    <string name="text_seconds">Seconds</string>
+    <string name="_set_alarm">Service starts %1s seconds later</string>
+    <string name="t_start">Start</string>
+    <string name="text_set_alarm">Set alarm</string>
+    <string name="text_activity">Activity</string>
+    <string name="info_activity">The Activity class is a crucial component of an Android app, and the way activities are launched and put together is a fundamental part of the platform\'s application model. Unlike programming paradigms in which apps are launched with a main() method, the Android system initiates code in an Activity instance by invoking specific callback methods that correspond to specific stages of its lifecycle.</string>
+    <string name="text_file_provider">File provider</string>
+    <string name="info_file_provider">ContentProvider is an Android component which encapsulates data and provides it to other applications. It is required only if you need to share data between multiple applications. For example, the contacts data is shared with other applications using ContactsProvider which is a subclass of ContentProvider.  \nFileProvider is a subclass of ContentProvider. While ContentProvider is a component that enables you to securely share any kind of data, FileProvider is used specifically for sharing the app’s internal files. The FileProvider class is part of the v4 Support Library so make sure to include it in your project.  \nTo make FileProvider work follow these three steps:  \nDefine the FileProvider in your AndroidManifest file \nCreate an XML file that contains all paths that the FileProvider will share with other applications \nBundle a valid URI in the Intent and activate it</string>
+    <string name="text_read_photos">Read photos</string>
+    <string name="text_read_songs">Read songs</string>
+    <string name="menu_song_play">Play</string>
+    <string name="t_play">Play</string>
+    <string name="text_delete">Delete</string>
+    <string name="text_details">Details</string>
+    <string name="text_sort_by">Sort by</string>
+    <string name="text_ascending">Ascending</string>
+    <string name="text_descending">Descending</string>
+    <string name="text_read_videos">Read videos</string>
+    <string name="text_operation_on_file">Operation on file</string>
+    <string name="text_file_name">File name</string>
+    <string name="text_text">Text</string>
+    <string name="text_create">Create</string>
+    <string name="text_write">Write</string>
+    <string name="text_read">Read</string>
+    <string name="text_select_photo">Select photo</string>
+    <string name="text_photo">Photo</string>
+    <string name="text_file">File</string>
+    <string name="t_video">Video</string>
+    <string name="text_audio">Audio</string>
+    <string name="text_database_name">Database name</string>
+    <string name="text_table_name">Table name</string>
+    <string name="text_create_database">Create database</string>
+    <string name="text_create_table">Create table</string>
+    <string name="text_is_default">Is default</string>
+    <string name="text_hint">Hint</string>
+    <string name="text_date">Date</string>
+    <string name="text_tag">Tag</string>
+    <string name="text_insert">Insert</string>
+    <string name="text_key">Key</string>
+    <string name="text_update">Update</string>
+    <string name="text_clear_all">Clear all</string>
+    <string name="text_shared_preferences">Shared preferences</string>
+    <string name="info_realm_database">Realm is a mobile database and a replacement for SQLite. Although is an OO database it has some differences with other databases. Realm is not using SQLite as it’s engine. Instead it has own C++ core and aims to provide a mobile-first alternative to SQLite. Realm store data in a universal, table-based format by a C++ core. This is what allows Realm to allow data access from multiple languages as well as a range of ad hoc queries.</string>
+    <string name="text_realm_database">Realm database</string>
+    <string name="text_name">Name</string>
+    <string name="text_number">Number</string>
+    <string name="text_address">Address</string>
+    <string name="text_id">id</string>
+    <string name="text_read_all">Read all</string>
+    <string name="text_delete_all">Delete all</string>
+    <string name="title_realm_database">Realm database</string>
+    <string name="info_notification">Notifications provide short, timely information about events in your app while it\'s not in use.</string>
+    <string name="text_simple_notification">Simple notification</string>
+    <string name="t_notification">Notification</string>
+    <string name="text_notification_with_open_url">Notification with open url</string>
+    <string name="text_notification_with_play_sound">Notification with play sound</string>
+    <string name="text_basic_notification">Basic notification</string>
+    <string name="text_notification_with_open_app">Notification with open app</string>
+    <string name="text_expandable_notification">Expandable notification</string>
+    <string name="text_media_style">Media style</string>
+    <string name="text_messaging_style">Messaging style</string>
+    <string name="text_inbox_style">Inbox style</string>
+    <string name="text_big_picture_style">Big picture style</string>
+    <string name="text_bit_text_style">Big text style</string>
+    <string name="text_notification_styling">Notification styling</string>
+    <string name="text_custom_notification">Custom notification</string>
+    <string name="text_notification_action_button">Notification action button</string>
+    <string name="text_reply_notification">Reply notification</string>
+    <string name="text_action_button">Action button</string>
+    <string name="text_music_player">Music player</string>
+    <string name="text_downloadProgress">Download progress</string>
+    <string name="text_image_switcher">Image swithcher</string>
+    <string name="text_list_view">List view</string>
+    <string name="text_handlers">Handlers</string>
+    <string name="info_handlers">A Handler allows you to send and process Message and Runnable objects associated with a thread\'s MessageQueue. Each Handler instance is associated with a single thread and that thread\'s message queue. When you create a new Handler, it is bound to the thread / message queue of the thread that is creating it — from that point on, it will deliver messages and runnables to that message queue and execute them as they come out of the message queue.  There are two main uses for a Handler: (1) to schedule messages and runnables to be executed at some point in the future; and (2) to enqueue an action to be performed on a different thread than your own.</string>
+    <string name="text_downloadText">Download text</string>
+    <string name="text_download_audio">Download audio</string>
+    <string name="text_download_video">Download video</string>
+    <string name="text_download_image">Download image</string>
+    <string name="text_http_request">http request</string>
+    <string name="text_download_website_source_code">Download website source code</string>
+    <string name="text_start_downloading">Start downloading…</string>
+    <string name="text_url">Url</string>
+    <string name="text_volley">Volley</string>
+    <string name="text_download_string">Download string</string>
+    <string name="text_download_json_array">Download json array</string>
+    <string name="text_download_json_object">Download json object</string>
+    <string name="text_retrofit">Retrofit</string>
+    <string name="text_get_posts">Get posts</string>
+    <string name="text_get_comments">Get comments</string>
+    <string name="text_get_photos">Get photos</string>
+    <string name="text_get_albums">Get albums</string>
+    <string name="text_get_todos">Get todos</string>
+    <string name="text_get_users">Get users</string>
+    <string name="text_json_converters">Json converters</string>
+    <string name="text_json_object">Json object</string>
+    <string name="text_json_array">Json array</string>
+    <string name="text_read_json_array">Read json array</string>
+    <string name="text_read_json_object">Read json object</string>
+    <string name="text_position_sensors">Position sensors</string>
+    <string name="text_motion_sensors">Motion sensors</string>
+    <string name="sensor_type_accelerometer">TYPE_ACCELEROMETER</string>
+    <string name="text_not_found">Not found</string>
+    <string name="text_type_accelerometer_uncalibrated">TYPE_ACCELEROMETER_UNCALIBRATED</string>
+    <string name="text_type_gravity">TYPE_GRAVITY</string>
+    <string name="text_type_gyroscope">TYPE_GYROSCOPE</string>
+    <string name="text_type_gyroscope_uncalibrated">TYPE_GYROSCOPE_UNCALIBRATED</string>
+    <string name="text_type_linear_acceleration">TYPE_LINEAR_ACCELERATION</string>
+    <string name="text_type_rotation_vector">TYPE_ROTATION_VECTOR</string>
+    <string name="text_type_step_counter">TYPE_STEP_COUNTER</string>
+    <string name="text_type_game_rotation_vector">TYPE_GAME_ROTATION_VECTOR</string>
+    <string name="text_type_geomagnetic_rotation_vector">TYPE_GEOMAGNETIC_ROTATION_VECTOR</string>
+    <string name="text_type_magnetic_field">TYPE_MAGNETIC_FIELD</string>
+    <string name="text_type_magnetic_field_uncalibrated">TYPE_MAGNETIC_FIELD_UNCALIBRATED</string>
+    <string name="text_type_orientation">TYPE_ORIENTATION</string>
+    <string name="text_type_proximity">TYPE_PROXIMITY</string>
+    <string name="text_environment_sensors">Environment sensors</string>
+    <string name="text_type_ambient_temperature">TYPE_AMBIENT_TEMPERATURE</string>
+    <string name="text_type_light">TYPE_LIGHT</string>
+    <string name="text_type_pressure">TYPE_PRESSURE</string>
+    <string name="text_type_relative_humidity">TYPE_RELATIVE_HUMIDITY</string>
+    <string name="text_type_temperature">TYPE_TEMPERATURE</string>
+    <string name="text_example_1">Example 1</string>
+    <string name="text_example_8">Example 8</string>
+    <string name="text_example_7">Example 7</string>
+    <string name="text_example_6">Example 6</string>
+    <string name="text_example_5">Example 5</string>
+    <string name="text_example_4">Example 4</string>
+    <string name="text_example_3">Example 3</string>
+    <string name="text_example_2">Example 2</string>
+    <string name="text_appbar_bottom">App bar : bottom</string>
+    <string name="text_basic">Basic</string>
+    <string name="text_simple">Simple</string>
+    <string name="text_shifting">Shifting</string>
+    <string name="text_labeled">Labeled</string>
+    <string name="text_unlabeled">Unlabeled</string>
+    <string name="text_search">Search</string>
+    <string name="text_overlapping_fab">Overlapping FAB</string>
+    <string name="text_more">More</string>
+    <string name="text_close">Close</string>
+    <string name="text_exit">Exit</string>
+    <string name="text_inset_fab">Inset FAB</string>
+    <string name="text_scrolling">Scrolling</string>
+    <string name="text_hide_on_scroll">Hide on scroll</string>
+    <string name="text_app_bar_top">App bar : top</string>
+    <string name="text_regular">Regular</string>
+    <string name="text_wallpaper">Wallpaper</string>
+    <string name="text_action_mode">Action mode</string>
+    <string name="text_subtitle">Subtitle</string>
+    <string name="text_collapse">Collapse</string>
+    <string name="title_activity_appbar_top_collapse_image1">AppbarTopCollapseImage1Activity
+    </string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="text_outlined_button">Outlined button</string>
+    <string name="text_text_button">Text button</string>
+    <string name="text_backdrop">Backdrop</string>
+    <string name="Banner">Banner</string>
+    <string name="text_buttons">Buttons</string>
+    <string name="text_contained_button">Contained button</string>
+    <string name="text_button">Text button</string>
+    <string name="text_more_button">More button</string>
+    <string name="text_small_button">Small button</string>
+    <string name="text_colored_borderless">Colored borderless</string>
+    <string name="text_with_icon">with icon</string>
+    <string name="text_icon_in_bottom">Icon in bottom</string>
+    <string name="text_icon_in_top">Icon in top</string>
+    <string name="text_icon_in_start">Icon in start</string>
+    <string name="text_icon_in_end">Icon in end</string>
+    <string name="text_image_button">Image button</string>
+    <string name="text_colored">Colored</string>
+    <string name="text_borderless">Borderless</string>
+    <string name="text_floating_action_button">Floating action button</string>
+    <string name="text_mini">Mini</string>
+    <string name="text_new_group">New Group</string>
+    <string name="text_new_secret_chat">New Secret Chat</string>
+    <string name="text_new_channel">New Channel</string>
+    <string name="text_new_contact">New Contact</string>
+    <string name="text_extended_fab">Extended FAB</string>
+    <string name="text_mini_fab">Mini FAB</string>
+    <string name="text_basic_fab">Basic FAB</string>
+    <string name="text_cards">Cards</string>
+    <string name="text_person_1">Person 1</string>
+    <string name="simple_bio">This is a simple bio for test</string>
+    <string name="simple_post">This is a simple post for test and develop android app and other, you can share this app . i love yoy and etc</string>
+    <string name="text_dismiss">Dismiss</string>
+    <string name="text_big_ban_restaurant">Big ban Restaurant</string>
+    <string name="simple_resturant"><![CDATA[Restaurant Times is an online publication for everyone who is interested in Restaurants and Food & Business Industry. Get Latest Updates and Trending News from the world of Restaurants. Discover how you can grow your Restaurant Business and overcome different challenges]]></string>
+    <string name="text_visit">Visit</string>
+    <string name="text_new_album">New album</string>
+    <string name="text_new_love_2020">New Love 2020</string>
+    <string name="text_rate_this_album">Rate this album</string>
+    <string name="text_simple_title">Simple title</string>
+    <string name="simple_caption">This is a simple caption for this image</string>
+    <string name="text_ok">Ok</string>
+    <string name="text_basic_dialog">Basic Dialog</string>
+    <string name="text_basic_dialog_2">Basic Dialog 2</string>
+    <string name="info_dialog">A dialog is a small window that prompts the user to make a decision or enter additional information. A dialog does not fill the screen and is normally used for modal events that require users to take an action before they can proceed.</string>
+    <string name="text_learn_more">Learn more</string>
+    <string name="url_android_dev_dialog">https://developer.android.com/guide/topics/ui/dialogs</string>
+    <string name="text_single_choice_dialog">Single Choice Dialog</string>
+    <string name="text_multi_choice_dialog">Multi Choice Dialog</string>
+    <string name="text_dialog">Dialog</string>
+    <string name="text_date_picker">Date Picker Dialog</string>
+    <string name="text_time_picker_dialog">Time Picker Dialog</string>
+    <string name="ok">Ok</string>
+    <string name="text_custom_date_picker">Custom Date Picker</string>
+    <string name="text_update_dialog">Update Dialog</string>
+    <string name="text_about_update">About Update</string>
+    <string name="info_update">1.Fix bugs\n 2.Add space section\n 2.Remove delete all item\n 4.Add more ads\n 5.Add more dialog\n</string>
+    <string name="text_cookie_dialog">Cookie Dialog</string>
+    <string name="text_cookie">Cookie!</string>
+    <string name="info_cookie_message">We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services</string>
+    <string name="text_i_like_cookies">I Like Cookies</string>
+    <string name="text_capture_photos_videos_and_go_live">Capture photos, videos and go live</string>
+    <string name="text_continue">Continue</string>
+    <string name="text_not_now">Not now</string>
+    <string name="t_camera_permission_dialog">Camera permission (Full screen)</string>
+    <string name="text_lists">Lists</string>
+    <string name="text_simple_list_1">Simple List 1</string>
+    <string name="text_simple_list_2">Simple List 2</string>
+    <string name="text_android_lists">Android Lists</string>
+    <string name="text_menu_drawer"><![CDATA[Menu & Drawer]]></string>
+    <string name="t_simple_swipe">Simple swipe</string>
+    <string name="t_swipe_delete">Swipe delete</string>
+    <string name="t_horizontal">Horizontal</string>
+    <string name="t_grid">Grid layout</string>
+    <string name="t_staggered_grid">Staggered grid</string>
+    <string name="text_popup_menu">Popup menu</string>
+    <string name="text_popup_menu_whith_icon">Popup menu with icon</string>
+    <string name="text_simple_drawer">Simple drawer</string>
+    <string name="t_drawer_gmail">Drawer Gmail</string>
+    <string name="t_drawer_admin">Drawer admin</string>
+    <string name="t_drawer_social">Drawer social</string>
+    <string name="t_drawer_music">Drawer music</string>
+    <string name="t_menu_navigation_drawer"><![CDATA[Menu & Navigation drawer]]></string>
+    <string name="title_activity_drawer_gmail">DrawerGmailActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="t_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="menu_promotions">Promotions</string>
+    <string name="menu_social">Social</string>
+    <string name="menu_primary">Primary</string>
+    <string name="menu_all_inboxes">All inboxes</string>
+    <string name="title_all_labels">ALL LABELS</string>
+    <string name="title_google_apps">GOOGLE APPS</string>
+    <string name="menu_calendar">Calendar</string>
+    <string name="menu_contacts">Contacts</string>
+    <string name="menu_help_feedback"><![CDATA[Help & feedback]]></string>
+    <string name="menu_starred">Starred</string>
+    <string name="menu_important">Important</string>
+    <string name="menu_sent">Sent</string>
+    <string name="menu_scheduled">Schuduled</string>
+    <string name="menu_outbox">Outbox</string>
+    <string name="menu_drafts">Drafts</string>
+    <string name="menu_all_mail">All mail</string>
+    <string name="menu_spam">Spam</string>
+    <string name="menu_trash">Trash</string>
+    <string name="t_gmail">Gmail</string>
+    <string name="t_search_mail">Search mail</string>
+    <string name="title_activity_drawer_admin">DrawerAdminActivity</string>
+    <string name="menu_requests">Requests</string>
+    <string name="menu_reviews">Reviews</string>
+    <string name="menu_payments">Payments</string>
+    <string name="menu_last_actions">Last actions</string>
+    <string name="menu_dashboards">Dashboards</string>
+    <string name="menu_products">Products</string>
+    <string name="title_other">Other</string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_security">Security</string>
+    <string name="menu_profile">Profile</string>
+    <string name="title_hello">Hello</string>
+    <string name="milad_sohrabi">Milad sohrabi</string>
+    <string name="t_progress_bar">Progress bar</string>
+    <string name="t_linear">Linear</string>
+    <string name="t_linear_indeterminate">Linear : Indeterminate</string>
+    <string name="t_linear_determinate">Linear : Determinate</string>
+    <string name="t_circular_determinate">Circular : Determinate</string>
+    <string name="t_circular_indeterminate">Circular : Indeterminate</string>
+    <string name="text_google_maps">Google maps</string>
+    <string name="text_full_screen">Full screen</string>
+    <string name="text_floating">Floating</string>
+    <string name="text_image_chooser">Image chooser</string>
+    <string name="text_list">Simple List</string>
+    <string name="bottom_sheet">Bottom sheet</string>
+    <string name="text_whit_action">With action</string>
+    <string name="text_snackbar">Snack bar</string>
+    <string name="text_tab_layout">Tab layout</string>
+    <string name="t_simple_tab_layout">Simple tab layout</string>
+    <string name="t_tab_layout_with_icon">Tab layout with icon</string>
+    <string name="t_with_icon">With icon</string>
+    <string name="t_scrollable">Scrollable</string>
+    <string name="t_badges">Badges</string>
+    <string name="t_text_icon"><![CDATA[Text & Icon]]></string>
+    <string name="t_custom_tab">Custom tab</string>
+    <string name="t_hide_in_scroll">Hide in scroll</string>
+    <string name="t_only_icon">Only icon</string>
+    <string name="text_hide_toolbar">Hide toolbar</string>
+    <string name="t_vertical">Vertical</string>
+    <string name="t_item_1">Item 1</string>
+    <string name="t_item_2">Item 2</string>
+    <string name="t_item_3">Item 3</string>
+    <string name="t_linear_layout">Linear Layout</string>
+    <string name="info_linear_layout">A layout that arranges other views either horizontally in a single column or vertically in a single row.</string>
+    <string name="t_constraint_layout">Constraint Layout</string>
+    <string name="info_constraint_layout">A ConstraintLayout is a android.view.ViewGroup which allows you to position and size widgets in a flexible way.  Note: ConstraintLayout is available as a support library that you can use on Android systems starting with API level 9 (Gingerbread). As such, we are planning on enriching its API and capabilities over time. This documentation will reflect those changes.</string>
+    <string name="info_relative_layout">RelativeLayout is a view group that displays child views in relative positions. The position of each view can be specified as relative to sibling elements (such as to the left-of or below another view) or in positions relative to the parent RelativeLayout area (such as aligned to the bottom, left or center).</string>
+    <string name="t_relative_layout">Relative layout</string>
+    <string name="t_frame_layout">Frame layout</string>
+    <string name="info_frame_layout">FrameLayout is designed to block out an area on the screen to display a single item. Generally, FrameLayout should be used to hold a single child view, because it can be difficult to organize child views in a way that\'s scalable to different screen sizes without the children overlapping each other. You can, however, add multiple children to a FrameLayout and control their position within the FrameLayout by assigning gravity to each child, using the android:layout_gravity attribute.  Child views are drawn in a stack, with the most recently added child on top. The size of the FrameLayout is the size of its largest child (plus padding), visible or not (if the FrameLayout\'s parent permits). Views that are View.GONE are used for sizing only if setConsiderGoneChildrenWhenMeasuring() is set to true.</string>
+    <string name="info_table_layout">A layout that arranges its children into rows and columns. A TableLayout consists of a number of TableRow objects, each defining a row (actually, you can have other children, which will be explained below). TableLayout containers do not display border lines for their rows, columns, or cells. Each row has zero or more cells; each cell can hold one View object. The table has as many columns as the row with the most cells. A table can leave cells empty. Cells can span columns, as they can in HTML.  The width of a column is defined by the row with the widest cell in that column. However, a TableLayout can specify certain columns as shrinkable or stretchable by calling setColumnShrinkable() or setColumnStretchable(). If marked as shrinkable, the column width can be shrunk to fit the table into its parent object. If marked as stretchable, it can expand in width to fit any extra space. The total width of the table is defined by its parent container. It is important to remember that a column can be both shrinkable and stretchable. In such a situation, the column will change its size to always use up the available space, but never more. Finally, you can hide a column by calling setColumnCollapsed().  The children of a TableLayout cannot specify the layout_width attribute. Width is always MATCH_PARENT. However, the layout_height attribute can be defined by a child; default value is ViewGroup.LayoutParams.WRAP_CONTENT. If the child is a TableRow, then the height is always ViewGroup.LayoutParams.WRAP_CONTENT.  Cells must be added to a row in increasing column order, both in code and XML. Column numbers are zero-based. If you don\'t specify a column number for a child cell, it will autoincrement to the next available column. If you skip a column number, it will be considered an empty cell in that row. See the TableLayout examples in ApiDemos for examples of creating tables in XML.  Although the typical child of a TableLayout is a TableRow, you can actually use any View subclass as a direct child of TableLayout. The View will be displayed as a single row that spans all the table columns.</string>
+    <string name="t_table_layout">Table layout</string>
+    <string name="t_read_string">Read string</string>
+    <string name="example_from_res">This is example text from resuorce</string>
+    <string name="t_read_string_array">Read string array</string>
+    <string name="t_string">String</string>
+    <string name="t_drawable">Drawable</string>
+    <string name="t_all_drawables">All drawables</string>
+    <string name="t_all_drawable_names">All drawable names</string>
+    <string name="t_read_text_file_from_resource">Read text file from resource</string>
+    <string name="text_files">Files</string>
+    <string name="info_font">Android 8.0 (API level 26) introduces a new feature, Fonts in XML, which lets you use fonts as resources. You can add the font file in the res/font/ folder to bundle fonts as resources. These fonts are compiled in your R file and are automatically available in Android Studio. You can access the font resources with the help of a new resource type, font. For example, to access a font resource, use @font/myfont, or R.font.myfont.</string>
+    <string name="t_xml">xml</string>
+    <string name="t_java">Java</string>
+    <string name="t_with_java">With Java</string>
+    <string name="t_with_xml">With xml</string>
+    <string name="t_fonts">Fonts</string>
+    <string name="t_fragment_lifecycle">Fragment Lifecycle</string>
+    <string name="t_fragment_manager">Fragment Manager</string>
+    <string name="t_stroke_width">Stroke width</string>
+    <string name="t_show_stroke">Show Stroke</string>
+    <string name="t_stroke_color">Stroke color</string>
+    <string name="t_custom_text_view">Custom text view</string>
+    <string name="t_circle">Circle</string>
+    <string name="t_shape_view">Shape View</string>
+    <string name="t_rectangle">Rectangle</string>
+    <string name="t_square">Square</string>
+    <string name="t_line">Line</string>
+    <string name="t_triangle">Triangle</string>
+    <string name="t_circle_image_view">Circle image view</string>
+    <string name="t_value_selector">Value Selector</string>
+    <string name="t_sound_effect_1">Sound effect 1</string>
+    <string name="t_sound_effect_2">Sound effect 2</string>
+    <string name="t_sound_effect_3">Sound effect 3</string>
+    <string name="t_without_sound">Without sound</string>
+    <string name="title_about_1">Maiden Shanghai</string>
+    <string name="info_resturant_1">Adding Passion To Indian Cuisine. Vineet Bhatia is widely regarded as the \" face \" of modern progressive Indian cuisine. He created history in 2001 by being the first Indian Chef -Patron to get the coveted Michelin star for his restaurant and yet again in 2009, as being the only Indian chef to have the coveted star for each of his restaurant in London and Geneva. In a consultative capacity, Vineet overlooks the in-flight food at Qatar Airways and at his restaurants in hotels around the world, most notably in Mauritius, Doha, Saudi Arabia, Bahrain and back home in Mumbai. Connect with Vineet on Facebook and follow him on Twitter</string>
+    <string name="t_location">Location</string>
+    <string name="info_restaurant_location">Grosvenor House, a Luxury Collection Hotel, Al Emreef Street, Dubai Marina, Dubai</string>
+    <string name="t_opening_hours">Opening Hours</string>
+    <string name="info_restaurant">Daily | 7:00 PM - 12:00 AM Last order: 11:30 PM</string>
+    <string name="title_about_us">About Us</string>
+    <string name="info_about_infinite_developers">Welcome to Infinite developers, your number one source for all things applications. We\'re dedicated to providing you the best of android apps, with a focus on dependability. customer service, and Security.   We\'re working to turn our passion for apps into a booming online store. We hope you enjoy our products as much as we enjoy offering them to you.   Sincerely,  Infinite developers</string>
+    <string name="info_about_privacy_policy">Our Privacy Policy, which also governs your visit to Our Site, can be found at \"Privacy Link\". Please review our Privacy Policy for information on how We collect, use and share information about our users.</string>
+    <string name="t_efficient">Efficient</string>
+    <string name="t_fast">Fast</string>
+    <string name="t_material_design">Material design</string>
+    <string name="t_support">Support</string>
+    <string name="t_using_java">Using Java</string>
+    <string name="t_infinite_developers">Infinite Developers</string>
+    <string name="info_about_space_company">Space Discover designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 1975 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.</string>
+    <string name="info_our_mission">The mission of our company is to discover new yards. To help human life on another planet. Build new places to live in the Anasas. Creating new and advanced spacecraft and investing in new sectors.</string>
+    <string name="t_collections">Collections</string>
+    <string name="t_chatgram">ChatGram</string>
+    <string name="info_about_chatgram">This app is a two-person chat network. You can share and enjoy your photos, images and texts there. This app keeps your data secure with data encryption capabilities. With this app you have infinite volume of cloud space.</string>
+    <string name="t_feedback">Feedback</string>
+    <string name="info_feedback">Separate and apart from User Content, you may have the ability to submit questions, comments suggestions, reviews, ideas, plans, designs, notes, proposals, drawings, original or creative materials and other information regarding this Site, Us and our products or services (collectively "Feedback"). You agree that Feedback is non-confidential and shall become Our sole property. We shall own exclusive rights, including all intellectual property rights, in and to such Feedback and shall be entitled to the unrestricted use and dissemination of the Feedback for any purpose, commercial or otherwise, without acknowledgment or compensation to you</string>
+    <string name="t_echnology_amp_tools"><![CDATA[Technology & tools]]></string>
+    <string name="t_backend">Backend</string>
+    <string name="info_backend">Node.js \nPHP \nMYSQL \nLinux Host</string>
+    <string name="t_frontend">Frontend</string>
+    <string name="info_frontend">android : JAVA \nios : SWIFT \nlinux : C++ \nwindows : C#</string>
+    <string name="t_team">Team</string>
+    <string name="t_about_application">About application</string>
+    <string name="info_news_apple">iPhone 11 Pro and iPhone 11 Pro Max: the most powerful and advanced smartphones</string>
+    <string name="info_apple_news_body">Cupertino, California — Apple today announced iPhone 11 Pro and iPhone 11 Pro Max, a new pro line for iPhone that delivers advanced performance for users who want the very best smartphone. The new Super Retina XDR display is a pro display with the brightest display ever in an iPhone. The powerful Apple-designed A13 Bionic chip provides unparalleled performance for every task while enabling an unprecedented leap in battery life to easily get through the day. A new triple-camera system provides a pro-level camera experience with an Ultra Wide, Wide and Telephoto camera, delivering huge improvements to low-light photography and offering the highest quality video in a smartphone that is great for shooting action videos.
+iPhone 11 Pro and iPhone 11 Pro Max come in four gorgeous finishes including a beautiful new midnight green, and will be available for pre-order beginning Friday, September 13 and in stores beginning Friday, September 20.
+
+“iPhone 11 Pro and iPhone 11 Pro Max are the most powerful and advanced smartphones we have ever made. They are packed with sophisticated technology that pros can count on to get their work done, and for anyone who wants the very best device made, even if they are not a pro,” said Phil Schiller, Apple’s senior vice president of Worldwide Marketing. “iPhone 11 Pro has the first triple-camera system in iPhone and is far and away the best camera we’ve ever made, it provides our customers with great range of creative control and advanced photo and video editing features in iOS 13. The Super Retina XDR is the brightest and most advanced display in iPhone and the A13 Bionic chip sets a new bar for smartphone performance and power efficiency.”
+
+Pro Design and Display
+iPhone 11 Pro and iPhone 11 Pro Max have a textured matte glass back and polished stainless steel band, and come in four stunning finishes including a beautiful new midnight green. The most powerful devices are also designed to be durable — iPhone 11 Pro and iPhone 11 Pro Max feature the toughest glass ever in a smartphone and are rated IP68 for water resistance up to 4 meters for up to 30 minutes, and are protected against everyday spills including coffee and soda.1
+The new Super Retina XDR display, a custom-designed OLED, provides users an immersive HDR viewing experience for movies and other high-definition video with up to 1,200 nits brightness. Super Retina XDR features wide color support with system-wide color management and True Tone to offer a more natural viewing experience. With a 2 million-to-one contrast ratio with true blacks, pro users can enjoy a more vivid viewing experience for HDR videos and photos, and the Super Retina XDR display is even more power efficient. Customers can interact with their favorite apps in a quick, seamless way with Haptic Touch deeply integrated across iOS 13 to provide app shortcuts for everyday tasks right from the Home screen, including taking a selfie in Camera, checking an appointment in Calendar or previewing email within Mail with just a simple press.</string>
+    <string name="info_earth_news">ASCENSION FLIGHTS: BRITISH COMPANY LAUNCHES FUNERAL SERVICE WHERE FAMILIES CAN SCATTER ASHES IN SPACE</string>
+    <string name="info_earch_news_body">A British company is launching the first extra-terrestrial funeral service that means people can have their ashes scattered in space. Offered by Ascension Flights, the process allows families to send their loved one’s remains to the edge of Earth’s atmosphere and costs upwards of £795. Using the Ascension 1 aircraft, a person’s cremated remains are carried 22 miles up to be released into the high-altitude winds of the stratosphere before the emptied canister returns to Earth. As part of the service, the two-and-a-half hour process is also filmed on an HD camera so that friends and family can watch the ashes being scattered while residual moisture in the canister creates a plume of glitter. The launches are set to take place at the company’s South Yorkshire base but can be held elsewhere for a higher fee. Pet funerals are also on offer. All flights are authorised by the Civil Aviation Authority, which provides a launch window and warns nearby pilots. The company was formed by two ex-University of Sheffield students who appeared on Dragon’s Den with their concept and have been developing the technology for five years. “Many of the first generation of space fans will never experience space flight,” co-founder Dr Chris Rose said. “Our new service enables families the opportunity to fulfil their loved ones’ dreams. We feel it’s the ultimate send-off for a life well lived. “Fundamentally, we are all stardust, so this feels like a fitting tribute to those of us who have lived through the prologue to the space age.”</string>
+    <string name="info_solar">What Spacecraft are Headed into Interstellar Space?</string>
+    <string name="info_solar_body">Five spacecraft have achieved enough velocity to eventually travel beyond the boundaries of our solar system. Two of them reached the unexplored space between the stars after several decades in space.  \nVoyager 1 went interstellar in 2012 and Voyager 2 joined it in 2018. Both spacecraft are still in communication with Earth. Both spacecraft launched in 1977. \nNASA\'s New Horizons spacecraft—currently exploring the an icy region beyond Neptune called the Kuiper Belt—eventually will leave our solar system.</string>
+    <string name="info_rxjava_1">RxJava is described officially as \"a library for composing asynchronous and event-based programs by using observable sequences\". \nBut what does this actually mean? Let\'s put this library into context.  One of the challenges in writing robust Android apps is the dynamic nature of changing inputs. \nIn traditional imperative programming models, values have to be explicitly set on variables for them to be updated. If one dependent value changes, the value will not be updated without adding another line of code. \nConsider the following example:</string>
+    <string name="info_rxjava_code1">// init variables \nint i, j, k;   \n\n// Init inputs \ni = 1; j = 2;  \n\n// Set output value \nk = i + j;  \n\n// Update a dependent value \nj = 4; k = ?  // What should k be?</string>
+    <string name="info_rxjava_2">State variables such as k intrinsically may not reflect the current value of its inputs. \nTraditional asynchronous programming approaches tend to rely on callbacks to update these changes, \nbut this way can lead to a problem known as callback hell. Reactive programming (see an intro here) addresses these issues by providing a framework to describe outputs to reflect their changing inputs. RxJava, which is a port of the Reactive Extensions library from .NET, enables Android apps to be built in this style.  Check out Kaushik\'s video introduction to RxJava talk which provides a solid overview of the library. \nFor a tutorial, check out this tutorial by Chris Arriola.</string>
+    <string name="t_article">Article</string>
+    <string name="info_rxjava_3">The basic building blocks of reactive code are Observables and Observers. An Observable emits items; an Observer consumes those items. An Observable may emit any number of items (including zero items), then it terminates either by successfully completing, or due to an error. An Observable can then have any number of observers. For each Observer attached, an Observable calls Observer#onNext() for every item, followed by either Observer#onComplete() or Observer#onError(). Keep in mind that Observables often don\'t start emitting items until there\'s at least one subscriber.</string>
+    <string name="info_ocean">Global warming is speeding up Earth‘s massive ocean currents</string>
+    <string name="info_ocean_1">The oceans’ great continent-wrapping currents, each one moving as much water as all the world’s rivers combined, can rightly be considered the planet’s circulatory system. And this circulation, it appears, has started to thump faster: For nearly 25 years the currents have been rapidly speeding up, partly because of global warming.  That’s the conclusion of a new paper today in Science Advances. Based on observations combined with models, the authors claim that from 1990 to 2013, the energy of the currents increased by some 15% per decade. “This is a really huge increase,” says Susan Wijffels, an oceanographer at the Woods Hole Oceanographic Institution. “It’s going to stimulate a lot of other work.” If the acceleration is real, it could affect jet streams, weather patterns, and the amount of heat stored in the ocean’s depths.  Oceanographers have suspected that climate warming is affecting ocean circulation, but so far, observations haven’t shown a trend, says Hu Shijian, an oceanographer at the Chinese Academy of Sciences’s Institute of Oceanology and lead author of the study. The Kuroshio Current, running up Eastern Asia, has seemed stable, whereas the Agulhas, flowing along Africa’s eastern coast, has broadened, fracturing into meandering eddies. The Atlantic Ocean’s Gulf Stream may be weakening as Arctic melt slows its driver, the sinking of salty water in the North Atlantic, whereas currents in the Pacific Ocean have seen a strong uptick. Hu decided only a global view could reveal any overall trend. \\nNo sustained, direct measurements of currents around the world are available, however. Instead, Hu’s team turned to so-called reanalyses, which combine observations of the ocean and atmosphere with computer models to fill in the gaps and produce a global picture. The approach is tricky to use for time spans of decades: Changes in observations, for example when new satellites come online, can cause unknown biases.  So Hu’s team combined five different reanalyses of ocean circulation, hoping their differing methods could reveal a true trend. From each one they extracted the ocean’s kinetic energy month by month, at a coarse scale that would ignore the turbulence of eddies and storms. And each showed a distinct rise starting around 1990.  Was it real? A look at data from the Argo array, a fleet of nearly 4000 robotic floats deployed around the world, provided the best test. The floats have been bobbing up and down in the ocean’s uppermost 2000 meters for the past 15 years, measuring temperature and salinity. They don’t track velocity through the water column. But their data do indicate where winds have piled up water, helping create differences in pressure that drive large-scale flows. By combining those data with the floats’ own current-borne trajectories, investigators can reconstruct overall currents and their speed.  The data set, compiled by oceanographer Alison Gray of the University of Washington, Seattle, covers only 6 years, from 2005 to 2010, but Hu found that it reveals an even clearer global speedup than the reanalysis models. “The evidence in the Argo data is absolutely astonishing,” says Eleanor Frajka-Williams, an oceanographer at the United Kingdom’s National Oceanography Centre, who was not part of the study.  Gray says she was startled by the magnitude of the acceleration. But she notes that ocean winds, which drive most currents, have steadily increased over the past 3 decades. And Hu says there’s good evidence that human activity has contributed to that strengthening. For example, in the Southern Hemisphere, ozone depletion and greenhouse warming have altered atmospheric circulation to push the Southern Ocean’s famed westerly winds to the south, perhaps causing a slight strengthening and spreading of the Antarctic Circumpolar Current. Meanwhile, heat from the warming tropical Atlantic has goosed the Walker Circulation, an equatorial pattern that drives the Pacific trade winds.  Still, natural fluctuations can’t be ruled out, says Gerrit Lohmann, a climate scientist at the Alfred Wegener Institute. Over the past few decades, long-term cooling off western North America has caused Pacific winds to pick up—and that cooling may reflect natural oscillations in the ocean’s state. Other researchers doubt these cycles exist. Either way, Hu thinks the oscillations could be responsible for at most one-third of the wind speedup.  The ocean acceleration could have globe-spanning effects. Stronger tropical currents could carry more warm water to higher latitudes, for example. Because carbon dioxide (CO2) is less soluble in warm water, that could slow the ocean’s uptake of CO2 from the atmosphere. The high-latitude warming may also be shifting weather patterns. At the same time, Hu adds that by reaching deep into the ocean, the acceleration could boost the storage of heat in the depths, helping slow the warming on land. “This is the first global study,” says Janet Sprintall, a co-author and oceanographer at the Scripps Institution of Oceanography. “There’s a lot of uncertainty.”  Oceanographers will likely fan out to test the study’s findings. Perhaps the strongest confirmation could come from updated data from the Argo floats, due out later this year. Still, it will probably take another decade of observations to be sure the trend is real and driven by global warming, Wijffels says. “This paper does highlight how ill prepared we are to truly diagnose what’s going on.”</string>
+    <string name="t_welcome">Welcome</string>
+    <string name="t_forget_password">Forget Password</string>
+    <string name="t_password">Password</string>
+    <string name="t_username">Username</string>
+    <string name="t_sign_up">Sign Up</string>
+    <string name="t_login">Login</string>
+    <string name="info_about_sally">I am the doctor you\'re looking for.  Hello lads and ladies! I\'m learning about important dates in history. Wanna be one of them?  \nI\'m a bold kind of gal, who likes nothing more than socialising with the right person.  \nThe first thing people usually notice about me is my smart personality, closly followed by my smashing moles. I\'m the woman for you, if you like great moles and fingernails, particularly combined with ample baby oil.  \nI work as a doctor, helping women. This allows me to exercise my skills: and fixing cars.  \nMy life goals include: \n\t\tStar in the next Star Wars film. \n\t\tFall in love with you \n\t\tBecome the best doctor I can be \n\t\tHelp all the women in the world \n\nIf you\'re the right person for me, you\'ll be considerate and optimistic. You won\'t be afraid to speak their mind and will have a healthy respect for honesty.  \nMy ideal date would involve baking in Scotland with a beautiful person by my side. While we\'re there, I admire your beautiful eyelashes whilst feeling I\'m the luckiest woman on the planet.  \nLet me tell you about a funny thing that happened to me last week. I was just helping an elderly across the road when I was hit by a car. I needed three stitches. BOOM!  \nMay the force be with you.  \nLight me fire, babe  \n\nSally</string>
+    <string name="about_developer">I am the Android Developer you\'re looking for.\n\n  Hello lads! I\'m learning about important dates in history. Wanna be one of them?\n\n  I\'m a helpful kind of chap, who likes nothing more than play game with the right man.\n\n  The first thing people usually notice about me is my admirable personality, closly followed by my smashing eyebrows. I\'m the man for you, if you like great eyebrows and elbows, particularly combined with ample baby oil.\n\n  I work as a Android Developer, helping criminals. This allows me to exercise my skills: diligence and investigating crooks.\n\n  My life goals include:\n Star in the next Star Wars film.\n Fall in love with you\n Become the best Android Developer I can be\n Help all the criminals in the world\n If you\'re the right man for me, you\'ll be caring and remarkable. You won\'t be afraid to speak their mind and will have a healthy respect for .\n\n  My ideal date would involve learning in New York with a slimy man by my side. While we\'re there, I admire your short thighs whilst feeling I\'m the luckiest man on the planet.\n\n  Let me tell you about a funny thing that happened to me last week. I was just helping an elderly across the road when I was hit by a car. I needed three stitches. BOOM!\n\n  May the force be with you.\n\n  Light me fire, babe\n\n  Jack Harrison</string>
+    <string name="t_profile">Profile</string>
+    <string name="t_account">Account</string>
+    <string name="t_tasks">Tasks</string>
+    <string name="t_todo">Todo</string>
+    <string name="t_daily_tasks">Daily Tasks</string>
+    <string name="t_new_task">New Task</string>
+    <string name="t_paste">Paste</string>
+    <string name="t_copy">Copy</string>
+    <string name="t_title">Title</string>
+    <string name="t_description">Description</string>
+    <string name="t_zoom_in">Zoom in</string>
+    <string name="t_zoom_out">Zoom out</string>
+    <string name="t_zoom_in_down">Zoom in down</string>
+    <string name="t_zoom_in_left">Zoom in left</string>
+    <string name="t_zoom_out_left">Zoom out left</string>
+    <string name="t_zoom_out_down">Zoom out down</string>
+    <string name="t_zoom">Zoom</string>
+    <string name="t_zoom_animation">Zoom animation</string>
+    <string name="t_slide_in_top">Slide in top</string>
+    <string name="t_slide_out_top">Slide out top</string>
+    <string name="t_slide_out_bottom">Slide out bottom</string>
+    <string name="t_slide_in_bottom">Slide in bottom</string>
+    <string name="t_slide_animation">Slide Animation</string>
+    <string name="t_rotate_animation">Rotate Animation</string>
+    <string name="t_fade_in">Fade in</string>
+    <string name="t_fade_out">Fade out</string>
+    <string name="t_fade_animation">Fade animation</string>
+    <string name="t_stop">Stop</string>
+    <string name="text_audio_recorder">Audio Recorder</string>
+    <string name="t_media_player">Media Player</string>
+    <string name="t_no_file">No File</string>
+    <string name="t_your_text">your text</string>
+    <string name="t_text_to_speech">Text to speech</string>
+    <string name="t_silent_mode">Silent Mode</string>
+    <string name="t_ringer_mode">Ringer Mode</string>
+    <string name="t_vibrate_mode">Vibrate Mode</string>
+    <string name="t_normal_mode">Normal Mode</string>
+    <string name="t_audio_manager">Audio Manager</string>
+    <string name="t_volume">Volume</string>
+    <string name="t_ringtone">Ringtone</string>
+    <string name="t_media">Media</string>
+    <string name="t_alarms">Alarms</string>
+    <string name="t_calls">Calls</string>
+    <string name="t_chips">Chips</string>
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="all_devices">All devices</string>
+    <string name="start">Start</string>
+    <string name="finished">Finished</string>
+    <string name="devices">Devices</string>
+    <string name="searching">Searching</string>
+    <string name="new_name">New name</string>
+    <string name="change">Change</string>
+    <string name="error">Error</string>
+    <string name="successfully">Successfully</string>
+    <string name="failed">Failed</string>
+    <string name="select_device">Select Device</string>
+    <string name="connect">Connect</string>
+    <string name="dont_support_bluetooth">Don\'t support bluetooth</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="not_found">Not found</string>
+    <string name="scan_devices">Scan devices</string>
+    <string name="paired_devices">Paired devices</string>
+    <string name="no_paired_devices">No paired devices</string>
+    <string name="bluetooth_is_off">Bluetooth is off</string>
+    <string name="location_permission_denied">Location permission denied</string>
+</resources>

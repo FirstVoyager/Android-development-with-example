@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="@dimen/margin_card_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin_card_big">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close_black_24dp"
+                style="@style/Widget.AppCompat.ActionButton"
+                android:id="@+id/imageButton_close"
+                android:layout_gravity="end"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_margin="@dimen/margin_card_medium"
+                android:src="@drawable/ic_cookie_512dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Display3"
+                android:text="@string/text_cookie"
+                android:textColor="@color/color_black"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:gravity="center"
+                android:layout_margin="@dimen/margin_card_big"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:maxLength="121"
+                android:layout_height="wrap_content"
+                android:text="@string/info_cookie_message"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_like"
+                android:layout_width="wrap_content"
+                android:minWidth="150dp"
+                android:layout_height="wrap_content"
+                android:minHeight="45dp"
+                android:textColor="@color/color_white"
+                android:layout_marginBottom="@dimen/margin_card_big"
+                android:text="@string/text_i_like_cookies"
+                android:background="@drawable/back_black_button"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

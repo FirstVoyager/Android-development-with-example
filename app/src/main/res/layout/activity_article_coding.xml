@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UIMore.Article.ArticleCodingActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_scrollFlags="scroll|enterAlwaysCollapsed|snap"
+        android:theme="@style/AppTheme.DarkToolbar">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/toolbar" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="80dp"
+                android:text="Android Development"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:background="#90F7E2E2"
+                android:textColor="@color/color_black"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RxJava"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/color_black"
+                style="@style/TextAppearance.AppCompat.Display1"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jan 12, 2019 by Github users"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_test_12"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/info_rxjava_1"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:lineSpacingExtra="4.5dp"
+                android:textColor="@color/color_black"/>
+
+            <LinearLayout
+                android:background="#90F7E2E2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4.5dp"
+                    android:textColor="@color/color_black"
+                    android:padding="16dp"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:text="@string/info_rxjava_code1"/>
+
+                <FrameLayout
+                    android:layout_gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:layout_gravity="center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:id="@+id/progressbar"
+                        android:visibility="invisible"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:backgroundTint="@color/color_blue_800"
+                        android:id="@+id/button_run"
+                        android:text="Run"
+                        android:layout_margin="8dp"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/color_black"
+                android:lineSpacingExtra="4.5dp"
+                android:padding="8dp"
+                android:text="@string/info_rxjava_2"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:padding="8dp"
+                android:text="Observables and Observers"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:textColor="@color/color_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"
+                android:lineSpacingExtra="4.5dp"
+                android:text="@string/info_rxjava_3"/>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

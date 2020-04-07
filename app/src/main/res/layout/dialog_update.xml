@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_shuttle_512dp"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="-44dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginStart="@dimen/margin_card_big"
+        android:layout_marginEnd="@dimen/margin_card_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/radius_card_big">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView_header"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_header"
+                android:src="@drawable/image_test_5"
+                android:scaleType="fitXY"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_card_medium"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_title"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/text_about_update"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_red"
+                    android:text="V4.2.1"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp"
+                android:text="@string/info_update"
+                android:layout_margin="@dimen/margin_card_medium"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_update"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_marginEnd="@dimen/margin_card_medium"
+            android:layout_marginBottom="@dimen/margin_card_big"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:background="@drawable/back_update_button"
+            android:text="@string/text_update"
+            android:layout_width="wrap_content"
+            android:minWidth="120dp"
+            android:minHeight="45dp"
+            android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

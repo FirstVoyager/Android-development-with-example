@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/ic_play_arrow_black_24dp"
+        android:title="@string/t_play"
+        android:id="@+id/menu_song_play"/>
+
+    <item
+        android:icon="@drawable/ic_share_black_24dp"
+        android:title="@string/text_share"
+        android:id="@+id/menu_song_share"/>
+
+    <item
+        android:icon="@drawable/ic_delete_black_24dp"
+        android:title="@string/text_delete"
+        android:id="@+id/menu_song_delete"/>
+
+    <item
+        android:icon="@drawable/ic_info_outline_black_24dp"
+        android:title="@string/text_details"
+        android:id="@+id/menu_song_details"/>
+
+</menu>

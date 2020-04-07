@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UIMore.TaskManager.TaskManagerListAndRecentlyActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbarLayout"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:id="@+id/toolbar"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_black_24dp"
+        app:backgroundTint="@color/color_blue_800"
+        android:tint="@android:color/white"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    app:cardBackgroundColor="#4FC3F7"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_works"
+                        android:background="?attr/selectableItemBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:padding="12dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_work_black_24dp"
+                            app:tint="@android:color/white"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Work"
+                            android:textColor="@android:color/white"
+                            style="@style/TextAppearance.AppCompat.Large"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:textColor="@android:color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="25 Tasks"
+                            style="@style/TextAppearance.AppCompat.Medium"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardBackgroundColor="#F48FB1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_music"
+                        android:background="?attr/selectableItemBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:padding="12dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_music_note_black_24dp"
+                            app:tint="@android:color/white"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:text="Music"
+                            style="@style/TextAppearance.AppCompat.Large"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:text="10 Tasks"
+                            style="@style/TextAppearance.AppCompat.Medium"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    app:cardBackgroundColor="#AB47BC"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_travel"
+                        android:background="?attr/selectableItemBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:padding="12dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_flight_black_24dp"
+                            app:tint="@android:color/white"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Travel"
+                            android:textColor="@android:color/white"
+                            style="@style/TextAppearance.AppCompat.Large"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:text="12 Tasks"
+                            style="@style/TextAppearance.AppCompat.Medium"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardBackgroundColor="#689F38"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_fitness"
+                        android:background="?attr/selectableItemBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:padding="12dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_fitness_center_black_24dp"
+                            app:tint="@android:color/white"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fitness"
+                            android:textColor="@android:color/white"
+                            style="@style/TextAppearance.AppCompat.Large"/>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:text="30 Tasks"
+                            style="@style/TextAppearance.AppCompat.Medium"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recently Open Todo"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout_foods"
+                            android:background="?attr/selectableItemBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="8dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="240dp"
+                                android:layout_height="140dp"
+                                android:src="@drawable/image_test_1"
+                                android:scaleType="centerCrop"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Buy Foods"
+                                style="@style/TextAppearance.AppCompat.Large"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_width="match_parent"
+                                android:lines="2"
+                                android:layout_height="wrap_content"
+                                android:text="Shopping for the weekends especially the fruits"
+                                style="@style/TextAppearance.AppCompat.Medium"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout_develop"
+                            android:background="?attr/selectableItemBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="8dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="240dp"
+                                android:layout_height="140dp"
+                                android:src="@drawable/image_code_header"
+                                android:scaleType="centerCrop"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Develop Android app"
+                                style="@style/TextAppearance.AppCompat.Large"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_width="match_parent"
+                                android:lines="2"
+                                android:layout_height="wrap_content"
+                                android:text="Develop a simple android application for Twitter with java ans xml"
+                                style="@style/TextAppearance.AppCompat.Medium"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout_gitar"
+                            android:background="?attr/selectableItemBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="8dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="240dp"
+                                android:layout_height="140dp"
+                                android:src="@drawable/image_test_4"
+                                android:scaleType="centerCrop"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Gitar"
+                                style="@style/TextAppearance.AppCompat.Large"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_width="match_parent"
+                                android:lines="2"
+                                android:layout_height="wrap_content"
+                                android:text="Performing guitar class exercises"
+                                style="@style/TextAppearance.AppCompat.Medium"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout_london"
+                            android:background="?attr/selectableItemBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="8dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="240dp"
+                                android:layout_height="140dp"
+                                android:src="@drawable/image_test_10"
+                                android:scaleType="centerCrop"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="London"
+                                style="@style/TextAppearance.AppCompat.Large"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_width="match_parent"
+                                android:lines="2"
+                                android:layout_height="wrap_content"
+                                android:text="I'm going to visit my sister in the big city of London next year"
+                                style="@style/TextAppearance.AppCompat.Medium"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout_london1"
+                            android:background="?attr/selectableItemBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="8dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="240dp"
+                                android:layout_height="140dp"
+                                android:src="@drawable/image_test_10"
+                                android:scaleType="centerCrop"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="London"
+                                style="@style/TextAppearance.AppCompat.Large"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_width="match_parent"
+                                android:lines="2"
+                                android:layout_height="wrap_content"
+                                android:text="I'm going to visit my sister in the big city of London next year"
+                                style="@style/TextAppearance.AppCompat.Medium"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout_gitar1"
+                            android:background="?attr/selectableItemBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="8dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="240dp"
+                                android:layout_height="140dp"
+                                android:src="@drawable/image_test_4"
+                                android:scaleType="centerCrop"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Gitar"
+                                style="@style/TextAppearance.AppCompat.Large"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_width="match_parent"
+                                android:lines="2"
+                                android:layout_height="wrap_content"
+                                android:text="Performing guitar class exercises"
+                                style="@style/TextAppearance.AppCompat.Medium"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout_develop1"
+                            android:background="?attr/selectableItemBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="8dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="240dp"
+                                android:layout_height="140dp"
+                                android:src="@drawable/image_code_header"
+                                android:scaleType="centerCrop"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Develop Android app"
+                                style="@style/TextAppearance.AppCompat.Large"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_width="match_parent"
+                                android:lines="2"
+                                android:layout_height="wrap_content"
+                                android:text="Develop a simple android application for Twitter with java ans xml"
+                                style="@style/TextAppearance.AppCompat.Medium"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout_foods1"
+                            android:background="?attr/selectableItemBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="8dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="240dp"
+                                android:layout_height="140dp"
+                                android:src="@drawable/image_test_1"
+                                android:scaleType="centerCrop"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:lines="1"
+                                android:singleLine="true"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Buy Foods"
+                                style="@style/TextAppearance.AppCompat.Large"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_width="match_parent"
+                                android:lines="2"
+                                android:layout_height="wrap_content"
+                                android:text="Shopping for the weekends especially the fruits"
+                                style="@style/TextAppearance.AppCompat.Medium"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

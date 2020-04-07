@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UserInterface.ShapeViewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/t_circle"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginTop="8dp"/>
+
+        <limitless.android.androiddevelopment.CustomView.ShapeView
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:shape_type="circle"
+            app:shape_stroke="true"
+            app:shape_strokeColor="@color/colorAccent"
+            app:shape_strokeWidth="4dp"
+            app:shape_backgroundColor="#FF6C6C"
+            app:shape_shadowColor="@color/color_black"
+            app:shape_shadowRadius="8dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/t_square"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginTop="8dp"/>
+
+        <limitless.android.androiddevelopment.CustomView.ShapeView
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:shape_type="square"
+            app:shape_stroke="true"
+            app:shape_strokeColor="@color/colorPrimary"
+            app:shape_strokeWidth="4dp"
+            app:shape_backgroundColor="#98EE40"
+            app:shape_shadowColor="#744AF1"
+            app:shape_shadowRadius="4dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/t_rectangle"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginTop="8dp"/>
+
+        <limitless.android.androiddevelopment.CustomView.ShapeView
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:shape_type="rectangle"
+            app:shape_stroke="true"
+            app:shape_strokeColor="#F30C0C"
+            app:shape_strokeWidth="4dp"
+            app:shape_backgroundColor="#424D38"
+            app:shape_shadowColor="#744AF1"
+            app:shape_shadowRadius="4dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/t_line"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginTop="8dp"/>
+
+        <limitless.android.androiddevelopment.CustomView.ShapeView
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:shape_type="line"
+            app:shape_lineWidth="8dp"
+            app:shape_lineColor="@color/colorAccent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/t_triangle"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginTop="8dp"/>
+
+        <limitless.android.androiddevelopment.CustomView.ShapeView
+            android:paddingTop="16dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="16dp"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            app:shape_type="triangle"
+            app:shape_backgroundColor="#F30707"
+            app:shape_stroke="true"
+            app:shape_strokeWidth="2dp"
+            app:shape_strokeColor="#4A148C"
+            app:shape_shadowRadius="4dp"
+            app:shape_shadowColor="#000"/>
+
+    </LinearLayout>
+
+</ScrollView>

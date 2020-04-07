@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="limitless.android.androiddevelopment">
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.ADD_VOICEMAIL" />
+    <uses-permission android:name="android.permission.USE_SIP" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_WAP_PUSH" />
+    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <application
+        android:name=".ApplicationLoader"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Activity.CodeMore.GpsActivity"></activity>
+        <activity
+            android:name=".Activity.CodeMore.BluetoothActivity"
+            android:label="@string/bluetooth" />
+        <activity
+            android:name=".Activity.UserInterface.ChipsActivity"
+            android:label="@string/t_chips" />
+        <activity
+            android:name=".Activity.CodeMore.AudioManagerActivity"
+            android:label="@string/t_audio_manager" />
+        <activity
+            android:name=".Activity.CodeMore.TextToSpeechActivity"
+            android:label="@string/t_text_to_speech" />
+        <activity
+            android:name=".Activity.CodeMore.MediaPlayerActivity"
+            android:label="@string/t_media_player" />
+        <activity
+            android:name=".Activity.CodeMore.AudioRecorderActivity"
+            android:label="@string/text_audio_recorder" />
+        <activity
+            android:name=".Activity.CodeMore.AnimationFadeActivity"
+            android:label="@string/t_fade_animation" />
+        <activity
+            android:name=".Activity.CodeMore.AnimationRotateActivity"
+            android:label="@string/t_rotate_animation" />
+        <activity
+            android:name=".Activity.CodeMore.AnimationSlideActivity"
+            android:label="@string/t_slide_animation" />
+        <activity
+            android:name=".Activity.CodeMore.AnimationZoomActivity"
+            android:label="@string/t_zoom_animation" />
+        <activity
+            android:name=".Activity.CodeMore.ClipboardManagerActivity"
+            android:label="Clipboard" />
+        <activity
+            android:name=".Activity.UIMore.Music.MusicSimpleActivity"
+            android:theme="@style/AppTheme.NoActionBar.Withe1" />
+        <activity
+            android:name=".Activity.UIMore.TaskManager.TaskManagerNewActivity"
+            android:label="@string/t_new_task"
+            android:theme="@style/AppTheme.NewTask"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activity.UIMore.TaskManager.TaskManagerChartViewActivity"
+            android:label="@string/t_daily_tasks"
+            android:theme="@style/AppTheme.NoActionBar.Withe"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activity.UIMore.TaskManager.TaskManagerListAndRecentlyActivity"
+            android:label="@string/t_todo"
+            android:theme="@style/AppTheme.NoActionBar.Red_600"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activity.UIMore.TaskManager.TaskManagerListsActivity"
+            android:label="@string/t_tasks"
+            android:theme="@style/AppTheme.NoActionBar.Withe" />
+        <activity
+            android:name=".Activity.UIMore.Profile.ProfileWithPostsActivity"
+            android:label="@string/t_profile"
+            android:theme="@style/AppTheme.WithPost" />
+        <activity
+            android:name=".Activity.UIMore.Profile.ProfileTelegramActivity"
+            android:label="Telegram"
+            android:theme="@style/AppTheme.Telegram" />
+        <activity
+            android:name=".Activity.UIMore.Profile.ProfileDeveloperActivity"
+            android:label="User Info"
+            android:theme="@style/AppTheme.ProfileDeveloper" />
+        <activity
+            android:name=".Activity.UIMore.Profile.ProfileBigHeaderActivity"
+            android:theme="@style/AppTheme.ArticleBigHeader" />
+        <activity
+            android:name=".Activity.UIMore.Verification.VerificationCustomKeyboardDarkActivity"
+            android:theme="@style/AppTheme.CustomKeyboardDark"
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden" />
+        <activity
+            android:name=".Activity.UIMore.Verification.VerificationCustomKeyboardLightActivity"
+            android:theme="@style/AppTheme.CustomKeyboardLight"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity
+            android:name=".Activity.UIMore.Verification.VerificationCodeActivity"
+            android:theme="@style/AppTheme.VerificationCode" />
+        <activity
+            android:name=".Activity.UIMore.Verification.VerificationPhoneActivity"
+            android:theme="@style/AppTheme.VerificationSimple" />
+        <activity
+            android:name=".Activity.UIMore.Login.LoginCardViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.UIMore.Login.LoginWithDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.UIMore.Login.LoginWithTabActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activity.UIMore.Login.LoginSimpleActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activity.UserInterface.ValueSelectorActivity"
+            android:label="@string/t_value_selector" />
+        <activity
+            android:name=".Activity.UserInterface.CircleImageViewActivity"
+            android:label="@string/t_circle_image_view" />
+        <activity
+            android:name=".Activity.UserInterface.ShapeViewActivity"
+            android:label="@string/t_shape_view" />
+        <activity
+            android:name=".Activity.UserInterface.CustomTextViewActivity"
+            android:label="@string/t_custom_text_view" />
+        <activity
+            android:name=".Activity.UserInterface.FragmentManagerActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.UserInterface.FragmentLifecycleActivity"
+            android:label="@string/t_fragment_lifecycle" />
+        <activity
+            android:name=".Activity.UserInterface.FontsActivity"
+            android:label="@string/t_fonts" />
+        <activity
+            android:name=".Activity.UserInterface.FilesActivity"
+            android:label="@string/text_files" />
+        <activity
+            android:name=".Activity.UserInterface.DrawablesActivity"
+            android:label="@string/t_drawable" />
+        <activity
+            android:name=".Activity.UserInterface.StringActivity"
+            android:label="@string/t_string" />
+        <activity
+            android:name=".Activity.UserInterface.TableLayoutActivity"
+            android:label="@string/t_table_layout" />
+        <activity
+            android:name=".Activity.UserInterface.FrameLayoutActivity"
+            android:label="@string/t_frame_layout" />
+        <activity
+            android:name=".Activity.UserInterface.RelativeLayoutActivity"
+            android:label="@string/t_relative_layout"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.UserInterface.ConstraintLayoutActivity"
+            android:label="@string/t_constraint_layout"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.UserInterface.LinearLayoutActivity"
+            android:label="@string/t_linear_layout" />
+        <activity
+            android:name=".Activity.UserInterface.HideToolbarTabLayoutActivity"
+            android:label="@string/text_hide_toolbar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.UserInterface.CustomTabLayoutActivity"
+            android:label="@string/t_custom_tab" />
+        <activity android:name=".Activity.UserInterface.SimpleTabLayoutActivity" />
+        <activity
+            android:name=".Activity.UserInterface.TablayoutActivity"
+            android:label="@string/text_tab_layout" />
+        <activity
+            android:name=".Activity.UserInterface.SnackbarActivity"
+            android:label="@string/text_snackbar" />
+        <activity
+            android:name=".Activity.UserInterface.BottomSheetActivity"
+            android:label="@string/bottom_sheet" />
+        <activity
+            android:name=".Activity.UserInterface.ProgressBarActivity"
+            android:label="@string/t_progress_bar" />
+        <activity
+            android:name=".Activity.UserInterface.DrawerAdminActivity"
+            android:label="@string/t_drawer_admin"
+            android:theme="@style/AppTheme.DrawerAdmin" />
+        <activity
+            android:name=".Activity.UserInterface.DrawerGmailActivity"
+            android:label="@string/t_drawer_gmail"
+            android:theme="@style/AppTheme.Gmail"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activity.UserInterface.SimpleDrawerActivity"
+            android:label="@string/t_menu_navigation_drawer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.UserInterface.MenuActivity"
+            android:label="@string/text_menu_drawer" />
+        <activity
+            android:name=".Activity.UserInterface.List2Activity"
+            android:label="@string/text_android_lists" />
+        <activity
+            android:name=".Activity.UserInterface.ListActivity"
+            android:label="@string/text_lists" />
+        <activity
+            android:name=".Activity.UserInterface.DialogActivity"
+            android:label="@string/text_dialog" />
+        <activity
+            android:name=".Activity.UserInterface.CardsActivity"
+            android:label="@string/text_cards" />
+        <activity
+            android:name=".Activity.UserInterface.FloatingActionButtonActivity"
+            android:label="@string/text_floating_action_button" />
+        <activity
+            android:name=".Activity.UserInterface.ButtonsActivity"
+            android:label="@string/text_buttons" />
+        <activity
+            android:name=".Activity.UserInterface.BannerActivity"
+            android:label="@string/Banner" />
+        <activity
+            android:name=".Activity.UserInterface.BackdropActivity"
+            android:label="@string/text_backdrop" />
+        <activity
+            android:name=".Activity.UserInterface.AppbarTopCollapseImageActivity"
+            android:label="@string/text_collapse"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.UserInterface.AppbarTopActionModeActivity"
+            android:label="@string/text_action_mode"
+            android:theme="@style/AppTheme.Light" />
+        <activity
+            android:name=".Activity.UserInterface.AppbarTopRegularActivity"
+            android:label="@string/text_regular"
+            android:theme="@style/AppTheme.NoToolbar" />
+        <activity
+            android:name=".Activity.UserInterface.AppbarTopActivity"
+            android:label="@string/text_app_bar_top" />
+        <activity
+            android:name=".Activity.UserInterface.AppbarBottomHideOnScrollActivity"
+            android:label="@string/text_hide_on_scroll" />
+        <activity
+            android:name=".Activity.UserInterface.AppbarBottomInsetFABActivity"
+            android:label="@string/text_inset_fab"
+            android:theme="@style/AppTheme.NoToolbar" />
+        <activity
+            android:name=".Activity.UserInterface.AppbarBottomOverlappingFABActivity"
+            android:label="@string/text_overlapping_fab"
+            android:theme="@style/AppTheme.NoToolbar" />
+        <activity
+            android:name=".Activity.UserInterface.AppbarBottomUnlabeledActivity"
+            android:label="@string/text_unlabeled" />
+        <activity
+            android:name=".Activity.UserInterface.AppbarBottomShiftingActivity"
+            android:label="@string/text_shifting" />
+        <activity
+            android:name=".Activity.UserInterface.AppbarBottomLabeledActivity"
+            android:label="@string/text_basic" />
+        <activity
+            android:name=".Activity.UserInterface.AppbarBottomActivity"
+            android:label="@string/text_appbar_bottom" />
+        <activity
+            android:name=".Activity.Basic.EnvironmentActivity"
+            android:label="@string/text_environment_sensors" />
+        <activity
+            android:name=".Activity.Basic.PositionActivity"
+            android:label="@string/text_position_sensors" />
+        <activity android:name=".Activity.Basic.GsonActivity" />
+        <activity
+            android:name=".Activity.Basic.JsonActivity"
+            android:label="@string/text_json_converters" />
+        <activity
+            android:name=".Activity.Basic.RetrofitActivity"
+            android:label="@string/text_retrofit" />
+        <activity
+            android:name=".Activity.Basic.VolleyActivity"
+            android:label="@string/text_volley" />
+        <activity
+            android:name=".Activity.Basic.NotificationActionButtonActivity"
+            android:label="@string/text_notification_action_button" />
+        <activity
+            android:name=".Activity.Basic.CustomNotificationActivity"
+            android:label="@string/text_custom_notification" />
+        <activity
+            android:name=".Activity.Basic.NotificationStylingActivity"
+            android:label="@string/text_notification_styling" />
+        <activity
+            android:name=".Activity.Basic.RealmTestActivity"
+            android:label="@string/text_realm_database" />
+        <activity
+            android:name=".Activity.Basic.SharePrefActivity"
+            android:label="@string/text_shared_preferences" />
+        <activity android:name=".Activity.UIMore.Payment.Payment6Activity" />
+        <activity android:name=".Activity.UIMore.Payment.Payment5Activity" />
+        <activity android:name=".Activity.UIMore.Payment.Payment4Activity" />
+        <activity android:name=".Activity.UIMore.Payment.Payment3Activity" />
+        <activity android:name=".Activity.UIMore.Payment.Payment2Activity" />
+        <activity android:name=".Activity.UIMore.Payment.Payment1Activity" />
+        <activity
+            android:name=".Activity.UIMore.Article.ArticleWithVideoActivity"
+            android:label="@string/t_video"
+            android:theme="@style/AppTheme.ArticleWithVideo" />
+        <activity
+            android:name=".Activity.UIMore.Article.ArticleCodingActivity"
+            android:label="@string/t_article"
+            android:theme="@style/AppTheme.ArticleCoding" />
+        <activity
+            android:name=".Activity.UIMore.Article.ArticleShortTextActivity"
+            android:label="Solar System"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".Activity.UIMore.Article.ArticleBigHeaderActivity"
+            android:theme="@style/AppTheme.ArticleBigHeader" />
+        <activity
+            android:name=".Activity.UIMore.Article.ArticleFullScreenActivity"
+            android:theme="@style/AppTheme.FullScreen" />
+        <activity
+            android:name=".Activity.UIMore.About.AboutApplicationActivity"
+            android:label="@string/t_about_application"
+            android:theme="@style/AppTheme.AboutApplication" />
+        <activity
+            android:name=".Activity.UIMore.About.AboutFullScreenActivity"
+            android:theme="@style/AppTheme.AboutFullScreen" />
+        <activity
+            android:name=".Activity.UIMore.About.AboutInfiniteDevelopersActivity"
+            android:label="@string/t_infinite_developers"
+            android:theme="@style/AppTheme.InfiniteDevelopers" />
+        <activity
+            android:name=".Activity.UIMore.About.AboutRestaurantActivity"
+            android:label="@string/title_about_1"
+            android:theme="@style/AppTheme.About1" />
+        <activity android:name=".Activity.UIMore.Chat.Chat5Activity" />
+        <activity android:name=".Activity.UIMore.Chat.Chat4Activity" />
+        <activity android:name=".Activity.UIMore.Chat.Chat3Activity" />
+        <activity android:name=".Activity.UIMore.Chat.Chat2Activity" />
+        <activity android:name=".Activity.UIMore.Chat.Chat1Activity" />
+        <activity android:name=".Activity.UIMore.Chat.WhatAppActivity" />
+        <activity android:name=".Activity.UIMore.Chat.TelegramActivity" />
+        <activity
+            android:name=".Activity.Basic.RWCDFileActivity"
+            android:label="@string/text_operation_on_file" />
+        <activity
+            android:name=".Activity.Basic.ReadVideosActivity"
+            android:label="@string/text_read_videos" />
+        <activity
+            android:name=".Activity.Basic.ReadSongsActivity"
+            android:label="@string/text_read_songs" />
+        <activity
+            android:name=".Activity.Basic.ReadPhotosActivity"
+            android:label="@string/text_read_photos" />
+        <activity
+            android:name=".Activity.Basic.SetAlarmActivity"
+            android:label="@string/text_set_alarm" />
+        <activity
+            android:name=".Activity.Basic.SimpleImageDownloaderActivity"
+            android:label="@string/text_simple_image_downloader" />
+        <activity
+            android:name=".Activity.Basic.SMSReceiverActivity"
+            android:label="@string/text_sms_receiver" />
+        <activity
+            android:name=".Activity.Basic.CallReceiverActivity"
+            android:label="@string/title_call_receiver" />
+        <activity
+            android:name=".Activity.Basic.BroadcastInfoActivity"
+            android:label="@string/title_list_of_broadcast_receivers" />
+        <activity
+            android:name=".Activity.Basic.BasicBroadcastReceiver"
+            android:label="@string/title_broadcast_receiver" />
+        <activity android:name=".Activity.UserInterface.UIComponentActivity" />
+        <activity android:name=".Activity.Basic.SecurityActivity" />
+        <activity
+            android:name=".Activity.Basic.MotionActivity"
+            android:label="@string/text_motion_sensors" />
+        <activity
+            android:name=".Activity.Basic.HttpRequestActivity"
+            android:label="@string/text_http_request" />
+        <activity android:name=".Activity.Basic.HandlerActivity" />
+        <activity
+            android:name=".Activity.Basic.BasicNotificationActivity"
+            android:label="@string/text_basic_notification" />
+        <activity android:name=".Activity.Basic.SQLiteActivity" />
+        <activity
+            android:name=".Activity.Basic.FileProviderActivity"
+            android:label="@string/text_file_provider" />
+        <activity android:name=".Activity.Basic.ActivityActivity" />
+        <activity
+            android:name=".Activity.Basic.ServiceActivity"
+            android:label="@string/text_basic_service" />
+        <activity android:name=".Activity.Basic.BroadcastActivity" />
+        <activity
+            android:name=".Activity.Basic.PermissionActivity"
+            android:label="@string/title_permissions" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:theme="@style/AppTheme.NoToolbar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- call receiver -->
+        <receiver android:name=".Activity.Basic.CallReceiverActivity$CallReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver> <!-- sms receiver -->
+        <receiver
+            android:name=".Activity.Basic.SMSReceiverActivity$SMSReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver> <!-- simple alarm receiver -->
+        <receiver
+            android:name=".Activity.Basic.SetAlarmActivity$SimpleAlarmReceiver"
+            android:process=":remote" /> <!-- simple service -->
+        <service android:name=".Activity.Basic.ServiceActivity$SimpleService" /> <!-- simple image downloader service -->
+        <service android:name=".Activity.Basic.SimpleImageDownloaderActivity$SimpleImageDownloaderService" /> <!-- file provider example -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="limitless.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider> <!-- close notification receiver -->
+        <receiver android:name=".Activity.Basic.BasicNotificationActivity$BroadcastReceiverAction" /> <!-- remote input receiver -->
+        <receiver android:name=".Activity.Basic.BasicNotificationActivity$InputReceiver" /> <!-- custom notification receiver -->
+        <receiver android:name=".Activity.Basic.CustomNotificationActivity$CustomNotificationListener" />
+    </application>
+
+</manifest>

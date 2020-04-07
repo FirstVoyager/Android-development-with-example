@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="6dp"
+        android:layout_margin="4dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="@color/colorAccent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView_icon"
+                app:tint="@color/color_white"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                tools:src="@drawable/ic_notifications_black_24dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView_title"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:singleLine="true"
+                tools:text="Notification"
+                android:textSize="16sp"
+                android:textColor="@color/color_white"
+                android:textStyle="bold"
+                android:layout_marginStart="6dp"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

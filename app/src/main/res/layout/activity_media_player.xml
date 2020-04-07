@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.CodeMore.MediaPlayerActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_music_512dp"
+        android:padding="12dp"
+        android:id="@+id/imageView_cover"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_height="wrap_content"
+        tools:text="Music name"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:id="@+id/textView_name"/>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:singleLine="true"
+            tools:text="00:22"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:padding="4dp"
+            android:gravity="center"
+            android:id="@+id/textView_start"/>
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            tools:progress="20"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/seekBar"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:singleLine="true"
+            tools:text="04:22"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:padding="4dp"
+            android:gravity="center"
+            android:id="@+id/textView_end"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="8dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            style="@style/Widget.AppCompat.ActionButton"
+            android:src="@drawable/ic_skip_previous_black_24dp"
+            android:id="@+id/imageButton_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            style="@style/Widget.AppCompat.ActionButton"
+            android:src="@drawable/ic_play_arrow_black_24dp"
+            android:id="@+id/imageButton_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            style="@style/Widget.AppCompat.ActionButton"
+            android:src="@drawable/ic_skip_next_black_24dp"
+            android:id="@+id/imageButton_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_playlist_play_black_24dp"
+            style="@style/Widget.AppCompat.ActionButton"
+            android:id="@+id/imageButton_playList"/>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"/>
+
+</LinearLayout>

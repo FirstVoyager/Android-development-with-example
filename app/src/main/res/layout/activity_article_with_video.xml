@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UIMore.Article.ArticleWithVideoActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:theme="@style/AppTheme.DarkToolbar">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            app:layout_scrollFlags="snap|enterAlways|scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/toolbar"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <VideoView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/videoView" />
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:id="@+id/linearLayout_controls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/imageButton_previous"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.ActionButton"
+                        android:src="@drawable/ic_skip_previous_black_24dp"
+                        android:tint="@color/color_white"/>
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/imageButton_play"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.ActionButton"
+                        android:src="@drawable/ic_pause_black_24dp"
+                        android:tint="@color/color_white"/>
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/imageButton_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.ActionButton"
+                        android:src="@drawable/ic_skip_next_black_24dp"
+                        android:tint="@color/color_white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="bottom"
+                    android:gravity="center_vertical"
+                    android:id="@+id/linearLayout_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView_timeStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:02"
+                        android:padding="4dp"
+                        android:layout_marginStart="4dp"
+                        android:gravity="center"
+                        android:textColor="@color/color_white"
+                        style="@style/TextAppearance.AppCompat.Body1"/>
+
+                    <androidx.appcompat.widget.AppCompatSeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:progress="10"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView_timeEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:02"
+                        android:padding="4dp"
+                        android:gravity="center"
+                        android:textColor="@color/color_white"
+                        style="@style/TextAppearance.AppCompat.Body1"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageView_fullScreen"
+                        android:padding="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_fullscreen_black_24dp"
+                        android:tint="@color/color_white"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/avatar_diver"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="16dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Norah Bruce"
+                        style="@style/TextAppearance.AppCompat.Title"/>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10 Days ago"
+                            style="@style/TextAppearance.AppCompat.Body1"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_star_border_black_24dp"
+                            android:layout_marginStart="8dp"
+                            app:tint="#BF360C"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/color_black"
+                android:text="@string/info_ocean"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/color_black"
+                android:lineSpacingExtra="4.5dp"
+                android:text="@string/info_ocean_1"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_divider"
+            android:background="@color/color_divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:background="@drawable/whit_background"
+                android:padding="8dp"
+                android:id="@+id/editText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:hint="Your reply"
+                android:layout_height="match_parent"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/Widget.AppCompat.ActionButton"
+                android:src="@drawable/ic_reply_black_24dp"
+                android:id="@+id/imageButton_reply"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

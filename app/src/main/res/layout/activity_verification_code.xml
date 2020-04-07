@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/brown_400"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UIMore.Verification.VerificationCodeActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_marginTop="64dp"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:text="Verify your phone number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="16dp"
+        android:text="We sent code to your phone number\n+1-123456789"/>
+
+    <LinearLayout
+        android:layout_marginTop="64dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_1"
+            android:gravity="center"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:lines="1"
+            android:singleLine="true"
+            android:maxLength="1"
+            android:inputType="number"
+            android:background="@drawable/background_edit_text_verify"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_2"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:lines="1"
+            android:singleLine="true"
+            android:maxLength="1"
+            android:inputType="number"
+            android:background="@drawable/background_edit_text_verify"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_3"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:lines="1"
+            android:singleLine="true"
+            android:maxLength="1"
+            android:inputType="number"
+            android:background="@drawable/background_edit_text_verify"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_4"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:lines="1"
+            android:singleLine="true"
+            android:maxLength="1"
+            android:inputType="number"
+            android:background="@drawable/background_edit_text_verify"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_5"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:lines="1"
+            android:singleLine="true"
+            android:maxLength="1"
+            android:inputType="number"
+            android:background="@drawable/background_edit_text_verify"/>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_blue_800"
+        android:padding="8dp"
+        android:text="Resend"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Verify"
+        app:backgroundTint="@color/color_blue_800"/>
+
+</LinearLayout>

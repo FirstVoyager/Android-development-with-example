@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@color/color_back_camera_permission"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close_black_24dp"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:id="@+id/imageButton_close"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/height_avatar"
+        android:layout_height="@dimen/height_avatar"
+        android:src="@drawable/ic_camera2_512dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_camera_phone_512dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:singleLine="true"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/color_black"
+        android:text="@string/text_capture_photos_videos_and_go_live"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="@color/color_black"
+        android:layout_margin="@dimen/margin_card_big"
+        android:text="Allow Liver access to your  camera,\nmedia and microphone to use the this app.\nShare your media on liver"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_continue"
+        android:background="@drawable/back_update_button"
+        android:id="@+id/button_continue"
+        android:minWidth="150dp"
+        android:minHeight="50dp"
+        android:textColor="@color/color_white"
+        android:layout_margin="@dimen/margin_card_medium"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginBottom="@dimen/margin_card_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_not_now"
+        android:background="@android:color/transparent"
+        android:minWidth="150dp"
+        android:minHeight="50dp"
+        android:id="@+id/button_notNow"/>
+
+</LinearLayout>

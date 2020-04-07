@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UserInterface.ValueSelectorActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:text="@string/t_sound_effect_1"/>
+
+    <limitless.android.androiddevelopment.CustomView.ValueSelector
+        android:id="@+id/valueSelector1"
+        android:layout_marginTop="16dp"
+        app:vs_maxValue="1000"
+        app:vs_currentValue="450"
+        app:vs_minValue="25"
+        app:vs_textColor="@color/color_black"
+        app:vs_soundPress="true"
+        app:vs_soundType="type_1"
+        android:layout_gravity="center"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:text="@string/t_sound_effect_2"/>
+
+    <limitless.android.androiddevelopment.CustomView.ValueSelector
+        android:id="@+id/valueSelector2"
+        app:vs_maxValue="20"
+        app:vs_currentValue="2"
+        app:vs_minValue="0"
+        app:vs_textColor="@color/color_white"
+        app:vs_soundPress="true"
+        app:vs_soundType="type_2"
+        app:vs_backgroundColor="@color/colorAccent"
+        app:vs_increaseTint="@color/color_white"
+        app:vs_decreaseTint="@color/color_white"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:text="@string/t_sound_effect_3"/>
+
+    <limitless.android.androiddevelopment.CustomView.ValueSelector
+        android:id="@+id/valueSelector3"
+        app:vs_maxValue="1000"
+        app:vs_currentValue="450"
+        app:vs_minValue="25"
+        app:vs_textColor="@color/color_black"
+        app:vs_soundPress="true"
+        app:vs_soundType="type_3"
+        app:vs_increaseDrawable="@drawable/pencil_plus"
+        app:vs_decreaseDrawable="@drawable/pencil_minus"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:text="@string/t_without_sound"/>
+
+    <limitless.android.androiddevelopment.CustomView.ValueSelector
+        android:id="@+id/valueSelector4"
+        android:layout_marginTop="16dp"
+        app:vs_maxValue="1000"
+        app:vs_currentValue="450"
+        app:vs_minValue="25"
+        app:vs_textColor="@color/color_black"
+        app:vs_soundPress="false"
+        android:layout_gravity="center"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Title"
+        tools:text="value = 55"
+        android:padding="16dp"
+        android:id="@+id/textView_resulat"/>
+
+</LinearLayout>

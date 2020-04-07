@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="?attr/selectableItemBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <limitless.android.androiddevelopment.CustomView.CircleImageView
+            android:layout_width="@dimen/height_icon_user"
+            android:layout_height="@dimen/height_icon_user"
+            tools:src="@drawable/image_test_1"
+            android:scaleType="centerCrop"
+            android:id="@+id/imageView_avatar"
+            android:layout_margin="4dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:singleLine="true"
+                style="@style/TextAppearance.AppCompat.Title"
+                tools:text="a simple name for this chat"
+                android:id="@+id/textView_name"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="hey man, how are you? what are you doing?"/>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_notif"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:minWidth="20dp"
+            app:cardCornerRadius="8dp"
+            android:layout_height="wrap_content"
+            android:minHeight="30dp"
+            android:layout_marginEnd="-16dp"
+            app:cardBackgroundColor="@color/colorPrimary">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_notif"
+                android:text="20"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/color_white"
+                android:padding="8dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:lines="1"
+                android:singleLine="true"
+                android:layout_marginEnd="16dp"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_divider"
+        android:background="@color/color_divider"/>
+
+</LinearLayout>

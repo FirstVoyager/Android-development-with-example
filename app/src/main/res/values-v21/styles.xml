@@ -1,0 +1,10 @@
+<resources>
+
+    <style name="AppTheme.Gmail" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimaryDark">@color/color_white</item>
+        <item name="android:statusBarColor">@color/color_white</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

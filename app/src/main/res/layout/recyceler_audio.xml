@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:padding="@dimen/margin_list_two_line"
+    android:background="?attr/selectableItemBackground">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="0dp"
+        android:layout_marginEnd="@dimen/margin_list_two_line">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/height_icon_list_two_line"
+            android:layout_height="@dimen/height_icon_list_two_line"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_music_note_black_24dp"
+            android:id="@+id/imageView_cover"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_text_list_two_line"
+            android:textColor="@color/color_black"
+            tools:text="this a name"
+            android:lines="1"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:id="@+id/textView_title"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="this a name"
+            android:textSize="@dimen/size_text_caption_list_two_line"
+            android:textColor="@color/color_black"
+            android:lines="1"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:id="@+id/textView_des"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="@dimen/height_icon_mini_list_two_line"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/margin_list_two_line"
+        android:src="@drawable/ic_more_vert_black_24dp"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:id="@+id/button_more"/>
+
+</LinearLayout>

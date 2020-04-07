@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_all"
+            android:icon="@drawable/inbox_multiple"
+            android:title="@string/menu_all_inboxes" />
+        <item
+            android:id="@+id/nav_primary"
+            android:icon="@drawable/ic_inbox_black_24dp"
+            android:title="@string/menu_primary" />
+        <item
+            android:id="@+id/nav_social"
+            android:icon="@drawable/account_group_outline"
+            android:title="@string/menu_social" />
+        <item
+            android:id="@+id/nav_promotions"
+            android:icon="@drawable/ic_label_outline_black_24dp"
+            android:title="@string/menu_promotions" />
+    </group>
+
+    <item android:title="@string/title_all_labels">
+        <menu>
+            <item
+                android:id="@+id/nav_starred"
+                android:icon="@drawable/ic_star_border_black_24dp"
+                android:title="@string/menu_starred" />
+            <item
+                android:id="@+id/nav_important"
+                android:icon="@drawable/ic_favorite_border_black_24dp"
+                android:title="@string/menu_important" />
+            <item
+                android:id="@+id/nav_sent"
+                android:icon="@drawable/ic_send_black_24dp"
+                android:title="@string/menu_sent" />
+            <item
+                android:id="@+id/nav_scheduled"
+                android:icon="@drawable/ic_schedule_black_24dp"
+                android:title="@string/menu_scheduled" />
+            <item
+                android:id="@+id/nav_outbox"
+                android:icon="@drawable/email_send"
+                android:title="@string/menu_outbox" />
+            <item
+                android:id="@+id/nav_drafts"
+                android:icon="@drawable/draft"
+                android:title="@string/menu_drafts" />
+            <item
+                android:id="@+id/nav_all_mail"
+                android:icon="@drawable/ic_email_black_24dp"
+                android:title="@string/menu_all_mail" />
+            <item
+                android:id="@+id/nav_spam"
+                android:icon="@drawable/ic_report_black_24dp"
+                android:title="@string/menu_spam" />
+            <item
+                android:id="@+id/nav_trash"
+                android:icon="@drawable/trash_can_outline"
+                android:title="@string/menu_trash" />
+        </menu>
+    </item>
+
+    <item android:title="@string/title_google_apps">
+        <menu>
+            <item
+                android:id="@+id/nav_calendar"
+                android:icon="@drawable/calendar_blank"
+                android:title="@string/menu_calendar" />
+            <item
+                android:id="@+id/nav_contacts"
+                android:icon="@drawable/account_circle_outline"
+                android:title="@string/menu_contacts" />
+        </menu>
+    </item>
+
+    <group
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings_outline_24dp"
+            android:title="@string/menu_contacts" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_info_outline_black_24dp"
+            android:title="@string/menu_help_feedback" />
+    </group>
+
+</menu>

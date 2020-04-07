@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Basic.JsonActivity">
+
+    <LinearLayout
+        android:layout_marginStart="@dimen/padding_inner_item"
+        android:layout_marginEnd="@dimen/padding_inner_item"
+        android:layout_marginTop="@dimen/padding_inner_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_json_object"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/button_jsonObject"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_json_array"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/button_jsonArray"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginStart="@dimen/padding_inner_item"
+        android:layout_marginEnd="@dimen/padding_inner_item"
+        android:layout_marginTop="@dimen/padding_inner_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_read_json_object"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/button_readJsonObject"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_read_json_array"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/button_readJsonArray"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginTop="@dimen/padding_inner_item"
+        android:layout_marginStart="@dimen/padding_inner_item"
+        android:layout_marginEnd="@dimen/padding_inner_item"
+        android:text="Gson library"
+        android:id="@+id/button_gson"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_inner_item"
+        android:id="@+id/textView_json"/>
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="1dp"
+    android:layout_marginBottom="1dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/imageView"
+        tools:src="@drawable/image_code_header"
+        android:scaleType="centerCrop"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:background="@color/color_divider"
+        android:padding="4dp"
+        android:singleLine="true"
+        android:lines="1"
+        android:id="@+id/textView_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_title_mini"
+        android:gravity="center"
+        android:layout_gravity="center"
+        style="@style/TextAppearance.AppCompat.Caption"
+        tools:text="Photo name"
+        android:textColor="@color/color_black" />
+
+</LinearLayout>

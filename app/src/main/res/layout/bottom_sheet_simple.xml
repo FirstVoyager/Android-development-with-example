@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-16dp"
+        app:cardCornerRadius="16dp">
+
+        <LinearLayout
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
+
+            <View
+                android:layout_gravity="center_horizontal"
+                android:layout_width="20dp"
+                android:layout_height="10dp"
+                android:background="@drawable/bottom_sheet_circule_top"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:textColor="@color/color_black"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_notification"
+                android:textSize="18sp"
+                app:fontFamily="monospace"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                app:backgroundTint="@color/colorAccent"
+                android:layout_gravity="end"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/ok"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

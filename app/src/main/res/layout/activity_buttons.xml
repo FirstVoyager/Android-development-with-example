@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_card_medium"
+    tools:context=".Activity.UserInterface.ButtonsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:text="@string/text_button"
+            android:textSize="16sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="@dimen/margin_card_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_text_button"
+            android:background="?attr/selectableItemBackground"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:text="@string/text_outlined_button"
+            android:textSize="16sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="@dimen/margin_card_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_outlined_button"
+            android:background="@drawable/outlined_button"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:text="@string/text_contained_button"
+            android:textSize="16sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="@dimen/margin_card_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_outlined_button"
+            style="@style/Widget.AppCompat.Button.Colored" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:text="@string/text_more_button"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginTop="@dimen/margin_card_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ActionButton"
+                android:text="@string/text_action_button" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginStart="@dimen/margin_card_medium"
+                android:layout_marginTop="@dimen/margin_card_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:text="@string/text_small_button" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:text="@string/text_colored_borderless" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginTop="@dimen/margin_card_medium"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:text="@string/text_icon_in_start"
+                android:drawableStart="@drawable/ic_share_black_24dp"
+                android:drawableTint="@color/color_white"
+                android:drawablePadding="@dimen/margin_card_medium"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginTop="@dimen/margin_card_medium"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:text="@string/text_icon_in_end"
+                android:drawableEnd="@drawable/ic_share_black_24dp"
+                android:drawableTint="@color/color_white"
+                android:drawablePadding="@dimen/margin_card_medium"/>
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_icon_in_top"
+            android:drawableTop="@drawable/ic_share_black_24dp"
+            android:drawableTint="@color/color_white"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/text_icon_in_bottom"
+            android:drawableBottom="@drawable/ic_share_black_24dp"
+            android:drawableTint="@color/color_white"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:text="@string/text_image_button"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/text_basic"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="14sp"
+                android:textColor="@color/color_black"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_marginStart="@dimen/margin_card_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_share_black_24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/text_colored"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="14sp"
+                android:textColor="@color/color_black"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_marginStart="@dimen/margin_card_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/color_white"
+                android:src="@drawable/ic_wallpaper_black_24dp"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/text_borderless"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="14sp"
+                android:textColor="@color/color_black"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_marginStart="@dimen/margin_card_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_wallpaper_black_24dp"
+                android:tint="@color/colorAccent"
+                style="@style/Widget.AppCompat.Button.Borderless"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginStart="@dimen/margin_card_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/text_action_button"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="14sp"
+                android:textColor="@color/color_black"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:layout_marginStart="@dimen/margin_card_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_wallpaper_black_24dp"
+                style="@style/Widget.AppCompat.ActionButton"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

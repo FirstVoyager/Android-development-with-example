@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sample_array">
+        <item>Example 1</item>
+        <item>Example 2</item>
+        <item>Example 3</item>
+        <item>Example 4</item>
+        <item>Example 5</item>
+        <item>Example 6</item>
+        <item>Example 7</item>
+        <item>Example 8</item>
+        <item>Example 9</item>
+        <item>Example 10</item>
+    </string-array>
+</resources>
