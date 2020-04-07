@@ -6,25 +6,10 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import limitless.android.androiddevelopment.Activity.CodeMore.AnimationFadeActivity;
-import limitless.android.androiddevelopment.Activity.CodeMore.AnimationRotateActivity;
-import limitless.android.androiddevelopment.Activity.CodeMore.AnimationSlideActivity;
-import limitless.android.androiddevelopment.Activity.CodeMore.AnimationZoomActivity;
-import limitless.android.androiddevelopment.Activity.CodeMore.AudioManagerActivity;
-import limitless.android.androiddevelopment.Activity.CodeMore.AudioRecorderActivity;
-import limitless.android.androiddevelopment.Activity.CodeMore.BluetoothActivity;
-import limitless.android.androiddevelopment.Activity.CodeMore.MediaPlayerActivity;
-import limitless.android.androiddevelopment.Activity.CodeMore.TextToSpeechActivity;
-import limitless.android.androiddevelopment.Activity.UIMore.Music.MusicSimpleActivity;
-import limitless.android.androiddevelopment.Activity.UIMore.TaskManager.TaskManagerChartViewActivity;
-import limitless.android.androiddevelopment.Activity.UIMore.TaskManager.TaskManagerNewActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.ChipsActivity;
 import limitless.android.androiddevelopment.Fragment.MainFragment;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
-import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -46,7 +31,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-        startActivity(new Intent(this, BluetoothActivity.class));
+//        startActivity(new Intent(this, BluetoothActivity.class));
     }
 
     @Override
@@ -118,7 +103,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
                 Tools.closeDrawer(drawerLayout);
                 return true;
-            case R.id.menu_nav_other_apps:
+            case R.id.menu_projects:
 
                 Tools.closeDrawer(drawerLayout);
                 return true;

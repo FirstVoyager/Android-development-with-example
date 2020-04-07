@@ -657,4 +657,5 @@ The new Super Retina XDR display, a custom-designed OLED, provides users an imme
     <string name="no_paired_devices">No paired devices</string>
     <string name="bluetooth_is_off">Bluetooth is off</string>
     <string name="location_permission_denied">Location permission denied</string>
+    <string name="projects">Projects</string>
 </resources>

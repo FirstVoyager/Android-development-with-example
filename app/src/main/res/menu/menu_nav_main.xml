@@ -22,8 +22,8 @@
         android:icon="@drawable/ic_star_half_black_24dp"/>
 
     <item
-        android:title="@string/title_other_apps"
-        android:id="@+id/menu_nav_other_apps"
+        android:title="@string/projects"
+        android:id="@+id/menu_projects"
         android:icon="@drawable/ic_apps_black_24dp"/>
 
 </menu>
