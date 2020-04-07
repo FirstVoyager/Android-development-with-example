@@ -23,7 +23,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private BottomNavigationView bottomNavigationView;
-    private MainFragment componentsFragment, userInterfaceFragment, uiMoreFragment, codeMoreFragment;
+    private MainFragment componentsFragment, userInterfaceFragment, uiMoreFragment, codeMoreFragment, projectFragment;
     private int lastFragment = -1;
 
     @Override
@@ -52,6 +52,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         userInterfaceFragment = new MainFragment();
         uiMoreFragment = new MainFragment();
         codeMoreFragment = new MainFragment();
+        projectFragment = new MainFragment();
 
         Bundle bundle = new Bundle();
         bundle.putInt(MainFragment.fragmentId, R.id.menu_main_basic);
@@ -103,9 +104,8 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
                 Tools.closeDrawer(drawerLayout);
                 return true;
-            case R.id.menu_projects:
-
-                Tools.closeDrawer(drawerLayout);
+            case R.id.menu_main_projects:
+                setFragment(projectFragment, id);
                 return true;
             case R.id.menu_main_basic:
                 setFragment(componentsFragment, id);
@@ -136,6 +136,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         Tools.fragmentCommit(ft);
         ft = getSupportFragmentManager().beginTransaction();
         switch (lastFragment){
+            case R.id.menu_projects:
+                Tools.fragmentCommit(ft.hide(projectFragment));
+                break;
             case R.id.menu_main_basic:
                 Tools.fragmentCommit(ft.hide(componentsFragment));
                 break;
@@ -151,9 +154,5 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
         }
         lastFragment = id;
-    }
-
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
     }
 }

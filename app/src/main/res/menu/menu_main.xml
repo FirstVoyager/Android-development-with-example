@@ -23,8 +23,8 @@
         android:icon="@drawable/ic_code_black_24dp"/>
 
     <item
-        android:title="@string/t_collections"
-        android:id="@+id/menu_main_collections"
+        android:title="@string/projects"
+        android:id="@+id/menu_main_projects"
         android:icon="@drawable/rhombus_split"/>
 
 </menu>
