@@ -69,7 +69,7 @@ public class SimpleImageDownloaderActivity extends BaseActivity implements View.
         if (view.getId() == R.id.button_cancel){
             stopService();
         }else if (view.getId() == R.id.button_download){
-            if (Tools.serviceIsRunnig(this, SimpleImageDownloaderService.class)){
+            if (Tools.serviceIsRunning(this, SimpleImageDownloaderService.class)){
                 stopService(new Intent(this, SimpleImageDownloaderService.class));
             }
             if (Tools.isEmpty(etUrl.getText().toString())){
@@ -94,7 +94,7 @@ public class SimpleImageDownloaderActivity extends BaseActivity implements View.
         findViewById(R.id.button_cancel).setOnClickListener(this);
         btnDownload.setOnClickListener(this);
 
-        if (Tools.serviceIsRunnig(this, SimpleImageDownloaderService.class)){
+        if (Tools.serviceIsRunning(this, SimpleImageDownloaderService.class)){
             pb.setVisibility(View.VISIBLE);
             btnDownload.setVisibility(View.INVISIBLE);
         }

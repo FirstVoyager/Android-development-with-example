@@ -25,8 +25,11 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -46,6 +49,7 @@ import java.util.Set;
 import java.util.TimeZone;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
@@ -102,6 +106,10 @@ public class Tools {
         toast.show();
     }
 
+    /**
+     * Check if is open close it
+     * @param drawerLayout
+     */
     public static void closeDrawer(DrawerLayout drawerLayout) {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)){
             drawerLayout.closeDrawer(GravityCompat.START);
@@ -123,6 +131,10 @@ public class Tools {
         }
     }
 
+    /**
+     * Print error if is debug version
+     * @param e
+     */
     public static void error(Exception e){
         if (e == null)
             return;
@@ -130,6 +142,11 @@ public class Tools {
             e.printStackTrace();
     }
 
+    /**
+     * Start activity with context and intent
+     * @param context
+     * @param intent
+     */
     public static void startActivity(Context context, Intent intent) {
         if (context == null || intent == null)
             return;
@@ -140,22 +157,26 @@ public class Tools {
         }
     }
 
-    public static void startActivity(Context context, Class<?> tClass) {
-        if (context == null || tClass == null)
+    /**
+     * Start activity with calss
+     * @param context
+     * @param aClass
+     */
+    public static void startActivity(Context context, Class<?> aClass) {
+        if (context == null || aClass == null)
             return;
-        try {
-            Intent intent = new Intent(context, tClass);
-            if (intent != null)
-                context.startActivity(intent);
-        }catch (Exception e){
-            error(e);
-        }
+        startActivity(context, new Intent(context, aClass));
     }
 
     public static float convertDipToPx(DisplayMetrics dm, int i) {
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, i, dm);
     }
 
+    /**
+     * Open url
+     * @param context
+     * @param url
+     */
     public static void openUrl(Context context, String url) {
         if (context == null || url == null)
             return;
@@ -164,18 +185,36 @@ public class Tools {
         startActivity(context, intent);
     }
 
+    /**
+     * Check permission granted or no
+     * @param context
+     * @param s permission
+     * @return granted result
+     */
     public static boolean permissionGranted(Context context, String s) {
         if (context == null || s == null)
             return false;
         return ContextCompat.checkSelfPermission(context, s) == PackageManager.PERMISSION_GRANTED;
     }
 
+    /**
+     * Request new permission
+     * @param activity return result to this activity
+     * @param p want to get permission
+     * @param code for check result
+     */
     public static void requestPermission(Activity activity, String p, int code) {
         if (activity == null || code < 0)
             return;
         ActivityCompat.requestPermissions(activity, new String[]{p}, code);
     }
 
+    /**
+     * Request permission list
+     * @param activity
+     * @param permissions
+     * @param code
+     */
     public static void requestPermission(Activity activity, String[] permissions, int code){
         if (activity == null || permissions == null || code < 0)
             return;
@@ -191,6 +230,11 @@ public class Tools {
         info.show(fm, null);
     }
 
+    /**
+     * Check string is empty or no
+     * @param s
+     * @return is empty or no
+     */
     public static boolean isEmpty(String s) {
         if (s == null)
             return true;
@@ -202,7 +246,7 @@ public class Tools {
         return df.format(time);
     }
 
-    public static boolean serviceIsRunnig(Context context, Class<?> aClass) {
+    public static boolean serviceIsRunning(Context context, Class<?> aClass) {
         if (context == null || aClass == null)
             return false;
         ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
@@ -260,6 +304,11 @@ public class Tools {
                 s.endsWith(".mkv");
     }
 
+    /**
+     * Check file is photo or no
+     * @param s file name
+     * @return true => is photo
+     */
     public static boolean isPhoto(String s){
         return s.endsWith(".png") ||
                 s.endsWith(".jpg") ||
@@ -393,6 +442,13 @@ public class Tools {
         }
     }
 
+    /**
+     * Copy message to clipboard with custom title
+     * @param context
+     * @param title for clipboard
+     * @param description msq want to copy
+     * @return copy or no
+     */
     public static boolean copyToClipboard(Context context, String title, String description) {
         try {
             if (description == null)
@@ -424,5 +480,17 @@ public class Tools {
             return entry.getKey();
         }
         return null;
+    }
+
+    /**
+     * Load image and set from resources
+     * @param context
+     * @param res image resources id
+     * @param iv want to set in it
+     */
+    public static void loadImage(Context context, int res, ImageView iv) {
+        if (context == null || res <= 0 || iv == null)
+            return;
+        Picasso.get().load(res).resize(400, 300).into(iv);
     }
 }

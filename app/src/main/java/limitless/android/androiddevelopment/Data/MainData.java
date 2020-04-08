@@ -57,6 +57,7 @@ import limitless.android.androiddevelopment.Activity.UIMore.Chat.Chat2Activity;
 import limitless.android.androiddevelopment.Activity.UIMore.Chat.Chat3Activity;
 import limitless.android.androiddevelopment.Activity.UIMore.Chat.Chat4Activity;
 import limitless.android.androiddevelopment.Activity.UIMore.Chat.Chat5Activity;
+import limitless.android.androiddevelopment.Activity.CodeMore.ImageEffectsActivity;
 import limitless.android.androiddevelopment.Activity.UIMore.Login.LoginCardViewActivity;
 import limitless.android.androiddevelopment.Activity.UIMore.Login.LoginSimpleActivity;
 import limitless.android.androiddevelopment.Activity.UIMore.Login.LoginWithDetailsActivity;
@@ -111,6 +112,7 @@ import limitless.android.androiddevelopment.Activity.UserInterface.TablayoutActi
 import limitless.android.androiddevelopment.Activity.UserInterface.TableLayoutActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.ValueSelectorActivity;
 import limitless.android.androiddevelopment.Model.MainModel;
+import limitless.android.androiddevelopment.Model.ProjectModel;
 import limitless.android.androiddevelopment.Other.AnimationManager;
 import limitless.android.androiddevelopment.R;
 
@@ -237,17 +239,32 @@ public class MainData {
         model.add(new MainModel("Text to speech", R.drawable.ic_text_to_speech_512dp, false,  false, null, TextToSpeechActivity.class, false));
         model.add(new MainModel("Audio manger", R.drawable.ic_audio_manager_512dp, false,  false, null, AudioManagerActivity.class, false));
         model.add(new MainModel("Bluetooth", R.drawable.ic_bluetooth_512dp, false,  false, null, BluetoothActivity.class, false));
-        model.add(new MainModel("GPS", R.drawable.ic_maps_512dp, false,  false, null, GpsActivity.class, false));
+        model.add(new MainModel("Image effects", R.drawable.ic_effects_512dp, false,  false, imageEffects(), null, true));
 
+        model.add(new MainModel("GPS", R.drawable.ic_maps_512dp, false,  false, null, GpsActivity.class, false));
         model.add(new MainModel("Camera", R.drawable.ic_camera_512dp, false,  false, null, MainActivity.class, false));
         model.add(new MainModel("Gestures", R.drawable.ic_gestures_512dp, false,  false, null, MainActivity.class, false));
         model.add(new MainModel("Google maps", R.drawable.ic_maps_512dp, false,  false, null, MainActivity.class, false));
-        model.add(new MainModel("Image effects", R.drawable.ic_effects_512dp, false,  false, null, MainActivity.class, false));
         model.add(new MainModel("Multi touch", R.drawable.ic_multi_touch_512dp, false,  false, null, MainActivity.class, false));
         model.add(new MainModel("Network connection", R.drawable.ic_network_connection_512dp, false,  false, null, MainActivity.class, false));
         model.add(new MainModel("Textur View", R.drawable.ic_texturview_512dp, false,  false, null, MainActivity.class, false));
         model.add(new MainModel("Wifi", R.drawable.ic_wifi_512dp, false,  false, null, MainActivity.class, false));
         return model;
+    }
+
+    /**
+     * @return list of project for sale
+     */
+    public static List<ProjectModel> projectList() {
+        List<ProjectModel> list = new ArrayList<>();
+        list.add(new ProjectModel("App manager", "Manager your apks in android", null, 25, R.drawable.image_code_header));
+        list.add(new ProjectModel("File manager", "Manager your file in android", null, 30, R.drawable.image_code_header));
+        list.add(new ProjectModel("Material color", "Material colors code and etc work with colors", null, 20, R.drawable.image_code_header));
+        list.add(new ProjectModel("Infinite wallpaper", "Get free wallpaper", null, 25, R.drawable.image_code_header));
+        list.add(new ProjectModel("FlashLight", "Control your flash", null, 20, R.drawable.image_code_header));
+        list.add(new ProjectModel("Media downloader", "Download your media from twitter", null, 25, R.drawable.image_code_header));
+        list.add(new ProjectModel("Twitter unfollowers", "Best twitter unfollowers", null, 25, R.drawable.image_code_header));
+        return list;
     }
 
     /**
@@ -263,6 +280,16 @@ public class MainData {
         return models;
     }
 
+    private static List<MainModel.InnerModel> imageEffects() {
+        List<MainModel.InnerModel> models = new ArrayList<>();
+        models.add(new MainModel.InnerModel("Grey Filter", false, ImageEffectsActivity.class));
+        models.add(new MainModel.InnerModel("Sepia Filter", false, ImageEffectsActivity.class));
+        models.add(new MainModel.InnerModel("Black and White Filter", false, ImageEffectsActivity.class));
+        models.add(new MainModel.InnerModel("Brightness Filter", false, ImageEffectsActivity.class));
+//        models.add(new MainModel.InnerModel("Sketch Filter", false, ImageEffectsActivity.class));
+//        models.add(new MainModel.InnerModel("Brush Filter", false, ImageEffectsActivity.class));
+        return models;
+    }
 
     private static List<MainModel.InnerModel> travel() {
         List<MainModel.InnerModel> model = new ArrayList<>();
@@ -773,5 +800,6 @@ public class MainData {
         br.add(new MainModel.InnerModel("Set alarm", false, SetAlarmActivity.class));
         return br;
     }
+
 
 }

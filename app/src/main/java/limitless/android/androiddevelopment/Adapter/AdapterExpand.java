@@ -67,7 +67,9 @@ public class AdapterExpand extends RecyclerView.Adapter<AdapterExpand.ExpandView
         @Override
         public void onClick(View v) {
             if (v.getId() == R.id.linearLayout){
-                Tools.startActivity(context, new Intent(context, innerModels.get(getAdapterPosition()).aClass1));
+                Intent intent = new Intent(context, innerModels.get(getAdapterPosition()).aClass1);
+                intent.putExtra(Intent.EXTRA_TEXT, getAdapterPosition());
+                Tools.startActivity(context, intent);
             }
         }
     }

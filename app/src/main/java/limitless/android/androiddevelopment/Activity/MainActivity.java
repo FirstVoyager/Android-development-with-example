@@ -6,10 +6,13 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import limitless.android.androiddevelopment.Activity.CodeMore.ImageEffectsActivity;
 import limitless.android.androiddevelopment.Fragment.MainFragment;
+import limitless.android.androiddevelopment.Fragment.ProjectsFragment;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,7 +26,8 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private BottomNavigationView bottomNavigationView;
-    private MainFragment componentsFragment, userInterfaceFragment, uiMoreFragment, codeMoreFragment, projectFragment;
+    private MainFragment componentsFragment, userInterfaceFragment, uiMoreFragment, codeMoreFragment;
+    private ProjectsFragment projectFragment;
     private int lastFragment = -1;
 
     @Override
@@ -31,7 +35,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-//        startActivity(new Intent(this, BluetoothActivity.class));
+//        startActivity(new Intent(this, ImageEffectsActivity.class));
     }
 
     @Override
@@ -52,7 +56,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         userInterfaceFragment = new MainFragment();
         uiMoreFragment = new MainFragment();
         codeMoreFragment = new MainFragment();
-        projectFragment = new MainFragment();
+        projectFragment = new ProjectsFragment();
 
         Bundle bundle = new Bundle();
         bundle.putInt(MainFragment.fragmentId, R.id.menu_main_basic);
@@ -136,7 +140,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         Tools.fragmentCommit(ft);
         ft = getSupportFragmentManager().beginTransaction();
         switch (lastFragment){
-            case R.id.menu_projects:
+            case R.id.menu_main_projects:
                 Tools.fragmentCommit(ft.hide(projectFragment));
                 break;
             case R.id.menu_main_basic:

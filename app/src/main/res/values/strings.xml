@@ -658,4 +658,13 @@ The new Super Retina XDR display, a custom-designed OLED, provides users an imme
     <string name="bluetooth_is_off">Bluetooth is off</string>
     <string name="location_permission_denied">Location permission denied</string>
     <string name="projects">Projects</string>
+    <string name="app_manager">App manager</string>
+    <string name="image_effects">Image effects</string>
+    <string name="apply">Apply</string>
+    <string name="grey_filter">GREY Filter</string>
+    <string name="sketch_filter">Sketch Filter</string>
+    <string name="sepia_filter">Sepia filter</string>
+    <string name="black_and_white">Black and White</string>
+    <string name="negative_filter">Negative Filter</string>
+    <string name="brightness_filter">Brightness filter</string>
 </resources>

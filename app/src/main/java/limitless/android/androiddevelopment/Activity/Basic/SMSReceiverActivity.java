@@ -28,7 +28,7 @@ public class SMSReceiverActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_smsreceiver);
         init();
-        Tools.serviceIsRunnig(this, SMSReceiverActivity.class);
+        Tools.serviceIsRunning(this, SMSReceiverActivity.class);
     }
 
     private void init() {

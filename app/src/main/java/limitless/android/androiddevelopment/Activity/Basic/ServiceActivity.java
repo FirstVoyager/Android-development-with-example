@@ -51,7 +51,7 @@ public class ServiceActivity extends BaseActivity implements View.OnClickListene
         findViewById(R.id.button_start).setOnClickListener(this);
         findViewById(R.id.button_stop).setOnClickListener(this);
 
-        if (Tools.serviceIsRunnig(this, SimpleService.class))
+        if (Tools.serviceIsRunning(this, SimpleService.class))
             tvStatus.setText(getString(R.string.text_service_is_running));
         else
             tvStatus.setText(getString(R.string.text_service_is_stopping));
@@ -60,13 +60,13 @@ public class ServiceActivity extends BaseActivity implements View.OnClickListene
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.button_stop){
-            if (! Tools.serviceIsRunnig(this, SimpleService.class))
+            if (! Tools.serviceIsRunning(this, SimpleService.class))
                 return;
             Intent intent = new Intent(this, SimpleService.class);
             stopService(intent);
             tvStatus.setText(getString(R.string.text_service_is_stopping));
         }else if (v.getId() == R.id.button_start){
-            if (Tools.serviceIsRunnig(this, SimpleService.class))
+            if (Tools.serviceIsRunning(this, SimpleService.class))
                 return;
             Intent intent = new Intent(this, SimpleService.class);
             startService(intent);

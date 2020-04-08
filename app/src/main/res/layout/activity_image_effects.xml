@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".Activity.CodeMore.ImageEffectsActivity">
+
+    <include
+        layout="@layout/toolbar"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_marginTop="12dp"
+        tools:text="Effect name"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/image_test_2"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/height_progress"
+            android:layout_height="@dimen/height_progress"
+            android:layout_gravity="center"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_gravity="center"
+            android:id="@+id/button_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apply"/>
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_margin="8dp"
+        android:max="510"
+        android:progress="255"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+</LinearLayout>
