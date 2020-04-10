@@ -2,10 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="limitless.android.androiddevelopment">
-
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -16,7 +20,6 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -50,8 +53,24 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/styled_map"
+            android:name=".Activity.CodeMore.GoogleMap.StyledMapActivity"></activity>
+        <activity
+            android:name=".Activity.CodeMore.GoogleMap.DarkStyleMapActivity"
+            android:label="@string/dark_mode"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.CodeMore.GoogleMap.LiveLocationActivity"
+            android:label="@string/live_location"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.CodeMore.GoogleMap.SimpleMapsActivity"
+            android:label="@string/title_activity_maps"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.CodeMore.ImageEffectsActivity"
             android:label="@string/image_effects"
-            android:name=".Activity.CodeMore.ImageEffectsActivity" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activity.CodeMore.GpsActivity" />
         <activity
             android:name=".Activity.CodeMore.BluetoothActivity"
@@ -72,16 +91,16 @@
             android:name=".Activity.CodeMore.AudioRecorderActivity"
             android:label="@string/text_audio_recorder" />
         <activity
-            android:name=".Activity.CodeMore.AnimationFadeActivity"
+            android:name=".Activity.CodeMore.Animation.AnimationFadeActivity"
             android:label="@string/t_fade_animation" />
         <activity
-            android:name=".Activity.CodeMore.AnimationRotateActivity"
+            android:name=".Activity.CodeMore.Animation.AnimationRotateActivity"
             android:label="@string/t_rotate_animation" />
         <activity
-            android:name=".Activity.CodeMore.AnimationSlideActivity"
+            android:name=".Activity.CodeMore.Animation.AnimationSlideActivity"
             android:label="@string/t_slide_animation" />
         <activity
-            android:name=".Activity.CodeMore.AnimationZoomActivity"
+            android:name=".Activity.CodeMore.Animation.AnimationZoomActivity"
             android:label="@string/t_zoom_animation" />
         <activity
             android:name=".Activity.CodeMore.ClipboardManagerActivity"
@@ -466,6 +485,9 @@
         <receiver android:name=".Activity.Basic.BasicNotificationActivity$BroadcastReceiverAction" /> <!-- remote input receiver -->
         <receiver android:name=".Activity.Basic.BasicNotificationActivity$InputReceiver" /> <!-- custom notification receiver -->
         <receiver android:name=".Activity.Basic.CustomNotificationActivity$CustomNotificationListener" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
     </application>
 
 </manifest>

@@ -24,15 +24,19 @@ import limitless.android.androiddevelopment.Activity.Basic.SimpleImageDownloader
 import limitless.android.androiddevelopment.Activity.Basic.SQLiteActivity;
 import limitless.android.androiddevelopment.Activity.Basic.FileProviderActivity;
 import limitless.android.androiddevelopment.Activity.Basic.VolleyActivity;
-import limitless.android.androiddevelopment.Activity.CodeMore.AnimationFadeActivity;
-import limitless.android.androiddevelopment.Activity.CodeMore.AnimationRotateActivity;
-import limitless.android.androiddevelopment.Activity.CodeMore.AnimationSlideActivity;
-import limitless.android.androiddevelopment.Activity.CodeMore.AnimationZoomActivity;
+import limitless.android.androiddevelopment.Activity.CodeMore.Animation.AnimationFadeActivity;
+import limitless.android.androiddevelopment.Activity.CodeMore.Animation.AnimationRotateActivity;
+import limitless.android.androiddevelopment.Activity.CodeMore.Animation.AnimationSlideActivity;
+import limitless.android.androiddevelopment.Activity.CodeMore.Animation.AnimationZoomActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.AudioManagerActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.AudioRecorderActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.BluetoothActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.ClipboardManagerActivity;
+import limitless.android.androiddevelopment.Activity.CodeMore.GoogleMap.DarkStyleMapActivity;
+import limitless.android.androiddevelopment.Activity.CodeMore.GoogleMap.LiveLocationActivity;
+import limitless.android.androiddevelopment.Activity.CodeMore.GoogleMap.StyledMapActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.GpsActivity;
+import limitless.android.androiddevelopment.Activity.CodeMore.GoogleMap.SimpleMapsActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.MediaPlayerActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.TextToSpeechActivity;
 import limitless.android.androiddevelopment.Activity.MainActivity;
@@ -240,11 +244,11 @@ public class MainData {
         model.add(new MainModel("Audio manger", R.drawable.ic_audio_manager_512dp, false,  false, null, AudioManagerActivity.class, false));
         model.add(new MainModel("Bluetooth", R.drawable.ic_bluetooth_512dp, false,  false, null, BluetoothActivity.class, false));
         model.add(new MainModel("Image effects", R.drawable.ic_effects_512dp, false,  false, imageEffects(), null, true));
+        model.add(new MainModel("Google maps", R.drawable.ic_google_maps_512dp, false,  false, googleMaps(), null, true));
 
         model.add(new MainModel("GPS", R.drawable.ic_maps_512dp, false,  false, null, GpsActivity.class, false));
         model.add(new MainModel("Camera", R.drawable.ic_camera_512dp, false,  false, null, MainActivity.class, false));
         model.add(new MainModel("Gestures", R.drawable.ic_gestures_512dp, false,  false, null, MainActivity.class, false));
-        model.add(new MainModel("Google maps", R.drawable.ic_maps_512dp, false,  false, null, MainActivity.class, false));
         model.add(new MainModel("Multi touch", R.drawable.ic_multi_touch_512dp, false,  false, null, MainActivity.class, false));
         model.add(new MainModel("Network connection", R.drawable.ic_network_connection_512dp, false,  false, null, MainActivity.class, false));
         model.add(new MainModel("Textur View", R.drawable.ic_texturview_512dp, false,  false, null, MainActivity.class, false));
@@ -264,6 +268,18 @@ public class MainData {
         list.add(new ProjectModel("FlashLight", "Control your flash", null, 20, R.drawable.image_code_header));
         list.add(new ProjectModel("Media downloader", "Download your media from twitter", null, 25, R.drawable.image_code_header));
         list.add(new ProjectModel("Twitter unfollowers", "Best twitter unfollowers", null, 25, R.drawable.image_code_header));
+        return list;
+    }
+
+    /**
+     * @return List of Google map
+     */
+    private static List<MainModel.InnerModel> googleMaps() {
+        List<MainModel.InnerModel> list = new ArrayList<>();
+        list.add(new MainModel.InnerModel("Simple map", false, SimpleMapsActivity.class));
+        list.add(new MainModel.InnerModel("Live location", false, LiveLocationActivity.class));
+        list.add(new MainModel.InnerModel("Dark mode", false, DarkStyleMapActivity.class));
+        list.add(new MainModel.InnerModel("Styled map", false, StyledMapActivity.class));
         return list;
     }
 

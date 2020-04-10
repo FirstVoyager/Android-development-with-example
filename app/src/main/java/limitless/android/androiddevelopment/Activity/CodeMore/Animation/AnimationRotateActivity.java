@@ -1,7 +1,6 @@
-package limitless.android.androiddevelopment.Activity.CodeMore;
+package limitless.android.androiddevelopment.Activity.CodeMore.Animation;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
 import limitless.android.androiddevelopment.Other.AnimationManager;
@@ -10,25 +9,27 @@ import limitless.android.androiddevelopment.R;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AnimationSet;
 
-public class AnimationFadeActivity extends BaseActivity implements View.OnClickListener {
+public class AnimationRotateActivity extends BaseActivity implements View.OnClickListener {
 
     private AppCompatImageView ivAnim;
-    private int duration = 2000;
+    private int duration = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animation_fade);
+        setContentView(R.layout.activity_animation_rotate);
         init();
     }
 
     private void init() {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        findViewById(R.id.button_90).setOnClickListener(this);
+        findViewById(R.id.button_180).setOnClickListener(this);
+        findViewById(R.id.button_360).setOnClickListener(this);
+        findViewById(R.id.button_180b).setOnClickListener(this);
         ivAnim = findViewById(R.id.imageView_animation);
-        findViewById(R.id.button_fadeIn).setOnClickListener(this);
-        findViewById(R.id.button_fadeOut).setOnClickListener(this);
-
     }
 
     @Override
@@ -42,11 +43,17 @@ public class AnimationFadeActivity extends BaseActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.button_fadeIn:
-                AnimationManager.fadeIn(ivAnim, duration);
+            case R.id.button_90:
+                AnimationManager.rotate(ivAnim, 90, duration);
                 break;
-            case R.id.button_fadeOut:
-                AnimationManager.fadeOut(ivAnim, duration);
+            case R.id.button_180:
+                AnimationManager.rotate(ivAnim, 180, duration);
+                break;
+            case R.id.button_360:
+                AnimationManager.rotate(ivAnim, 360, duration);
+                break;
+            case R.id.button_180b:
+                AnimationManager.rotate(ivAnim, -180, duration);
                 break;
         }
     }

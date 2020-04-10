@@ -42,7 +42,7 @@ dependencies {
     implementation 'com.android.support:design:29.0.0'
 
     // material
-    implementation 'com.google.android.material:material:1.2.0-alpha04'
+    implementation 'com.google.android.material:material:1.2.0-alpha05'
     // picasso for load images
     implementation 'com.squareup.picasso:picasso:2.71828'
     // volley
@@ -57,4 +57,10 @@ dependencies {
     implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
     // multi dex
     implementation 'com.android.support:multidex:1.0.3'
+    // maps
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    // location
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    // places
+    implementation 'com.google.android.libraries.places:places:2.2.0'
 }

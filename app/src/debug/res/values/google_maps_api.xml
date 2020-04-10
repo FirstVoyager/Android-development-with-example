@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=B0:C5:01:C9:7A:E2:45:12:6B:7B:6A:28:F5:24:AC:B3:F3:0F:E7:0E%3Blimitless.android.androiddevelopment.Activity.CodeMore
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    limitless.android.androiddevelopment.Activity.CodeMore
+
+    SHA-1 certificate fingerprint:
+    B0:C5:01:C9:7A:E2:45:12:6B:7B:6A:28:F5:24:AC:B3:F3:0F:E7:0E
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">@string/map_key</string>
+</resources>

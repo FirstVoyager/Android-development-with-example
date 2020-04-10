@@ -35,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/Widget.AppCompat.Button.Borderless"
-                    android:text="@string/text_cancel"
+                    android:text="@string/cancel"
                     android:id="@+id/button_cancel"/>
 
                 <androidx.appcompat.widget.AppCompatButton

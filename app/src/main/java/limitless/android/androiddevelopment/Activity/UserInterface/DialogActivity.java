@@ -2,9 +2,6 @@ package limitless.android.androiddevelopment.Activity.UserInterface;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
-import androidx.core.view.GravityCompat;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
 import limitless.android.androiddevelopment.Dialog.DialogCameraPermission;
 import limitless.android.androiddevelopment.Dialog.DialogCookies;
@@ -15,18 +12,14 @@ import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
 import android.app.DatePickerDialog;
-import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.DatePicker;
-import android.widget.LinearLayout;
 import android.widget.TimePicker;
-import android.widget.Toolbar;
 
 public class DialogActivity extends BaseActivity implements View.OnClickListener {
 
@@ -129,7 +122,7 @@ public class DialogActivity extends BaseActivity implements View.OnClickListener
     }
 
     private void customDatePicker() {
-        String[] names = new String[]{getString(R.string.text_ok), getString(R.string.text_cancel)};
+        String[] names = new String[]{getString(R.string.text_ok), getString(R.string.cancel)};
         DialogDatePicker datePicker = new DialogDatePicker(names, new DateListener() {
             @Override
             public void date(int year, int mouth, int dayOfMonth) {
@@ -171,7 +164,7 @@ public class DialogActivity extends BaseActivity implements View.OnClickListener
                 dialog.dismiss();
             }
         });
-        builder.setNegativeButton(getString(R.string.text_cancel), new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
@@ -197,7 +190,7 @@ public class DialogActivity extends BaseActivity implements View.OnClickListener
                 dialog.dismiss();
             }
         });
-        builder.setNegativeButton(getString(R.string.text_cancel), new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
@@ -217,7 +210,7 @@ public class DialogActivity extends BaseActivity implements View.OnClickListener
                 dialog.dismiss();
             }
         });
-        builder.setNegativeButton(getString(R.string.text_cancel), new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();

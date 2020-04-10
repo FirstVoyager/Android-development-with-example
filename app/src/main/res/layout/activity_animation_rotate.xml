@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.CodeMore.AnimationRotateActivity">
+    tools:context=".Activity.CodeMore.Animation.AnimationRotateActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageView_animation"

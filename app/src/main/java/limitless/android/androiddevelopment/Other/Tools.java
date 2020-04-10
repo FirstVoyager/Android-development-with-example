@@ -7,6 +7,7 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -29,6 +30,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.squareup.picasso.Picasso;
 
 import java.io.BufferedReader;
@@ -36,6 +39,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Field;
+import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -48,7 +52,10 @@ import java.util.Random;
 import java.util.Set;
 import java.util.TimeZone;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.cardview.widget.CardView;
@@ -56,19 +63,32 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import limitless.android.androiddevelopment.Activity.CodeMore.ClipboardManagerActivity;
 import limitless.android.androiddevelopment.BuildConfig;
 import limitless.android.androiddevelopment.Dialog.DialogInfo;
+import limitless.android.androiddevelopment.Dialog.StyleMapDialog;
 import limitless.android.androiddevelopment.R;
 
 public class Tools {
 
+    /**
+     * Show toast with string
+     * @param context
+     * @param s message want to show
+     */
     public static void toast(Context context, String s) {
         if (context == null || s == null)
             return;
         Toast.makeText(context, s, Toast.LENGTH_SHORT).show();
+    }
+
+    public static void toast(Context context, @StringRes int id){
+        if (context == null)
+            return;
+        Toast.makeText(context, id, Toast.LENGTH_SHORT).show();
     }
 
     public static void customToast(Context context, String s){
@@ -428,6 +448,11 @@ public class Tools {
         }
     }
 
+    /**
+     * Show keyboard if can {@link InputMethodManager}
+     * @param context
+     * @param view
+     */
     public static void showKeyboard(Context context, View view){
         InputMethodManager manager = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
         if (manager != null){
@@ -435,6 +460,11 @@ public class Tools {
         }
     }
 
+    /**
+     * Hide keyboard if can {@link InputMethodManager}
+     * @param context
+     * @param view
+     */
     public static void hideKeyboard(Context context, View view) {
         InputMethodManager manager =(InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
         if (manager != null){
@@ -488,9 +518,54 @@ public class Tools {
      * @param res image resources id
      * @param iv want to set in it
      */
-    public static void loadImage(Context context, int res, ImageView iv) {
+    public static void loadImage(Context context, @DrawableRes int res, ImageView iv) {
         if (context == null || res <= 0 || iv == null)
             return;
         Picasso.get().load(res).resize(400, 300).into(iv);
+    }
+
+    /**
+     * Convert resource drawable to {@link BitmapDescriptor} for use in {@link com.google.android.gms.maps.GoogleMap}
+     * @param res id for drawable
+     * @return
+     */
+    public static BitmapDescriptor bitmapDescriptor(@DrawableRes int res) {
+         BitmapDescriptor bd = BitmapDescriptorFactory.fromResource(res);
+        return bd;
+    }
+
+    /**
+     * Convert String files in asset folder to String
+     * @param assets Asset manager
+     * @param s file name
+     * @return a string
+     */
+    public static String assetToString(AssetManager assets, String s) {
+        try {
+            InputStream inputStream = assets.open(s);
+            int size = inputStream.available();
+            byte[] buffer = new byte[size];
+            inputStream.read(buffer);
+            inputStream.close();
+            return new String(buffer, StandardCharsets.UTF_8);
+        } catch (IOException e) {
+            error(e);
+        }
+        return null;
+    }
+
+    /**
+     * Show Dialog if can
+     * @param fm FragmentManagerb
+     * @param df Dialog Fragment
+     */
+    public static void showDialog(FragmentManager fm, DialogFragment df) {
+        if (fm == null || df == null)
+            return;
+        try {
+            df.show(fm, null);
+        } catch (Exception e) {
+            error(e);
+        }
     }
 }

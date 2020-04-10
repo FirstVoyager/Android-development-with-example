@@ -48,4 +48,5 @@
     <dimen name="height_mini_icon_bottom_sheet">25dp</dimen>
     <dimen name="height_item_bottom_sheet">50dp</dimen>
     <dimen name="height_about_image">245dp</dimen>
+    <dimen name="image_style_height">90dp</dimen>
 </resources>

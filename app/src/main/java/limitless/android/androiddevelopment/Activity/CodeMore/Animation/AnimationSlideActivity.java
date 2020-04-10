@@ -1,4 +1,4 @@
-package limitless.android.androiddevelopment.Activity.CodeMore;
+package limitless.android.androiddevelopment.Activity.CodeMore.Animation;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatImageView;
@@ -10,23 +10,25 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
-public class AnimationZoomActivity extends BaseActivity implements View.OnClickListener {
+public class AnimationSlideActivity extends BaseActivity implements View.OnClickListener {
 
     private AppCompatImageView ivAnim;
+    private int duration = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animation_zoom);
+        setContentView(R.layout.activity_animation_slide);
         init();
     }
 
     private void init() {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ivAnim = findViewById(R.id.imageView_animation);
-
-        findViewById(R.id.button_zoomIn).setOnClickListener(this);
-        findViewById(R.id.button_zoomOut).setOnClickListener(this);
+        findViewById(R.id.button_slideInTop).setOnClickListener(this);
+        findViewById(R.id.button_slideInBottom).setOnClickListener(this);
+        findViewById(R.id.button_slideOutTop).setOnClickListener(this);
+        findViewById(R.id.button_slideOutBottom).setOnClickListener(this);
     }
 
     @Override
@@ -40,11 +42,17 @@ public class AnimationZoomActivity extends BaseActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.button_zoomIn:
-                AnimationManager.zoomIn(ivAnim, 1000);
+            case R.id.button_slideInTop:
+                AnimationManager.slideInTop(ivAnim, duration);
                 break;
-            case R.id.button_zoomOut:
-                AnimationManager.zoomOut(ivAnim, 1000);
+            case R.id.button_slideInBottom:
+                AnimationManager.slideInBottom(ivAnim, duration);
+                break;
+            case R.id.button_slideOutTop:
+                AnimationManager.slideOutTop(ivAnim, duration);
+                break;
+            case R.id.button_slideOutBottom:
+                AnimationManager.slideOutBottom(ivAnim, duration);
                 break;
         }
     }
