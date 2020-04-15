@@ -83,7 +83,7 @@ public class AdapterPhoto extends RecyclerView.Adapter<AdapterPhoto.PhotoViewHol
         }
 
         void bindView(PhotoModel pm){
-            Picasso.get().load(new File(pm.data)).resize(180, 350).into(ivMain);
+            Tools.loadImage(context, pm.data, ivMain);
             tvTitle.setText(pm.title);
         }
 

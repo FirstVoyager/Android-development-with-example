@@ -42,8 +42,8 @@ dependencies {
     implementation 'com.android.support:design:29.0.0'
 
     // material
-    implementation 'com.google.android.material:material:1.2.0-alpha05'
-    // picasso for load images
+    implementation 'com.google.android.material:material:1.2.0-alpha06'
+    // picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
     // volley
     implementation 'com.android.volley:volley:1.1.1'
@@ -63,4 +63,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-location:17.0.0'
     // places
     implementation 'com.google.android.libraries.places:places:2.2.0'
+    // glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 }

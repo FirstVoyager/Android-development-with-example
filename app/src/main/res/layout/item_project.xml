@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    android:id="@+id/cardView_project"
+<androidx.cardview.widget.CardView android:id="@+id/cardView_project"
     android:layout_width="match_parent"
     android:layout_height="240dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -10,7 +9,8 @@
     android:layout_marginTop="6dp"
     android:layout_marginBottom="6dp"
     app:cardElevation="4dp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <FrameLayout
         android:background="?attr/selectableItemBackground"
@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/image_code_header"
-            android:scaleType="centerCrop"/>
+            android:scaleType="fitXY"/>
 
         <LinearLayout
             android:gravity="center_vertical"
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="bottom"
-            android:background="#39FFFFFF">
+            android:background="#4A000000">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -70,7 +70,7 @@
                 android:id="@+id/textView_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="20$"
+                tools:text="20$"
                 style="@style/TextAppearance.AppCompat.Title"
                 android:textColor="@android:color/holo_red_dark"/>
 

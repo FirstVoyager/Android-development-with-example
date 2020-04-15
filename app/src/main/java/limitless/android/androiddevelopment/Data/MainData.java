@@ -261,7 +261,8 @@ public class MainData {
      */
     public static List<ProjectModel> projectList() {
         List<ProjectModel> list = new ArrayList<>();
-        list.add(new ProjectModel("App manager", "Manager your apks in android", null, 25, R.drawable.image_code_header));
+//        list.add(new ProjectModel("App manager", "Manager your apks in android", "https://firebasestorage.googleapis.com/v0/b/media-downloader-for-twitter.appspot.com/o/Android%20development%20with%20java%2Fphotos%2Fproject_app_manager_header.jpg", 25, 0));
+        list.add(new ProjectModel("App manager", "Manager your apks in android", null, 25, R.drawable.wallpaper_app_manager));
         list.add(new ProjectModel("File manager", "Manager your file in android", null, 30, R.drawable.image_code_header));
         list.add(new ProjectModel("Material color", "Material colors code and etc work with colors", null, 20, R.drawable.image_code_header));
         list.add(new ProjectModel("Infinite wallpaper", "Get free wallpaper", null, 25, R.drawable.image_code_header));

@@ -66,8 +66,8 @@ public class HorizontalListAdapter extends RecyclerView.Adapter<HorizontalListAd
             });
         }
 
-        void bindView(Integer drawable, String s){
-            Picasso.get().load(drawable).into(iv);
+        void bindView(int resId, String s){
+            Tools.loadImage(context, resId, iv);
             tv.setText(s);
         }
 

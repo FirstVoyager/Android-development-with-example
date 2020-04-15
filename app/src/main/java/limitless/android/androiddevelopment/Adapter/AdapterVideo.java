@@ -94,7 +94,8 @@ public class AdapterVideo extends RecyclerView.Adapter<AdapterVideo.VideoViewHol
             tvTitle.setText(vm.title);
             tvDuration.setText(Tools.displayDuration(vm.duration));
             ivCover.setImageResource(R.drawable.ic_video_library_black_24dp);
-            new GetCover(getAdapterPosition()).execute(vm.id);
+            Tools.loadImage(context, vm.data, ivCover);
+//            new GetCover(getAdapterPosition()).execute(vm.id);
         }
 
         private class GetCover extends AsyncTask<Integer, Void, Bitmap>{

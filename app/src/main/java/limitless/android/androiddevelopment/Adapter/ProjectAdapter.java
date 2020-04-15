@@ -66,7 +66,10 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectV
             tvPrice.append("$");
             tvTitle.setText(pm.title);
             tvCaption.setText(pm.caption);
-            Tools.loadImage(context, pm.image, ivBack);
+            if (pm.imageUrl == null)
+                Tools.loadImage(context, pm.image, ivBack);
+            else
+                Tools.loadImage(context, pm.imageUrl, ivBack);
         }
 
         @Override

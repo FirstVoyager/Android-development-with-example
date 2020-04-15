@@ -75,7 +75,7 @@ public class AdapterMain extends RecyclerView.Adapter<AdapterMain.MainViewHolder
             if (mm.hasData)
                 ivNavigate.setVisibility(View.VISIBLE);
 
-            Picasso.get().load(mm.image).resize(200, 200).into(ivMain);
+            Tools.loadImage(context, mm.image, ivMain);
             tvName.setText(mm.name);
             if (mm.hasNew)
                 viewNew.setVisibility(View.VISIBLE);

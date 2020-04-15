@@ -16,6 +16,7 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -30,6 +31,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.squareup.picasso.Picasso;
@@ -519,9 +521,33 @@ public class Tools {
      * @param iv want to set in it
      */
     public static void loadImage(Context context, @DrawableRes int res, ImageView iv) {
-        if (context == null || res <= 0 || iv == null)
+        if (context == null || iv == null)
             return;
-        Picasso.get().load(res).resize(400, 300).into(iv);
+        Glide.with(context).load(res).into(iv);
+    }
+
+    /**
+     * Load image and set from url or path
+     * @param context
+     * @param url for image
+     * @param iv want to set in it
+     */
+    public static void loadImage(Context context, String url, ImageView iv){
+        if (context == null || url == null  || iv == null)
+            return;
+        Glide.with(context).load(url).into(iv);
+    }
+
+    /**
+     * Load and set image from drawable
+     * @param context
+     * @param drawable
+     * @param iv
+     */
+    public static void loadImage(Context context, Drawable drawable, ImageView iv){
+        if (context == null || drawable == null || iv == null)
+            return;
+        Glide.with(context).load(drawable).into(iv);
     }
 
     /**
