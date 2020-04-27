@@ -75,7 +75,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectV
         @Override
         public void onClick(View v) {
             if (v.getId() == R.id.cardView_project){
-
+                Tools.openUrl(context, list.get(getAdapterPosition()).storeUrl);
             }
         }
     }

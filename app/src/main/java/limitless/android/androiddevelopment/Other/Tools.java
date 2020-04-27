@@ -11,6 +11,7 @@ import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
@@ -76,6 +77,8 @@ import limitless.android.androiddevelopment.R;
 
 public class Tools {
 
+    public static Toast toast;
+
     /**
      * Show toast with string
      * @param context
@@ -84,13 +87,23 @@ public class Tools {
     public static void toast(Context context, String s) {
         if (context == null || s == null)
             return;
-        Toast.makeText(context, s, Toast.LENGTH_SHORT).show();
+        if (toast != null)
+            toast.cancel();
+        toast = Toast.makeText(context, s, Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     public static void toast(Context context, @StringRes int id){
         if (context == null)
             return;
-        Toast.makeText(context, id, Toast.LENGTH_SHORT).show();
+        if (toast != null)
+            toast.cancel();
+        toast = Toast.makeText(context, id, Toast.LENGTH_SHORT);
+        toast.show();
+    }
+
+    public static void customToast(Context context, @StringRes int id){
+        customToast(context, context.getString(id));
     }
 
     public static void customToast(Context context, String s){
@@ -99,6 +112,7 @@ public class Tools {
         CardView cardView = new CardView(context);
         cardView.setLayoutParams(new LinearLayout.LayoutParams(-2, -2));
         cardView.setRadius(convertDipToPx(context.getResources().getDisplayMetrics(), 8));
+        cardView.setCardBackgroundColor(Color.BLACK);
 
         AppCompatTextView tv = new AppCompatTextView(context);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(-2, -2);
@@ -120,9 +134,12 @@ public class Tools {
         tv.setGravity(Gravity.CENTER);
         tv.setLines(1);
         tv.setSingleLine(true);
+        tv.setTextColor(Color.WHITE);
         cardView.addView(tv);
 
-        Toast toast = new Toast(context);
+        if (toast != null)
+            toast.cancel();
+        toast = new Toast(context);
         toast.setView(cardView);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();

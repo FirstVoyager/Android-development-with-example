@@ -246,6 +246,7 @@ public class MainData {
         model.add(new MainModel("Image effects", R.drawable.ic_effects_512dp, false,  false, imageEffects(), null, true));
         model.add(new MainModel("Google maps", R.drawable.ic_google_maps_512dp, false,  false, googleMaps(), null, true));
 
+        model.add(new MainModel("Firebase", R.drawable.ic_firebase_512dp, false,  false, firebase(), null, true));
         model.add(new MainModel("GPS", R.drawable.ic_maps_512dp, false,  false, null, GpsActivity.class, false));
         model.add(new MainModel("Camera", R.drawable.ic_camera_512dp, false,  false, null, MainActivity.class, false));
         model.add(new MainModel("Gestures", R.drawable.ic_gestures_512dp, false,  false, null, MainActivity.class, false));
@@ -256,19 +257,29 @@ public class MainData {
         return model;
     }
 
+    private static List<MainModel.InnerModel> firebase() {
+        List<MainModel.InnerModel> list = new ArrayList<>();
+        list.add(new MainModel.InnerModel("Authentication", false, null));
+        list.add(new MainModel.InnerModel("Cloud Storage", false, null));
+        list.add(new MainModel.InnerModel("Realtime Database", false, null));
+        list.add(new MainModel.InnerModel("Cloud Messaging", false, null));
+        list.add(new MainModel.InnerModel("In-App Messaging", false, null));
+        return list;
+    }
+
     /**
      * @return list of project for sale
      */
     public static List<ProjectModel> projectList() {
         List<ProjectModel> list = new ArrayList<>();
-//        list.add(new ProjectModel("App manager", "Manager your apks in android", "https://firebasestorage.googleapis.com/v0/b/media-downloader-for-twitter.appspot.com/o/Android%20development%20with%20java%2Fphotos%2Fproject_app_manager_header.jpg", 25, 0));
-        list.add(new ProjectModel("App manager", "Manager your apks in android", null, 25, R.drawable.wallpaper_app_manager));
-        list.add(new ProjectModel("File manager", "Manager your file in android", null, 30, R.drawable.image_code_header));
-        list.add(new ProjectModel("Material color", "Material colors code and etc work with colors", null, 20, R.drawable.image_code_header));
-        list.add(new ProjectModel("Infinite wallpaper", "Get free wallpaper", null, 25, R.drawable.image_code_header));
-        list.add(new ProjectModel("FlashLight", "Control your flash", null, 20, R.drawable.image_code_header));
-        list.add(new ProjectModel("Media downloader", "Download your media from twitter", null, 25, R.drawable.image_code_header));
-        list.add(new ProjectModel("Twitter unfollowers", "Best twitter unfollowers", null, 25, R.drawable.image_code_header));
+        list.add(new ProjectModel("App manager", "Manager your apks in android", null, "https://play.google.com/store/apps/details?id=limitless.android.appmanager", null, 20, R.drawable.wallpaper_app_manager ));
+        list.add(new ProjectModel("Color palette", "Material colors code and etc work with colors", null, "https://play.google.com/store/apps/details?id=limitless.materialcolor", null, 25, R.drawable.ic_color_pallete_sale));
+
+//        list.add(new ProjectModel("Infinite wallpaper", "Get free wallpaper", null, null, null, 25, R.drawable.image_code_header));
+//        list.add(new ProjectModel("File manager", "Manager your file in android", null, null, null, 30, R.drawable.ic_color_pallete_sale));
+//        list.add(new ProjectModel("FlashLight", "Control your flash", null, null, null, 20, R.drawable.image_code_header));
+//        list.add(new ProjectModel("Media downloader", "Download your media from twitter", null, null, null, 25, R.drawable.image_code_header));
+//        list.add(new ProjectModel("Twitter unfollowers", "Best twitter unfollowers", null, null, null, 25, R.drawable.image_code_header));
         return list;
     }
 

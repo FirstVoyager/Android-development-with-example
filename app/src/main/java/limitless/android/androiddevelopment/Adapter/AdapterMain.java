@@ -103,7 +103,7 @@ public class AdapterMain extends RecyclerView.Adapter<AdapterMain.MainViewHolder
                 return;
             }
             if (mm.innerList == null || mm.innerList.size() <= 0){
-                Tools.toast(context, "coming soon ...");
+                Tools.customToast(context, R.string.coming_soon);
                 return;
             }
             if (mm.showData){

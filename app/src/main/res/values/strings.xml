@@ -682,4 +682,5 @@ The new Super Retina XDR display, a custom-designed OLED, provides users an imme
     <string name="dark">Dark</string>
     <string name="night">Night</string>
     <string name="aubergine">Aubergine</string>
+    <string name="coming_soon">Coming soon ...</string>
 </resources>
