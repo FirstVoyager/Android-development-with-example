@@ -2,12 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="limitless.android.androiddevelopment">
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality.
-    -->
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -20,7 +17,6 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -50,10 +46,11 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Activity.Basic.Database.ObjectBoxActivity"/>
         <activity
-            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".Activity.CodeMore.GoogleMap.StyledMapActivity"
             android:label="@string/styled_map"
-            android:name=".Activity.CodeMore.GoogleMap.StyledMapActivity"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activity.CodeMore.GoogleMap.DarkStyleMapActivity"
             android:label="@string/dark_mode"
@@ -237,26 +234,26 @@
             android:name=".Activity.UserInterface.ProgressBarActivity"
             android:label="@string/t_progress_bar" />
         <activity
-            android:name=".Activity.UserInterface.DrawerAdminActivity"
+            android:name=".Activity.UserInterface.MenuDrawer.DrawerAdminActivity"
             android:label="@string/t_drawer_admin"
             android:theme="@style/AppTheme.DrawerAdmin" />
         <activity
-            android:name=".Activity.UserInterface.DrawerGmailActivity"
+            android:name=".Activity.UserInterface.MenuDrawer.DrawerGmailActivity"
             android:label="@string/t_drawer_gmail"
             android:theme="@style/AppTheme.Gmail"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".Activity.UserInterface.SimpleDrawerActivity"
+            android:name=".Activity.UserInterface.MenuDrawer.SimpleDrawerActivity"
             android:label="@string/t_menu_navigation_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activity.UserInterface.MenuActivity"
+            android:name=".Activity.UserInterface.MenuDrawer.MenuActivity"
             android:label="@string/text_menu_drawer" />
         <activity
-            android:name=".Activity.UserInterface.List2Activity"
+            android:name=".Activity.UserInterface.List.List2Activity"
             android:label="@string/text_android_lists" />
         <activity
-            android:name=".Activity.UserInterface.ListActivity"
+            android:name=".Activity.UserInterface.List.ListActivity"
             android:label="@string/text_lists" />
         <activity
             android:name=".Activity.UserInterface.DialogActivity"
@@ -277,73 +274,70 @@
             android:name=".Activity.UserInterface.BackdropActivity"
             android:label="@string/text_backdrop" />
         <activity
-            android:name=".Activity.UserInterface.AppbarTopCollapseImageActivity"
+            android:name=".Activity.UserInterface.AppbarTop.AppbarTopCollapseImageActivity"
             android:label="@string/text_collapse"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activity.UserInterface.AppbarTopActionModeActivity"
+            android:name=".Activity.UserInterface.AppbarTop.AppbarTopActionModeActivity"
             android:label="@string/text_action_mode"
             android:theme="@style/AppTheme.Light" />
         <activity
-            android:name=".Activity.UserInterface.AppbarTopRegularActivity"
+            android:name=".Activity.UserInterface.AppbarTop.AppbarTopRegularActivity"
             android:label="@string/text_regular"
             android:theme="@style/AppTheme.NoToolbar" />
         <activity
-            android:name=".Activity.UserInterface.AppbarTopActivity"
+            android:name=".Activity.UserInterface.AppbarTop.AppbarTopActivity"
             android:label="@string/text_app_bar_top" />
         <activity
-            android:name=".Activity.UserInterface.AppbarBottomHideOnScrollActivity"
+            android:name=".Activity.UserInterface.AppbarBottom.AppbarBottomHideOnScrollActivity"
             android:label="@string/text_hide_on_scroll" />
         <activity
-            android:name=".Activity.UserInterface.AppbarBottomInsetFABActivity"
+            android:name=".Activity.UserInterface.AppbarBottom.AppbarBottomInsetFABActivity"
             android:label="@string/text_inset_fab"
             android:theme="@style/AppTheme.NoToolbar" />
         <activity
-            android:name=".Activity.UserInterface.AppbarBottomOverlappingFABActivity"
+            android:name=".Activity.UserInterface.AppbarBottom.AppbarBottomOverlappingFABActivity"
             android:label="@string/text_overlapping_fab"
             android:theme="@style/AppTheme.NoToolbar" />
         <activity
-            android:name=".Activity.UserInterface.AppbarBottomUnlabeledActivity"
+            android:name=".Activity.UserInterface.AppbarBottom.AppbarBottomUnlabeledActivity"
             android:label="@string/text_unlabeled" />
         <activity
-            android:name=".Activity.UserInterface.AppbarBottomShiftingActivity"
+            android:name=".Activity.UserInterface.AppbarBottom.AppbarBottomShiftingActivity"
             android:label="@string/text_shifting" />
         <activity
-            android:name=".Activity.UserInterface.AppbarBottomLabeledActivity"
+            android:name=".Activity.UserInterface.AppbarBottom.AppbarBottomLabeledActivity"
             android:label="@string/text_basic" />
         <activity
-            android:name=".Activity.UserInterface.AppbarBottomActivity"
+            android:name=".Activity.UserInterface.AppbarBottom.AppbarBottomActivity"
             android:label="@string/text_appbar_bottom" />
         <activity
-            android:name=".Activity.Basic.EnvironmentActivity"
+            android:name=".Activity.Basic.Sensors.EnvironmentActivity"
             android:label="@string/text_environment_sensors" />
         <activity
-            android:name=".Activity.Basic.PositionActivity"
+            android:name=".Activity.Basic.Sensors.PositionActivity"
             android:label="@string/text_position_sensors" />
-        <activity android:name=".Activity.Basic.GsonActivity" />
+        <activity android:name=".Activity.Basic.Sensors.Network.GsonActivity" />
         <activity
-            android:name=".Activity.Basic.JsonActivity"
+            android:name=".Activity.Basic.Sensors.Network.JsonActivity"
             android:label="@string/text_json_converters" />
         <activity
-            android:name=".Activity.Basic.RetrofitActivity"
+            android:name=".Activity.Basic.Sensors.Network.RetrofitActivity"
             android:label="@string/text_retrofit" />
         <activity
-            android:name=".Activity.Basic.VolleyActivity"
+            android:name=".Activity.Basic.Sensors.Network.VolleyActivity"
             android:label="@string/text_volley" />
         <activity
-            android:name=".Activity.Basic.NotificationActionButtonActivity"
-            android:label="@string/text_notification_action_button" />
-        <activity
-            android:name=".Activity.Basic.CustomNotificationActivity"
+            android:name=".Activity.Basic.Notification.CustomNotificationActivity"
             android:label="@string/text_custom_notification" />
         <activity
-            android:name=".Activity.Basic.NotificationStylingActivity"
+            android:name=".Activity.Basic.Notification.NotificationStylingActivity"
             android:label="@string/text_notification_styling" />
         <activity
-            android:name=".Activity.Basic.RealmTestActivity"
+            android:name=".Activity.Basic.Database.RealmTestActivity"
             android:label="@string/text_realm_database" />
         <activity
-            android:name=".Activity.Basic.SharePrefActivity"
+            android:name=".Activity.Basic.Database.SharePrefActivity"
             android:label="@string/text_shared_preferences" />
         <activity android:name=".Activity.UIMore.Payment.Payment6Activity" />
         <activity android:name=".Activity.UIMore.Payment.Payment5Activity" />
@@ -392,58 +386,58 @@
         <activity android:name=".Activity.UIMore.Chat.WhatAppActivity" />
         <activity android:name=".Activity.UIMore.Chat.TelegramActivity" />
         <activity
-            android:name=".Activity.Basic.RWCDFileActivity"
+            android:name=".Activity.Basic.FileStorage.RWCDFileActivity"
             android:label="@string/text_operation_on_file" />
         <activity
-            android:name=".Activity.Basic.ReadVideosActivity"
+            android:name=".Activity.Basic.FileStorage.ReadVideosActivity"
             android:label="@string/text_read_videos" />
         <activity
-            android:name=".Activity.Basic.ReadSongsActivity"
+            android:name=".Activity.Basic.FileStorage.ReadSongsActivity"
             android:label="@string/text_read_songs" />
         <activity
-            android:name=".Activity.Basic.ReadPhotosActivity"
+            android:name=".Activity.Basic.FileStorage.ReadPhotosActivity"
             android:label="@string/text_read_photos" />
         <activity
-            android:name=".Activity.Basic.SetAlarmActivity"
+            android:name=".Activity.Basic.BroadCast.SetAlarmActivity"
             android:label="@string/text_set_alarm" />
         <activity
-            android:name=".Activity.Basic.SimpleImageDownloaderActivity"
+            android:name=".Activity.Basic.Service.SimpleImageDownloaderActivity"
             android:label="@string/text_simple_image_downloader" />
         <activity
-            android:name=".Activity.Basic.SMSReceiverActivity"
+            android:name=".Activity.Basic.BroadCast.SMSReceiverActivity"
             android:label="@string/text_sms_receiver" />
         <activity
-            android:name=".Activity.Basic.CallReceiverActivity"
-            android:label="@string/title_call_receiver" />
-        <activity
-            android:name=".Activity.Basic.BroadcastInfoActivity"
+            android:name=".Activity.Basic.BroadCast.BroadcastInfoActivity"
             android:label="@string/title_list_of_broadcast_receivers" />
         <activity
-            android:name=".Activity.Basic.BasicBroadcastReceiver"
+            android:name=".Activity.Basic.BroadCast.BasicBroadcastReceiver"
             android:label="@string/title_broadcast_receiver" />
         <activity android:name=".Activity.UserInterface.UIComponentActivity" />
-        <activity android:name=".Activity.Basic.SecurityActivity" />
+        <activity android:name=".Activity.Basic.Security.SecurityActivity" />
         <activity
-            android:name=".Activity.Basic.MotionActivity"
+            android:name=".Activity.Basic.Sensors.MotionActivity"
             android:label="@string/text_motion_sensors" />
         <activity
-            android:name=".Activity.Basic.HttpRequestActivity"
+            android:name=".Activity.Basic.Sensors.Network.HttpRequestActivity"
             android:label="@string/text_http_request" />
-        <activity android:name=".Activity.Basic.HandlerActivity" />
         <activity
-            android:name=".Activity.Basic.BasicNotificationActivity"
+            android:label="@string/handler"
+            android:name=".Activity.Basic.Thread.HandlerActivity" />
+        <activity
+            android:name=".Activity.Basic.Notification.BasicNotificationActivity"
             android:label="@string/text_basic_notification" />
-        <activity android:name=".Activity.Basic.SQLiteActivity" />
         <activity
-            android:name=".Activity.Basic.FileProviderActivity"
+            android:label="@string/sqlite"
+            android:name=".Activity.Basic.Database.SQLiteActivity" />
+        <activity
+            android:name=".Activity.Basic.FileStorage.FileProviderActivity"
             android:label="@string/text_file_provider" />
-        <activity android:name=".Activity.Basic.ActivityActivity" />
+        <activity android:name=".Activity.Basic.Activity.ActivityActivity" />
         <activity
-            android:name=".Activity.Basic.ServiceActivity"
+            android:name=".Activity.Basic.Service.ServiceActivity"
             android:label="@string/text_basic_service" />
-        <activity android:name=".Activity.Basic.BroadcastActivity" />
         <activity
-            android:name=".Activity.Basic.PermissionActivity"
+            android:name=".Activity.Basic.Manifest.PermissionActivity"
             android:label="@string/title_permissions" />
         <activity
             android:name=".Activity.MainActivity"
@@ -460,7 +454,7 @@
             </intent-filter>
         </receiver> <!-- sms receiver -->
         <receiver
-            android:name=".Activity.Basic.SMSReceiverActivity$SMSReceiver"
+            android:name=".Activity.Basic.BroadCast.SMSReceiverActivity$SMSReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -468,10 +462,10 @@
             </intent-filter>
         </receiver> <!-- simple alarm receiver -->
         <receiver
-            android:name=".Activity.Basic.SetAlarmActivity$SimpleAlarmReceiver"
+            android:name=".Activity.Basic.BroadCast.SetAlarmActivity$SimpleAlarmReceiver"
             android:process=":remote" /> <!-- simple service -->
-        <service android:name=".Activity.Basic.ServiceActivity$SimpleService" /> <!-- simple image downloader service -->
-        <service android:name=".Activity.Basic.SimpleImageDownloaderActivity$SimpleImageDownloaderService" /> <!-- file provider example -->
+        <service android:name=".Activity.Basic.Service.ServiceActivity$SimpleService" /> <!-- simple image downloader service -->
+        <service android:name=".Activity.Basic.Service.SimpleImageDownloaderActivity$SimpleImageDownloaderService" /> <!-- file provider example -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="limitless.android.fileprovider"
@@ -481,9 +475,10 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
         </provider> <!-- close notification receiver -->
-        <receiver android:name=".Activity.Basic.BasicNotificationActivity$BroadcastReceiverAction" /> <!-- remote input receiver -->
-        <receiver android:name=".Activity.Basic.BasicNotificationActivity$InputReceiver" /> <!-- custom notification receiver -->
-        <receiver android:name=".Activity.Basic.CustomNotificationActivity$CustomNotificationListener" />
+        <receiver android:name=".Activity.Basic.Notification.BasicNotificationActivity$BroadcastReceiverAction" /> <!-- remote input receiver -->
+        <receiver android:name=".Activity.Basic.Notification.BasicNotificationActivity$InputReceiver" /> <!-- custom notification receiver -->
+        <receiver android:name=".Activity.Basic.Notification.CustomNotificationActivity$CustomNotificationListener" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />

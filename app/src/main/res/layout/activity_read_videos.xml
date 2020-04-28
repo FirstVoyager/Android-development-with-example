@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.Basic.ReadVideosActivity">
+    tools:context=".Activity.Basic.FileStorage.ReadVideosActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

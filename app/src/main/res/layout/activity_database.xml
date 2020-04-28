@@ -8,15 +8,7 @@
     android:layout_height="match_parent"
     android:paddingStart="8dp"
     android:paddingEnd="8dp"
-    tools:context=".Activity.Basic.SQLiteActivity">
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:text="@string/text_create_database"
-        android:layout_marginTop="8dp"
-        android:id="@+id/button_createDB"/>
+    tools:context=".Activity.Basic.Database.SQLiteActivity">
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"

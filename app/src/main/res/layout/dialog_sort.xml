@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -15,10 +16,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/padding_card_inner_medium"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/TextAppearance.AppCompat.Title"
@@ -26,13 +29,15 @@
                 tools:text="Sort image by"/>
 
             <RadioGroup
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioGroup"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginTop="16dp"/>
 
             <View
+                android:layout_marginTop="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/height_divider"
                 android:background="@color/color_divider"/>

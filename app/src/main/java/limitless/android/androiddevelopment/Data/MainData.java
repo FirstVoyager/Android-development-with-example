@@ -3,27 +3,27 @@ package limitless.android.androiddevelopment.Data;
 import java.util.ArrayList;
 import java.util.List;
 
-import limitless.android.androiddevelopment.Activity.Basic.ActivityActivity;
-import limitless.android.androiddevelopment.Activity.Basic.BasicBroadcastReceiver;
-import limitless.android.androiddevelopment.Activity.Basic.BroadcastInfoActivity;
-import limitless.android.androiddevelopment.Activity.Basic.CustomNotificationActivity;
-import limitless.android.androiddevelopment.Activity.Basic.EnvironmentActivity;
-import limitless.android.androiddevelopment.Activity.Basic.JsonActivity;
-import limitless.android.androiddevelopment.Activity.Basic.NotificationStylingActivity;
-import limitless.android.androiddevelopment.Activity.Basic.PositionActivity;
-import limitless.android.androiddevelopment.Activity.Basic.RWCDFileActivity;
-import limitless.android.androiddevelopment.Activity.Basic.ReadSongsActivity;
-import limitless.android.androiddevelopment.Activity.Basic.ReadPhotosActivity;
-import limitless.android.androiddevelopment.Activity.Basic.ReadVideosActivity;
-import limitless.android.androiddevelopment.Activity.Basic.RealmTestActivity;
-import limitless.android.androiddevelopment.Activity.Basic.RetrofitActivity;
-import limitless.android.androiddevelopment.Activity.Basic.SMSReceiverActivity;
-import limitless.android.androiddevelopment.Activity.Basic.SetAlarmActivity;
-import limitless.android.androiddevelopment.Activity.Basic.SharePrefActivity;
-import limitless.android.androiddevelopment.Activity.Basic.SimpleImageDownloaderActivity;
-import limitless.android.androiddevelopment.Activity.Basic.SQLiteActivity;
-import limitless.android.androiddevelopment.Activity.Basic.FileProviderActivity;
-import limitless.android.androiddevelopment.Activity.Basic.VolleyActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Activity.ActivityActivity;
+import limitless.android.androiddevelopment.Activity.Basic.BroadCast.BasicBroadcastReceiver;
+import limitless.android.androiddevelopment.Activity.Basic.BroadCast.BroadcastInfoActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Notification.CustomNotificationActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Sensors.EnvironmentActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Sensors.Network.JsonActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Notification.NotificationStylingActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Sensors.PositionActivity;
+import limitless.android.androiddevelopment.Activity.Basic.FileStorage.RWCDFileActivity;
+import limitless.android.androiddevelopment.Activity.Basic.FileStorage.ReadSongsActivity;
+import limitless.android.androiddevelopment.Activity.Basic.FileStorage.ReadPhotosActivity;
+import limitless.android.androiddevelopment.Activity.Basic.FileStorage.ReadVideosActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Database.RealmTestActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Sensors.Network.RetrofitActivity;
+import limitless.android.androiddevelopment.Activity.Basic.BroadCast.SMSReceiverActivity;
+import limitless.android.androiddevelopment.Activity.Basic.BroadCast.SetAlarmActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Database.SharePrefActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Service.SimpleImageDownloaderActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Database.SQLiteActivity;
+import limitless.android.androiddevelopment.Activity.Basic.FileStorage.FileProviderActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Sensors.Network.VolleyActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.Animation.AnimationFadeActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.Animation.AnimationRotateActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.Animation.AnimationSlideActivity;
@@ -33,20 +33,17 @@ import limitless.android.androiddevelopment.Activity.CodeMore.AudioRecorderActiv
 import limitless.android.androiddevelopment.Activity.CodeMore.BluetoothActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.ClipboardManagerActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.GoogleMap.DarkStyleMapActivity;
-import limitless.android.androiddevelopment.Activity.CodeMore.GoogleMap.LiveLocationActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.GoogleMap.StyledMapActivity;
-import limitless.android.androiddevelopment.Activity.CodeMore.GpsActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.GoogleMap.SimpleMapsActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.MediaPlayerActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.TextToSpeechActivity;
-import limitless.android.androiddevelopment.Activity.MainActivity;
-import limitless.android.androiddevelopment.Activity.Basic.HttpRequestActivity;
-import limitless.android.androiddevelopment.Activity.Basic.BasicNotificationActivity;
-import limitless.android.androiddevelopment.Activity.Basic.PermissionActivity;
-import limitless.android.androiddevelopment.Activity.Basic.SecurityActivity;
-import limitless.android.androiddevelopment.Activity.Basic.MotionActivity;
-import limitless.android.androiddevelopment.Activity.Basic.ServiceActivity;
-import limitless.android.androiddevelopment.Activity.Basic.HandlerActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Sensors.Network.HttpRequestActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Notification.BasicNotificationActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Manifest.PermissionActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Security.SecurityActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Sensors.MotionActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Service.ServiceActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Thread.HandlerActivity;
 import limitless.android.androiddevelopment.Activity.UIMore.About.AboutRestaurantActivity;
 import limitless.android.androiddevelopment.Activity.UIMore.About.AboutInfiniteDevelopersActivity;
 import limitless.android.androiddevelopment.Activity.UIMore.About.AboutFullScreenActivity;
@@ -87,8 +84,8 @@ import limitless.android.androiddevelopment.Activity.UIMore.Verification.Verific
 import limitless.android.androiddevelopment.Activity.UIMore.Verification.VerificationCustomKeyboardLightActivity;
 import limitless.android.androiddevelopment.Activity.UIMore.Verification.VerificationPhoneActivity;
 import limitless.android.androiddevelopment.Activity.UIMore.Chat.WhatAppActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.AppbarBottomActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.AppbarTopActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.AppbarBottom.AppbarBottomActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.AppbarTop.AppbarTopActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.BottomSheetActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.ButtonsActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.CardsActivity;
@@ -105,8 +102,8 @@ import limitless.android.androiddevelopment.Activity.UserInterface.FragmentLifec
 import limitless.android.androiddevelopment.Activity.UserInterface.FragmentManagerActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.FrameLayoutActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.LinearLayoutActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.ListActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.MenuActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.List.ListActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.MenuDrawer.MenuActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.ProgressBarActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.RelativeLayoutActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.ShapeViewActivity;
@@ -141,7 +138,6 @@ public class MainData {
     */
     public static List<MainModel> components(){
         List<MainModel> mainList = new ArrayList<>();
-
         mainList.add(new MainModel("App Manifest", R.drawable.ic_manifest_512dp, false, false, manifest(), null, true));
         mainList.add(new MainModel( "Broadcast receiver", R.drawable.ic_broadcast_512dp, false, false, broadcastReceiver(), null, true));
         mainList.add(new MainModel("Service", R.drawable.ic_service_512dp, false, false, service(), null, true));
@@ -149,7 +145,7 @@ public class MainData {
         mainList.add(new MainModel("File storage", R.drawable.ic_file_storage_512dp, false, false, fileStorage(), null, true));
         mainList.add(new MainModel("Data storage", R.drawable.ic_database_512dp, false, false, databaseStorage(), null, true));
         mainList.add(new MainModel("Notification", R.drawable.ic_notification_512dp, false, false, notification(), null, true));
-        mainList.add(new MainModel("Thread handling", R.drawable.ic_thread_512dp, false, false, thread(), null, false));
+//        mainList.add(new MainModel("Thread handling", R.drawable.ic_thread_512dp, false, false, thread(), null, false));
         mainList.add(new MainModel("Network handling", R.drawable.ic_network_512dp, false, false, network(), null, true));
         mainList.add(new MainModel("Sensors", R.drawable.ic_sensor_512dp, false, false, sensor(), null, true));
         // TODO: 12/22/19 add in other versions
@@ -213,8 +209,8 @@ public class MainData {
         model.add(new MainModel("Verification", R.drawable.ic_verfication_512dp, false, false, verification(), null, true));
         model.add(new MainModel("Profile", R.drawable.ic_profile_512dp, false, false, profile(), null, true));
         model.add(new MainModel("Task Manager", R.drawable.ic_task_manager_512dp, false, false, taskManager(), null, true));
-        model.add(new MainModel("Music", R.drawable.ic_music_512dp, false, false, music(), null, true));
 
+        model.add(new MainModel("Music", R.drawable.ic_music_512dp, false, false, null, null, false));
         model.add(new MainModel("Chat", R.drawable.ic_chat_512dp, false, false, chats(), null, false));
         model.add(new MainModel("Search page", R.drawable.ic_search_512dp, false, false, searchPage(), null, false));
         model.add(new MainModel("Dashboard", R.drawable.ic_dashboard_512dp, false, false, dashboard(), null, false));
@@ -247,13 +243,13 @@ public class MainData {
         model.add(new MainModel("Google maps", R.drawable.ic_google_maps_512dp, false,  false, googleMaps(), null, true));
 
         model.add(new MainModel("Firebase", R.drawable.ic_firebase_512dp, false,  false, firebase(), null, true));
-        model.add(new MainModel("GPS", R.drawable.ic_maps_512dp, false,  false, null, GpsActivity.class, false));
-        model.add(new MainModel("Camera", R.drawable.ic_camera_512dp, false,  false, null, MainActivity.class, false));
-        model.add(new MainModel("Gestures", R.drawable.ic_gestures_512dp, false,  false, null, MainActivity.class, false));
-        model.add(new MainModel("Multi touch", R.drawable.ic_multi_touch_512dp, false,  false, null, MainActivity.class, false));
-        model.add(new MainModel("Network connection", R.drawable.ic_network_connection_512dp, false,  false, null, MainActivity.class, false));
-        model.add(new MainModel("Textur View", R.drawable.ic_texturview_512dp, false,  false, null, MainActivity.class, false));
-        model.add(new MainModel("Wifi", R.drawable.ic_wifi_512dp, false,  false, null, MainActivity.class, false));
+        model.add(new MainModel("GPS", R.drawable.ic_maps_512dp, false,  false, null, null, false));
+        model.add(new MainModel("Camera", R.drawable.ic_camera_512dp, false,  false, null, null, false));
+        model.add(new MainModel("Gestures", R.drawable.ic_gestures_512dp, false,  false, null, null, false));
+        model.add(new MainModel("Multi touch", R.drawable.ic_multi_touch_512dp, false,  false, null, null, false));
+        model.add(new MainModel("Network connection", R.drawable.ic_network_connection_512dp, false,  false, null, null, false));
+        model.add(new MainModel("Textur View", R.drawable.ic_texturview_512dp, false,  false, null, null, false));
+        model.add(new MainModel("Wifi", R.drawable.ic_wifi_512dp, false,  false, null, null, false));
         return model;
     }
 
@@ -289,9 +285,9 @@ public class MainData {
     private static List<MainModel.InnerModel> googleMaps() {
         List<MainModel.InnerModel> list = new ArrayList<>();
         list.add(new MainModel.InnerModel("Simple map", false, SimpleMapsActivity.class));
-        list.add(new MainModel.InnerModel("Live location", false, LiveLocationActivity.class));
         list.add(new MainModel.InnerModel("Dark mode", false, DarkStyleMapActivity.class));
         list.add(new MainModel.InnerModel("Styled map", false, StyledMapActivity.class));
+//        list.add(new MainModel.InnerModel("Live location", false, LiveLocationActivity.class));
         return list;
     }
 
@@ -582,9 +578,7 @@ public class MainData {
         model.add(new MainModel.InnerModel("Chips", false, ChipsActivity.class)); // TODO:  complete next version
 //        model.add(new MainModel.InnerModel("Backdrop", false, BackdropActivity.class)); // TODO: 12/23/19 complete
 //        model.add(new MainModel.InnerModel("Banner", false, BannerActivity.class)); // TODO: 12/23/19 complete
-//        model.add(new MainModel.InnerModel("Data table", false, UIComponentActivity.class)); // TODO: 12/26/19  add to next version
 //        model.add(new MainModel.InnerModel("Dividers", false, UIComponentActivity.class));
-//        model.add(new MainModel.InnerModel("Image list", false, UIComponentActivity.class));
 //        model.add(new MainModel.InnerModel("Pickers", false, UIComponentActivity.class));
 //        model.add(new MainModel.InnerModel("Sheet side", false, UIComponentActivity.class));
 //        model.add(new MainModel.InnerModel("Slider", false, UIComponentActivity.class));
@@ -727,11 +721,10 @@ public class MainData {
     }
 
     /**
-    * list of notification
-    *   1.basic notification
-    *   2.expandable notification
-    *   3.progress notification
-    *   4.action button notification
+    * List of notification
+    *   1. Basic notification
+    *   2. Notification Style
+    *   3. Custom notification
     */
     private static List<MainModel.InnerModel> notification() {
         List<MainModel.InnerModel> model = new ArrayList<>();
@@ -743,25 +736,27 @@ public class MainData {
 
     /**
     * list of database storage
-    *   1.sqlite
-    *   2.shared preferences
-    *   3.realm
+    *   1. SQLite
+    *   2. Shared preferences
+    *   3. Realm
     */
     private static List<MainModel.InnerModel> databaseStorage() {
         List<MainModel.InnerModel> model = new ArrayList<>();
         model.add(new MainModel.InnerModel("SQLite", false, SQLiteActivity.class));
         model.add(new MainModel.InnerModel("Shared preferences", false, SharePrefActivity.class));
         model.add(new MainModel.InnerModel("Realm", false, RealmTestActivity.class));
+        model.add(new MainModel.InnerModel("ObjectBox", false, null)); // TODO: 4/27/20 add in other versin
+        model.add(new MainModel.InnerModel("Room", false, null)); // TODO: 4/27/20 add in other versin
         return model;
     }
 
     /**
-    * list of file storage
-    *   1.file provider
-    *   2.read images
-    *   3.read audios
-    *   4.read videos
-    *   5.read & create & delete file
+    * List of file storage
+    *   1. File provider
+    *   2. Read images
+    *   3. Read audios
+    *   4. Read videos
+    *   5. Read & create & delete file
     */
     private static List<MainModel.InnerModel> fileStorage() {
         List<MainModel.InnerModel> model = new ArrayList<>();
@@ -776,7 +771,7 @@ public class MainData {
     /**
      * @return a list of activity models
     * list of activity
-    *   1.activity lifecycle
+    *   1. Activity lifecycle
     */
     private static List<MainModel.InnerModel> activity() {
         List<MainModel.InnerModel> model = new ArrayList<>();
@@ -803,13 +798,11 @@ public class MainData {
     /**
      * @return a list of manifest models
     * list of manifest
-    *   1.permissions
+    *   1. Permissions
     */
     private static List<MainModel.InnerModel> manifest(){
         List<MainModel.InnerModel> model = new ArrayList<>();
-
         model.add(new MainModel.InnerModel("Permissions", false, PermissionActivity.class));
-
         return model;
     }
 

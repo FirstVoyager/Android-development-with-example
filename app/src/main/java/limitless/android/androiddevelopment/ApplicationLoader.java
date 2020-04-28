@@ -14,7 +14,8 @@ public class ApplicationLoader extends android.app.Application {
         // To Initialize Realm
         try {
             Realm.init(this);
-            RealmConfiguration rfc = new RealmConfiguration.Builder()
+            RealmConfiguration rfc = new RealmConfiguration
+                    .Builder()
                     .name(Constant.realmDataBaseTest)
                     .schemaVersion(1)
                     .build();

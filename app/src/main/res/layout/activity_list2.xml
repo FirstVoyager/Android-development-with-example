@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activity.UserInterface.List2Activity">
+    tools:context=".Activity.UserInterface.List.List2Activity">
 
     <ListView
         android:layout_width="wrap_content"

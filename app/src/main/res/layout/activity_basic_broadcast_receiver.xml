@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    tools:context=".Activity.Basic.BasicBroadcastReceiver">
+    tools:context=".Activity.Basic.BroadCast.BasicBroadcastReceiver">
 
     <androidx.cardview.widget.CardView
         android:layout_gravity="center"

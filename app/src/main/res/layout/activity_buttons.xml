@@ -15,7 +15,7 @@
         android:orientation="vertical">
 
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <com.google.android.material.textview.MaterialTextView
             android:layout_marginTop="@dimen/margin_card_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,14 +23,14 @@
             android:text="@string/text_button"
             android:textSize="16sp"/>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:layout_margin="@dimen/margin_card_medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/text_text_button"
-            android:background="?attr/selectableItemBackground"/>
+            style="@style/Widget.MaterialComponents.Button.TextButton"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <com.google.android.material.textview.MaterialTextView
             android:layout_marginTop="@dimen/margin_card_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,14 +38,14 @@
             android:text="@string/text_outlined_button"
             android:textSize="16sp"/>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:layout_margin="@dimen/margin_card_medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/text_outlined_button"
-            android:background="@drawable/outlined_button"/>
+            style="?attr/materialButtonOutlinedStyle"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <com.google.android.material.textview.MaterialTextView
             android:layout_marginTop="@dimen/margin_card_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,14 +53,14 @@
             android:text="@string/text_contained_button"
             android:textSize="16sp"/>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:layout_margin="@dimen/margin_card_medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/text_outlined_button"
+            android:text="@string/text_contained_button"
             style="@style/Widget.AppCompat.Button.Colored" />
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <com.google.android.material.textview.MaterialTextView
             android:layout_marginTop="@dimen/margin_card_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,29 +68,12 @@
             android:text="@string/text_more_button"
             android:textSize="16sp"/>
 
-        <LinearLayout
-            android:gravity="center"
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginTop="@dimen/margin_card_medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_marginTop="@dimen/margin_card_medium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Widget.AppCompat.ActionButton"
-                android:text="@string/text_action_button" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_marginStart="@dimen/margin_card_medium"
-                android:layout_marginTop="@dimen/margin_card_medium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Widget.AppCompat.Button.Small"
-                android:text="@string/text_small_button" />
-
-        </LinearLayout>
+            style="@style/Widget.AppCompat.ActionButton"
+            android:text="@string/text_action_button" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_marginTop="@dimen/margin_card_medium"
@@ -104,28 +87,26 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:layout_marginTop="@dimen/margin_card_medium"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                style="@style/Widget.AppCompat.Button.Colored"
                 android:text="@string/text_icon_in_start"
-                android:drawableStart="@drawable/ic_share_black_24dp"
-                android:drawableTint="@color/color_white"
-                android:drawablePadding="@dimen/margin_card_medium"/>
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                app:icon="@drawable/ic_share_black_24dp"
+                app:iconGravity="start"/>
 
-
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="@dimen/margin_card_medium"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:text="@string/text_icon_in_end"
-                android:drawableEnd="@drawable/ic_share_black_24dp"
-                android:drawableTint="@color/color_white"
-                android:drawablePadding="@dimen/margin_card_medium"/>
+                app:icon="@drawable/ic_share_black_24dp"
+                app:iconGravity="end"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:text="@string/text_icon_in_end" />
 
 
         </LinearLayout>
@@ -148,7 +129,7 @@
             android:drawableBottom="@drawable/ic_share_black_24dp"
             android:drawableTint="@color/color_white"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <com.google.android.material.textview.MaterialTextView
             android:layout_marginTop="@dimen/margin_card_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -164,7 +145,7 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -189,7 +170,7 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -216,7 +197,7 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -243,7 +224,7 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"

@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.Basic.JsonActivity">
+    tools:context=".Activity.Basic.Sensors.Network.JsonActivity">
 
     <LinearLayout
         android:layout_marginStart="@dimen/padding_inner_item"

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".Activity.UserInterface.AppbarTopCollapseImageActivity">
+    tools:context=".Activity.UserInterface.AppbarTop.AppbarTopCollapseImageActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"

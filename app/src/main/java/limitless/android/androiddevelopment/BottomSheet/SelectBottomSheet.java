@@ -161,7 +161,7 @@ public class SelectBottomSheet extends BottomSheetDialogFragment implements View
         @Override
         protected void onPostExecute(List<?> objects) {
             super.onPostExecute(objects);
-            if (objects.size() <= 0){
+            if (objects == null || objects.size() <= 0){
                 vNoFile.setVisibility(View.VISIBLE);
                 recyclerView.setVisibility(View.INVISIBLE);
                 return;

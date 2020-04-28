@@ -36,6 +36,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // Appcompat
+    implementation "androidx.appcompat:appcompat:1.1.0"
     // Constraint layout
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     // Support
@@ -57,7 +59,7 @@ dependencies {
     // any chart
     implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
     // multi dex
-    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.multidex:multidex:2.0.1'
     // maps
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     // location

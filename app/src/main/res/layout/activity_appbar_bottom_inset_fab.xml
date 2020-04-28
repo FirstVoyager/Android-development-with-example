@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.UserInterface.AppbarBottomInsetFABActivity">
+    tools:context=".Activity.UserInterface.AppbarBottom.AppbarBottomInsetFABActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"

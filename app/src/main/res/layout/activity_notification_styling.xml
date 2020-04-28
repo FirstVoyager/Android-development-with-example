@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:paddingStart="8dp"
     android:paddingEnd="8dp"
-    tools:context=".Activity.Basic.NotificationStylingActivity">
+    tools:context=".Activity.Basic.Notification.NotificationStylingActivity">
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_marginTop="8dp"

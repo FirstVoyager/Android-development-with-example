@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/swipeRefreshLayout"
-    tools:context=".Activity.Basic.ReadSongsActivity">
+    tools:context=".Activity.Basic.FileStorage.ReadSongsActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:paddingTop="2dp"
