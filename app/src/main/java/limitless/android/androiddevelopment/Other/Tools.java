@@ -261,7 +261,7 @@ public class Tools {
         ActivityCompat.requestPermissions(activity, permissions, code);
     }
 
-    public static void showInfoDialog(FragmentManager fm, String title, String body) {
+    public static void infoDialog(FragmentManager fm, String title, String body) {
         DialogInfo info = new DialogInfo();
         Bundle bundle = new Bundle();
         bundle.putString(DialogInfo.title, title);

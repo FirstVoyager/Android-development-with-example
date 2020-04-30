@@ -69,7 +69,7 @@ public class BasicNotificationActivity extends BaseActivity implements View.OnCl
         if (item.getItemId() == android.R.id.home){
             finish();
         }else if (item.getTitle().equals(getString(R.string.title_info))){
-            Tools.showInfoDialog(
+            Tools.infoDialog(
                     getSupportFragmentManager(),
                     getString(R.string.t_notification),
                     getString(R.string.info_notification));

@@ -1,7 +1,6 @@
 package limitless.android.androiddevelopment.Activity.Basic.BroadCast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatTextView;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
@@ -76,7 +75,7 @@ public class BasicBroadcastReceiver extends BaseActivity implements View.OnClick
         if (item.getItemId() == android.R.id.home)
             finish();
         else if (item.getTitle().equals(getString(R.string.title_info))){
-            Tools.showInfoDialog(
+            Tools.infoDialog(
                     getSupportFragmentManager(),
                     getString(R.string.title_broadcast_receiver),
                     getString(R.string.info_broadcast_receiver)

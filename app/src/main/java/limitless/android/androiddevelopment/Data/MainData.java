@@ -149,8 +149,7 @@ public class MainData {
 //        mainList.add(new MainModel("Thread handling", R.drawable.ic_thread_512dp, false, false, thread(), null, false));
         mainList.add(new MainModel("Network handling", R.drawable.ic_network_512dp, false, false, network(), null, true));
         mainList.add(new MainModel("Sensors", R.drawable.ic_sensor_512dp, false, false, sensor(), null, true));
-        // TODO: 12/22/19 add in other versions
-//        mainList.add(new MainModel("Security", R.drawable.ic_security_512dp, false, false, security(), null, false));
+//        mainList.add(new MainModel("Security", R.drawable.ic_security_512dp, false, false, security(), null, false)); // TODO and in next versions
 
         return mainList;
     }

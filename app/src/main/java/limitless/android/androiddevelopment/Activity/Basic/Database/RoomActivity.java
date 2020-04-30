@@ -86,7 +86,7 @@ public class RoomActivity extends BaseActivity implements View.OnClickListener {
                     + "Job : " + rm.job;
             sb.append(info).append("\n*********\n");
         }
-        Tools.showInfoDialog(getSupportFragmentManager(), "Read all", sb.toString());
+        Tools.infoDialog(getSupportFragmentManager(), "Read all", sb.toString());
     }
 
     private void read() {
@@ -102,7 +102,7 @@ public class RoomActivity extends BaseActivity implements View.OnClickListener {
                                 + "Name : " + rm.name + "\n"
                                 + "Description : " + rm.description + "\n"
                                 + "Job : " + rm.job;
-            Tools.showInfoDialog(getSupportFragmentManager(), "Read", info);
+            Tools.infoDialog(getSupportFragmentManager(), "Read", info);
         }
     }
 

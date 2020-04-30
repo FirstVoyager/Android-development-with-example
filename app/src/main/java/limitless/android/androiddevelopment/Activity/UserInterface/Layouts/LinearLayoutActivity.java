@@ -1,7 +1,6 @@
 package limitless.android.androiddevelopment.Activity.UserInterface.Layouts;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
@@ -36,7 +35,7 @@ public class LinearLayoutActivity extends BaseActivity {
         if (item.getItemId() == android.R.id.home){
             finish();
         }else if (item.getTitle() != null && item.getTitle().equals(getString(R.string.title_about))){
-            Tools.showInfoDialog(getSupportFragmentManager(), getString(R.string.t_linear_layout), getString(R.string.info_linear_layout));
+            Tools.infoDialog(getSupportFragmentManager(), getString(R.string.t_linear_layout), getString(R.string.info_linear_layout));
         }
         return super.onOptionsItemSelected(item);
     }

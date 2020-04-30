@@ -1,8 +1,6 @@
 package limitless.android.androiddevelopment.Activity.Basic.Activity;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatTextView;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
@@ -69,7 +67,7 @@ public class ActivityActivity extends BaseActivity {
         if (item.getItemId() == android.R.id.home){
             finish();
         }else if (item.getTitle().equals(getString(R.string.title_info))){
-            Tools.showInfoDialog(
+            Tools.infoDialog(
                     getSupportFragmentManager(),
                     getString(R.string.text_activity),
                     getString(R.string.info_activity)

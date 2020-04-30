@@ -169,7 +169,7 @@ public class BluetoothActivity extends BaseActivity implements View.OnClickListe
                             .append("--------")
                             .append(System.lineSeparator());
                 }
-                Tools.showInfoDialog(
+                Tools.infoDialog(
                         getSupportFragmentManager(),
                         getString(R.string.paired_devices),
                         sb.toString()

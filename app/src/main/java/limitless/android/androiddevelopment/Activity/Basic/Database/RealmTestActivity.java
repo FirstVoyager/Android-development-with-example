@@ -32,7 +32,7 @@ public class RealmTestActivity extends BaseActivity implements View.OnClickListe
         if (item.getItemId() == android.R.id.home){
             finish();
         }else if (item.getTitle().equals(getString(R.string.title_info))){
-            Tools.showInfoDialog(
+            Tools.infoDialog(
                     getSupportFragmentManager(),
                     getString(R.string.title_realm_database), getString(R.string.info_realm_database)
             );
@@ -112,7 +112,7 @@ public class RealmTestActivity extends BaseActivity implements View.OnClickListe
             sb.append("Address : ").append(rtm.getAddress()).append(System.lineSeparator());
             sb.append(System.lineSeparator()).append(System.lineSeparator());
         }
-        Tools.showInfoDialog(getSupportFragmentManager(), "All data", sb.toString());
+        Tools.infoDialog(getSupportFragmentManager(), "All data", sb.toString());
     }
 
     private void delete() {
@@ -134,7 +134,7 @@ public class RealmTestActivity extends BaseActivity implements View.OnClickListe
             Tools.toast(this, "not found");
             return;
         }
-        Tools.showInfoDialog(
+        Tools.infoDialog(
                 getSupportFragmentManager(),
                 etIdRead.getText().toString(),
                 "Id : " + model.getId() + "\n" +

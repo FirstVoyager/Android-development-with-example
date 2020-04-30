@@ -51,7 +51,7 @@ public class FileProviderActivity extends BaseActivity implements View.OnClickLi
         if (item.getItemId() == android.R.id.home){
             finish();
         }else if (item.getTitle().equals(getString(R.string.title_info))){
-            Tools.showInfoDialog(
+            Tools.infoDialog(
                     getSupportFragmentManager(),
                     getString(R.string.text_file_provider),
                     getString(R.string.info_file_provider)

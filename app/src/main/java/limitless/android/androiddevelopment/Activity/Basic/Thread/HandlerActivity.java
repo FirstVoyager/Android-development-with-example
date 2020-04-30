@@ -1,7 +1,6 @@
 package limitless.android.androiddevelopment.Activity.Basic.Thread;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
@@ -37,7 +36,7 @@ public class HandlerActivity extends BaseActivity {
         if (item.getItemId() == android.R.id.home){
             finish();
         }else if (item.getTitle().equals(getString(R.string.title_info))){
-            Tools.showInfoDialog(getSupportFragmentManager(), getString(R.string.text_handlers), getString(R.string.info_handlers));
+            Tools.infoDialog(getSupportFragmentManager(), getString(R.string.text_handlers), getString(R.string.info_handlers));
         }
         return super.onOptionsItemSelected(item);
     }

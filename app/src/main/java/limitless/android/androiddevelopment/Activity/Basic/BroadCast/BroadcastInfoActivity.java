@@ -1,7 +1,6 @@
 package limitless.android.androiddevelopment.Activity.Basic.BroadCast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
@@ -179,7 +178,7 @@ public class BroadcastInfoActivity extends BaseActivity implements View.OnClickL
     private AdapterSimpleListItem.StringListener itemClickListener = new AdapterSimpleListItem.StringListener() {
         @Override
         public void string(String s) {
-            Tools.showInfoDialog(
+            Tools.infoDialog(
                     getSupportFragmentManager(),
                     s.substring(s.lastIndexOf(".") + 1),
                     getString(R.string.info_broadcast_receiver_how_add) + "\n\n" + s

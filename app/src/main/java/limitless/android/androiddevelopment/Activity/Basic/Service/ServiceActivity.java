@@ -39,7 +39,7 @@ public class ServiceActivity extends BaseActivity implements View.OnClickListene
         if (item.getItemId() == android.R.id.home){
             finish();
         }else if (item.getTitle().equals(getString(R.string.title_info))){
-            Tools.showInfoDialog(getSupportFragmentManager(), getString(R.string.text_basic_service), getString(R.string.info_service));
+            Tools.infoDialog(getSupportFragmentManager(), getString(R.string.text_basic_service), getString(R.string.info_service));
         }
         return super.onOptionsItemSelected(item);
     }

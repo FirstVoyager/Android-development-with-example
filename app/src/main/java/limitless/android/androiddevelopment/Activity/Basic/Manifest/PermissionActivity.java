@@ -1,7 +1,6 @@
 package limitless.android.androiddevelopment.Activity.Basic.Manifest;
 
 import androidx.annotation.NonNull;
-import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
@@ -10,13 +9,10 @@ import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -126,7 +122,7 @@ public class PermissionActivity extends BaseActivity implements View.OnClickList
     private AdapterSimpleListItem.StringListener normalListener = new AdapterSimpleListItem.StringListener() {
         @Override
         public void string(String s) {
-            Tools.showInfoDialog(
+            Tools.infoDialog(
                     getSupportFragmentManager(),
                     s, getString(R.string.info_normal_permissions_how_add) + "\n\n" + "android.permission." + s
             );
@@ -146,7 +142,7 @@ public class PermissionActivity extends BaseActivity implements View.OnClickList
         if (item.getItemId() == android.R.id.home)
             onBackPressed();
         else if (item.getTitle().equals(getString(R.string.title_info))){
-            Tools.showInfoDialog(
+            Tools.infoDialog(
                     getSupportFragmentManager(),
                     getString(R.string.title_permissions),
                     getString(R.string.info_permissions)
@@ -173,13 +169,13 @@ public class PermissionActivity extends BaseActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.ibtn_infoDangerous){
-            Tools.showInfoDialog(
+            Tools.infoDialog(
                     getSupportFragmentManager(),
                     getString(R.string.title_dangerous_permissions),
                     getString(R.string.info_dangerous_permissions)
             );
         }else if (v.getId() == R.id.ibtn_infoNormal){
-            Tools.showInfoDialog(
+            Tools.infoDialog(
                     getSupportFragmentManager(),
                     getString(R.string.title_normal_permissions),
                     getString(R.string.info_normal_permissions)

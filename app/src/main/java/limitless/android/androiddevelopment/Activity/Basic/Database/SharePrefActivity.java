@@ -108,7 +108,7 @@ public class SharePrefActivity extends BaseActivity implements View.OnClickListe
             toast(etKeyRead.getText().toString() + " is null");
             return;
         }
-        Tools.showInfoDialog(
+        Tools.infoDialog(
                 getSupportFragmentManager(),
                 key,
                 s
