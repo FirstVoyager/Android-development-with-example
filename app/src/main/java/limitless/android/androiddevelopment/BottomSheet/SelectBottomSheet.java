@@ -66,7 +66,7 @@ public class SelectBottomSheet extends BottomSheetDialogFragment implements View
         appBarHeight = appBarLayout.getLayoutParams().height;
         appBarLayout.setVisibility(View.INVISIBLE);
         appBarLayout.setLayoutParams(new LinearLayout.LayoutParams(-1, 0));
-        bottomSheetBehavior.setBottomSheetCallback(bottomSheetCallback);
+        bottomSheetBehavior.addBottomSheetCallback(bottomSheetCallback);
         tvTitle.setText(title());
         recyclerView.setLayoutManager(layoutManager());
         view.findViewById(R.id.imageButton_close).setOnClickListener(this);
