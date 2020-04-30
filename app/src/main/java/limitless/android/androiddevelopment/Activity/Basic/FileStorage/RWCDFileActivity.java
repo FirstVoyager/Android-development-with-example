@@ -119,7 +119,7 @@ public class RWCDFileActivity extends BaseActivity implements View.OnClickListen
             return;
         }
         if (Tools.isEmpty(etBody.getText().toString())){
-            etBody.setError(getString(R.string.t_empty));
+            etBody.setError(getString(R.string.empty));
             return;
         }
         try {
@@ -138,7 +138,7 @@ public class RWCDFileActivity extends BaseActivity implements View.OnClickListen
 
     private void createFile() {
         if (Tools.isEmpty(etName.getText().toString())){
-            etName.setError(getString(R.string.t_empty));
+            etName.setError(getString(R.string.empty));
             return;
         }
         lastFile = new File(getCacheDir().getAbsolutePath() + "/" + etName.getText().toString());

@@ -46,7 +46,12 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activity.Basic.Database.ObjectBoxActivity"/>
+        <activity
+            android:label="@string/room"
+            android:name=".Activity.Basic.Database.RoomActivity" />
+        <activity
+            android:label="@string/objectbox"
+            android:name=".Activity.Basic.Database.ObjectBoxActivity" />
         <activity
             android:name=".Activity.CodeMore.GoogleMap.StyledMapActivity"
             android:label="@string/styled_map"
@@ -420,14 +425,14 @@
             android:name=".Activity.Basic.Sensors.Network.HttpRequestActivity"
             android:label="@string/text_http_request" />
         <activity
-            android:label="@string/handler"
-            android:name=".Activity.Basic.Thread.HandlerActivity" />
+            android:name=".Activity.Basic.Thread.HandlerActivity"
+            android:label="@string/handler" />
         <activity
             android:name=".Activity.Basic.Notification.BasicNotificationActivity"
             android:label="@string/text_basic_notification" />
         <activity
-            android:label="@string/sqlite"
-            android:name=".Activity.Basic.Database.SQLiteActivity" />
+            android:name=".Activity.Basic.Database.SQLiteActivity"
+            android:label="@string/sqlite" />
         <activity
             android:name=".Activity.Basic.FileStorage.FileProviderActivity"
             android:label="@string/text_file_provider" />
@@ -481,6 +486,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/ads_app_id" />
     </application>
 
 </manifest>

@@ -74,7 +74,7 @@
             android:background="?attr/selectableItemBackground"
             android:id="@+id/button_read"
             android:gravity="center"
-            android:text="@string/text_read"/>
+            android:text="@string/read"/>
 
         <View
             android:layout_width="@dimen/height_divider"
@@ -88,7 +88,7 @@
             android:background="?attr/selectableItemBackground"
             android:id="@+id/button_delete"
             android:gravity="center"
-            android:text="@string/text_delete"/>
+            android:text="@string/delete"/>
 
     </LinearLayout>
 

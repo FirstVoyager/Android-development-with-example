@@ -51,7 +51,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Widget.AppCompat.Button.Colored"
-                    android:text="@string/text_insert"
+                    android:text="@string/insert"
                     android:id="@+id/button_insert"
                     android:layout_marginTop="8dp"/>
 
@@ -87,7 +87,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Widget.AppCompat.Button.Colored"
-                    android:text="@string/text_read"
+                    android:text="@string/read"
                     android:id="@+id/button_read"
                     android:layout_marginTop="8dp"/>
 
@@ -123,7 +123,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Widget.AppCompat.Button.Colored"
-                    android:text="@string/text_delete"
+                    android:text="@string/delete"
                     android:id="@+id/button_delete"
                     android:layout_marginTop="8dp"/>
 

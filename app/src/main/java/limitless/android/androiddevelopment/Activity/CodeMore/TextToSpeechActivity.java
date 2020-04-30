@@ -53,7 +53,7 @@ public class TextToSpeechActivity extends BaseActivity implements View.OnClickLi
     public void onClick(View v) {
         if (v.getId() == R.id.button_tts){
             if (Tools.isEmpty(editText.getText().toString())){
-                editText.setError(getString(R.string.t_empty));
+                editText.setError(getString(R.string.empty));
             }else {
                 tts.speak(editText.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
             }

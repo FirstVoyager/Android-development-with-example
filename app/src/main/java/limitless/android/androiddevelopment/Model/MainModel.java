@@ -9,7 +9,7 @@ public class MainModel {
     public int image;
     public boolean hasNew;
     public boolean showData;
-    public List<InnerModel> innerList;
+    public List<Inner> innerList;
     public Class<?> aClass;
     public boolean hasData;
 
@@ -23,7 +23,7 @@ public class MainModel {
         this.hasData = false;
     }
 
-    public MainModel(String name, int image, boolean hasNew, boolean showData, List<InnerModel> innerList, Class<?> aClass, boolean hasData){
+    public MainModel(String name, int image, boolean hasNew, boolean showData, List<Inner> innerList, Class<?> aClass, boolean hasData){
         this.name = name;
         this.image = image;
         this.hasNew = hasNew;
@@ -33,18 +33,18 @@ public class MainModel {
         this.hasData = hasData;
     }
 
-    public static class InnerModel {
+    public static class Inner {
         public String name;
         public boolean isNew;
         public Class<?> aClass1;
 
-        public InnerModel(){
+        public Inner(){
             this.name = "";
             this.isNew = false;
             this.aClass1 = null;
         }
 
-        public InnerModel(String name, boolean isNew, Class<?> aClass1){
+        public Inner(String name, boolean isNew, Class<?> aClass1){
             this.name = name;
             this.isNew = isNew;
             this.aClass1 = aClass1;

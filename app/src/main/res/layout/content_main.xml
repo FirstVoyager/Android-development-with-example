@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
+<LinearLayout android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
 
     <include
         layout="@layout/toolbar"/>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ads_banner"
+        android:id="@+id/adView"/>
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -15,20 +22,11 @@
         android:layout_weight="1"
         android:id="@+id/frameLayout_main" />
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_gravity="bottom"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:labelVisibilityMode="labeled"
+        android:id="@+id/bottomNavigationView_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="0dp"
-        app:cardElevation="4dp">
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView_main"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:menu="@menu/menu_main"
-            android:background="?attr/selectableItemBackground"/>
-
-    </com.google.android.material.card.MaterialCardView>
+        app:menu="@menu/menu_main"/>
 
 </LinearLayout>

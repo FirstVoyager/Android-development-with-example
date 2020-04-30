@@ -9,6 +9,8 @@ public class SharePref {
     public static final String shareName = "sharepref.name";
     public static final String SMS_BODY = "sms_body";
     public static final String LAST_SMS_RECEIVED_DATE = "last_sms_received_date";
+    public static final String LAST_SHOW_ADS = "last_show_Ads";
+    public static final String LOAD_ACTIVITY_COUNT = "load_activity_count";
     private SharedPreferences sp;
     private SharedPreferences.Editor editor;
 

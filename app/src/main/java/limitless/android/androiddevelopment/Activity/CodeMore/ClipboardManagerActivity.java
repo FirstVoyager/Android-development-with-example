@@ -45,7 +45,7 @@ public class ClipboardManagerActivity extends BaseActivity implements View.OnCli
     public void onClick(View v) {
         if (v.getId() == R.id.button_copy){
             if (Tools.isEmpty(etDescription.getText().toString())){
-                etDescription.setError(getString(R.string.t_empty));
+                etDescription.setError(getString(R.string.empty));
             }else {
                 if (Tools.copyToClipboard(this, etTitle.getText().toString(), etDescription.getText().toString())){
                     Tools.toast(this, "Copied");

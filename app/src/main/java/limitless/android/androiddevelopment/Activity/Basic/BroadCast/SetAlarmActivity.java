@@ -47,7 +47,7 @@ public class SetAlarmActivity extends BaseActivity implements View.OnClickListen
     public void onClick(View v) {
         if (v.getId() == R.id.button_start){
             if (Tools.isEmpty(etSecond.getText().toString())){
-                etSecond.setError(getString(R.string.t_empty));
+                etSecond.setError(getString(R.string.empty));
                 return;
             }
             setAlarm();

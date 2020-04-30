@@ -75,7 +75,7 @@ public class HttpRequestActivity extends BaseActivity implements View.OnClickLis
 
     private void getWebsite() {
         if (Tools.isEmpty(etUrl.getText().toString())){
-            etUrl.setError(getString(R.string.t_empty));
+            etUrl.setError(getString(R.string.empty));
             return;
         }
         ivTest.setImageBitmap(null);

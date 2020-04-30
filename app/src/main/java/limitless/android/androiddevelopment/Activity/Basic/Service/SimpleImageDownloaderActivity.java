@@ -73,7 +73,7 @@ public class SimpleImageDownloaderActivity extends BaseActivity implements View.
                 stopService(new Intent(this, SimpleImageDownloaderService.class));
             }
             if (Tools.isEmpty(etUrl.getText().toString())){
-                etUrl.setError(getString(R.string.t_empty));
+                etUrl.setError(getString(R.string.empty));
                 return;
             }
             Intent intent = new Intent(this, SimpleImageDownloaderService.class);

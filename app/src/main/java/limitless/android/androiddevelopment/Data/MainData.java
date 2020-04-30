@@ -6,6 +6,7 @@ import java.util.List;
 import limitless.android.androiddevelopment.Activity.Basic.Activity.ActivityActivity;
 import limitless.android.androiddevelopment.Activity.Basic.BroadCast.BasicBroadcastReceiver;
 import limitless.android.androiddevelopment.Activity.Basic.BroadCast.BroadcastInfoActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Database.RoomActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Notification.CustomNotificationActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Sensors.EnvironmentActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Sensors.Network.JsonActivity;
@@ -253,13 +254,13 @@ public class MainData {
         return model;
     }
 
-    private static List<MainModel.InnerModel> firebase() {
-        List<MainModel.InnerModel> list = new ArrayList<>();
-        list.add(new MainModel.InnerModel("Authentication", false, null));
-        list.add(new MainModel.InnerModel("Cloud Storage", false, null));
-        list.add(new MainModel.InnerModel("Realtime Database", false, null));
-        list.add(new MainModel.InnerModel("Cloud Messaging", false, null));
-        list.add(new MainModel.InnerModel("In-App Messaging", false, null));
+    private static List<MainModel.Inner> firebase() {
+        List<MainModel.Inner> list = new ArrayList<>();
+        list.add(new MainModel.Inner("Authentication", false, null));
+        list.add(new MainModel.Inner("Cloud Storage", false, null));
+        list.add(new MainModel.Inner("Realtime Database", false, null));
+        list.add(new MainModel.Inner("Cloud Messaging", false, null));
+        list.add(new MainModel.Inner("In-App Messaging", false, null));
         return list;
     }
 
@@ -282,11 +283,11 @@ public class MainData {
     /**
      * @return List of Google map
      */
-    private static List<MainModel.InnerModel> googleMaps() {
-        List<MainModel.InnerModel> list = new ArrayList<>();
-        list.add(new MainModel.InnerModel("Simple map", false, SimpleMapsActivity.class));
-        list.add(new MainModel.InnerModel("Dark mode", false, DarkStyleMapActivity.class));
-        list.add(new MainModel.InnerModel("Styled map", false, StyledMapActivity.class));
+    private static List<MainModel.Inner> googleMaps() {
+        List<MainModel.Inner> list = new ArrayList<>();
+        list.add(new MainModel.Inner("Simple map", false, SimpleMapsActivity.class));
+        list.add(new MainModel.Inner("Dark mode", false, DarkStyleMapActivity.class));
+        list.add(new MainModel.Inner("Styled map", false, StyledMapActivity.class));
 //        list.add(new MainModel.InnerModel("Live location", false, LiveLocationActivity.class));
         return list;
     }
@@ -295,79 +296,79 @@ public class MainData {
      * @return a list of animation models
      * {@link AnimationManager}
      */
-    private static List<MainModel.InnerModel> animations() {
-        List<MainModel.InnerModel> models = new ArrayList<>();
-        models.add(new MainModel.InnerModel("Zoom", false, AnimationZoomActivity.class));
-        models.add(new MainModel.InnerModel("Slide", false, AnimationSlideActivity.class));
-        models.add(new MainModel.InnerModel("Rotate", false, AnimationRotateActivity.class));
-        models.add(new MainModel.InnerModel("Fade", false, AnimationFadeActivity.class));
+    private static List<MainModel.Inner> animations() {
+        List<MainModel.Inner> models = new ArrayList<>();
+        models.add(new MainModel.Inner("Zoom", false, AnimationZoomActivity.class));
+        models.add(new MainModel.Inner("Slide", false, AnimationSlideActivity.class));
+        models.add(new MainModel.Inner("Rotate", false, AnimationRotateActivity.class));
+        models.add(new MainModel.Inner("Fade", false, AnimationFadeActivity.class));
         return models;
     }
 
-    private static List<MainModel.InnerModel> imageEffects() {
-        List<MainModel.InnerModel> models = new ArrayList<>();
-        models.add(new MainModel.InnerModel("Grey Filter", false, ImageEffectsActivity.class));
-        models.add(new MainModel.InnerModel("Sepia Filter", false, ImageEffectsActivity.class));
-        models.add(new MainModel.InnerModel("Black and White Filter", false, ImageEffectsActivity.class));
-        models.add(new MainModel.InnerModel("Brightness Filter", false, ImageEffectsActivity.class));
+    private static List<MainModel.Inner> imageEffects() {
+        List<MainModel.Inner> models = new ArrayList<>();
+        models.add(new MainModel.Inner("Grey Filter", false, ImageEffectsActivity.class));
+        models.add(new MainModel.Inner("Sepia Filter", false, ImageEffectsActivity.class));
+        models.add(new MainModel.Inner("Black and White Filter", false, ImageEffectsActivity.class));
+        models.add(new MainModel.Inner("Brightness Filter", false, ImageEffectsActivity.class));
 //        models.add(new MainModel.InnerModel("Sketch Filter", false, ImageEffectsActivity.class));
 //        models.add(new MainModel.InnerModel("Brush Filter", false, ImageEffectsActivity.class));
         return models;
     }
 
-    private static List<MainModel.InnerModel> travel() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
+    private static List<MainModel.Inner> travel() {
+        List<MainModel.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.InnerModel> taskManager() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Lists", false, TaskManagerListsActivity.class));
-        model.add(new MainModel.InnerModel("List & Recently", false, TaskManagerListAndRecentlyActivity.class));
-        model.add(new MainModel.InnerModel("Chart View", false, TaskManagerChartViewActivity.class));
-        model.add(new MainModel.InnerModel("New Task", false, TaskManagerNewActivity.class));
+    private static List<MainModel.Inner> taskManager() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Lists", false, TaskManagerListsActivity.class));
+        model.add(new MainModel.Inner("List & Recently", false, TaskManagerListAndRecentlyActivity.class));
+        model.add(new MainModel.Inner("Chart View", false, TaskManagerChartViewActivity.class));
+        model.add(new MainModel.Inner("New Task", false, TaskManagerNewActivity.class));
         return model;
     }
 
-    private static List<MainModel.InnerModel> social() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-
-        return model;
-    }
-
-    private static List<MainModel.InnerModel> news() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
+    private static List<MainModel.Inner> social() {
+        List<MainModel.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.InnerModel> navigation() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
+    private static List<MainModel.Inner> news() {
+        List<MainModel.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.InnerModel> files() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
+    private static List<MainModel.Inner> navigation() {
+        List<MainModel.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.InnerModel> education() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
+    private static List<MainModel.Inner> files() {
+        List<MainModel.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.InnerModel> cooking() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
+    private static List<MainModel.Inner> education() {
+        List<MainModel.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.InnerModel> books() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
+    private static List<MainModel.Inner> cooking() {
+        List<MainModel.Inner> model = new ArrayList<>();
+
+        return model;
+    }
+
+    private static List<MainModel.Inner> books() {
+        List<MainModel.Inner> model = new ArrayList<>();
 
         return model;
     }
@@ -379,47 +380,47 @@ public class MainData {
      * 3. with posts
      * 4. telegram
      * */
-    private static List<MainModel.InnerModel> profile() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Big Header", false, ProfileBigHeaderActivity.class));
-        model.add(new MainModel.InnerModel("Developer", false, ProfileDeveloperActivity.class));
-        model.add(new MainModel.InnerModel("With Posts", false, ProfileWithPostsActivity.class));
-        model.add(new MainModel.InnerModel("Telegram", false, ProfileTelegramActivity.class));
+    private static List<MainModel.Inner> profile() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Big Header", false, ProfileBigHeaderActivity.class));
+        model.add(new MainModel.Inner("Developer", false, ProfileDeveloperActivity.class));
+        model.add(new MainModel.Inner("With Posts", false, ProfileWithPostsActivity.class));
+        model.add(new MainModel.Inner("Telegram", false, ProfileTelegramActivity.class));
         return model;
     }
 
-    private static List<MainModel.InnerModel> music() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Simple", false, MusicSimpleActivity.class));
+    private static List<MainModel.Inner> music() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Simple", false, MusicSimpleActivity.class));
         return model;
     }
 
-    private static List<MainModel.InnerModel> videoPlayer() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-
-        return model;
-    }
-
-    private static List<MainModel.InnerModel> shopping() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
+    private static List<MainModel.Inner> videoPlayer() {
+        List<MainModel.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.InnerModel> searchPage() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
+    private static List<MainModel.Inner> shopping() {
+        List<MainModel.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.InnerModel> sliderImage() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
+    private static List<MainModel.Inner> searchPage() {
+        List<MainModel.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.InnerModel> setting() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
+    private static List<MainModel.Inner> sliderImage() {
+        List<MainModel.Inner> model = new ArrayList<>();
+
+        return model;
+    }
+
+    private static List<MainModel.Inner> setting() {
+        List<MainModel.Inner> model = new ArrayList<>();
 
         return model;
     }
@@ -431,21 +432,21 @@ public class MainData {
      * 3. custom keyboard light
      * 4. custom keyboard dark
     * */
-    private static List<MainModel.InnerModel> verification() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Phone", false, VerificationPhoneActivity.class));
-        model.add(new MainModel.InnerModel("Code", false, VerificationCodeActivity.class));
-        model.add(new MainModel.InnerModel("Custom Keyboard Light", false, VerificationCustomKeyboardLightActivity.class));
-        model.add(new MainModel.InnerModel("Custom Keyboard Dark", false, VerificationCustomKeyboardDarkActivity.class));
+    private static List<MainModel.Inner> verification() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Phone", false, VerificationPhoneActivity.class));
+        model.add(new MainModel.Inner("Code", false, VerificationCodeActivity.class));
+        model.add(new MainModel.Inner("Custom Keyboard Light", false, VerificationCustomKeyboardLightActivity.class));
+        model.add(new MainModel.Inner("Custom Keyboard Dark", false, VerificationCustomKeyboardDarkActivity.class));
         return model;
     }
 
-    private static List<MainModel.InnerModel> login() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Simple", false, LoginSimpleActivity.class));
-        model.add(new MainModel.InnerModel("With Tab", false, LoginWithTabActivity.class));
-        model.add(new MainModel.InnerModel("With Details", false, LoginWithDetailsActivity.class));
-        model.add(new MainModel.InnerModel("Card View", false, LoginCardViewActivity.class));
+    private static List<MainModel.Inner> login() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Simple", false, LoginSimpleActivity.class));
+        model.add(new MainModel.Inner("With Tab", false, LoginWithTabActivity.class));
+        model.add(new MainModel.Inner("With Details", false, LoginWithDetailsActivity.class));
+        model.add(new MainModel.Inner("Card View", false, LoginCardViewActivity.class));
         return model;
     }
 
@@ -458,19 +459,19 @@ public class MainData {
      *  5. Payment 5
      *  6. Payment 6
      * */
-    private static List<MainModel.InnerModel> payment() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Payment 1", false, Payment1Activity.class));
-        model.add(new MainModel.InnerModel("Payment 2", false, Payment2Activity.class));
-        model.add(new MainModel.InnerModel("Payment 3", false, Payment3Activity.class));
-        model.add(new MainModel.InnerModel("Payment 4", false, Payment4Activity.class));
-        model.add(new MainModel.InnerModel("Payment 5", false, Payment5Activity.class));
-        model.add(new MainModel.InnerModel("Payment 6", false, Payment6Activity.class));
+    private static List<MainModel.Inner> payment() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Payment 1", false, Payment1Activity.class));
+        model.add(new MainModel.Inner("Payment 2", false, Payment2Activity.class));
+        model.add(new MainModel.Inner("Payment 3", false, Payment3Activity.class));
+        model.add(new MainModel.Inner("Payment 4", false, Payment4Activity.class));
+        model.add(new MainModel.Inner("Payment 5", false, Payment5Activity.class));
+        model.add(new MainModel.Inner("Payment 6", false, Payment6Activity.class));
         return null;
     }
 
-    private static List<MainModel.InnerModel> dashboard() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
+    private static List<MainModel.Inner> dashboard() {
+        List<MainModel.Inner> model = new ArrayList<>();
         return model;
     }
 
@@ -482,13 +483,13 @@ public class MainData {
      *  4. article 4
      *  5. article 5
      *  */
-    private static List<MainModel.InnerModel> article() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Full Screen", false, ArticleFullScreenActivity.class));
-        model.add(new MainModel.InnerModel("Big Header", false, ArticleBigHeaderActivity.class));
-        model.add(new MainModel.InnerModel("Short Text", false, ArticleShortTextActivity.class));
-        model.add(new MainModel.InnerModel("Coding", false, ArticleCodingActivity.class));
-        model.add(new MainModel.InnerModel("With Video", false, ArticleWithVideoActivity.class));
+    private static List<MainModel.Inner> article() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Full Screen", false, ArticleFullScreenActivity.class));
+        model.add(new MainModel.Inner("Big Header", false, ArticleBigHeaderActivity.class));
+        model.add(new MainModel.Inner("Short Text", false, ArticleShortTextActivity.class));
+        model.add(new MainModel.Inner("Coding", false, ArticleCodingActivity.class));
+        model.add(new MainModel.Inner("With Video", false, ArticleWithVideoActivity.class));
         return model;
     }
 
@@ -499,12 +500,12 @@ public class MainData {
      *  3. About 3
      *  4. About 4
      * */
-    private static List<MainModel.InnerModel> about() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Restaurant", false, AboutRestaurantActivity.class));
-        model.add(new MainModel.InnerModel("Infinite Developers", false, AboutInfiniteDevelopersActivity.class));
-        model.add(new MainModel.InnerModel("Full Screen", false, AboutFullScreenActivity.class));
-        model.add(new MainModel.InnerModel("Application", false, AboutApplicationActivity.class));
+    private static List<MainModel.Inner> about() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Restaurant", false, AboutRestaurantActivity.class));
+        model.add(new MainModel.Inner("Infinite Developers", false, AboutInfiniteDevelopersActivity.class));
+        model.add(new MainModel.Inner("Full Screen", false, AboutFullScreenActivity.class));
+        model.add(new MainModel.Inner("Application", false, AboutApplicationActivity.class));
         return model;
     }
 
@@ -518,15 +519,15 @@ public class MainData {
      *  6. Chat 4
      *  5. Chat 5
      * */
-    private static List<MainModel.InnerModel> chats() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Telegram", false, TelegramActivity.class));
-        model.add(new MainModel.InnerModel("WhatApp", false, WhatAppActivity.class));
-        model.add(new MainModel.InnerModel("Chat 1", false, Chat1Activity.class));
-        model.add(new MainModel.InnerModel("Chat 2", false, Chat2Activity.class));
-        model.add(new MainModel.InnerModel("Chat 3", false, Chat3Activity.class));
-        model.add(new MainModel.InnerModel("Chat 4", false, Chat4Activity.class));
-        model.add(new MainModel.InnerModel("Chat 5", false, Chat5Activity.class));
+    private static List<MainModel.Inner> chats() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Telegram", false, TelegramActivity.class));
+        model.add(new MainModel.Inner("WhatApp", false, WhatAppActivity.class));
+        model.add(new MainModel.Inner("Chat 1", false, Chat1Activity.class));
+        model.add(new MainModel.Inner("Chat 2", false, Chat2Activity.class));
+        model.add(new MainModel.Inner("Chat 3", false, Chat3Activity.class));
+        model.add(new MainModel.Inner("Chat 4", false, Chat4Activity.class));
+        model.add(new MainModel.Inner("Chat 5", false, Chat5Activity.class));
         return null;
     }
 
@@ -561,21 +562,21 @@ public class MainData {
      *  27.text fields
      *  28.tooltips
      * */
-    private static List<MainModel.InnerModel> uiComponents() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("App bar : bottom", false, AppbarBottomActivity.class));
-        model.add(new MainModel.InnerModel("App bar : top", false, AppbarTopActivity.class));
-        model.add(new MainModel.InnerModel("Buttons", false, ButtonsActivity.class));
-        model.add(new MainModel.InnerModel("Floating action button", false, FloatingActionButtonActivity.class));
-        model.add(new MainModel.InnerModel("Cards", false, CardsActivity.class));
-        model.add(new MainModel.InnerModel("Dialog", false, DialogActivity.class));
-        model.add(new MainModel.InnerModel("List", false, ListActivity.class));
-        model.add(new MainModel.InnerModel("Menus & Navigation drawer", false, MenuActivity.class));
-        model.add(new MainModel.InnerModel("Progress bar", false, ProgressBarActivity.class));
-        model.add(new MainModel.InnerModel("Bottom Sheet", false, BottomSheetActivity.class));
-        model.add(new MainModel.InnerModel("SnackBars", false, SnackbarActivity.class));
-        model.add(new MainModel.InnerModel("Tabs", false, TablayoutActivity.class));
-        model.add(new MainModel.InnerModel("Chips", false, ChipsActivity.class));
+    private static List<MainModel.Inner> uiComponents() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("App bar : bottom", false, AppbarBottomActivity.class));
+        model.add(new MainModel.Inner("App bar : top", false, AppbarTopActivity.class));
+        model.add(new MainModel.Inner("Buttons", false, ButtonsActivity.class));
+        model.add(new MainModel.Inner("Floating action button", false, FloatingActionButtonActivity.class));
+        model.add(new MainModel.Inner("Cards", false, CardsActivity.class));
+        model.add(new MainModel.Inner("Dialog", false, DialogActivity.class));
+        model.add(new MainModel.Inner("List", false, ListActivity.class));
+        model.add(new MainModel.Inner("Menus & Navigation drawer", false, MenuActivity.class));
+        model.add(new MainModel.Inner("Progress bar", false, ProgressBarActivity.class));
+        model.add(new MainModel.Inner("Bottom Sheet", false, BottomSheetActivity.class));
+        model.add(new MainModel.Inner("SnackBars", false, SnackbarActivity.class));
+        model.add(new MainModel.Inner("Tabs", false, TablayoutActivity.class));
+        model.add(new MainModel.Inner("Chips", false, ChipsActivity.class));
 
 //        model.add(new MainModel.InnerModel("Backdrop", false, BackdropActivity.class));
 //        model.add(new MainModel.InnerModel("Banner", false, BannerActivity.class));
@@ -597,13 +598,13 @@ public class MainData {
      *  4.frame layout
      *  5.table layout
      * */
-    private static List<MainModel.InnerModel> layout() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Linear layout", false,  LinearLayoutActivity.class));
-        model.add(new MainModel.InnerModel("Constraint layout", false,  ConstraintLayoutActivity.class));
-        model.add(new MainModel.InnerModel("Relative layout", false,  RelativeLayoutActivity.class));
-        model.add(new MainModel.InnerModel("Frame layout", false,  FrameLayoutActivity.class));
-        model.add(new MainModel.InnerModel("Table layout", false,  TableLayoutActivity.class));
+    private static List<MainModel.Inner> layout() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Linear layout", false,  LinearLayoutActivity.class));
+        model.add(new MainModel.Inner("Constraint layout", false,  ConstraintLayoutActivity.class));
+        model.add(new MainModel.Inner("Relative layout", false,  RelativeLayoutActivity.class));
+        model.add(new MainModel.Inner("Frame layout", false,  FrameLayoutActivity.class));
+        model.add(new MainModel.Inner("Table layout", false,  TableLayoutActivity.class));
         return model;
     }
 
@@ -614,12 +615,12 @@ public class MainData {
      *  3.drawables
      *  4.files
      * */
-    private static List<MainModel.InnerModel> resources() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Strings", false,  StringActivity.class));
-        model.add(new MainModel.InnerModel("Drawables", false,  DrawablesActivity.class));
-        model.add(new MainModel.InnerModel("Files", false,  FilesActivity.class));
-        model.add(new MainModel.InnerModel("Fonts", false,  FontsActivity.class));
+    private static List<MainModel.Inner> resources() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Strings", false,  StringActivity.class));
+        model.add(new MainModel.Inner("Drawables", false,  DrawablesActivity.class));
+        model.add(new MainModel.Inner("Files", false,  FilesActivity.class));
+        model.add(new MainModel.Inner("Fonts", false,  FontsActivity.class));
         return model;
     }
 
@@ -629,16 +630,16 @@ public class MainData {
      *  2.fragment manger
      *  3.fragment transaction
      * */
-    private static List<MainModel.InnerModel> fragment() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Fragment lifecycle", false,  FragmentLifecycleActivity.class));
-        model.add(new MainModel.InnerModel("Fragment manager", false,  FragmentManagerActivity.class));
+    private static List<MainModel.Inner> fragment() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Fragment lifecycle", false,  FragmentLifecycleActivity.class));
+        model.add(new MainModel.Inner("Fragment manager", false,  FragmentManagerActivity.class));
 //        model.add(new MainModel.InnerModel("Fragment transaction", false,  MainActivity.class));
         return model;
     }
 
-    private static List<MainModel.InnerModel> theme() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
+    private static List<MainModel.Inner> theme() {
+        List<MainModel.Inner> model = new ArrayList<>();
         return model;
     }
 
@@ -650,12 +651,12 @@ public class MainData {
      *  4.value selector
      *  5.count down
      * */
-    private static List<MainModel.InnerModel> custom() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Simple custom text view",false, CustomTextViewActivity.class));
-        model.add(new MainModel.InnerModel("Shape view", false,  ShapeViewActivity.class));
-        model.add(new MainModel.InnerModel("Circle image view", false, CircleImageViewActivity.class));
-        model.add(new MainModel.InnerModel("Value selector", false,  ValueSelectorActivity.class));
+    private static List<MainModel.Inner> custom() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Simple custom text view",false, CustomTextViewActivity.class));
+        model.add(new MainModel.Inner("Shape view", false,  ShapeViewActivity.class));
+        model.add(new MainModel.Inner("Circle image view", false, CircleImageViewActivity.class));
+        model.add(new MainModel.Inner("Value selector", false,  ValueSelectorActivity.class));
 //        model.add(new MainModel.InnerModel("Count down", false,  CustomTextViewActivity.class));
         return model;
     }
@@ -667,11 +668,11 @@ public class MainData {
      *  2.R8
      *  3.Key store
      */
-    private static List<MainModel.InnerModel> security() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Proguard", false, SecurityActivity.class));
-        model.add(new MainModel.InnerModel("R8", false, SecurityActivity.class));
-        model.add(new MainModel.InnerModel("Key store", false, SecurityActivity.class));
+    private static List<MainModel.Inner> security() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Proguard", false, SecurityActivity.class));
+        model.add(new MainModel.Inner("R8", false, SecurityActivity.class));
+        model.add(new MainModel.Inner("Key store", false, SecurityActivity.class));
         return model;
     }
 
@@ -682,11 +683,11 @@ public class MainData {
      *  3.motion
      *  4.camera
      */
-    private static List<MainModel.InnerModel> sensor() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Motion sensors", false, MotionActivity.class));
-        model.add(new MainModel.InnerModel("Position sensors", false, PositionActivity.class));
-        model.add(new MainModel.InnerModel("Environment sensors", false, EnvironmentActivity.class));
+    private static List<MainModel.Inner> sensor() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Motion sensors", false, MotionActivity.class));
+        model.add(new MainModel.Inner("Position sensors", false, PositionActivity.class));
+        model.add(new MainModel.Inner("Environment sensors", false, EnvironmentActivity.class));
         // TODO: 12/21/19  camera sensor add to next version
 //        model.add(new MainModel.InnerModel("Camera", false, MotionActivity.class));
         return model;
@@ -700,12 +701,12 @@ public class MainData {
      *  3.retrofit
      *  4.json converters
      */
-    private static List<MainModel.InnerModel> network() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Http request", false, HttpRequestActivity.class));
-        model.add(new MainModel.InnerModel("Volley", false, VolleyActivity.class));
-        model.add(new MainModel.InnerModel("Retrofit", false, RetrofitActivity.class));
-        model.add(new MainModel.InnerModel("Json converters", false, JsonActivity.class));
+    private static List<MainModel.Inner> network() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Http request", false, HttpRequestActivity.class));
+        model.add(new MainModel.Inner("Volley", false, VolleyActivity.class));
+        model.add(new MainModel.Inner("Retrofit", false, RetrofitActivity.class));
+        model.add(new MainModel.Inner("Json converters", false, JsonActivity.class));
         return model;
     }
 
@@ -714,10 +715,10 @@ public class MainData {
     *   1.handlers
     *   2.async task
     */
-    private static List<MainModel.InnerModel> thread() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Handlers", false, HandlerActivity.class));
-        model.add(new MainModel.InnerModel("Async Task", false, HandlerActivity.class));
+    private static List<MainModel.Inner> thread() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Handlers", false, HandlerActivity.class));
+        model.add(new MainModel.Inner("Async Task", false, HandlerActivity.class));
         return model;
     }
 
@@ -727,11 +728,11 @@ public class MainData {
     *   2. Notification Style
     *   3. Custom notification
     */
-    private static List<MainModel.InnerModel> notification() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Basic notification", false, BasicNotificationActivity.class));
-        model.add(new MainModel.InnerModel("Notification styling", false, NotificationStylingActivity.class));
-        model.add(new MainModel.InnerModel("Custom notification", false, CustomNotificationActivity.class));
+    private static List<MainModel.Inner> notification() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Basic notification", false, BasicNotificationActivity.class));
+        model.add(new MainModel.Inner("Notification styling", false, NotificationStylingActivity.class));
+        model.add(new MainModel.Inner("Custom notification", false, CustomNotificationActivity.class));
         return model;
     }
 
@@ -741,13 +742,13 @@ public class MainData {
     *   2. Shared preferences
     *   3. Realm
     */
-    private static List<MainModel.InnerModel> databaseStorage() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("SQLite", false, SQLiteActivity.class));
-        model.add(new MainModel.InnerModel("Shared preferences", false, SharePrefActivity.class));
-        model.add(new MainModel.InnerModel("Realm", false, RealmTestActivity.class));
-        model.add(new MainModel.InnerModel("ObjectBox", false, null)); // TODO: 4/27/20 add in other versin
-        model.add(new MainModel.InnerModel("Room", false, null)); // TODO: 4/27/20 add in other versin
+    private static List<MainModel.Inner> databaseStorage() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("SQLite", false, SQLiteActivity.class));
+        model.add(new MainModel.Inner("Shared preferences", false, SharePrefActivity.class));
+        model.add(new MainModel.Inner("Realm", false, RealmTestActivity.class));
+        model.add(new MainModel.Inner("Room", false, RoomActivity.class));
+        model.add(new MainModel.Inner("ObjectBox", false, null)); // TODO: 4/27/20 add in other version
         return model;
     }
 
@@ -759,13 +760,13 @@ public class MainData {
     *   4. Read videos
     *   5. Read & create & delete file
     */
-    private static List<MainModel.InnerModel> fileStorage() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("File provider", false, FileProviderActivity.class));
-        model.add(new MainModel.InnerModel("Read photos", false, ReadPhotosActivity.class));
-        model.add(new MainModel.InnerModel("Read songs", false, ReadSongsActivity.class));
-        model.add(new MainModel.InnerModel("Read videos", false, ReadVideosActivity.class));
-        model.add(new MainModel.InnerModel("Read & Write & Create & Delete file", false, RWCDFileActivity.class));
+    private static List<MainModel.Inner> fileStorage() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("File provider", false, FileProviderActivity.class));
+        model.add(new MainModel.Inner("Read photos", false, ReadPhotosActivity.class));
+        model.add(new MainModel.Inner("Read songs", false, ReadSongsActivity.class));
+        model.add(new MainModel.Inner("Read videos", false, ReadVideosActivity.class));
+        model.add(new MainModel.Inner("Read & Write & Create & Delete file", false, RWCDFileActivity.class));
         return model;
     }
 
@@ -774,9 +775,9 @@ public class MainData {
     * list of activity
     *   1. Activity lifecycle
     */
-    private static List<MainModel.InnerModel> activity() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Activity lifecycle", false, ActivityActivity.class));
+    private static List<MainModel.Inner> activity() {
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Activity lifecycle", false, ActivityActivity.class));
         return model;
     }
 
@@ -787,11 +788,11 @@ public class MainData {
     *   2.image downloader service
     *   3.set alarm service
     */
-    private static List<MainModel.InnerModel> service() {
-        List<MainModel.InnerModel> model = new ArrayList<>();
+    private static List<MainModel.Inner> service() {
+        List<MainModel.Inner> model = new ArrayList<>();
 
-        model.add(new MainModel.InnerModel("Basic service", false, ServiceActivity.class));
-        model.add(new MainModel.InnerModel("Image downloader service", false, SimpleImageDownloaderActivity.class));
+        model.add(new MainModel.Inner("Basic service", false, ServiceActivity.class));
+        model.add(new MainModel.Inner("Image downloader service", false, SimpleImageDownloaderActivity.class));
 
         return model;
     }
@@ -801,9 +802,9 @@ public class MainData {
     * list of manifest
     *   1. Permissions
     */
-    private static List<MainModel.InnerModel> manifest(){
-        List<MainModel.InnerModel> model = new ArrayList<>();
-        model.add(new MainModel.InnerModel("Permissions", false, PermissionActivity.class));
+    private static List<MainModel.Inner> manifest(){
+        List<MainModel.Inner> model = new ArrayList<>();
+        model.add(new MainModel.Inner("Permissions", false, PermissionActivity.class));
         return model;
     }
 
@@ -814,12 +815,12 @@ public class MainData {
     *   2.info broadcast receiver
     *   3.sms received
     */
-    private static List<MainModel.InnerModel> broadcastReceiver(){
-        List<MainModel.InnerModel> br = new ArrayList<>();
-        br.add(new MainModel.InnerModel("Info broadcast receiver", false, BroadcastInfoActivity.class));
-        br.add(new MainModel.InnerModel("Basic broadcast receiver", false, BasicBroadcastReceiver.class));
-        br.add(new MainModel.InnerModel("SMS RECEIVED", false, SMSReceiverActivity.class));
-        br.add(new MainModel.InnerModel("Set alarm", false, SetAlarmActivity.class));
+    private static List<MainModel.Inner> broadcastReceiver(){
+        List<MainModel.Inner> br = new ArrayList<>();
+        br.add(new MainModel.Inner("Info broadcast receiver", false, BroadcastInfoActivity.class));
+        br.add(new MainModel.Inner("Basic broadcast receiver", false, BasicBroadcastReceiver.class));
+        br.add(new MainModel.Inner("SMS RECEIVED", false, SMSReceiverActivity.class));
+        br.add(new MainModel.Inner("Set alarm", false, SetAlarmActivity.class));
         return br;
     }
 

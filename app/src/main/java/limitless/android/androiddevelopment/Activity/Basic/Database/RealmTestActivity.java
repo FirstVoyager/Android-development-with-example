@@ -117,7 +117,7 @@ public class RealmTestActivity extends BaseActivity implements View.OnClickListe
 
     private void delete() {
         if (Tools.isEmpty(etIdRead.getText().toString())){
-            etIdDelete.setError(getString(R.string.t_empty));
+            etIdDelete.setError(getString(R.string.empty));
             return;
         }
         controllerTest.delete(Integer.valueOf(etIdRead.getText().toString()));
@@ -126,7 +126,7 @@ public class RealmTestActivity extends BaseActivity implements View.OnClickListe
 
     private void read() {
         if (Tools.isEmpty(etIdRead.getText().toString())){
-            etIdRead.setError(getString(R.string.t_empty));
+            etIdRead.setError(getString(R.string.empty));
             return;
         }
         RealmTestModel model = controllerTest.getModel(Integer.valueOf(etIdRead.getText().toString()));
@@ -146,15 +146,15 @@ public class RealmTestActivity extends BaseActivity implements View.OnClickListe
 
     private void insert() {
         if (Tools.isEmpty(etName.getText().toString())) {
-            etName.setError(getString(R.string.t_empty));
+            etName.setError(getString(R.string.empty));
             return;
         }
         if (Tools.isEmpty(etNumber.getText().toString())){
-            etNumber.setError(getString(R.string.t_empty));
+            etNumber.setError(getString(R.string.empty));
             return;
         }
         if (Tools.isEmpty(etAddress.getText().toString())){
-            etAddress.setError(getString(R.string.t_empty));
+            etAddress.setError(getString(R.string.empty));
             return;
         }
         controllerTest.insert(etName.getText().toString(), etNumber.getText().toString(), etAddress.getText().toString());

@@ -3,6 +3,7 @@
     <string name="app_name">Android development</string>
     <string name="title_ui">UI</string>
     <string name="title_Basic">Basic</string>
+    <string name="title_interface">interface</string>
     <string name="title_user_interface">User interface</string>
     <string name="title_ui_examples">UI examples</string>
     <string name="title_ui_more">UI more</string>
@@ -91,7 +92,7 @@
     <string name="text_image_url">Image url</string>
     <string name="cancel">Cancel</string>
     <string name="text_download">Download</string>
-    <string name="t_empty">Empty</string>
+    <string name="empty">Empty</string>
     <string name="text_set_alarm_service">Set alarm service</string>
     <string name="text_seconds">Seconds</string>
     <string name="_set_alarm">Service starts %1s seconds later</string>
@@ -105,7 +106,7 @@
     <string name="text_read_songs">Read songs</string>
     <string name="menu_song_play">Play</string>
     <string name="t_play">Play</string>
-    <string name="text_delete">Delete</string>
+    <string name="delete">Delete</string>
     <string name="text_details">Details</string>
     <string name="text_sort_by">Sort by</string>
     <string name="text_ascending">Ascending</string>
@@ -116,7 +117,7 @@
     <string name="text_text">Text</string>
     <string name="text_create">Create</string>
     <string name="text_write">Write</string>
-    <string name="text_read">Read</string>
+    <string name="read">Read</string>
     <string name="text_select_photo">Select photo</string>
     <string name="text_photo">Photo</string>
     <string name="text_file">File</string>
@@ -130,7 +131,7 @@
     <string name="text_hint">Hint</string>
     <string name="text_date">Date</string>
     <string name="text_tag">Tag</string>
-    <string name="text_insert">Insert</string>
+    <string name="insert">Insert</string>
     <string name="text_key">Key</string>
     <string name="text_update">Update</string>
     <string name="text_clear_all">Clear all</string>
@@ -141,7 +142,7 @@
     <string name="text_number">Number</string>
     <string name="text_address">Address</string>
     <string name="text_id">id</string>
-    <string name="text_read_all">Read all</string>
+    <string name="read_all">Read all</string>
     <string name="text_delete_all">Delete all</string>
     <string name="title_realm_database">Realm database</string>
     <string name="info_notification">Notifications provide short, timely information about events in your app while it\'s not in use.</string>
@@ -601,7 +602,7 @@ The new Super Retina XDR display, a custom-designed OLED, provides users an imme
     <string name="t_paste">Paste</string>
     <string name="t_copy">Copy</string>
     <string name="t_title">Title</string>
-    <string name="t_description">Description</string>
+    <string name="description">Description</string>
     <string name="t_zoom_in">Zoom in</string>
     <string name="t_zoom_out">Zoom out</string>
     <string name="t_zoom_in_down">Zoom in down</string>
@@ -690,4 +691,14 @@ The new Super Retina XDR display, a custom-designed OLED, provides users an imme
     <string name="app_email">limitlessDreamDev@gmail.com</string>
     <string name="want_to_by_source">I want to buy android development source code.</string>
     <string name="app_url">https://play.google.com/store/apps/details?id=limitless.android.androiddevelopmentjava</string>
+
+    <string name="ads_app_id">ca-app-pub-5248248664217130~3915287299</string>
+    <string name="ads_banner">ca-app-pub-5248248664217130/9472588506</string>
+    <string name="ads_interstitial">ca-app-pub-5248248664217130/1517829446</string>
+    <string name="ads_rewarded">ca-app-pub-5248248664217130/8672789955</string>
+    <string name="job">Job</string>
+    <string name="deleted">Deleted</string>
+    <string name="objectbox">ObjectBox</string>
+    <string name="room">Room</string>
+
 </resources>

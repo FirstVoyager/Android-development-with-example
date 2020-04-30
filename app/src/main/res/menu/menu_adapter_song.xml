@@ -13,7 +13,7 @@
 
     <item
         android:icon="@drawable/ic_delete_black_24dp"
-        android:title="@string/text_delete"
+        android:title="@string/delete"
         android:id="@+id/menu_song_delete"/>
 
     <item

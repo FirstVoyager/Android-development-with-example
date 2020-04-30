@@ -77,11 +77,11 @@ public class SharePrefActivity extends BaseActivity implements View.OnClickListe
 
     private void update() {
         if (Tools.isEmpty(etKeyUpate.getText().toString())){
-            etKeyUpate.setError(getString(R.string.t_empty));
+            etKeyUpate.setError(getString(R.string.empty));
             return;
         }
         if (Tools.isEmpty(etTextUpdate.getText().toString())){
-            etTextUpdate.setError(getString(R.string.t_empty));
+            etTextUpdate.setError(getString(R.string.empty));
             return;
         }
         sharedPreferences.edit().putString(etKeyUpate.getText().toString(), etTextUpdate.getText().toString()).apply();
@@ -90,7 +90,7 @@ public class SharePrefActivity extends BaseActivity implements View.OnClickListe
 
     private void delete() {
         if (Tools.isEmpty(etKeyDelete.getText().toString())){
-            etKeyDelete.setError(getString(R.string.t_empty));
+            etKeyDelete.setError(getString(R.string.empty));
             return;
         }
         sharedPreferences.edit().remove(etKeyDelete.getText().toString()).apply();
@@ -100,7 +100,7 @@ public class SharePrefActivity extends BaseActivity implements View.OnClickListe
     private void read() {
         String key = etKeyRead.getText().toString();
         if (Tools.isEmpty(key)){
-            etKeyRead.setError(getString(R.string.t_empty));
+            etKeyRead.setError(getString(R.string.empty));
             return;
         }
         String s = sharedPreferences.getString(key, null);
@@ -117,11 +117,11 @@ public class SharePrefActivity extends BaseActivity implements View.OnClickListe
 
     private void insert() {
         if (Tools.isEmpty(etKeyInsert.getText().toString())){
-            etKeyInsert.setError(getString(R.string.t_empty));
+            etKeyInsert.setError(getString(R.string.empty));
             return;
         }
         if (Tools.isEmpty(etTextInsert.getText().toString())){
-            etTextInsert.setError(getString(R.string.t_empty));
+            etTextInsert.setError(getString(R.string.empty));
             return;
         }
         sharedPreferences.edit().putString(

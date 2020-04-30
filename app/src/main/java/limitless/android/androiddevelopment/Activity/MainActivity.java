@@ -11,6 +11,7 @@ import limitless.android.androiddevelopment.Activity.CodeMore.ImageEffectsActivi
 import limitless.android.androiddevelopment.Dialog.AboutDialog;
 import limitless.android.androiddevelopment.Fragment.MainFragment;
 import limitless.android.androiddevelopment.Fragment.ProjectsFragment;
+import limitless.android.androiddevelopment.Other.Ads;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
@@ -20,6 +21,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.android.gms.ads.AdView;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -38,6 +40,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
+        // Load ads
+        AdView adView = findViewById(R.id.adView);
+        adView.loadAd(Ads.adRequest());
 //        startActivity(new Intent(this, ImageEffectsActivity.class));
     }
 

@@ -18,11 +18,11 @@ import limitless.android.androiddevelopment.R;
 public class AdapterExpand extends RecyclerView.Adapter<AdapterExpand.ExpandViewHolder> {
 
     private Context context;
-    private List<MainModel.InnerModel> innerModels;
+    private List<MainModel.Inner> inners;
 
-    public AdapterExpand(Context context, List<MainModel.InnerModel> innerModels) {
+    public AdapterExpand(Context context, List<MainModel.Inner> inners) {
         this.context = context;
-        this.innerModels = innerModels;
+        this.inners = inners;
     }
 
     @NonNull
@@ -33,13 +33,13 @@ public class AdapterExpand extends RecyclerView.Adapter<AdapterExpand.ExpandView
 
     @Override
     public void onBindViewHolder(@NonNull ExpandViewHolder holder, int position) {
-        holder.bindView(innerModels.get(position));
+        holder.bindView(inners.get(position));
     }
 
     @Override
     public int getItemCount() {
         try {
-            return innerModels.size();
+            return inners.size();
         }catch (Exception e){
             Tools.error(e);
             return 0;
@@ -56,7 +56,7 @@ public class AdapterExpand extends RecyclerView.Adapter<AdapterExpand.ExpandView
             viewNew = itemView.findViewById(R.id.view_new);
         }
 
-        void bindView(MainModel.InnerModel im){
+        void bindView(MainModel.Inner im){
             tvName.setText(im.name);
             if (im.isNew)
                 viewNew.setVisibility(View.VISIBLE);
@@ -67,10 +67,10 @@ public class AdapterExpand extends RecyclerView.Adapter<AdapterExpand.ExpandView
         @Override
         public void onClick(View v) {
             if (v.getId() == R.id.linearLayout){
-                if (innerModels.get(getAdapterPosition()).aClass1 == null){
+                if (inners.get(getAdapterPosition()).aClass1 == null){
                     Tools.customToast(context, R.string.coming_soon);
                 }else {
-                    Intent intent = new Intent(context, innerModels.get(getAdapterPosition()).aClass1);
+                    Intent intent = new Intent(context, inners.get(getAdapterPosition()).aClass1);
                     intent.putExtra(Intent.EXTRA_TEXT, getAdapterPosition());
                     Tools.startActivity(context, intent);
                 }

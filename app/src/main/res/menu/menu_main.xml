@@ -8,7 +8,7 @@
         android:icon="@drawable/ic_android_24dp"/>
 
     <item
-        android:title="@string/title_user_interface"
+        android:title="@string/title_interface"
         android:id="@+id/menu_main_ui"
         android:icon="@drawable/ic_view_compact_black_24dp"/>
 

@@ -11,7 +11,6 @@ import android.view.View;
 
 public class SQLiteActivity extends BaseActivity implements View.OnClickListener {
 
-    // todo complete when want to publish
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
