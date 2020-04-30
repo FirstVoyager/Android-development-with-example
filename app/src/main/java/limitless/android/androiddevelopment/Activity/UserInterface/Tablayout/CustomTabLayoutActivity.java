@@ -1,4 +1,4 @@
-package limitless.android.androiddevelopment.Activity.UserInterface;
+package limitless.android.androiddevelopment.Activity.UserInterface.Tablayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

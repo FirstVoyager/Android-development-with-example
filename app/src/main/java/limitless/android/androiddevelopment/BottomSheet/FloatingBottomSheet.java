@@ -5,7 +5,9 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
@@ -18,20 +20,20 @@ import limitless.android.androiddevelopment.R;
 
 public class FloatingBottomSheet extends BottomSheetDialogFragment implements View.OnClickListener {
 
-    @NonNull
     @Override
-    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
-        Dialog dialog = super.onCreateDialog(savedInstanceState);
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setStyle(BottomSheetDialogFragment.STYLE_NORMAL, R.style.BottomSheet_Transparent);
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = View.inflate(getContext(), R.layout.bottom_sheet_floating, null);
-        dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        view.setBackgroundColor(Color.TRANSPARENT);
-        dialog.setContentView(view);
+        getDialog().setContentView(view);
         view.findViewById(R.id.imageButton_close).setOnClickListener(this);
         BottomSheetBehavior.from((View) view.getParent()).addBottomSheetCallback(callBack);
-
-//        view.setBackgroundColor(Color.TRANSPARENT);
-//        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        return dialog;
+        return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     private BottomSheetBehavior.BottomSheetCallback callBack = new BottomSheetBehavior.BottomSheetCallback() {

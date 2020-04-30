@@ -1,19 +1,18 @@
-package limitless.android.androiddevelopment.Activity.UserInterface;
+package limitless.android.androiddevelopment.Activity.UserInterface.Fragments;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import limitless.android.androiddevelopment.Activity.BaseActivity;
 import limitless.android.androiddevelopment.R;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class CircleImageViewActivity extends BaseActivity {
+public class FragmentLifecycleActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_circle_image_view);
+        setContentView(R.layout.activity_fragment_lifecycle);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 

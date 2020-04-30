@@ -90,28 +90,28 @@ import limitless.android.androiddevelopment.Activity.UserInterface.BottomSheetAc
 import limitless.android.androiddevelopment.Activity.UserInterface.ButtonsActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.CardsActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.ChipsActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.CircleImageViewActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.ConstraintLayoutActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.CustomTextViewActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.CustomComponents.CircleImageViewActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.Layouts.ConstraintLayoutActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.CustomComponents.CustomTextViewActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.DialogActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.DrawablesActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.FilesActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.Resources.DrawablesActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.Resources.FilesActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.FloatingActionButtonActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.FontsActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.FragmentLifecycleActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.FragmentManagerActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.FrameLayoutActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.LinearLayoutActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.Resources.FontsActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.Fragments.FragmentLifecycleActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.Fragments.FragmentManagerActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.Layouts.FrameLayoutActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.Layouts.LinearLayoutActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.List.ListActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.MenuDrawer.MenuActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.ProgressBarActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.RelativeLayoutActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.ShapeViewActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.Layouts.RelativeLayoutActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.CustomComponents.ShapeViewActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.SnackbarActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.StringActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.TablayoutActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.TableLayoutActivity;
-import limitless.android.androiddevelopment.Activity.UserInterface.ValueSelectorActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.Resources.StringActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.Tablayout.TablayoutActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.Layouts.TableLayoutActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.CustomComponents.ValueSelectorActivity;
 import limitless.android.androiddevelopment.Model.MainModel;
 import limitless.android.androiddevelopment.Model.ProjectModel;
 import limitless.android.androiddevelopment.Other.AnimationManager;
@@ -214,7 +214,7 @@ public class MainData {
         model.add(new MainModel("Chat", R.drawable.ic_chat_512dp, false, false, chats(), null, false));
         model.add(new MainModel("Search page", R.drawable.ic_search_512dp, false, false, searchPage(), null, false));
         model.add(new MainModel("Dashboard", R.drawable.ic_dashboard_512dp, false, false, dashboard(), null, false));
-        model.add(new MainModel("Payment", R.drawable.ic_payment_512dp, false, false, payment(), null, true));
+        model.add(new MainModel("Payment", R.drawable.ic_payment_512dp, false, false, payment(), null, false));
         model.add(new MainModel("Setting", R.drawable.ic_settings_512dp, false, false, setting(), null, false));
         model.add(new MainModel("Slider image", R.drawable.ic_slider_image_512dp, false, false, sliderImage(), null, false));
         model.add(new MainModel("Shopping", R.drawable.ic_shopping_512dp, false, false, shopping(), null, false));
@@ -466,7 +466,7 @@ public class MainData {
         model.add(new MainModel.InnerModel("Payment 4", false, Payment4Activity.class));
         model.add(new MainModel.InnerModel("Payment 5", false, Payment5Activity.class));
         model.add(new MainModel.InnerModel("Payment 6", false, Payment6Activity.class));
-        return model;
+        return null;
     }
 
     private static List<MainModel.InnerModel> dashboard() {
@@ -527,7 +527,7 @@ public class MainData {
         model.add(new MainModel.InnerModel("Chat 3", false, Chat3Activity.class));
         model.add(new MainModel.InnerModel("Chat 4", false, Chat4Activity.class));
         model.add(new MainModel.InnerModel("Chat 5", false, Chat5Activity.class));
-        return model;
+        return null;
     }
 
     /**
@@ -575,9 +575,10 @@ public class MainData {
         model.add(new MainModel.InnerModel("Bottom Sheet", false, BottomSheetActivity.class));
         model.add(new MainModel.InnerModel("SnackBars", false, SnackbarActivity.class));
         model.add(new MainModel.InnerModel("Tabs", false, TablayoutActivity.class));
-        model.add(new MainModel.InnerModel("Chips", false, ChipsActivity.class)); // TODO:  complete next version
-//        model.add(new MainModel.InnerModel("Backdrop", false, BackdropActivity.class)); // TODO: 12/23/19 complete
-//        model.add(new MainModel.InnerModel("Banner", false, BannerActivity.class)); // TODO: 12/23/19 complete
+        model.add(new MainModel.InnerModel("Chips", false, ChipsActivity.class));
+
+//        model.add(new MainModel.InnerModel("Backdrop", false, BackdropActivity.class));
+//        model.add(new MainModel.InnerModel("Banner", false, BannerActivity.class));
 //        model.add(new MainModel.InnerModel("Dividers", false, UIComponentActivity.class));
 //        model.add(new MainModel.InnerModel("Pickers", false, UIComponentActivity.class));
 //        model.add(new MainModel.InnerModel("Sheet side", false, UIComponentActivity.class));

@@ -70,6 +70,7 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import limitless.android.androiddevelopment.Activity.CodeMore.ClipboardManagerActivity;
+import limitless.android.androiddevelopment.Activity.MainActivity;
 import limitless.android.androiddevelopment.BuildConfig;
 import limitless.android.androiddevelopment.Dialog.DialogInfo;
 import limitless.android.androiddevelopment.Dialog.StyleMapDialog;
@@ -610,5 +611,24 @@ public class Tools {
         } catch (Exception e) {
             error(e);
         }
+    }
+
+    public static void openEmail(Context context, String subject, String email) {
+        if (context == null || email == null)
+            return;
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.fromParts("mailto", email, null));
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT, "Write your email");
+        startActivity(context, intent);
+    }
+
+    public static void shareText(Context context, String msg) {
+        if (context == null || msg == null)
+            return;
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, msg);
+        startActivity(context, intent);
     }
 }

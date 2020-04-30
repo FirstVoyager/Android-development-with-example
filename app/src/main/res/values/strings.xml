@@ -685,4 +685,9 @@ The new Super Retina XDR display, a custom-designed OLED, provides users an imme
     <string name="coming_soon">Coming soon ...</string>
     <string name="sqlite">SQLite</string>
     <string name="handler">Handler</string>
+    <string name="learning_android_dev">Learn Android programming with source code.</string>
+    <string name="get_source_code">Get source code</string>
+    <string name="app_email">limitlessDreamDev@gmail.com</string>
+    <string name="want_to_by_source">I want to buy android development source code.</string>
+    <string name="app_url">https://play.google.com/store/apps/details?id=limitless.android.androiddevelopmentjava</string>
 </resources>

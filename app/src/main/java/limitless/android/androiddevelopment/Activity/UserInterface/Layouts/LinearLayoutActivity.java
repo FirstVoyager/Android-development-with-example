@@ -1,4 +1,4 @@
-package limitless.android.androiddevelopment.Activity.UserInterface;
+package limitless.android.androiddevelopment.Activity.UserInterface.Layouts;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,12 +10,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class TableLayoutActivity extends BaseActivity {
+public class LinearLayoutActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_table_layout);
+        setContentView(R.layout.activity_linear_layout);
         init();
     }
 
@@ -26,8 +26,8 @@ public class TableLayoutActivity extends BaseActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuItem mi = menu.add(getString(R.string.title_about));
+        mi.setIcon(R.drawable.ic_info_outline_white_24dp);
         mi.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        mi.setIcon(R.drawable.ic_info_outline_black_24dp);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -36,7 +36,7 @@ public class TableLayoutActivity extends BaseActivity {
         if (item.getItemId() == android.R.id.home){
             finish();
         }else if (item.getTitle() != null && item.getTitle().equals(getString(R.string.title_about))){
-            Tools.showInfoDialog(getSupportFragmentManager(), getString(R.string.t_table_layout), getString(R.string.info_table_layout));
+            Tools.showInfoDialog(getSupportFragmentManager(), getString(R.string.t_linear_layout), getString(R.string.info_linear_layout));
         }
         return super.onOptionsItemSelected(item);
     }

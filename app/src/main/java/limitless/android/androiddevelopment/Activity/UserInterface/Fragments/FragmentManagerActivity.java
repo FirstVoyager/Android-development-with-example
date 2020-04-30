@@ -1,8 +1,9 @@
-package limitless.android.androiddevelopment.Activity.UserInterface;
+package limitless.android.androiddevelopment.Activity.UserInterface.Fragments;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import limitless.android.androiddevelopment.Activity.BaseActivity;
 import limitless.android.androiddevelopment.Fragment.ManagerFragment;
 import limitless.android.androiddevelopment.R;
 
@@ -22,7 +23,7 @@ import android.widget.FrameLayout.LayoutParams;
 
 import java.util.List;
 
-public class FragmentManagerActivity extends AppCompatActivity {
+public class FragmentManagerActivity extends BaseActivity {
 
     private static final double PERCENT_OF_SCROLL_OF_ACTIVITY_TO_FINISH = 1;
     private View mView;

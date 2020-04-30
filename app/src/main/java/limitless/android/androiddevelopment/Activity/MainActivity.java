@@ -2,17 +2,20 @@ package limitless.android.androiddevelopment.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import limitless.android.androiddevelopment.Activity.CodeMore.ImageEffectsActivity;
+import limitless.android.androiddevelopment.Dialog.AboutDialog;
 import limitless.android.androiddevelopment.Fragment.MainFragment;
 import limitless.android.androiddevelopment.Fragment.ProjectsFragment;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -82,10 +85,19 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuItem code = menu.add("Source code");
+        MenuItem code = menu.add(R.string.get_source_code);
         code.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
         code.setIcon(R.drawable.ic_code_black_24dp);
+        DrawableCompat.setTint(code.getIcon(), Color.WHITE);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getTitle() != null && item.getTitle().equals(getString(R.string.get_source_code))){
+            new AboutDialog().show(getSupportFragmentManager(), null);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -93,20 +105,16 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         int id = menuItem.getItemId();
         switch (id){
             case R.id.menu_nav_setting:
-
-                Tools.closeDrawer(drawerLayout);
+                // TODO add in next version
                 return true;
             case R.id.menu_nav_about:
-
-                Tools.closeDrawer(drawerLayout);
+                new AboutDialog().show(getSupportFragmentManager(), null);
                 return true;
             case R.id.menu_nav_share:
-
-                Tools.closeDrawer(drawerLayout);
+                Tools.shareText(this, getString(R.string.app_url));
                 return true;
             case R.id.menu_nav_rate:
-
-                Tools.closeDrawer(drawerLayout);
+                Tools.openUrl(this, getString(R.string.app_url));
                 return true;
             case R.id.menu_main_projects:
                 setFragment(projectFragment, id);

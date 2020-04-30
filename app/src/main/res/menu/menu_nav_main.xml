@@ -2,6 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:visible="false"
         android:title="@string/title_setting"
         android:id="@+id/menu_nav_setting"
         android:icon="@drawable/ic_settings_black_24dp"/>
@@ -20,10 +21,5 @@
         android:title="@string/title_rate_us"
         android:id="@+id/menu_nav_rate"
         android:icon="@drawable/ic_star_half_black_24dp"/>
-
-    <item
-        android:title="@string/projects"
-        android:id="@+id/menu_projects"
-        android:icon="@drawable/ic_apps_black_24dp"/>
 
 </menu>

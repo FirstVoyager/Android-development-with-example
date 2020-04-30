@@ -167,62 +167,62 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".Activity.UserInterface.ValueSelectorActivity"
+            android:name=".Activity.UserInterface.CustomComponents.ValueSelectorActivity"
             android:label="@string/t_value_selector" />
         <activity
-            android:name=".Activity.UserInterface.CircleImageViewActivity"
+            android:name=".Activity.UserInterface.CustomComponents.CircleImageViewActivity"
             android:label="@string/t_circle_image_view" />
         <activity
-            android:name=".Activity.UserInterface.ShapeViewActivity"
+            android:name=".Activity.UserInterface.CustomComponents.ShapeViewActivity"
             android:label="@string/t_shape_view" />
         <activity
-            android:name=".Activity.UserInterface.CustomTextViewActivity"
+            android:name=".Activity.UserInterface.CustomComponents.CustomTextViewActivity"
             android:label="@string/t_custom_text_view" />
         <activity
-            android:name=".Activity.UserInterface.FragmentManagerActivity"
+            android:name=".Activity.UserInterface.Fragments.FragmentManagerActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activity.UserInterface.FragmentLifecycleActivity"
+            android:name=".Activity.UserInterface.Fragments.FragmentLifecycleActivity"
             android:label="@string/t_fragment_lifecycle" />
         <activity
-            android:name=".Activity.UserInterface.FontsActivity"
+            android:name=".Activity.UserInterface.Resources.FontsActivity"
             android:label="@string/t_fonts" />
         <activity
-            android:name=".Activity.UserInterface.FilesActivity"
+            android:name=".Activity.UserInterface.Resources.FilesActivity"
             android:label="@string/text_files" />
         <activity
-            android:name=".Activity.UserInterface.DrawablesActivity"
+            android:name=".Activity.UserInterface.Resources.DrawablesActivity"
             android:label="@string/t_drawable" />
         <activity
-            android:name=".Activity.UserInterface.StringActivity"
+            android:name=".Activity.UserInterface.Resources.StringActivity"
             android:label="@string/t_string" />
         <activity
-            android:name=".Activity.UserInterface.TableLayoutActivity"
+            android:name=".Activity.UserInterface.Layouts.TableLayoutActivity"
             android:label="@string/t_table_layout" />
         <activity
-            android:name=".Activity.UserInterface.FrameLayoutActivity"
+            android:name=".Activity.UserInterface.Layouts.FrameLayoutActivity"
             android:label="@string/t_frame_layout" />
         <activity
-            android:name=".Activity.UserInterface.RelativeLayoutActivity"
+            android:name=".Activity.UserInterface.Layouts.RelativeLayoutActivity"
             android:label="@string/t_relative_layout"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activity.UserInterface.ConstraintLayoutActivity"
+            android:name=".Activity.UserInterface.Layouts.ConstraintLayoutActivity"
             android:label="@string/t_constraint_layout"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activity.UserInterface.LinearLayoutActivity"
+            android:name=".Activity.UserInterface.Layouts.LinearLayoutActivity"
             android:label="@string/t_linear_layout" />
         <activity
-            android:name=".Activity.UserInterface.HideToolbarTabLayoutActivity"
+            android:name=".Activity.UserInterface.Tablayout.HideToolbarTabLayoutActivity"
             android:label="@string/text_hide_toolbar"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activity.UserInterface.CustomTabLayoutActivity"
+            android:name=".Activity.UserInterface.Tablayout.CustomTabLayoutActivity"
             android:label="@string/t_custom_tab" />
-        <activity android:name=".Activity.UserInterface.SimpleTabLayoutActivity" />
+        <activity android:name=".Activity.UserInterface.Tablayout.SimpleTabLayoutActivity" />
         <activity
-            android:name=".Activity.UserInterface.TablayoutActivity"
+            android:name=".Activity.UserInterface.Tablayout.TablayoutActivity"
             android:label="@string/text_tab_layout" />
         <activity
             android:name=".Activity.UserInterface.SnackbarActivity"
@@ -412,7 +412,6 @@
         <activity
             android:name=".Activity.Basic.BroadCast.BasicBroadcastReceiver"
             android:label="@string/title_broadcast_receiver" />
-        <activity android:name=".Activity.UserInterface.UIComponentActivity" />
         <activity android:name=".Activity.Basic.Security.SecurityActivity" />
         <activity
             android:name=".Activity.Basic.Sensors.MotionActivity"

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.UserInterface.CustomTextViewActivity">
+    tools:context=".Activity.UserInterface.CustomComponents.CustomTextViewActivity">
 
     <limitless.android.androiddevelopment.CustomView.CustomTextView
         android:id="@+id/customTextView"

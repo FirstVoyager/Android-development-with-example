@@ -1,8 +1,10 @@
-package limitless.android.androiddevelopment.Activity.UserInterface;
+package limitless.android.androiddevelopment.Activity.UserInterface.Tablayout;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.Tablayout.CustomTabLayoutActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.Tablayout.HideToolbarTabLayoutActivity;
+import limitless.android.androiddevelopment.Activity.UserInterface.Tablayout.SimpleTabLayoutActivity;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 

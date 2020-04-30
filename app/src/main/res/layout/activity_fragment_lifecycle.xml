@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.UserInterface.FragmentLifecycleActivity"
+    tools:context=".Activity.UserInterface.Fragments.FragmentLifecycleActivity"
     android:id="@+id/frameLayout">
 
     <androidx.appcompat.widget.AppCompatImageView

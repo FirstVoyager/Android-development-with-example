@@ -163,6 +163,14 @@
         <item name="colorAccent">#1E88E5</item>
     </style>
 
+    <style name="BottomSheet.Transparent" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Transparent</item>
+    </style>
+
+    <style name="Transparent" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
     <color name="gray_600">#757575</color>
     <color name="brown_600">#6D4C41</color>
     <color name="colorPrimaryDarkYellow">#F9A825</color>

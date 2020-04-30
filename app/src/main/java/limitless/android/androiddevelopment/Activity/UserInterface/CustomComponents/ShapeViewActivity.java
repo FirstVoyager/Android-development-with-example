@@ -1,4 +1,4 @@
-package limitless.android.androiddevelopment.Activity.UserInterface;
+package limitless.android.androiddevelopment.Activity.UserInterface.CustomComponents;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,13 +6,20 @@ import limitless.android.androiddevelopment.R;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 
-public class FragmentLifecycleActivity extends AppCompatActivity {
+public class ShapeViewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fragment_lifecycle);
+        setContentView(R.layout.activity_shape_view);
+        init();
+    }
+
+    private void init() {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
