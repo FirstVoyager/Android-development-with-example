@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="limitless.android.androiddevelopment">
 
@@ -429,12 +430,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- call receiver -->
-        <receiver android:name=".Activity.Basic.CallReceiverActivity$CallReceiver">
-            <intent-filter>
-                <action android:name="android.provider.Telephony.NEW_OUTGOING_CALL" />
-            </intent-filter>
-        </receiver> <!-- sms receiver -->
+        </activity>
         <receiver
             android:name=".Activity.Basic.BroadCast.SMSReceiverActivity$SMSReceiver"
             android:enabled="true"
