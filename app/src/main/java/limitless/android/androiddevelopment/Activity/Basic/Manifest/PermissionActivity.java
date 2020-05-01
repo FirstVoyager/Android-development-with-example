@@ -185,10 +185,11 @@ public class PermissionActivity extends BaseActivity implements View.OnClickList
 
 
     private void getPermission(String p) {
-        if (Tools.permissionGranted(this, "android.permission." + p)){
-            Tools.customToast(this, p + " Granted!");
-        }else {
-            Tools.requestPermission(this, "android.permission." + p, simpleRequestCode);
-        }
+        Tools.toast(this, p);
+//        if (Tools.permissionGranted(this, "android.permission." + p)){
+//            Tools.customToast(this, p + " Granted!");
+//        }else {
+//            Tools.requestPermission(this, "android.permission." + p, simpleRequestCode);
+//        }
     }
 }

@@ -118,10 +118,7 @@ public class SelectBottomSheet extends BottomSheetDialogFragment implements View
                 LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) appBarLayout.getLayoutParams();
                 int h = (int) Tools.convertDipToPx(
                         getContext().getResources().getDisplayMetrics(), (int) (appBarHeight * v * 0.5));
-                if (h > appBarHeight)
-                    layoutParams.height = appBarHeight;
-                else
-                    layoutParams.height = h;
+                layoutParams.height = Math.min(h, appBarHeight);
                 appBarLayout.setLayoutParams(layoutParams);
                 appBarLayout.setVisibility(View.VISIBLE);
             }

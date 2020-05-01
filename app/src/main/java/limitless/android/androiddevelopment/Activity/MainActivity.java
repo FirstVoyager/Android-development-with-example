@@ -111,14 +111,18 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         switch (id){
             case R.id.menu_nav_setting:
                 // TODO add in next version
+                drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
             case R.id.menu_nav_about:
+                drawerLayout.closeDrawer(GravityCompat.START);
                 new AboutDialog().show(getSupportFragmentManager(), null);
                 return true;
             case R.id.menu_nav_share:
+                drawerLayout.closeDrawer(GravityCompat.START);
                 Tools.shareText(this, getString(R.string.app_url));
                 return true;
             case R.id.menu_nav_rate:
+                drawerLayout.closeDrawer(GravityCompat.START);
                 Tools.openUrl(this, getString(R.string.app_url));
                 return true;
             case R.id.menu_main_projects:
