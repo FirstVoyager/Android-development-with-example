@@ -818,7 +818,7 @@ public class MainData {
         List<MainModel.Inner> br = new ArrayList<>();
         br.add(new MainModel.Inner("Info broadcast receiver", false, BroadcastInfoActivity.class));
         br.add(new MainModel.Inner("Basic broadcast receiver", false, BasicBroadcastReceiver.class));
-        br.add(new MainModel.Inner("SMS RECEIVED", false, SMSReceiverActivity.class));
+//        br.add(new MainModel.Inner("SMS RECEIVED", false, SMSReceiverActivity.class));
         br.add(new MainModel.Inner("Set alarm", false, SetAlarmActivity.class));
         return br;
     }
