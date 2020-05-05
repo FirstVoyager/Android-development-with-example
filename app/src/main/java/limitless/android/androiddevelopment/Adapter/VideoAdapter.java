@@ -25,13 +25,13 @@ import limitless.android.androiddevelopment.Data.Data;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
-public class AdapterVideo extends RecyclerView.Adapter<AdapterVideo.VideoViewHolder> {
+public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHolder> {
 
     private Context context;
     private List<VideoModel> list;
     private StringListener stringListener;
 
-    public AdapterVideo(Context context, List<VideoModel> list, StringListener stringListener) {
+    public VideoAdapter(Context context, List<VideoModel> list, StringListener stringListener) {
         this.context = context;
         this.list = list;
         this.stringListener = stringListener;

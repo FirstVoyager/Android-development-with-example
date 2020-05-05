@@ -17,7 +17,7 @@ import java.util.List;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import limitless.android.androiddevelopment.Adapter.AdapterSimpleText;
+import limitless.android.androiddevelopment.Adapter.SimpleTextAdapter;
 import limitless.android.androiddevelopment.R;
 
 public class SimpleTabLayoutFragment extends Fragment {
@@ -46,7 +46,7 @@ public class SimpleTabLayoutFragment extends Fragment {
                 strings.add("This is simple text " + i);
             }
             recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-            recyclerView.setAdapter(new AdapterSimpleText(getContext(), strings));
+            recyclerView.setAdapter(new SimpleTextAdapter(getContext(), strings));
             textView.setVisibility(View.GONE);
         }
     }

@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
-import limitless.android.androiddevelopment.Adapter.AdapterSimpleText;
+import limitless.android.androiddevelopment.Adapter.SimpleTextAdapter;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
@@ -33,7 +33,7 @@ public class RelativeLayoutActivity extends BaseActivity {
         for (int i = 0; i < 30; i++) {
             strings.add("Simple text " + i);
         }
-        rv.setAdapter(new AdapterSimpleText(this, strings));
+        rv.setAdapter(new SimpleTextAdapter(this, strings));
 
     }
 

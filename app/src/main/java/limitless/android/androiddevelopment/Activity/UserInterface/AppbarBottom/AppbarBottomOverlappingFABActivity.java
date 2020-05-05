@@ -1,13 +1,12 @@
 package limitless.android.androiddevelopment.Activity.UserInterface.AppbarBottom;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
-import limitless.android.androiddevelopment.Adapter.AdapterUserMessage;
+import limitless.android.androiddevelopment.Adapter.UserMessageAdapter;
 import limitless.android.androiddevelopment.Data.DataGenerator;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
@@ -23,7 +22,7 @@ public class AppbarBottomOverlappingFABActivity extends BaseActivity implements 
 
     private DrawerLayout drawerLayout;
     private RecyclerView recyclerView;
-    private AdapterUserMessage adapterUserMessage;
+    private UserMessageAdapter userMessageAdapter;
     private BottomAppBar bottomAppBar;
     private FloatingActionButton fab;
 
@@ -37,12 +36,12 @@ public class AppbarBottomOverlappingFABActivity extends BaseActivity implements 
     private void init() {
         drawerLayout = findViewById(R.id.drawerLayout);
         recyclerView = findViewById(R.id.recyclerView);
-        adapterUserMessage = new AdapterUserMessage(this, DataGenerator.generateUser(10));
+        userMessageAdapter = new UserMessageAdapter(this, DataGenerator.generateUser(10));
         bottomAppBar = findViewById(R.id.bottomAppBar);
         fab = findViewById(R.id.fab);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapterUserMessage);
+        recyclerView.setAdapter(userMessageAdapter);
         bottomAppBar.setNavigationOnClickListener(this);
         bottomAppBar.setOnMenuItemClickListener(this);
         fab.setOnClickListener(this);

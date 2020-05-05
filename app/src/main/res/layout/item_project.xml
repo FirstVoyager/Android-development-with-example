@@ -54,6 +54,7 @@
                     android:singleLine="true"/>
 
                 <com.google.android.material.textview.MaterialTextView
+                    android:visibility="gone"
                     android:id="@+id/textView_caption"
                     android:textColor="@android:color/white"
                     android:textSize="14sp"

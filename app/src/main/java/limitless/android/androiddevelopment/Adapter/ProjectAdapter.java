@@ -1,6 +1,7 @@
 package limitless.android.androiddevelopment.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.recyclerview.widget.RecyclerView;
+import limitless.android.androiddevelopment.Activity.ProjectViewActivity;
 import limitless.android.androiddevelopment.Model.ProjectModel;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
@@ -75,7 +77,9 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectV
         @Override
         public void onClick(View v) {
             if (v.getId() == R.id.cardView_project){
-                Tools.openUrl(context, list.get(getAdapterPosition()).storeUrl);
+                Intent intent = new Intent(context, ProjectViewActivity.class);
+                intent.putExtra(ProjectViewActivity.EXTRA_PROJECT, list.get(getAdapterPosition()));
+                Tools.startActivity(context, intent);
             }
         }
     }

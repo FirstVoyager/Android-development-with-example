@@ -19,15 +19,14 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import limitless.android.androiddevelopment.Adapter.AdapterPhoto;
-import limitless.android.androiddevelopment.Adapter.AdapterSongs;
-import limitless.android.androiddevelopment.Adapter.AdapterVideo;
+import limitless.android.androiddevelopment.Adapter.PhotoAdapter;
+import limitless.android.androiddevelopment.Adapter.SongsAdapter;
+import limitless.android.androiddevelopment.Adapter.VideoAdapter;
 import limitless.android.androiddevelopment.Interface.StringListener;
 import limitless.android.androiddevelopment.Model.PhotoModel;
 import limitless.android.androiddevelopment.Model.SongModel;
 import limitless.android.androiddevelopment.Model.VideoModel;
 import limitless.android.androiddevelopment.Data.Data;
-import limitless.android.androiddevelopment.Other.Constant;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
@@ -166,11 +165,11 @@ public class SelectBottomSheet extends BottomSheetDialogFragment implements View
             vNoFile.setVisibility(View.GONE);
             recyclerView.setVisibility(View.VISIBLE);
             if (type == 0)
-                recyclerView.setAdapter(new AdapterPhoto(getContext(), (List<PhotoModel>) objects, stringListenerClose));
+                recyclerView.setAdapter(new PhotoAdapter(getContext(), (List<PhotoModel>) objects, stringListenerClose));
             if (type == 1)
-                recyclerView.setAdapter(new AdapterSongs(getContext(), (List<SongModel>) objects, stringListenerClose));
+                recyclerView.setAdapter(new SongsAdapter(getContext(), (List<SongModel>) objects, stringListenerClose));
             if (type == 2)
-                recyclerView.setAdapter(new AdapterVideo(getContext(), (List<VideoModel>) objects, stringListenerClose));
+                recyclerView.setAdapter(new VideoAdapter(getContext(), (List<VideoModel>) objects, stringListenerClose));
             if (type == 3)
                 return;
         }

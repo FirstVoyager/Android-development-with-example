@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
-import limitless.android.androiddevelopment.Adapter.AdapterVideo;
+import limitless.android.androiddevelopment.Adapter.VideoAdapter;
 import limitless.android.androiddevelopment.Dialog.DialogSort;
 import limitless.android.androiddevelopment.Interface.StringListener;
 import limitless.android.androiddevelopment.Model.VideoModel;
@@ -44,7 +44,7 @@ public class ReadVideosActivity extends BaseActivity implements SwipeRefreshLayo
     };
     private SwipeRefreshLayout sfl;
     private RecyclerView rv;
-    private AdapterVideo adapterVideo;
+    private VideoAdapter videoAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,9 +57,9 @@ public class ReadVideosActivity extends BaseActivity implements SwipeRefreshLayo
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         sfl = findViewById(R.id.swipeRefreshLayout);
         rv = findViewById(R.id.recyclerView);
-        adapterVideo = new AdapterVideo(this, new ArrayList<VideoModel>(), null);
+        videoAdapter = new VideoAdapter(this, new ArrayList<VideoModel>(), null);
         rv.setLayoutManager(new GridLayoutManager(this, 2, RecyclerView.VERTICAL, false));
-        rv.setAdapter(adapterVideo);
+        rv.setAdapter(videoAdapter);
         sfl.setOnRefreshListener(this);
         if (! Tools.permissionGranted(this, Manifest.permission.READ_EXTERNAL_STORAGE)){
             Tools.requestPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE, requestStorage);
@@ -108,7 +108,7 @@ public class ReadVideosActivity extends BaseActivity implements SwipeRefreshLayo
 
     private void getData() {
         sfl.setRefreshing(true);
-        adapterVideo.clearAll();
+        videoAdapter.clearAll();
         new GetVideos(sort).execute(getContentResolver());
     }
 
@@ -134,7 +134,7 @@ public class ReadVideosActivity extends BaseActivity implements SwipeRefreshLayo
         protected void onPostExecute(List<VideoModel> videoModels) {
             super.onPostExecute(videoModels);
             sfl.setRefreshing(false);
-            adapterVideo.setData(videoModels);
+            videoAdapter.setData(videoModels);
         }
     }
 

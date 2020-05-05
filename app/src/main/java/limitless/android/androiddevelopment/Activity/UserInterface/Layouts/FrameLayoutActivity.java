@@ -3,7 +3,7 @@ package limitless.android.androiddevelopment.Activity.UserInterface.Layouts;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
-import limitless.android.androiddevelopment.Adapter.AdapterSimpleText;
+import limitless.android.androiddevelopment.Adapter.SimpleTextAdapter;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
@@ -31,7 +31,7 @@ public class FrameLayoutActivity extends BaseActivity {
         for (int i = 0; i < 20; i++) {
             strings.add("Simple text " + i);
         }
-        rv.setAdapter(new AdapterSimpleText(this, strings));
+        rv.setAdapter(new SimpleTextAdapter(this, strings));
     }
 
     @Override

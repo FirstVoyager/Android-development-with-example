@@ -4,7 +4,6 @@ package limitless.android.androiddevelopment.Fragment;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatTextView;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -15,15 +14,10 @@ import com.google.android.material.appbar.MaterialToolbar;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import limitless.android.androiddevelopment.Adapter.AdapterSimpleText;
 import limitless.android.androiddevelopment.R;
 
 public class ManagerFragment extends Fragment {

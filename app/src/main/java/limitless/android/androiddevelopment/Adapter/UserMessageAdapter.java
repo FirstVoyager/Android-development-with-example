@@ -18,13 +18,13 @@ import limitless.android.androiddevelopment.Model.ModelUser;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
-public class AdapterUserMessage extends RecyclerView.Adapter<AdapterUserMessage.UserViewHolder> {
+public class UserMessageAdapter extends RecyclerView.Adapter<UserMessageAdapter.UserViewHolder> {
 
     private Context context;
     private List<ModelUser> userList;
     private ObjectListener objectListener;
 
-    public AdapterUserMessage(Context context, List<ModelUser> userList) {
+    public UserMessageAdapter(Context context, List<ModelUser> userList) {
         this.context = context;
         this.userList = userList;
     }

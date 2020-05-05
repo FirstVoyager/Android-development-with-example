@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="limitless.android.androiddevelopment.Activity.ProjectViewActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView_header"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                tools:src="@drawable/image_code_header"
+                android:scaleType="fitXY"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:visibility="gone"
+                android:id="@+id/textView_title"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/text_name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView_description"
+                android:layout_margin="8dp"
+                style="@style/TextAppearance.AppCompat.Medium"
+                tools:text="@string/info_about_chatgram"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/google_play"
+        android:id="@+id/button_googlePlay"/>
+
+</LinearLayout>

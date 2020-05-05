@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
-import limitless.android.androiddevelopment.Adapter.AdapterPhoto;
+import limitless.android.androiddevelopment.Adapter.PhotoAdapter;
 import limitless.android.androiddevelopment.Dialog.DialogSort;
 import limitless.android.androiddevelopment.Interface.StringListener;
 import limitless.android.androiddevelopment.Model.PhotoModel;
@@ -30,7 +30,7 @@ public class ReadPhotosActivity extends BaseActivity implements SwipeRefreshLayo
     private String sortPhotos = MediaStore.Images.Media.DATE_ADDED + " DESC";
     private RecyclerView rv;
     private SwipeRefreshLayout sfl;
-    private AdapterPhoto adapterPhoto;
+    private PhotoAdapter photoAdapter;
     private String[] sorts = new String[]{"Date added", "Name", "Path", "Size", "Height", "Width"};
     private String[] column = new String[]{
             MediaStore.Images.ImageColumns.DATE_ADDED,
@@ -51,11 +51,11 @@ public class ReadPhotosActivity extends BaseActivity implements SwipeRefreshLayo
     private void init() {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         rv = findViewById(R.id.recyclerView);
-        adapterPhoto = new AdapterPhoto(this, new ArrayList<PhotoModel>(), null);
+        photoAdapter = new PhotoAdapter(this, new ArrayList<PhotoModel>(), null);
         sfl = findViewById(R.id.swipeRefreshLayout);
 
         rv.setLayoutManager(new GridLayoutManager(this, 3, RecyclerView.VERTICAL, false));
-        rv.setAdapter(adapterPhoto);
+        rv.setAdapter(photoAdapter);
         sfl.setOnRefreshListener(this);
 
         if (! Tools.permissionGranted(this, Manifest.permission.READ_EXTERNAL_STORAGE)){
@@ -111,7 +111,7 @@ public class ReadPhotosActivity extends BaseActivity implements SwipeRefreshLayo
 
     @Override
     public void onRefresh() {
-        adapterPhoto.clearAll();
+        photoAdapter.clearAll();
         getData();
     }
 
@@ -125,7 +125,7 @@ public class ReadPhotosActivity extends BaseActivity implements SwipeRefreshLayo
         @Override
         protected void onPostExecute(List<PhotoModel> photoModels) {
             sfl.setRefreshing(false);
-            adapterPhoto.setData(photoModels);
+            photoAdapter.setData(photoModels);
             super.onPostExecute(photoModels);
         }
     }

@@ -4,14 +4,9 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
-import com.squareup.picasso.Picasso;
-
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatImageView;
@@ -22,13 +17,13 @@ import limitless.android.androiddevelopment.Model.PhotoModel;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
-public class AdapterPhoto extends RecyclerView.Adapter<AdapterPhoto.PhotoViewHolder> {
+public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.PhotoViewHolder> {
 
     private Context context;
     private List<PhotoModel> list;
     private StringListener stringListener;
 
-    public AdapterPhoto(Context context, List<PhotoModel> list, StringListener stringListener) {
+    public PhotoAdapter(Context context, List<PhotoModel> list, StringListener stringListener) {
         this.context = context;
         this.list = list;
         this.stringListener = stringListener;

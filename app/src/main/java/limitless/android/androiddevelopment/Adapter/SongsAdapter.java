@@ -25,12 +25,12 @@ import limitless.android.androiddevelopment.Data.Data;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
-public class AdapterSongs extends RecyclerView.Adapter<AdapterSongs.AudioViewHolder> {
+public class SongsAdapter extends RecyclerView.Adapter<SongsAdapter.AudioViewHolder> {
     public Context context;
     public List<SongModel> list;
     private StringListener stringListener;
 
-    public AdapterSongs(Context context, List<SongModel> list, StringListener stringListener) {
+    public SongsAdapter(Context context, List<SongModel> list, StringListener stringListener) {
         this.context = context;
         this.list = list;
         this.stringListener = stringListener;

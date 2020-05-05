@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
-import limitless.android.androiddevelopment.Adapter.AdapterSongs;
+import limitless.android.androiddevelopment.Adapter.SongsAdapter;
 import limitless.android.androiddevelopment.Dialog.DialogSort;
 import limitless.android.androiddevelopment.Interface.StringListener;
 import limitless.android.androiddevelopment.Model.SongModel;
@@ -29,7 +29,7 @@ public class ReadSongsActivity extends BaseActivity implements SwipeRefreshLayou
     private int requestStorage = 2004;
     private String sortSongs = MediaStore.Audio.AudioColumns.DATE_ADDED + " DESC";
     private RecyclerView rv;
-    private AdapterSongs adapterSongs;
+    private SongsAdapter songsAdapter;
     private SwipeRefreshLayout sfl;
     private String[] sorts = new String[]{"Date added", "Name", "Artist", "Album", "Path", "Size", "Duration"};
     private String[] column = new String[]{
@@ -51,12 +51,12 @@ public class ReadSongsActivity extends BaseActivity implements SwipeRefreshLayou
 
     private void init() {
         rv = findViewById(R.id.recyclerView);
-        adapterSongs = new AdapterSongs(this, new ArrayList<SongModel>(), null);
+        songsAdapter = new SongsAdapter(this, new ArrayList<SongModel>(), null);
         sfl = findViewById(R.id.swipeRefreshLayout);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         rv.setLayoutManager(new LinearLayoutManager(this));
-        rv.setAdapter(adapterSongs);
+        rv.setAdapter(songsAdapter);
         sfl.setOnRefreshListener(this);
         if (! Tools.permissionGranted(this, Manifest.permission.READ_EXTERNAL_STORAGE)){
             Tools.requestPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE, requestStorage);
@@ -67,7 +67,7 @@ public class ReadSongsActivity extends BaseActivity implements SwipeRefreshLayou
 
     private void getData() {
         sfl.setRefreshing(true);
-        adapterSongs.clearAll();
+        songsAdapter.clearAll();
         new GetSongs().execute();
     }
 
@@ -125,7 +125,7 @@ public class ReadSongsActivity extends BaseActivity implements SwipeRefreshLayou
         protected void onPostExecute(List<SongModel> songModels) {
             super.onPostExecute(songModels);
             sfl.setRefreshing(false);
-            adapterSongs.setData(songModels);
+            songsAdapter.setData(songModels);
         }
     }
 

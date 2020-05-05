@@ -1,11 +1,10 @@
 package limitless.android.androiddevelopment.Activity.UserInterface.AppbarBottom;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
-import limitless.android.androiddevelopment.Adapter.AdapterUserMessage;
+import limitless.android.androiddevelopment.Adapter.UserMessageAdapter;
 import limitless.android.androiddevelopment.Data.DataGenerator;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
@@ -18,7 +17,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class AppbarBottomLabeledActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     private RecyclerView recyclerView;
-    private AdapterUserMessage adapterUserMessage;
+    private UserMessageAdapter userMessageAdapter;
     private BottomNavigationView bnv;
 
     @Override
@@ -31,11 +30,11 @@ public class AppbarBottomLabeledActivity extends BaseActivity implements BottomN
     private void init() {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         recyclerView = findViewById(R.id.recyclerView);
-        adapterUserMessage = new AdapterUserMessage(this, DataGenerator.generateUser(10));
+        userMessageAdapter = new UserMessageAdapter(this, DataGenerator.generateUser(10));
         bnv = findViewById(R.id.bottomNavigationView);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapterUserMessage);
+        recyclerView.setAdapter(userMessageAdapter);
         bnv.setOnNavigationItemSelectedListener(this);
 
     }

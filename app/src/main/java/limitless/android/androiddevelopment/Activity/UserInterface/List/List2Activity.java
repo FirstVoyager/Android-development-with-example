@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
-import limitless.android.androiddevelopment.Adapter.AdapterPhoto;
-import limitless.android.androiddevelopment.Adapter.AdapterSimpleText;
+import limitless.android.androiddevelopment.Adapter.PhotoAdapter;
+import limitless.android.androiddevelopment.Adapter.SimpleTextAdapter;
 import limitless.android.androiddevelopment.Adapter.HorizontalListAdapter;
 import limitless.android.androiddevelopment.Adapter.SimpleList2Adapter;
 import limitless.android.androiddevelopment.Data.Data;
@@ -79,9 +79,9 @@ public class List2Activity extends BaseActivity {
 
     private void staggeredLayout() {
         if (Tools.permissionGranted(this, Manifest.permission.READ_EXTERNAL_STORAGE)){
-            AdapterPhoto adapterPhoto = new AdapterPhoto(this, Data.getAllPhotos(this, MediaStore.Images.Media.DATE_ADDED + " DESC"), null);
+            PhotoAdapter photoAdapter = new PhotoAdapter(this, Data.getAllPhotos(this, MediaStore.Images.Media.DATE_ADDED + " DESC"), null);
             recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-            recyclerView.setAdapter(adapterPhoto);
+            recyclerView.setAdapter(photoAdapter);
             recyclerView.setVisibility(View.VISIBLE);
             listView.setVisibility(View.GONE);
         }else {
@@ -94,7 +94,7 @@ public class List2Activity extends BaseActivity {
         for (int i = 0; i < 100; i++) {
             strings.add("Hello world " + i);
         }
-        recyclerView.setAdapter(new AdapterSimpleText(this, strings));
+        recyclerView.setAdapter(new SimpleTextAdapter(this, strings));
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2, RecyclerView.VERTICAL, false));
         recyclerView.setVisibility(View.VISIBLE);
         listView.setVisibility(View.GONE);

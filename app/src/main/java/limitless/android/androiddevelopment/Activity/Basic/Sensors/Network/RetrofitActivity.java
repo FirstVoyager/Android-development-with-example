@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
-import limitless.android.androiddevelopment.Adapter.AdapterSimpleText;
+import limitless.android.androiddevelopment.Adapter.SimpleTextAdapter;
 import limitless.android.androiddevelopment.Interface.RetrofitTestService;
 import limitless.android.androiddevelopment.Model.Retrofit.RetrofitAlbumModel;
 import limitless.android.androiddevelopment.Model.Retrofit.RetrofitCommentsModel;
@@ -31,7 +31,7 @@ public class RetrofitActivity extends BaseActivity implements View.OnClickListen
 
     private RetrofitTestService testService;
     private RecyclerView recyclerView;
-    private AdapterSimpleText adapterSimpleText;
+    private SimpleTextAdapter simpleTextAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class RetrofitActivity extends BaseActivity implements View.OnClickListen
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapterSimpleText = new AdapterSimpleText(this, new ArrayList<String>());
+        simpleTextAdapter = new SimpleTextAdapter(this, new ArrayList<String>());
         setUpRetrofit();
 
         findViewById(R.id.button_posts).setOnClickListener(this);
@@ -53,7 +53,7 @@ public class RetrofitActivity extends BaseActivity implements View.OnClickListen
         findViewById(R.id.button_photos).setOnClickListener(this);
         findViewById(R.id.button_todos).setOnClickListener(this);
         findViewById(R.id.button_users).setOnClickListener(this);
-        recyclerView.setAdapter(adapterSimpleText);
+        recyclerView.setAdapter(simpleTextAdapter);
 
 
     }
@@ -77,7 +77,7 @@ public class RetrofitActivity extends BaseActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         Tools.toast(this, getString(R.string.text_start_downloading));
-        adapterSimpleText.clear();
+        simpleTextAdapter.clear();
         switch (v.getId()){
             case R.id.button_posts:
                 getPosts();
@@ -110,7 +110,7 @@ public class RetrofitActivity extends BaseActivity implements View.OnClickListen
                     for (int i = 0; i < response.body().size(); i++) {
                         strings.add(response.body().get(i).toString());
                     }
-                    adapterSimpleText.setData(strings);
+                    simpleTextAdapter.setData(strings);
                 }
             }
 
@@ -136,7 +136,7 @@ public class RetrofitActivity extends BaseActivity implements View.OnClickListen
                     for (int i = 0; i < size; i++) {
                         strings.add(response.body().get(i).toString());
                     }
-                    adapterSimpleText.setData(strings);
+                    simpleTextAdapter.setData(strings);
                 }
             }
 
@@ -159,7 +159,7 @@ public class RetrofitActivity extends BaseActivity implements View.OnClickListen
                     for (int i = 0; i < response.body().size(); i++) {
                         strings.add(response.body().get(i).toString());
                     }
-                    adapterSimpleText.setData(strings);
+                    simpleTextAdapter.setData(strings);
                 }
             }
 
@@ -182,7 +182,7 @@ public class RetrofitActivity extends BaseActivity implements View.OnClickListen
                     for (int i = 0; i < response.body().size(); i++) {
                         strings.add(response.body().get(i).toString());
                     }
-                    adapterSimpleText.setData(strings);
+                    simpleTextAdapter.setData(strings);
                 }
             }
 
@@ -204,7 +204,7 @@ public class RetrofitActivity extends BaseActivity implements View.OnClickListen
                     for (int i = 0; i < response.body().size(); i++) {
                         strings.add(response.body().get(i).toString());
                     }
-                    adapterSimpleText.setData(strings);
+                    simpleTextAdapter.setData(strings);
                 }
             }
 
@@ -226,7 +226,7 @@ public class RetrofitActivity extends BaseActivity implements View.OnClickListen
                     for (int i = 0; i < response.body().size(); i++) {
                         strings.add(response.body().get(i).toString());
                     }
-                    adapterSimpleText.setData(strings);
+                    simpleTextAdapter.setData(strings);
                 }
 
             }

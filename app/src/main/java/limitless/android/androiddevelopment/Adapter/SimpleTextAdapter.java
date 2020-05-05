@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,12 +14,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
-public class AdapterSimpleText extends RecyclerView.Adapter<AdapterSimpleText.TextViewHolder> {
+public class SimpleTextAdapter extends RecyclerView.Adapter<SimpleTextAdapter.TextViewHolder> {
 
     private Context context;
     private List<String> strings;
 
-    public AdapterSimpleText(Context context, List<String> strings) {
+    public SimpleTextAdapter(Context context, List<String> strings) {
         this.context = context;
         this.strings = strings;
     }

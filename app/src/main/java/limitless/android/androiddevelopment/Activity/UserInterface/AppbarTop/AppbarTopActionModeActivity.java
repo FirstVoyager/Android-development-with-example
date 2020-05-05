@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
-import limitless.android.androiddevelopment.Adapter.AdapterUserMessage;
+import limitless.android.androiddevelopment.Adapter.UserMessageAdapter;
 import limitless.android.androiddevelopment.Data.DataGenerator;
 import limitless.android.androiddevelopment.Interface.ObjectListener;
 import limitless.android.androiddevelopment.Other.Tools;
@@ -19,7 +19,7 @@ import android.view.MenuItem;
 public class AppbarTopActionModeActivity extends BaseActivity {
 
     private RecyclerView recyclerView;
-    private AdapterUserMessage adapterUserMessage;
+    private UserMessageAdapter userMessageAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +30,11 @@ public class AppbarTopActionModeActivity extends BaseActivity {
 
     private void init() {
         recyclerView = findViewById(R.id.recyclerView);
-        adapterUserMessage = new AdapterUserMessage(this, DataGenerator.generateUser(15));
+        userMessageAdapter = new UserMessageAdapter(this, DataGenerator.generateUser(15));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapterUserMessage);
-        adapterUserMessage.setItemClickListener(objectListener);
+        recyclerView.setAdapter(userMessageAdapter);
+        userMessageAdapter.setItemClickListener(objectListener);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp);
 

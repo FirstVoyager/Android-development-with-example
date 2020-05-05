@@ -5,7 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
-import limitless.android.androiddevelopment.Adapter.AdapterUserMessage;
+import limitless.android.androiddevelopment.Adapter.UserMessageAdapter;
 import limitless.android.androiddevelopment.BottomSheet.SelectBottomSheet;
 import limitless.android.androiddevelopment.Data.DataGenerator;
 import limitless.android.androiddevelopment.Other.Tools;
@@ -23,7 +23,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class AppbarBottomHideOnScrollActivity extends BaseActivity implements View.OnClickListener, Toolbar.OnMenuItemClickListener {
 
     private RecyclerView recyclerView;
-    private AdapterUserMessage adapterUserMessage;
+    private UserMessageAdapter userMessageAdapter;
     private BottomAppBar bottomAppBar;
     private FloatingActionButton fab;
     private int storageCode = 2301;
@@ -37,13 +37,13 @@ public class AppbarBottomHideOnScrollActivity extends BaseActivity implements Vi
 
     private void init() {
         recyclerView = findViewById(R.id.recyclerView);
-        adapterUserMessage = new AdapterUserMessage(this, DataGenerator.generateUser(15));
+        userMessageAdapter = new UserMessageAdapter(this, DataGenerator.generateUser(15));
         bottomAppBar = findViewById(R.id.bottomAppBar);
         fab = findViewById(R.id.fab);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapterUserMessage);
+        recyclerView.setAdapter(userMessageAdapter);
         bottomAppBar.setNavigationOnClickListener(this);
         bottomAppBar.setOnMenuItemClickListener(this);
         fab.setOnClickListener(this);

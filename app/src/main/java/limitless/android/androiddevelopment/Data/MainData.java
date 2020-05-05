@@ -268,8 +268,27 @@ public class MainData {
      */
     public static List<ProjectModel> projectList() {
         List<ProjectModel> list = new ArrayList<>();
-        list.add(new ProjectModel("App manager", "Manager your apks in android", null, "https://play.google.com/store/apps/details?id=limitless.android.appmanager", null, 20, R.drawable.wallpaper_app_manager ));
-        list.add(new ProjectModel("Color palette", "Material colors code and etc work with colors", null, "https://play.google.com/store/apps/details?id=limitless.materialcolor", null, 25, R.drawable.ic_color_pallete_sale));
+        list.add(new ProjectModel("App manager", "Share & Extract & Install & etc your android apps\n" +
+                "\n" +
+                "\t1. Apps category\n" +
+                "\t2. Search apps\n" +
+                "\t3. Material design\n" +
+                "\t4. Written in java\n" +
+                "\t5. Google admob\n" +
+                "\t6. Share apps\n" +
+                "\t7. Extract apps and etc", null, "https://play.google.com/store/apps/details?id=limitless.android.appmanager", null, 20, R.drawable.wallpaper_app_manager ));
+        list.add(new ProjectModel("Color palette", "Color palette for android\n" +
+                "\n" +
+                "\t1. Material colros\n" +
+                "\t2. Gradient colors\n" +
+                "\t3. Genrate new colors\n" +
+                "\t4. Favorite colros\n" +
+                "\t5. Extarct from imags\n" +
+                "\t6. Top colors\n" +
+                "\t7. Flat ui colors\n" +
+                "\t8. Social colors\n" +
+                "\t9. Metro colors\t\n" +
+                "\t10. Fluent colors", null, "https://play.google.com/store/apps/details?id=limitless.materialcolor", null, 25, R.drawable.ic_color_pallete_sale));
 
 //        list.add(new ProjectModel("Infinite wallpaper", "Get free wallpaper", null, null, null, 25, R.drawable.image_code_header));
 //        list.add(new ProjectModel("File manager", "Manager your file in android", null, null, null, 30, R.drawable.ic_color_pallete_sale));

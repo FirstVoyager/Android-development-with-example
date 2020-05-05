@@ -1,12 +1,11 @@
 package limitless.android.androiddevelopment.Activity.UserInterface.AppbarTop;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
-import limitless.android.androiddevelopment.Adapter.AdapterUserMessage;
+import limitless.android.androiddevelopment.Adapter.UserMessageAdapter;
 import limitless.android.androiddevelopment.Data.DataGenerator;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
@@ -18,7 +17,7 @@ import android.view.MenuItem;
 public class AppbarTopRegularActivity extends BaseActivity {
 
     private RecyclerView recyclerView;
-    private AdapterUserMessage adapterUserMessage;
+    private UserMessageAdapter userMessageAdapter;
     private Toolbar toolbar;
 
     @Override
@@ -30,7 +29,7 @@ public class AppbarTopRegularActivity extends BaseActivity {
 
     private void init() {
         recyclerView = findViewById(R.id.recyclerView);
-        adapterUserMessage = new AdapterUserMessage(this, DataGenerator.generateUser(12));
+        userMessageAdapter = new UserMessageAdapter(this, DataGenerator.generateUser(12));
         toolbar = findViewById(R.id.toolbar);
 
 
@@ -38,7 +37,7 @@ public class AppbarTopRegularActivity extends BaseActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapterUserMessage);
+        recyclerView.setAdapter(userMessageAdapter);
     }
 
     @Override

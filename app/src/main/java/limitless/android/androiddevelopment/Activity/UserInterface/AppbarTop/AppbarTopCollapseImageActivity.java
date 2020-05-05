@@ -2,11 +2,7 @@ package limitless.android.androiddevelopment.Activity.UserInterface.AppbarTop;
 
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
@@ -16,7 +12,7 @@ import android.view.View;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
-import limitless.android.androiddevelopment.Adapter.AdapterUserMessage;
+import limitless.android.androiddevelopment.Adapter.UserMessageAdapter;
 import limitless.android.androiddevelopment.Data.DataGenerator;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
@@ -24,7 +20,7 @@ import limitless.android.androiddevelopment.R;
 public class AppbarTopCollapseImageActivity extends BaseActivity implements View.OnClickListener {
 
     private RecyclerView recyclerView;
-    private AdapterUserMessage adapterUserMessage;
+    private UserMessageAdapter userMessageAdapter;
     private Toolbar toolbar;
 
     @Override
@@ -52,14 +48,14 @@ public class AppbarTopCollapseImageActivity extends BaseActivity implements View
 
     private void init() {
         recyclerView = findViewById(R.id.recyclerView);
-        adapterUserMessage = new AdapterUserMessage(this, DataGenerator.generateUser(10));
+        userMessageAdapter = new UserMessageAdapter(this, DataGenerator.generateUser(10));
         toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         findViewById(R.id.fab).setOnClickListener(this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapterUserMessage);
+        recyclerView.setAdapter(userMessageAdapter);
 
     }
 
