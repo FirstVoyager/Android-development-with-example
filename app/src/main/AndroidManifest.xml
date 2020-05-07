@@ -305,15 +305,15 @@
         <activity
             android:name=".Activity.Basic.Sensors.PositionActivity"
             android:label="@string/text_position_sensors" />
-        <activity android:name=".Activity.Basic.Sensors.Network.GsonActivity" />
+        <activity android:name=".Activity.Basic.Network.GsonActivity" />
         <activity
-            android:name=".Activity.Basic.Sensors.Network.JsonActivity"
+            android:name=".Activity.Basic.Network.JsonActivity"
             android:label="@string/text_json_converters" />
         <activity
-            android:name=".Activity.Basic.Sensors.Network.RetrofitActivity"
+            android:name=".Activity.Basic.Network.RetrofitActivity"
             android:label="@string/text_retrofit" />
         <activity
-            android:name=".Activity.Basic.Sensors.Network.VolleyActivity"
+            android:name=".Activity.Basic.Network.VolleyActivity"
             android:label="@string/text_volley" />
         <activity
             android:name=".Activity.Basic.Notification.CustomNotificationActivity"
@@ -405,7 +405,7 @@
             android:name=".Activity.Basic.Sensors.MotionActivity"
             android:label="@string/text_motion_sensors" />
         <activity
-            android:name=".Activity.Basic.Sensors.Network.HttpRequestActivity"
+            android:name=".Activity.Basic.Network.HttpRequestActivity"
             android:label="@string/text_http_request" />
         <activity
             android:name=".Activity.Basic.Thread.HandlerActivity"

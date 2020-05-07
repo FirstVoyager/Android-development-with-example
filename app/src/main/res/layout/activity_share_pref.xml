@@ -47,7 +47,7 @@
                     android:singleLine="true"
                     android:hint="@string/text_text"/>
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.google.android.material.button.MaterialButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Widget.AppCompat.Button.Colored"
@@ -83,7 +83,7 @@
                     android:hint="@string/text_key"
                     android:layout_marginTop="8dp"/>
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.google.android.material.button.MaterialButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Widget.AppCompat.Button.Colored"
@@ -119,7 +119,7 @@
                     android:hint="@string/text_key"
                     android:layout_marginTop="8dp"/>
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.google.android.material.button.MaterialButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Widget.AppCompat.Button.Colored"
@@ -166,7 +166,7 @@
                     android:hint="@string/text_text"
                     android:layout_marginTop="8dp"/>
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.google.android.material.button.MaterialButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Widget.AppCompat.Button.Colored"
@@ -191,7 +191,7 @@
                 android:orientation="vertical"
                 android:padding="@dimen/padding_card_inner_medium">
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.google.android.material.button.MaterialButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/Widget.AppCompat.Button.Colored"

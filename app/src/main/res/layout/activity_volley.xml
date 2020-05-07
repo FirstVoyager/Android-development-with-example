@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.Basic.Sensors.Network.VolleyActivity">
+    tools:context=".Activity.Basic.Network.VolleyActivity">
 
     <LinearLayout
         android:gravity="center_horizontal"
@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button_downloadString"
@@ -23,7 +23,7 @@
             android:layout_marginEnd="8dp"
             style="@style/Widget.AppCompat.Button.Colored"/>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button_downloadImage"
@@ -33,7 +33,7 @@
             android:layout_marginEnd="8dp"
             style="@style/Widget.AppCompat.Button.Colored"/>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button_downloadArray"
@@ -43,7 +43,7 @@
             android:layout_marginEnd="8dp"
             style="@style/Widget.AppCompat.Button.Colored"/>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button_downloadObject"

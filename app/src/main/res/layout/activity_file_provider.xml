@@ -10,7 +10,7 @@
     android:layout_marginEnd="8dp"
     tools:context=".Activity.Basic.FileStorage.FileProviderActivity">
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.Button.Colored"
@@ -19,7 +19,7 @@
         android:text="@string/text_photo"/>
 
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.Button.Colored"
@@ -28,7 +28,7 @@
         android:text="@string/text_audio"/>
 
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Widget.AppCompat.Button.Colored"
@@ -37,7 +37,7 @@
         android:text="@string/t_video"/>
 
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

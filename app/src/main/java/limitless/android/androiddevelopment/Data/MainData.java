@@ -9,7 +9,7 @@ import limitless.android.androiddevelopment.Activity.Basic.BroadCast.BroadcastIn
 import limitless.android.androiddevelopment.Activity.Basic.Database.RoomActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Notification.CustomNotificationActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Sensors.EnvironmentActivity;
-import limitless.android.androiddevelopment.Activity.Basic.Sensors.Network.JsonActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Network.JsonActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Notification.NotificationStylingActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Sensors.PositionActivity;
 import limitless.android.androiddevelopment.Activity.Basic.FileStorage.RWCDFileActivity;
@@ -17,13 +17,13 @@ import limitless.android.androiddevelopment.Activity.Basic.FileStorage.ReadSongs
 import limitless.android.androiddevelopment.Activity.Basic.FileStorage.ReadPhotosActivity;
 import limitless.android.androiddevelopment.Activity.Basic.FileStorage.ReadVideosActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Database.RealmTestActivity;
-import limitless.android.androiddevelopment.Activity.Basic.Sensors.Network.RetrofitActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Network.RetrofitActivity;
 import limitless.android.androiddevelopment.Activity.Basic.BroadCast.SetAlarmActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Database.SharePrefActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Service.SimpleImageDownloaderActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Database.SQLiteActivity;
 import limitless.android.androiddevelopment.Activity.Basic.FileStorage.FileProviderActivity;
-import limitless.android.androiddevelopment.Activity.Basic.Sensors.Network.VolleyActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Network.VolleyActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.Animation.AnimationFadeActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.Animation.AnimationRotateActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.Animation.AnimationSlideActivity;
@@ -37,7 +37,7 @@ import limitless.android.androiddevelopment.Activity.CodeMore.GoogleMap.StyledMa
 import limitless.android.androiddevelopment.Activity.CodeMore.GoogleMap.SimpleMapsActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.MediaPlayerActivity;
 import limitless.android.androiddevelopment.Activity.CodeMore.TextToSpeechActivity;
-import limitless.android.androiddevelopment.Activity.Basic.Sensors.Network.HttpRequestActivity;
+import limitless.android.androiddevelopment.Activity.Basic.Network.HttpRequestActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Notification.BasicNotificationActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Manifest.PermissionActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Security.SecurityActivity;
@@ -146,9 +146,9 @@ public class MainData {
         mainList.add(new Section("File storage", R.drawable.ic_file_storage_512dp, false, false, fileStorage(), null, true));
         mainList.add(new Section("Data storage", R.drawable.ic_database_512dp, false, false, databaseStorage(), null, true));
         mainList.add(new Section("Notification", R.drawable.ic_notification_512dp, false, false, notification(), null, true));
-//        mainList.add(new MainModel("Thread handling", R.drawable.ic_thread_512dp, false, false, thread(), null, false));
         mainList.add(new Section("Network handling", R.drawable.ic_network_512dp, false, false, network(), null, true));
         mainList.add(new Section("Sensors", R.drawable.ic_sensor_512dp, false, false, sensor(), null, true));
+//        mainList.add(new MainModel("Thread handling", R.drawable.ic_thread_512dp, false, false, thread(), null, false));
 //        mainList.add(new MainModel("Security", R.drawable.ic_security_512dp, false, false, security(), null, false)); // TODO and in next versions
 
         return mainList;

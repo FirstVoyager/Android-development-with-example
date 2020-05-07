@@ -32,11 +32,11 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginTop="8dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="?attr/selectableItemBackground"
             android:id="@+id/button_create"
             android:gravity="center"
             android:text="@string/text_create"/>
@@ -46,11 +46,12 @@
             android:layout_height="match_parent"
             android:background="@color/color_divider"/>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="?attr/selectableItemBackground"
             android:id="@+id/button_write"
             android:gravity="center"
             android:text="@string/text_write"/>
@@ -67,11 +68,11 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginTop="8dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="?attr/selectableItemBackground"
             android:id="@+id/button_read"
             android:gravity="center"
             android:text="@string/read"/>
@@ -81,11 +82,12 @@
             android:layout_height="match_parent"
             android:background="@color/color_divider"/>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="?attr/selectableItemBackground"
             android:id="@+id/button_delete"
             android:gravity="center"
             android:text="@string/delete"/>
