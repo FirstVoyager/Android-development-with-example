@@ -7,25 +7,23 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.android.material.textview.MaterialTextView;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import limitless.android.androiddevelopment.Model.MainModel;
+import limitless.android.androiddevelopment.Model.Section;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
 public class AdapterMain extends RecyclerView.Adapter<AdapterMain.MainViewHolder> {
 
     private Context context;
-    private List<MainModel> mainList;
+    private List<Section> mainList;
 
-    public AdapterMain(Context context, List<MainModel> mainList) {
+    public AdapterMain(Context context, List<Section> mainList) {
         this.context = context;
         this.mainList = mainList;
     }
@@ -69,7 +67,7 @@ public class AdapterMain extends RecyclerView.Adapter<AdapterMain.MainViewHolder
             recyclerView.setVisibility(View.GONE);
         }
 
-        void bindView(MainModel mm){
+        void bindView(Section mm){
             recyclerView.setVisibility(View.GONE);
             ivNavigate.setVisibility(View.GONE);
             if (mm.hasData)
@@ -97,7 +95,7 @@ public class AdapterMain extends RecyclerView.Adapter<AdapterMain.MainViewHolder
 
         @Override
         public void onClick(View v) {
-            MainModel mm = mainList.get(getAdapterPosition());
+            Section mm = mainList.get(getAdapterPosition());
             if (mm.aClass != null) {
                 Tools.startActivity(context, new Intent(context, mm.aClass));
                 return;

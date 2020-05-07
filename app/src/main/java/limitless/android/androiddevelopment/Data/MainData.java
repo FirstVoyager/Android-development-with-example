@@ -18,7 +18,6 @@ import limitless.android.androiddevelopment.Activity.Basic.FileStorage.ReadPhoto
 import limitless.android.androiddevelopment.Activity.Basic.FileStorage.ReadVideosActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Database.RealmTestActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Sensors.Network.RetrofitActivity;
-import limitless.android.androiddevelopment.Activity.Basic.BroadCast.SMSReceiverActivity;
 import limitless.android.androiddevelopment.Activity.Basic.BroadCast.SetAlarmActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Database.SharePrefActivity;
 import limitless.android.androiddevelopment.Activity.Basic.Service.SimpleImageDownloaderActivity;
@@ -54,6 +53,7 @@ import limitless.android.androiddevelopment.Activity.UIMore.Article.ArticleBigHe
 import limitless.android.androiddevelopment.Activity.UIMore.Article.ArticleShortTextActivity;
 import limitless.android.androiddevelopment.Activity.UIMore.Article.ArticleCodingActivity;
 import limitless.android.androiddevelopment.Activity.UIMore.Article.ArticleWithVideoActivity;
+import limitless.android.androiddevelopment.Activity.UIMore.Article.CircleAvatarActivity;
 import limitless.android.androiddevelopment.Activity.UIMore.Chat.Chat1Activity;
 import limitless.android.androiddevelopment.Activity.UIMore.Chat.Chat2Activity;
 import limitless.android.androiddevelopment.Activity.UIMore.Chat.Chat3Activity;
@@ -113,7 +113,7 @@ import limitless.android.androiddevelopment.Activity.UserInterface.Resources.Str
 import limitless.android.androiddevelopment.Activity.UserInterface.Tablayout.TablayoutActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.Layouts.TableLayoutActivity;
 import limitless.android.androiddevelopment.Activity.UserInterface.CustomComponents.ValueSelectorActivity;
-import limitless.android.androiddevelopment.Model.MainModel;
+import limitless.android.androiddevelopment.Model.Section;
 import limitless.android.androiddevelopment.Model.ProjectModel;
 import limitless.android.androiddevelopment.Other.AnimationManager;
 import limitless.android.androiddevelopment.R;
@@ -137,18 +137,18 @@ public class MainData {
     *   10.sensors
     *   11.security
     */
-    public static List<MainModel> components(){
-        List<MainModel> mainList = new ArrayList<>();
-        mainList.add(new MainModel("App Manifest", R.drawable.ic_manifest_512dp, false, false, manifest(), null, true));
-        mainList.add(new MainModel( "Broadcast receiver", R.drawable.ic_broadcast_512dp, false, false, broadcastReceiver(), null, true));
-        mainList.add(new MainModel("Service", R.drawable.ic_service_512dp, false, false, service(), null, true));
-        mainList.add(new MainModel("Activity", R.drawable.ic_activity_512dp, false, false, activity(), null, true));
-        mainList.add(new MainModel("File storage", R.drawable.ic_file_storage_512dp, false, false, fileStorage(), null, true));
-        mainList.add(new MainModel("Data storage", R.drawable.ic_database_512dp, false, false, databaseStorage(), null, true));
-        mainList.add(new MainModel("Notification", R.drawable.ic_notification_512dp, false, false, notification(), null, true));
+    public static List<Section> components(){
+        List<Section> mainList = new ArrayList<>();
+        mainList.add(new Section("App Manifest", R.drawable.ic_manifest_512dp, false, false, manifest(), null, true));
+        mainList.add(new Section( "Broadcast receiver", R.drawable.ic_broadcast_512dp, false, false, broadcastReceiver(), null, true));
+        mainList.add(new Section("Service", R.drawable.ic_service_512dp, false, false, service(), null, true));
+        mainList.add(new Section("Activity", R.drawable.ic_activity_512dp, false, false, activity(), null, true));
+        mainList.add(new Section("File storage", R.drawable.ic_file_storage_512dp, false, false, fileStorage(), null, true));
+        mainList.add(new Section("Data storage", R.drawable.ic_database_512dp, false, false, databaseStorage(), null, true));
+        mainList.add(new Section("Notification", R.drawable.ic_notification_512dp, false, false, notification(), null, true));
 //        mainList.add(new MainModel("Thread handling", R.drawable.ic_thread_512dp, false, false, thread(), null, false));
-        mainList.add(new MainModel("Network handling", R.drawable.ic_network_512dp, false, false, network(), null, true));
-        mainList.add(new MainModel("Sensors", R.drawable.ic_sensor_512dp, false, false, sensor(), null, true));
+        mainList.add(new Section("Network handling", R.drawable.ic_network_512dp, false, false, network(), null, true));
+        mainList.add(new Section("Sensors", R.drawable.ic_sensor_512dp, false, false, sensor(), null, true));
 //        mainList.add(new MainModel("Security", R.drawable.ic_security_512dp, false, false, security(), null, false)); // TODO and in next versions
 
         return mainList;
@@ -163,14 +163,14 @@ public class MainData {
      *   5.style and themes
      *   6.custom components
      */
-    public static List<MainModel> userInterface() {
-        List<MainModel> model = new ArrayList<>();
-        model.add(new MainModel("UI components", R.drawable.ic_ui_components_512dp, false, false, uiComponents(), null, true));
-        model.add(new MainModel("UI layouts", R.drawable.ic_layout_512dp, false, false, layout(), null, true));
-        model.add(new MainModel("Resources", R.drawable.ic_resources_512dp, false, false, resources(), null, true));
-        model.add(new MainModel("Fragments", R.drawable.ic_fragment_512dp, false, false, fragment(), null, true));
-        model.add(new MainModel("Style and Themes", R.drawable.ic_theme_512dp, false, false, theme(), null, false));
-        model.add(new MainModel("Custom components", R.drawable.ic_custom_512dp, false, false, custom(), null, true));
+    public static List<Section> userInterface() {
+        List<Section> model = new ArrayList<>();
+        model.add(new Section("UI components", R.drawable.ic_ui_components_512dp, false, false, uiComponents(), null, true));
+        model.add(new Section("UI layouts", R.drawable.ic_layout_512dp, false, false, layout(), null, true));
+        model.add(new Section("Resources", R.drawable.ic_resources_512dp, false, false, resources(), null, true));
+        model.add(new Section("Fragments", R.drawable.ic_fragment_512dp, false, false, fragment(), null, true));
+        model.add(new Section("Style and Themes", R.drawable.ic_theme_512dp, false, false, theme(), null, false));
+        model.add(new Section("Custom components", R.drawable.ic_custom_512dp, false, false, custom(), null, true));
         return model;
     }
 
@@ -201,65 +201,65 @@ public class MainData {
      *  26.task manager
      *  27.travel
      * */
-    public static List<MainModel> uiMore() {
-        List<MainModel> model = new ArrayList<>();
-        model.add(new MainModel("About", R.drawable.ic_about_512dp, false, false, about(), null, true));
-        model.add(new MainModel("Article", R.drawable.ic_article_512dp, false, false, article(), null, true));
-        model.add(new MainModel("Login", R.drawable.ic_login_512dp, false, false, login(), null, true));
-        model.add(new MainModel("Verification", R.drawable.ic_verfication_512dp, false, false, verification(), null, true));
-        model.add(new MainModel("Profile", R.drawable.ic_profile_512dp, false, false, profile(), null, true));
-        model.add(new MainModel("Task Manager", R.drawable.ic_task_manager_512dp, false, false, taskManager(), null, true));
+    public static List<Section> uiMore() {
+        List<Section> model = new ArrayList<>();
+        model.add(new Section("About", R.drawable.ic_about_512dp, false, false, about(), null, true));
+        model.add(new Section("Article", R.drawable.ic_article_512dp, false, false, article(), null, true));
+        model.add(new Section("Login", R.drawable.ic_login_512dp, false, false, login(), null, true));
+        model.add(new Section("Verification", R.drawable.ic_verfication_512dp, false, false, verification(), null, true));
+        model.add(new Section("Profile", R.drawable.ic_profile_512dp, false, false, profile(), null, true));
+        model.add(new Section("Task Manager", R.drawable.ic_task_manager_512dp, false, false, taskManager(), null, true));
 
-        model.add(new MainModel("Music", R.drawable.ic_music_512dp, false, false, null, null, false));
-        model.add(new MainModel("Chat", R.drawable.ic_chat_512dp, false, false, chats(), null, false));
-        model.add(new MainModel("Search page", R.drawable.ic_search_512dp, false, false, searchPage(), null, false));
-        model.add(new MainModel("Dashboard", R.drawable.ic_dashboard_512dp, false, false, dashboard(), null, false));
-        model.add(new MainModel("Payment", R.drawable.ic_payment_512dp, false, false, payment(), null, false));
-        model.add(new MainModel("Setting", R.drawable.ic_settings_512dp, false, false, setting(), null, false));
-        model.add(new MainModel("Slider image", R.drawable.ic_slider_image_512dp, false, false, sliderImage(), null, false));
-        model.add(new MainModel("Shopping", R.drawable.ic_shopping_512dp, false, false, shopping(), null, false));
-        model.add(new MainModel("Video", R.drawable.ic_video_512dp, false, false, videoPlayer(), null, false));
-        model.add(new MainModel("Books", R.drawable.ic_books_512dp, false, false, books(), null, false));
-        model.add(new MainModel("Cooking", R.drawable.ic_cooking_512dp, false, false, cooking(), null, false));
-        model.add(new MainModel("Education", R.drawable.ic_education_512dp, false, false, education(), null, false));
-        model.add(new MainModel("Files", R.drawable.ic_files_512dp, false, false, files(), null, false));
-        model.add(new MainModel("Navigation", R.drawable.ic_navigation_512dp, false, false, navigation(), null, false));
-        model.add(new MainModel("News", R.drawable.ic_news_512dp, false, false, news(), null, false));
-        model.add(new MainModel("Social", R.drawable.ic_social_512dp, false, false, social(), null, false));
-        model.add(new MainModel("Travel", R.drawable.ic_travel_512dp, false, false, travel(), null, false));
+        model.add(new Section("Music", R.drawable.ic_music_512dp, false, false, null, null, false));
+        model.add(new Section("Chat", R.drawable.ic_chat_512dp, false, false, chats(), null, false));
+        model.add(new Section("Search page", R.drawable.ic_search_512dp, false, false, searchPage(), null, false));
+        model.add(new Section("Dashboard", R.drawable.ic_dashboard_512dp, false, false, dashboard(), null, false));
+        model.add(new Section("Payment", R.drawable.ic_payment_512dp, false, false, payment(), null, false));
+        model.add(new Section("Setting", R.drawable.ic_settings_512dp, false, false, setting(), null, false));
+        model.add(new Section("Slider image", R.drawable.ic_slider_image_512dp, false, false, sliderImage(), null, false));
+        model.add(new Section("Shopping", R.drawable.ic_shopping_512dp, false, false, shopping(), null, false));
+        model.add(new Section("Video", R.drawable.ic_video_512dp, false, false, videoPlayer(), null, false));
+        model.add(new Section("Books", R.drawable.ic_books_512dp, false, false, books(), null, false));
+        model.add(new Section("Cooking", R.drawable.ic_cooking_512dp, false, false, cooking(), null, false));
+        model.add(new Section("Education", R.drawable.ic_education_512dp, false, false, education(), null, false));
+        model.add(new Section("Files", R.drawable.ic_files_512dp, false, false, files(), null, false));
+        model.add(new Section("Navigation", R.drawable.ic_navigation_512dp, false, false, navigation(), null, false));
+        model.add(new Section("News", R.drawable.ic_news_512dp, false, false, news(), null, false));
+        model.add(new Section("Social", R.drawable.ic_social_512dp, false, false, social(), null, false));
+        model.add(new Section("Travel", R.drawable.ic_travel_512dp, false, false, travel(), null, false));
         return model;
     }
 
-    public static List<MainModel> codeMore() {
-        List<MainModel> model = new ArrayList<>();
-        model.add(new MainModel("Clipboard", R.drawable.ic_clipboard_512dp, false,  false, null, ClipboardManagerActivity.class, false));
-        model.add(new MainModel("Animations", R.drawable.ic_animation_512dp, false,  false, animations(), null, true));
-        model.add(new MainModel("Audio capture", R.drawable.ic_audio_capture_512dp, false,  false, null, AudioRecorderActivity.class, false));
-        model.add(new MainModel("Media player", R.drawable.ic_music_512dp, false,  false, null, MediaPlayerActivity.class, false));
-        model.add(new MainModel("Text to speech", R.drawable.ic_text_to_speech_512dp, false,  false, null, TextToSpeechActivity.class, false));
-        model.add(new MainModel("Audio manger", R.drawable.ic_audio_manager_512dp, false,  false, null, AudioManagerActivity.class, false));
-        model.add(new MainModel("Bluetooth", R.drawable.ic_bluetooth_512dp, false,  false, null, BluetoothActivity.class, false));
-        model.add(new MainModel("Image effects", R.drawable.ic_effects_512dp, false,  false, imageEffects(), null, true));
-        model.add(new MainModel("Google maps", R.drawable.ic_google_maps_512dp, false,  false, googleMaps(), null, true));
+    public static List<Section> codeMore() {
+        List<Section> model = new ArrayList<>();
+        model.add(new Section("Clipboard", R.drawable.ic_clipboard_512dp, false,  false, null, ClipboardManagerActivity.class, false));
+        model.add(new Section("Animations", R.drawable.ic_animation_512dp, false,  false, animations(), null, true));
+        model.add(new Section("Audio capture", R.drawable.ic_audio_capture_512dp, false,  false, null, AudioRecorderActivity.class, false));
+        model.add(new Section("Media player", R.drawable.ic_music_512dp, false,  false, null, MediaPlayerActivity.class, false));
+        model.add(new Section("Text to speech", R.drawable.ic_text_to_speech_512dp, false,  false, null, TextToSpeechActivity.class, false));
+        model.add(new Section("Audio manger", R.drawable.ic_audio_manager_512dp, false,  false, null, AudioManagerActivity.class, false));
+        model.add(new Section("Bluetooth", R.drawable.ic_bluetooth_512dp, false,  false, null, BluetoothActivity.class, false));
+        model.add(new Section("Image effects", R.drawable.ic_effects_512dp, false,  false, imageEffects(), null, true));
+        model.add(new Section("Google maps", R.drawable.ic_google_maps_512dp, false,  false, googleMaps(), null, true));
 
-        model.add(new MainModel("Firebase", R.drawable.ic_firebase_512dp, false,  false, firebase(), null, true));
-        model.add(new MainModel("GPS", R.drawable.ic_maps_512dp, false,  false, null, null, false));
-        model.add(new MainModel("Camera", R.drawable.ic_camera_512dp, false,  false, null, null, false));
-        model.add(new MainModel("Gestures", R.drawable.ic_gestures_512dp, false,  false, null, null, false));
-        model.add(new MainModel("Multi touch", R.drawable.ic_multi_touch_512dp, false,  false, null, null, false));
-        model.add(new MainModel("Network connection", R.drawable.ic_network_connection_512dp, false,  false, null, null, false));
-        model.add(new MainModel("Textur View", R.drawable.ic_texturview_512dp, false,  false, null, null, false));
-        model.add(new MainModel("Wifi", R.drawable.ic_wifi_512dp, false,  false, null, null, false));
+        model.add(new Section("Firebase", R.drawable.ic_firebase_512dp, false,  false, firebase(), null, true));
+        model.add(new Section("GPS", R.drawable.ic_maps_512dp, false,  false, null, null, false));
+        model.add(new Section("Camera", R.drawable.ic_camera_512dp, false,  false, null, null, false));
+        model.add(new Section("Gestures", R.drawable.ic_gestures_512dp, false,  false, null, null, false));
+        model.add(new Section("Multi touch", R.drawable.ic_multi_touch_512dp, false,  false, null, null, false));
+        model.add(new Section("Network connection", R.drawable.ic_network_connection_512dp, false,  false, null, null, false));
+        model.add(new Section("Textur View", R.drawable.ic_texturview_512dp, false,  false, null, null, false));
+        model.add(new Section("Wifi", R.drawable.ic_wifi_512dp, false,  false, null, null, false));
         return model;
     }
 
-    private static List<MainModel.Inner> firebase() {
-        List<MainModel.Inner> list = new ArrayList<>();
-        list.add(new MainModel.Inner("Authentication", false, null));
-        list.add(new MainModel.Inner("Cloud Storage", false, null));
-        list.add(new MainModel.Inner("Realtime Database", false, null));
-        list.add(new MainModel.Inner("Cloud Messaging", false, null));
-        list.add(new MainModel.Inner("In-App Messaging", false, null));
+    private static List<Section.Inner> firebase() {
+        List<Section.Inner> list = new ArrayList<>();
+        list.add(new Section.Inner("Authentication", false, null));
+        list.add(new Section.Inner("Cloud Storage", false, null));
+        list.add(new Section.Inner("Realtime Database", false, null));
+        list.add(new Section.Inner("Cloud Messaging", false, null));
+        list.add(new Section.Inner("In-App Messaging", false, null));
         return list;
     }
 
@@ -301,11 +301,11 @@ public class MainData {
     /**
      * @return List of Google map
      */
-    private static List<MainModel.Inner> googleMaps() {
-        List<MainModel.Inner> list = new ArrayList<>();
-        list.add(new MainModel.Inner("Simple map", false, SimpleMapsActivity.class));
-        list.add(new MainModel.Inner("Dark mode", false, DarkStyleMapActivity.class));
-        list.add(new MainModel.Inner("Styled map", false, StyledMapActivity.class));
+    private static List<Section.Inner> googleMaps() {
+        List<Section.Inner> list = new ArrayList<>();
+        list.add(new Section.Inner("Simple map", false, SimpleMapsActivity.class));
+        list.add(new Section.Inner("Dark mode", false, DarkStyleMapActivity.class));
+        list.add(new Section.Inner("Styled map", false, StyledMapActivity.class));
 //        list.add(new MainModel.InnerModel("Live location", false, LiveLocationActivity.class));
         return list;
     }
@@ -314,79 +314,79 @@ public class MainData {
      * @return a list of animation models
      * {@link AnimationManager}
      */
-    private static List<MainModel.Inner> animations() {
-        List<MainModel.Inner> models = new ArrayList<>();
-        models.add(new MainModel.Inner("Zoom", false, AnimationZoomActivity.class));
-        models.add(new MainModel.Inner("Slide", false, AnimationSlideActivity.class));
-        models.add(new MainModel.Inner("Rotate", false, AnimationRotateActivity.class));
-        models.add(new MainModel.Inner("Fade", false, AnimationFadeActivity.class));
+    private static List<Section.Inner> animations() {
+        List<Section.Inner> models = new ArrayList<>();
+        models.add(new Section.Inner("Zoom", false, AnimationZoomActivity.class));
+        models.add(new Section.Inner("Slide", false, AnimationSlideActivity.class));
+        models.add(new Section.Inner("Rotate", false, AnimationRotateActivity.class));
+        models.add(new Section.Inner("Fade", false, AnimationFadeActivity.class));
         return models;
     }
 
-    private static List<MainModel.Inner> imageEffects() {
-        List<MainModel.Inner> models = new ArrayList<>();
-        models.add(new MainModel.Inner("Grey Filter", false, ImageEffectsActivity.class));
-        models.add(new MainModel.Inner("Sepia Filter", false, ImageEffectsActivity.class));
-        models.add(new MainModel.Inner("Black and White Filter", false, ImageEffectsActivity.class));
-        models.add(new MainModel.Inner("Brightness Filter", false, ImageEffectsActivity.class));
+    private static List<Section.Inner> imageEffects() {
+        List<Section.Inner> models = new ArrayList<>();
+        models.add(new Section.Inner("Grey Filter", false, ImageEffectsActivity.class));
+        models.add(new Section.Inner("Sepia Filter", false, ImageEffectsActivity.class));
+        models.add(new Section.Inner("Black and White Filter", false, ImageEffectsActivity.class));
+        models.add(new Section.Inner("Brightness Filter", false, ImageEffectsActivity.class));
 //        models.add(new MainModel.InnerModel("Sketch Filter", false, ImageEffectsActivity.class));
 //        models.add(new MainModel.InnerModel("Brush Filter", false, ImageEffectsActivity.class));
         return models;
     }
 
-    private static List<MainModel.Inner> travel() {
-        List<MainModel.Inner> model = new ArrayList<>();
+    private static List<Section.Inner> travel() {
+        List<Section.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.Inner> taskManager() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Lists", false, TaskManagerListsActivity.class));
-        model.add(new MainModel.Inner("List & Recently", false, TaskManagerListAndRecentlyActivity.class));
-        model.add(new MainModel.Inner("Chart View", false, TaskManagerChartViewActivity.class));
-        model.add(new MainModel.Inner("New Task", false, TaskManagerNewActivity.class));
+    private static List<Section.Inner> taskManager() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Lists", false, TaskManagerListsActivity.class));
+        model.add(new Section.Inner("List & Recently", false, TaskManagerListAndRecentlyActivity.class));
+        model.add(new Section.Inner("Chart View", false, TaskManagerChartViewActivity.class));
+        model.add(new Section.Inner("New Task", false, TaskManagerNewActivity.class));
         return model;
     }
 
-    private static List<MainModel.Inner> social() {
-        List<MainModel.Inner> model = new ArrayList<>();
-
-        return model;
-    }
-
-    private static List<MainModel.Inner> news() {
-        List<MainModel.Inner> model = new ArrayList<>();
+    private static List<Section.Inner> social() {
+        List<Section.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.Inner> navigation() {
-        List<MainModel.Inner> model = new ArrayList<>();
+    private static List<Section.Inner> news() {
+        List<Section.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.Inner> files() {
-        List<MainModel.Inner> model = new ArrayList<>();
+    private static List<Section.Inner> navigation() {
+        List<Section.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.Inner> education() {
-        List<MainModel.Inner> model = new ArrayList<>();
+    private static List<Section.Inner> files() {
+        List<Section.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.Inner> cooking() {
-        List<MainModel.Inner> model = new ArrayList<>();
+    private static List<Section.Inner> education() {
+        List<Section.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.Inner> books() {
-        List<MainModel.Inner> model = new ArrayList<>();
+    private static List<Section.Inner> cooking() {
+        List<Section.Inner> model = new ArrayList<>();
+
+        return model;
+    }
+
+    private static List<Section.Inner> books() {
+        List<Section.Inner> model = new ArrayList<>();
 
         return model;
     }
@@ -398,47 +398,47 @@ public class MainData {
      * 3. with posts
      * 4. telegram
      * */
-    private static List<MainModel.Inner> profile() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Big Header", false, ProfileBigHeaderActivity.class));
-        model.add(new MainModel.Inner("Developer", false, ProfileDeveloperActivity.class));
-        model.add(new MainModel.Inner("With Posts", false, ProfileWithPostsActivity.class));
-        model.add(new MainModel.Inner("Telegram", false, ProfileTelegramActivity.class));
+    private static List<Section.Inner> profile() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Big Header", false, ProfileBigHeaderActivity.class));
+        model.add(new Section.Inner("Developer", false, ProfileDeveloperActivity.class));
+        model.add(new Section.Inner("With Posts", false, ProfileWithPostsActivity.class));
+        model.add(new Section.Inner("Telegram", false, ProfileTelegramActivity.class));
         return model;
     }
 
-    private static List<MainModel.Inner> music() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Simple", false, MusicSimpleActivity.class));
+    private static List<Section.Inner> music() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Simple", false, MusicSimpleActivity.class));
         return model;
     }
 
-    private static List<MainModel.Inner> videoPlayer() {
-        List<MainModel.Inner> model = new ArrayList<>();
-
-        return model;
-    }
-
-    private static List<MainModel.Inner> shopping() {
-        List<MainModel.Inner> model = new ArrayList<>();
+    private static List<Section.Inner> videoPlayer() {
+        List<Section.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.Inner> searchPage() {
-        List<MainModel.Inner> model = new ArrayList<>();
+    private static List<Section.Inner> shopping() {
+        List<Section.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.Inner> sliderImage() {
-        List<MainModel.Inner> model = new ArrayList<>();
+    private static List<Section.Inner> searchPage() {
+        List<Section.Inner> model = new ArrayList<>();
 
         return model;
     }
 
-    private static List<MainModel.Inner> setting() {
-        List<MainModel.Inner> model = new ArrayList<>();
+    private static List<Section.Inner> sliderImage() {
+        List<Section.Inner> model = new ArrayList<>();
+
+        return model;
+    }
+
+    private static List<Section.Inner> setting() {
+        List<Section.Inner> model = new ArrayList<>();
 
         return model;
     }
@@ -450,21 +450,21 @@ public class MainData {
      * 3. custom keyboard light
      * 4. custom keyboard dark
     * */
-    private static List<MainModel.Inner> verification() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Phone", false, VerificationPhoneActivity.class));
-        model.add(new MainModel.Inner("Code", false, VerificationCodeActivity.class));
-        model.add(new MainModel.Inner("Custom Keyboard Light", false, VerificationCustomKeyboardLightActivity.class));
-        model.add(new MainModel.Inner("Custom Keyboard Dark", false, VerificationCustomKeyboardDarkActivity.class));
+    private static List<Section.Inner> verification() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Phone", false, VerificationPhoneActivity.class));
+        model.add(new Section.Inner("Code", false, VerificationCodeActivity.class));
+        model.add(new Section.Inner("Custom Keyboard Light", false, VerificationCustomKeyboardLightActivity.class));
+        model.add(new Section.Inner("Custom Keyboard Dark", false, VerificationCustomKeyboardDarkActivity.class));
         return model;
     }
 
-    private static List<MainModel.Inner> login() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Simple", false, LoginSimpleActivity.class));
-        model.add(new MainModel.Inner("With Tab", false, LoginWithTabActivity.class));
-        model.add(new MainModel.Inner("With Details", false, LoginWithDetailsActivity.class));
-        model.add(new MainModel.Inner("Card View", false, LoginCardViewActivity.class));
+    private static List<Section.Inner> login() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Simple", false, LoginSimpleActivity.class));
+        model.add(new Section.Inner("With Tab", false, LoginWithTabActivity.class));
+        model.add(new Section.Inner("With Details", false, LoginWithDetailsActivity.class));
+        model.add(new Section.Inner("Card View", false, LoginCardViewActivity.class));
         return model;
     }
 
@@ -477,37 +477,38 @@ public class MainData {
      *  5. Payment 5
      *  6. Payment 6
      * */
-    private static List<MainModel.Inner> payment() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Payment 1", false, Payment1Activity.class));
-        model.add(new MainModel.Inner("Payment 2", false, Payment2Activity.class));
-        model.add(new MainModel.Inner("Payment 3", false, Payment3Activity.class));
-        model.add(new MainModel.Inner("Payment 4", false, Payment4Activity.class));
-        model.add(new MainModel.Inner("Payment 5", false, Payment5Activity.class));
-        model.add(new MainModel.Inner("Payment 6", false, Payment6Activity.class));
+    private static List<Section.Inner> payment() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Payment 1", false, Payment1Activity.class));
+        model.add(new Section.Inner("Payment 2", false, Payment2Activity.class));
+        model.add(new Section.Inner("Payment 3", false, Payment3Activity.class));
+        model.add(new Section.Inner("Payment 4", false, Payment4Activity.class));
+        model.add(new Section.Inner("Payment 5", false, Payment5Activity.class));
+        model.add(new Section.Inner("Payment 6", false, Payment6Activity.class));
         return null;
     }
 
-    private static List<MainModel.Inner> dashboard() {
-        List<MainModel.Inner> model = new ArrayList<>();
+    private static List<Section.Inner> dashboard() {
+        List<Section.Inner> model = new ArrayList<>();
         return model;
     }
 
     /**
      * article pages
-     *  1. article 1
-     *  2. article 2
-     *  3. article 3
-     *  4. article 4
-     *  5. article 5
+     *  1. Full screen
+     *  2. Big header
+     *  3. Short text
+     *  4. Coding
+     *  5. Circle avatar
      *  */
-    private static List<MainModel.Inner> article() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Full Screen", false, ArticleFullScreenActivity.class));
-        model.add(new MainModel.Inner("Big Header", false, ArticleBigHeaderActivity.class));
-        model.add(new MainModel.Inner("Short Text", false, ArticleShortTextActivity.class));
-        model.add(new MainModel.Inner("Coding", false, ArticleCodingActivity.class));
-        model.add(new MainModel.Inner("With Video", false, ArticleWithVideoActivity.class));
+    private static List<Section.Inner> article() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Full Screen", false, ArticleFullScreenActivity.class));
+        model.add(new Section.Inner("Big Header", false, ArticleBigHeaderActivity.class));
+        model.add(new Section.Inner("Short Text", false, ArticleShortTextActivity.class));
+        model.add(new Section.Inner("Coding", false, ArticleCodingActivity.class));
+        model.add(new Section.Inner("With Video", false, ArticleWithVideoActivity.class));
+        model.add(new Section.Inner("Circle avatar", true, CircleAvatarActivity.class));
         return model;
     }
 
@@ -518,12 +519,12 @@ public class MainData {
      *  3. About 3
      *  4. About 4
      * */
-    private static List<MainModel.Inner> about() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Restaurant", false, AboutRestaurantActivity.class));
-        model.add(new MainModel.Inner("Infinite Developers", false, AboutInfiniteDevelopersActivity.class));
-        model.add(new MainModel.Inner("Full Screen", false, AboutFullScreenActivity.class));
-        model.add(new MainModel.Inner("Application", false, AboutApplicationActivity.class));
+    private static List<Section.Inner> about() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Restaurant", false, AboutRestaurantActivity.class));
+        model.add(new Section.Inner("Infinite Developers", false, AboutInfiniteDevelopersActivity.class));
+        model.add(new Section.Inner("Full Screen", false, AboutFullScreenActivity.class));
+        model.add(new Section.Inner("Application", false, AboutApplicationActivity.class));
         return model;
     }
 
@@ -537,15 +538,15 @@ public class MainData {
      *  6. Chat 4
      *  5. Chat 5
      * */
-    private static List<MainModel.Inner> chats() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Telegram", false, TelegramActivity.class));
-        model.add(new MainModel.Inner("WhatApp", false, WhatAppActivity.class));
-        model.add(new MainModel.Inner("Chat 1", false, Chat1Activity.class));
-        model.add(new MainModel.Inner("Chat 2", false, Chat2Activity.class));
-        model.add(new MainModel.Inner("Chat 3", false, Chat3Activity.class));
-        model.add(new MainModel.Inner("Chat 4", false, Chat4Activity.class));
-        model.add(new MainModel.Inner("Chat 5", false, Chat5Activity.class));
+    private static List<Section.Inner> chats() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Telegram", false, TelegramActivity.class));
+        model.add(new Section.Inner("WhatApp", false, WhatAppActivity.class));
+        model.add(new Section.Inner("Chat 1", false, Chat1Activity.class));
+        model.add(new Section.Inner("Chat 2", false, Chat2Activity.class));
+        model.add(new Section.Inner("Chat 3", false, Chat3Activity.class));
+        model.add(new Section.Inner("Chat 4", false, Chat4Activity.class));
+        model.add(new Section.Inner("Chat 5", false, Chat5Activity.class));
         return null;
     }
 
@@ -580,21 +581,21 @@ public class MainData {
      *  27.text fields
      *  28.tooltips
      * */
-    private static List<MainModel.Inner> uiComponents() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("App bar : bottom", false, AppbarBottomActivity.class));
-        model.add(new MainModel.Inner("App bar : top", false, AppbarTopActivity.class));
-        model.add(new MainModel.Inner("Buttons", false, ButtonsActivity.class));
-        model.add(new MainModel.Inner("Floating action button", false, FloatingActionButtonActivity.class));
-        model.add(new MainModel.Inner("Cards", false, CardsActivity.class));
-        model.add(new MainModel.Inner("Dialog", false, DialogActivity.class));
-        model.add(new MainModel.Inner("List", false, ListActivity.class));
-        model.add(new MainModel.Inner("Menus & Navigation drawer", false, MenuActivity.class));
-        model.add(new MainModel.Inner("Progress bar", false, ProgressBarActivity.class));
-        model.add(new MainModel.Inner("Bottom Sheet", false, BottomSheetActivity.class));
-        model.add(new MainModel.Inner("SnackBars", false, SnackbarActivity.class));
-        model.add(new MainModel.Inner("Tabs", false, TablayoutActivity.class));
-        model.add(new MainModel.Inner("Chips", false, ChipsActivity.class));
+    private static List<Section.Inner> uiComponents() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("App bar : bottom", false, AppbarBottomActivity.class));
+        model.add(new Section.Inner("App bar : top", false, AppbarTopActivity.class));
+        model.add(new Section.Inner("Buttons", false, ButtonsActivity.class));
+        model.add(new Section.Inner("Floating action button", false, FloatingActionButtonActivity.class));
+        model.add(new Section.Inner("Cards", false, CardsActivity.class));
+        model.add(new Section.Inner("Dialog", false, DialogActivity.class));
+        model.add(new Section.Inner("List", false, ListActivity.class));
+        model.add(new Section.Inner("Menus & Navigation drawer", false, MenuActivity.class));
+        model.add(new Section.Inner("Progress bar", false, ProgressBarActivity.class));
+        model.add(new Section.Inner("Bottom Sheet", false, BottomSheetActivity.class));
+        model.add(new Section.Inner("SnackBars", false, SnackbarActivity.class));
+        model.add(new Section.Inner("Tabs", false, TablayoutActivity.class));
+        model.add(new Section.Inner("Chips", false, ChipsActivity.class));
 
 //        model.add(new MainModel.InnerModel("Backdrop", false, BackdropActivity.class));
 //        model.add(new MainModel.InnerModel("Banner", false, BannerActivity.class));
@@ -616,13 +617,13 @@ public class MainData {
      *  4.frame layout
      *  5.table layout
      * */
-    private static List<MainModel.Inner> layout() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Linear layout", false,  LinearLayoutActivity.class));
-        model.add(new MainModel.Inner("Constraint layout", false,  ConstraintLayoutActivity.class));
-        model.add(new MainModel.Inner("Relative layout", false,  RelativeLayoutActivity.class));
-        model.add(new MainModel.Inner("Frame layout", false,  FrameLayoutActivity.class));
-        model.add(new MainModel.Inner("Table layout", false,  TableLayoutActivity.class));
+    private static List<Section.Inner> layout() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Linear layout", false,  LinearLayoutActivity.class));
+        model.add(new Section.Inner("Constraint layout", false,  ConstraintLayoutActivity.class));
+        model.add(new Section.Inner("Relative layout", false,  RelativeLayoutActivity.class));
+        model.add(new Section.Inner("Frame layout", false,  FrameLayoutActivity.class));
+        model.add(new Section.Inner("Table layout", false,  TableLayoutActivity.class));
         return model;
     }
 
@@ -633,12 +634,12 @@ public class MainData {
      *  3.drawables
      *  4.files
      * */
-    private static List<MainModel.Inner> resources() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Strings", false,  StringActivity.class));
-        model.add(new MainModel.Inner("Drawables", false,  DrawablesActivity.class));
-        model.add(new MainModel.Inner("Files", false,  FilesActivity.class));
-        model.add(new MainModel.Inner("Fonts", false,  FontsActivity.class));
+    private static List<Section.Inner> resources() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Strings", false,  StringActivity.class));
+        model.add(new Section.Inner("Drawables", false,  DrawablesActivity.class));
+        model.add(new Section.Inner("Files", false,  FilesActivity.class));
+        model.add(new Section.Inner("Fonts", false,  FontsActivity.class));
         return model;
     }
 
@@ -648,16 +649,16 @@ public class MainData {
      *  2.fragment manger
      *  3.fragment transaction
      * */
-    private static List<MainModel.Inner> fragment() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Fragment lifecycle", false,  FragmentLifecycleActivity.class));
-        model.add(new MainModel.Inner("Fragment manager", false,  FragmentManagerActivity.class));
+    private static List<Section.Inner> fragment() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Fragment lifecycle", false,  FragmentLifecycleActivity.class));
+        model.add(new Section.Inner("Fragment manager", false,  FragmentManagerActivity.class));
 //        model.add(new MainModel.InnerModel("Fragment transaction", false,  MainActivity.class));
         return model;
     }
 
-    private static List<MainModel.Inner> theme() {
-        List<MainModel.Inner> model = new ArrayList<>();
+    private static List<Section.Inner> theme() {
+        List<Section.Inner> model = new ArrayList<>();
         return model;
     }
 
@@ -669,12 +670,12 @@ public class MainData {
      *  4.value selector
      *  5.count down
      * */
-    private static List<MainModel.Inner> custom() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Simple custom text view",false, CustomTextViewActivity.class));
-        model.add(new MainModel.Inner("Shape view", false,  ShapeViewActivity.class));
-        model.add(new MainModel.Inner("Circle image view", false, CircleImageViewActivity.class));
-        model.add(new MainModel.Inner("Value selector", false,  ValueSelectorActivity.class));
+    private static List<Section.Inner> custom() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Simple custom text view",false, CustomTextViewActivity.class));
+        model.add(new Section.Inner("Shape view", false,  ShapeViewActivity.class));
+        model.add(new Section.Inner("Circle image view", false, CircleImageViewActivity.class));
+        model.add(new Section.Inner("Value selector", false,  ValueSelectorActivity.class));
 //        model.add(new MainModel.InnerModel("Count down", false,  CustomTextViewActivity.class));
         return model;
     }
@@ -686,11 +687,11 @@ public class MainData {
      *  2.R8
      *  3.Key store
      */
-    private static List<MainModel.Inner> security() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Proguard", false, SecurityActivity.class));
-        model.add(new MainModel.Inner("R8", false, SecurityActivity.class));
-        model.add(new MainModel.Inner("Key store", false, SecurityActivity.class));
+    private static List<Section.Inner> security() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Proguard", false, SecurityActivity.class));
+        model.add(new Section.Inner("R8", false, SecurityActivity.class));
+        model.add(new Section.Inner("Key store", false, SecurityActivity.class));
         return model;
     }
 
@@ -701,11 +702,11 @@ public class MainData {
      *  3.motion
      *  4.camera
      */
-    private static List<MainModel.Inner> sensor() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Motion sensors", false, MotionActivity.class));
-        model.add(new MainModel.Inner("Position sensors", false, PositionActivity.class));
-        model.add(new MainModel.Inner("Environment sensors", false, EnvironmentActivity.class));
+    private static List<Section.Inner> sensor() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Motion sensors", false, MotionActivity.class));
+        model.add(new Section.Inner("Position sensors", false, PositionActivity.class));
+        model.add(new Section.Inner("Environment sensors", false, EnvironmentActivity.class));
         // TODO: 12/21/19  camera sensor add to next version
 //        model.add(new MainModel.InnerModel("Camera", false, MotionActivity.class));
         return model;
@@ -719,12 +720,12 @@ public class MainData {
      *  3.retrofit
      *  4.json converters
      */
-    private static List<MainModel.Inner> network() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Http request", false, HttpRequestActivity.class));
-        model.add(new MainModel.Inner("Volley", false, VolleyActivity.class));
-        model.add(new MainModel.Inner("Retrofit", false, RetrofitActivity.class));
-        model.add(new MainModel.Inner("Json converters", false, JsonActivity.class));
+    private static List<Section.Inner> network() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Http request", false, HttpRequestActivity.class));
+        model.add(new Section.Inner("Volley", false, VolleyActivity.class));
+        model.add(new Section.Inner("Retrofit", false, RetrofitActivity.class));
+        model.add(new Section.Inner("Json converters", false, JsonActivity.class));
         return model;
     }
 
@@ -733,10 +734,10 @@ public class MainData {
     *   1.handlers
     *   2.async task
     */
-    private static List<MainModel.Inner> thread() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Handlers", false, HandlerActivity.class));
-        model.add(new MainModel.Inner("Async Task", false, HandlerActivity.class));
+    private static List<Section.Inner> thread() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Handlers", false, HandlerActivity.class));
+        model.add(new Section.Inner("Async Task", false, HandlerActivity.class));
         return model;
     }
 
@@ -746,11 +747,11 @@ public class MainData {
     *   2. Notification Style
     *   3. Custom notification
     */
-    private static List<MainModel.Inner> notification() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Basic notification", false, BasicNotificationActivity.class));
-        model.add(new MainModel.Inner("Notification styling", false, NotificationStylingActivity.class));
-        model.add(new MainModel.Inner("Custom notification", false, CustomNotificationActivity.class));
+    private static List<Section.Inner> notification() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Basic notification", false, BasicNotificationActivity.class));
+        model.add(new Section.Inner("Notification styling", false, NotificationStylingActivity.class));
+        model.add(new Section.Inner("Custom notification", false, CustomNotificationActivity.class));
         return model;
     }
 
@@ -760,13 +761,13 @@ public class MainData {
     *   2. Shared preferences
     *   3. Realm
     */
-    private static List<MainModel.Inner> databaseStorage() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("SQLite", false, SQLiteActivity.class));
-        model.add(new MainModel.Inner("Shared preferences", false, SharePrefActivity.class));
-        model.add(new MainModel.Inner("Realm", false, RealmTestActivity.class));
-        model.add(new MainModel.Inner("Room", false, RoomActivity.class));
-        model.add(new MainModel.Inner("ObjectBox", false, null)); // TODO: 4/27/20 add in other version
+    private static List<Section.Inner> databaseStorage() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("SQLite", false, SQLiteActivity.class));
+        model.add(new Section.Inner("Shared preferences", false, SharePrefActivity.class));
+        model.add(new Section.Inner("Realm", false, RealmTestActivity.class));
+        model.add(new Section.Inner("Room", false, RoomActivity.class));
+        model.add(new Section.Inner("ObjectBox", false, null)); // TODO: 4/27/20 add in other version
         return model;
     }
 
@@ -778,13 +779,13 @@ public class MainData {
     *   4. Read videos
     *   5. Read & create & delete file
     */
-    private static List<MainModel.Inner> fileStorage() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("File provider", false, FileProviderActivity.class));
-        model.add(new MainModel.Inner("Read photos", false, ReadPhotosActivity.class));
-        model.add(new MainModel.Inner("Read songs", false, ReadSongsActivity.class));
-        model.add(new MainModel.Inner("Read videos", false, ReadVideosActivity.class));
-        model.add(new MainModel.Inner("Read & Write & Create & Delete file", false, RWCDFileActivity.class));
+    private static List<Section.Inner> fileStorage() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("File provider", false, FileProviderActivity.class));
+        model.add(new Section.Inner("Read photos", false, ReadPhotosActivity.class));
+        model.add(new Section.Inner("Read songs", false, ReadSongsActivity.class));
+        model.add(new Section.Inner("Read videos", false, ReadVideosActivity.class));
+        model.add(new Section.Inner("Read & Write & Create & Delete file", false, RWCDFileActivity.class));
         return model;
     }
 
@@ -793,9 +794,9 @@ public class MainData {
     * list of activity
     *   1. Activity lifecycle
     */
-    private static List<MainModel.Inner> activity() {
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Activity lifecycle", false, ActivityActivity.class));
+    private static List<Section.Inner> activity() {
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Activity lifecycle", false, ActivityActivity.class));
         return model;
     }
 
@@ -806,11 +807,11 @@ public class MainData {
     *   2.image downloader service
     *   3.set alarm service
     */
-    private static List<MainModel.Inner> service() {
-        List<MainModel.Inner> model = new ArrayList<>();
+    private static List<Section.Inner> service() {
+        List<Section.Inner> model = new ArrayList<>();
 
-        model.add(new MainModel.Inner("Basic service", false, ServiceActivity.class));
-        model.add(new MainModel.Inner("Image downloader service", false, SimpleImageDownloaderActivity.class));
+        model.add(new Section.Inner("Basic service", false, ServiceActivity.class));
+        model.add(new Section.Inner("Image downloader service", false, SimpleImageDownloaderActivity.class));
 
         return model;
     }
@@ -820,9 +821,9 @@ public class MainData {
     * list of manifest
     *   1. Permissions
     */
-    private static List<MainModel.Inner> manifest(){
-        List<MainModel.Inner> model = new ArrayList<>();
-        model.add(new MainModel.Inner("Permissions", false, PermissionActivity.class));
+    private static List<Section.Inner> manifest(){
+        List<Section.Inner> model = new ArrayList<>();
+        model.add(new Section.Inner("Permissions", false, PermissionActivity.class));
         return model;
     }
 
@@ -833,12 +834,12 @@ public class MainData {
     *   2.info broadcast receiver
     *   3.sms received
     */
-    private static List<MainModel.Inner> broadcastReceiver(){
-        List<MainModel.Inner> br = new ArrayList<>();
-        br.add(new MainModel.Inner("Info broadcast receiver", false, BroadcastInfoActivity.class));
-        br.add(new MainModel.Inner("Basic broadcast receiver", false, BasicBroadcastReceiver.class));
+    private static List<Section.Inner> broadcastReceiver(){
+        List<Section.Inner> br = new ArrayList<>();
+        br.add(new Section.Inner("Info broadcast receiver", false, BroadcastInfoActivity.class));
+        br.add(new Section.Inner("Basic broadcast receiver", false, BasicBroadcastReceiver.class));
 //        br.add(new MainModel.Inner("SMS RECEIVED", false, SMSReceiverActivity.class));
-        br.add(new MainModel.Inner("Set alarm", false, SetAlarmActivity.class));
+        br.add(new Section.Inner("Set alarm", false, SetAlarmActivity.class));
         return br;
     }
 

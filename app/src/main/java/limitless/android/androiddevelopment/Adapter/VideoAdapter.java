@@ -1,7 +1,9 @@
 package limitless.android.androiddevelopment.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -19,7 +21,7 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.RecyclerView;
-import limitless.android.androiddevelopment.Interface.StringListener;
+import limitless.android.androiddevelopment.Interface.Listener;
 import limitless.android.androiddevelopment.Model.VideoModel;
 import limitless.android.androiddevelopment.Data.Data;
 import limitless.android.androiddevelopment.Other.Tools;
@@ -29,12 +31,12 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
 
     private Context context;
     private List<VideoModel> list;
-    private StringListener stringListener;
+    private Listener<Uri> uriListener;
 
-    public VideoAdapter(Context context, List<VideoModel> list, StringListener stringListener) {
+    public VideoAdapter(Context context, List<VideoModel> list, Listener<Uri> uriListener) {
         this.context = context;
         this.list = list;
-        this.stringListener = stringListener;
+        this.uriListener = uriListener;
     }
 
     @NonNull
@@ -94,7 +96,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
             tvTitle.setText(vm.title);
             tvDuration.setText(Tools.displayDuration(vm.duration));
             ivCover.setImageResource(R.drawable.ic_video_library_black_24dp);
-            Tools.loadImage(context, vm.data, ivCover);
+            Tools.loadImage(context, vm.uri, ivCover);
 //            new GetCover(getAdapterPosition()).execute(vm.id);
         }
 
@@ -121,6 +123,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
             }
         }
 
+        @SuppressLint("RestrictedApi")
         @Override
         public void onClick(View v) {
             if (v.getId() == R.id.button_more){
@@ -138,8 +141,8 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
                 helper.show();
 
             }else {
-                if (stringListener != null)
-                    stringListener.string(list.get(getAdapterPosition()).data);
+                if (uriListener != null)
+                    uriListener.data(list.get(getAdapterPosition()).uri);
             }
         }
     }

@@ -122,7 +122,7 @@ public class DialogActivity extends BaseActivity implements View.OnClickListener
     }
 
     private void customDatePicker() {
-        String[] names = new String[]{getString(R.string.text_ok), getString(R.string.cancel)};
+        String[] names = new String[]{getString(R.string.ok), getString(R.string.cancel)};
         DialogDatePicker datePicker = new DialogDatePicker(names, new DateListener() {
             @Override
             public void date(int year, int mouth, int dayOfMonth) {
@@ -158,7 +158,7 @@ public class DialogActivity extends BaseActivity implements View.OnClickListener
                 Tools.toast(DialogActivity.this, items[which] + " " + isChecked);
             }
         });
-        builder.setPositiveButton(getString(R.string.text_ok), new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
@@ -184,7 +184,7 @@ public class DialogActivity extends BaseActivity implements View.OnClickListener
                 Tools.toast(DialogActivity.this, items[which]);
             }
         });
-        builder.setPositiveButton(getString(R.string.text_ok), new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
@@ -204,7 +204,7 @@ public class DialogActivity extends BaseActivity implements View.OnClickListener
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(getString(R.string.text_basic_dialog));
         builder.setMessage(getString(R.string.info_dialog));
-        builder.setPositiveButton(getString(R.string.text_ok), new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
@@ -230,7 +230,7 @@ public class DialogActivity extends BaseActivity implements View.OnClickListener
     private void basic() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Basic dialog");
-        builder.setPositiveButton(getString(R.string.text_ok), new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();

@@ -1,6 +1,7 @@
 package limitless.android.androiddevelopment.Data;
 
 import android.content.ContentResolver;
+import android.content.ContentUris;
 import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -13,12 +14,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import limitless.android.androiddevelopment.Model.SongModel;
-import limitless.android.androiddevelopment.Model.PhotoModel;
+import limitless.android.androiddevelopment.Model.Photo;
 import limitless.android.androiddevelopment.Model.VideoModel;
 
 public class Data {
 
-    public static List<PhotoModel> getAllPhotos(Context context, String sort){
+    public static List<Photo> getAllPhotos(Context context, String sort){
         Uri uri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
         String[] projection = new String[]{
                 MediaStore.Images.Media._ID,
@@ -27,7 +28,6 @@ public class Data {
                 MediaStore.Images.Media.SIZE,
                 MediaStore.Images.Media.DATE_ADDED,
                 MediaStore.Images.Media.TITLE,
-                MediaStore.Images.Media.DATA,
                 MediaStore.Images.Media.DESCRIPTION,
                 MediaStore.Images.Media.LATITUDE,
                 MediaStore.Images.Media.LONGITUDE
@@ -35,26 +35,25 @@ public class Data {
         Cursor cursor = context.getContentResolver().query(uri, projection, null, null, sort);
         if (cursor != null){
             if (cursor.getCount() > 0 && cursor.moveToFirst()){
-                List<PhotoModel> list = new ArrayList<>();
+                List<Photo> list = new ArrayList<>();
                 int id = cursor.getColumnIndex(MediaStore.Images.Media._ID);
                 int height = cursor.getColumnIndex(MediaStore.Images.Media.HEIGHT);
                 int width = cursor.getColumnIndex(MediaStore.Images.Media.WIDTH);
                 int size = cursor.getColumnIndex(MediaStore.Images.Media.SIZE);
                 int dateAdded = cursor.getColumnIndex(MediaStore.Images.Media.DATE_ADDED);
                 int title = cursor.getColumnIndex(MediaStore.Images.Media.TITLE);
-                int data = cursor.getColumnIndex(MediaStore.Images.Media.DATA);
                 int des = cursor.getColumnIndex(MediaStore.Images.Media.DESCRIPTION);
                 int latitude = cursor.getColumnIndex(MediaStore.Images.Media.LATITUDE);
                 int longitude = cursor.getColumnIndex(MediaStore.Images.Media.LONGITUDE);
                 do {
-                    list.add(new PhotoModel(
+                    list.add(new Photo(
                             cursor.getInt(id),
                             cursor.getInt(height),
                             cursor.getInt(width),
                             cursor.getLong(size),
                             cursor.getLong(dateAdded),
                             cursor.getString(title),
-                            cursor.getString(data),
+                            ContentUris.withAppendedId(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, cursor.getInt(id)),
                             cursor.getString(des),
                             cursor.getString(latitude),
                             cursor.getString(longitude)
@@ -74,7 +73,6 @@ public class Data {
         Uri uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
         String[] projection = new String[]{
                 MediaStore.Audio.AudioColumns.TITLE,
-                MediaStore.Audio.AudioColumns.DATA,
                 MediaStore.Audio.AudioColumns.ALBUM,
                 MediaStore.Audio.AudioColumns.ARTIST,
                 MediaStore.Audio.AudioColumns._ID,
@@ -91,7 +89,6 @@ public class Data {
             return null;
         List<SongModel> list = new ArrayList<>();
         int title = cursor.getColumnIndex(MediaStore.Audio.AudioColumns.TITLE);
-        int data = cursor.getColumnIndex(MediaStore.Audio.AudioColumns.DATA);
         int album = cursor.getColumnIndex(MediaStore.Audio.AudioColumns.ALBUM);
         int artist = cursor.getColumnIndex(MediaStore.Audio.AudioColumns.ARTIST);
         int id = cursor.getColumnIndex(MediaStore.Audio.AudioColumns._ID);
@@ -103,7 +100,7 @@ public class Data {
         do {
             list.add(new SongModel(
                     cursor.getString(title),
-                    cursor.getString(data),
+                    ContentUris.withAppendedId(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, cursor.getInt(id)),
                     cursor.getString(album),
                     cursor.getString(artist),
                     cursor.getInt(id),
@@ -124,7 +121,6 @@ public class Data {
         Uri uri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
         String[] projection = new String[]{
                 MediaStore.Video.VideoColumns.TITLE,
-                MediaStore.Video.VideoColumns.DATA,
                 MediaStore.Video.VideoColumns.ALBUM,
                 MediaStore.Video.VideoColumns.ARTIST,
                 MediaStore.Video.VideoColumns.CATEGORY,
@@ -143,7 +139,6 @@ public class Data {
             return null;
         List<VideoModel> list = new ArrayList<>();
         int title = cursor.getColumnIndex(MediaStore.Video.VideoColumns.TITLE);
-        int data = cursor.getColumnIndex(MediaStore.Video.VideoColumns.DATA);
         int album = cursor.getColumnIndex(MediaStore.Video.VideoColumns.ALBUM);
         int artist = cursor.getColumnIndex(MediaStore.Video.VideoColumns.ARTIST);
         int category = cursor.getColumnIndex(MediaStore.Video.VideoColumns.CATEGORY);
@@ -157,7 +152,7 @@ public class Data {
         do {
             list.add(new VideoModel(
                     cursor.getString(title),
-                    cursor.getString(data),
+                    ContentUris.withAppendedId(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, cursor.getInt(id)),
                     cursor.getString(album),
                     cursor.getString(artist),
                     cursor.getString(category),
@@ -174,9 +169,11 @@ public class Data {
         return list;
     }
 
-    public static Bitmap getAudioCoverPhoto(String data) {
+    public static Bitmap getAudioCoverPhoto(Context context, Uri uri) {
+        if (context == null || uri == null)
+            return null;
         MediaMetadataRetriever mmr = new MediaMetadataRetriever();
-        mmr.setDataSource(data);
+        mmr.setDataSource(context, uri);
         byte[] bytes = mmr.getEmbeddedPicture();
         if (bytes != null)
             return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);

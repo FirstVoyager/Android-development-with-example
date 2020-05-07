@@ -11,16 +11,16 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
-import limitless.android.androiddevelopment.Model.MainModel;
+import limitless.android.androiddevelopment.Model.Section;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
 public class AdapterExpand extends RecyclerView.Adapter<AdapterExpand.ExpandViewHolder> {
 
     private Context context;
-    private List<MainModel.Inner> inners;
+    private List<Section.Inner> inners;
 
-    public AdapterExpand(Context context, List<MainModel.Inner> inners) {
+    public AdapterExpand(Context context, List<Section.Inner> inners) {
         this.context = context;
         this.inners = inners;
     }
@@ -56,7 +56,7 @@ public class AdapterExpand extends RecyclerView.Adapter<AdapterExpand.ExpandView
             viewNew = itemView.findViewById(R.id.view_new);
         }
 
-        void bindView(MainModel.Inner im){
+        void bindView(Section.Inner im){
             tvName.setText(im.name);
             if (im.isNew)
                 viewNew.setVisibility(View.VISIBLE);

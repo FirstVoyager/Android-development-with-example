@@ -13,6 +13,7 @@
     <uses-permission android:name="android.permission.BODY_SENSORS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
 
     <application
         android:name=".ApplicationLoader"
@@ -24,7 +25,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activity.ProjectViewActivity"></activity>
+        <activity
+            android:theme="@style/CircleAvatar"
+            android:name=".Activity.UIMore.Article.CircleAvatarActivity" />
+        <activity android:name=".Activity.ProjectViewActivity" />
         <activity
             android:name=".Activity.Basic.Database.RoomActivity"
             android:label="@string/room" />

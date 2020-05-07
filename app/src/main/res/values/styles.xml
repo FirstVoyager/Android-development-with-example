@@ -171,6 +171,11 @@
         <item name="android:background">@android:color/transparent</item>
     </style>
 
+    <style name="CircleAvatar" parent="AppTheme.NoActionBar">
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimaryDark">@android:color/white</item>
+    </style>
+
     <color name="gray_600">#757575</color>
     <color name="brown_600">#6D4C41</color>
     <color name="colorPrimaryDarkYellow">#F9A825</color>

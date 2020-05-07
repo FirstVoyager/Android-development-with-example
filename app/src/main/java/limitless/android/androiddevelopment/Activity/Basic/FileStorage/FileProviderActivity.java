@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.core.content.FileProvider;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
 import limitless.android.androiddevelopment.BottomSheet.SelectBottomSheet;
+import limitless.android.androiddevelopment.Interface.Listener;
 import limitless.android.androiddevelopment.Interface.StringListener;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
@@ -90,24 +91,29 @@ public class FileProviderActivity extends BaseActivity implements View.OnClickLi
             Tools.requestPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE, requestStorage);
             return;
         }
-        final SelectBottomSheet sheet = new SelectBottomSheet(new StringListener() {
+        SelectBottomSheet sheet = new SelectBottomSheet(new Listener<Uri>() {
             @Override
-            public void string(String s) {
+            public void data(Uri uri) {
+                String s = uri.getPath();
+                Tools.log(s);
                 String type;
-                if (Tools.isPhoto(s))
+                if (s == null)
+                    type = "*/*";
+                else if (s.contains("/images/media/"))
                     type = "image/*";
-                else if (Tools.isAudio(s))
+                else if (s.contains("/audio/media/"))
                     type = "audio/*";
-                else if (Tools.isVideo(s))
+                else if (s.contains("/video/media/"))
                     type = "video/*";
                 else
                     type = "*/*";
-                Uri data = FileProvider.getUriForFile(FileProviderActivity.this, "limitless.android.fileprovider", new File(s));
-                grantUriPermission(getPackageName(), data, Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+//                Uri data = FileProvider.getUriForFile(FileProviderActivity.this, "limitless.android.fileprovider", new File(s));
+                grantUriPermission(getPackageName(), uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
                 Intent intent = new Intent(Intent.ACTION_VIEW)
-                        .setDataAndType(data, type)
+                        .setDataAndType(uri, type)
                         .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            startActivity(intent);
+                startActivity(intent);
             }
         }, i);
         sheet.show(getSupportFragmentManager(), null);

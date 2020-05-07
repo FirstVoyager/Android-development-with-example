@@ -1,8 +1,10 @@
 package limitless.android.androiddevelopment.Model;
 
+import android.net.Uri;
+
 public class VideoModel {
     public String title;
-    public String data;
+    public Uri uri;
     public String album;
     public String artist;
     public String category;
@@ -14,9 +16,9 @@ public class VideoModel {
     public long size;
     public long dateAdded;
 
-    public VideoModel(String title, String data, String album, String artist, String category, String resolution, int id, int width, int height, int duration, long size, long dateAdded) {
+    public VideoModel(String title, Uri uri, String album, String artist, String category, String resolution, int id, int width, int height, int duration, long size, long dateAdded) {
         this.title = title;
-        this.data = data;
+        this.uri = uri;
         this.album = album;
         this.artist = artist;
         this.category = category;
@@ -30,18 +32,7 @@ public class VideoModel {
     }
 
     public VideoModel(){
-        this.title = "";
-        this.data = "";
-        this.album = "";
-        this.artist = "";
-        this.category = "";
-        this.resolution = "";
-        this.id = -1;
-        this.width = -1;
-        this.height = -1;
-        this.duration = -1;
-        this.size = -1;
-        this.dateAdded = -1;
+
     }
 
 }

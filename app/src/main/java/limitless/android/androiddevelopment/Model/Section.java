@@ -3,7 +3,7 @@ package limitless.android.androiddevelopment.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainModel {
+public class Section {
 
     public String name;
     public int image;
@@ -13,7 +13,7 @@ public class MainModel {
     public Class<?> aClass;
     public boolean hasData;
 
-    public MainModel(){
+    public Section(){
         this.name = "";
         this.image = -1;
         this.hasNew = false;
@@ -23,7 +23,7 @@ public class MainModel {
         this.hasData = false;
     }
 
-    public MainModel(String name, int image, boolean hasNew, boolean showData, List<Inner> innerList, Class<?> aClass, boolean hasData){
+    public Section(String name, int image, boolean hasNew, boolean showData, List<Inner> innerList, Class<?> aClass, boolean hasData){
         this.name = name;
         this.image = image;
         this.hasNew = hasNew;

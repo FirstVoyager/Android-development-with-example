@@ -49,13 +49,15 @@ public class AudioRecorderActivity extends BaseActivity implements View.OnClickL
 
         boolean storage = Tools.permissionGranted(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         boolean record = Tools.permissionGranted(this, Manifest.permission.RECORD_AUDIO);
+        tvPath.setText(pathName);
         if (storage && record){
             initMediaPlayer();
+            return;
         }
         if (! storage && ! record){
             Tools.requestPermission(
                     this,
-                    new String[]{Manifest.permission.RECORD_AUDIO, Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    new String[]{Manifest.permission.RECORD_AUDIO, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE},
                     twoPermission);
         }
         if (! storage){
@@ -64,7 +66,6 @@ public class AudioRecorderActivity extends BaseActivity implements View.OnClickL
         if (! record){
             Tools.requestPermission(this, Manifest.permission.RECORD_AUDIO, recordPermission);
         }
-        tvPath.setText(pathName);
     }
 
     private void initMediaPlayer() {

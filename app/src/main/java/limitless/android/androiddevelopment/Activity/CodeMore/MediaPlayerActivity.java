@@ -7,6 +7,7 @@ import androidx.appcompat.widget.AppCompatSeekBar;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
 import limitless.android.androiddevelopment.BottomSheet.SelectBottomSheet;
 import limitless.android.androiddevelopment.Data.Data;
+import limitless.android.androiddevelopment.Interface.Listener;
 import limitless.android.androiddevelopment.Interface.StringListener;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
@@ -15,6 +16,7 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
@@ -143,16 +145,16 @@ public class MediaPlayerActivity extends BaseActivity implements View.OnClickLis
     }
 
     private void selectMusic() {
-        SelectBottomSheet sheet = new SelectBottomSheet(new StringListener() {
+        SelectBottomSheet sheet = new SelectBottomSheet(new Listener<Uri>() {
             @Override
-            public void string(String s) {
-                playMedia(s);
+            public void data(Uri uri) {
+                playMedia(uri);
             }
         }, 1);
         sheet.show(getSupportFragmentManager(), null);
     }
 
-    private void playMedia(String s) {
+    private void playMedia(Uri uri) {
         try {
             if (mediaPlayer != null){
                 mediaPlayer.stop();
@@ -162,13 +164,13 @@ public class MediaPlayerActivity extends BaseActivity implements View.OnClickLis
             mediaPlayer.setOnPreparedListener(preparedListener);
             mediaPlayer.setOnErrorListener(errorListener);
             mediaPlayer.setOnCompletionListener(completeListener);
-            mediaPlayer.setDataSource(s);
+            mediaPlayer.setDataSource(this, uri);
             mediaPlayer.prepare();
             mediaPlayer.start();
-            File file = new File(s);
+            File file = new File(uri.getPath());
             tvName.setText(file.getName());
             ibtnPlay.setImageResource(R.drawable.ic_pause_black_24dp);
-            Bitmap cover = Data.getAudioCoverPhoto(s);
+            Bitmap cover = Data.getAudioCoverPhoto(this, uri);
             if (cover == null)
                 ivCover.setImageResource(R.drawable.ic_music_512dp);
             else

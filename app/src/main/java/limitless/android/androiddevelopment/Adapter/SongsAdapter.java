@@ -1,7 +1,9 @@
 package limitless.android.androiddevelopment.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -19,6 +21,7 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.RecyclerView;
+import limitless.android.androiddevelopment.Interface.Listener;
 import limitless.android.androiddevelopment.Interface.StringListener;
 import limitless.android.androiddevelopment.Model.SongModel;
 import limitless.android.androiddevelopment.Data.Data;
@@ -28,12 +31,12 @@ import limitless.android.androiddevelopment.R;
 public class SongsAdapter extends RecyclerView.Adapter<SongsAdapter.AudioViewHolder> {
     public Context context;
     public List<SongModel> list;
-    private StringListener stringListener;
+    private Listener<Uri> uriListener;
 
-    public SongsAdapter(Context context, List<SongModel> list, StringListener stringListener) {
+    public SongsAdapter(Context context, List<SongModel> list, Listener<Uri> uriListener) {
         this.context = context;
         this.list = list;
-        this.stringListener = stringListener;
+        this.uriListener = uriListener;
     }
 
     @NonNull
@@ -102,11 +105,12 @@ public class SongsAdapter extends RecyclerView.Adapter<SongsAdapter.AudioViewHol
             if (v.getId() == R.id.button_more){
                 showPopupMenu(v);
             }else {
-                if (stringListener != null)
-                    stringListener.string(list.get(getAdapterPosition()).data);
+                if (uriListener != null)
+                    uriListener.data(list.get(getAdapterPosition()).data);
             }
         }
 
+        @SuppressLint("RestrictedApi")
         private void showPopupMenu(View v) {
             PopupMenu pm = new PopupMenu(context, v);
             pm.inflate(R.menu.menu_adapter_song);
@@ -122,7 +126,7 @@ public class SongsAdapter extends RecyclerView.Adapter<SongsAdapter.AudioViewHol
             helper.show();
         }
 
-        private class GetCoverPhoto extends AsyncTask<String, Void, Bitmap>{
+        private class GetCoverPhoto extends AsyncTask<Uri, Void, Bitmap>{
 
             private AppCompatImageView iv;
             private int position;
@@ -133,8 +137,8 @@ public class SongsAdapter extends RecyclerView.Adapter<SongsAdapter.AudioViewHol
             }
 
             @Override
-            protected Bitmap doInBackground(String... strings) {
-                Bitmap bitmap = Data.getAudioCoverPhoto(strings[0]);
+            protected Bitmap doInBackground(Uri... uris) {
+                Bitmap bitmap = Data.getAudioCoverPhoto(context, uris[0]);
                 if (bitmap == null)
                     return null;
                 return Bitmap.createScaledBitmap(bitmap, 95, 95, false);

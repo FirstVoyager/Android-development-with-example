@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.ClipData;
 import android.content.ClipboardManager;
+import android.content.ContentUris;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -22,6 +23,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -55,8 +57,10 @@ import java.util.Random;
 import java.util.Set;
 import java.util.TimeZone;
 
+import androidx.annotation.ColorRes;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.AppCompatImageView;
@@ -85,7 +89,7 @@ public class Tools {
      * @param context
      * @param s message want to show
      */
-    public static void toast(Context context, String s) {
+    public static void toast(@Nullable Context context, @Nullable String s) {
         if (context == null || s == null)
             return;
         if (toast != null)
@@ -331,14 +335,18 @@ public class Tools {
         return String.format(Locale.getDefault(), "%02d:%02d:%02d", h, min, sec);
     }
 
-    public static boolean isAudio(String s) {
+    public static boolean isAudio(@Nullable String s) {
+        if (s == null)
+            return false;
         return s.endsWith(".3gp") ||
                 s.endsWith(".flac") ||
                 s.endsWith(".ogg") ||
                 s.endsWith(".mp3");
     }
 
-    public static boolean isVideo(String s){
+    public static boolean isVideo(@Nullable String s){
+        if (s == null)
+            return false;
         return s.endsWith(".mp4") ||
                 s.endsWith(".webm") ||
                 s.endsWith(".mkv");
@@ -349,7 +357,9 @@ public class Tools {
      * @param s file name
      * @return true => is photo
      */
-    public static boolean isPhoto(String s){
+    public static boolean isPhoto(@Nullable String s){
+        if (s == null)
+            return false;
         return s.endsWith(".png") ||
                 s.endsWith(".jpg") ||
                 s.endsWith("jpeg") ||
@@ -459,7 +469,7 @@ public class Tools {
         }
     }
 
-    public static void setSystemBarColor(Activity activity, int color) {
+    public static void setSystemBarColor(Activity activity, @ColorRes int color) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
@@ -542,6 +552,18 @@ public class Tools {
         if (context == null || iv == null)
             return;
         Glide.with(context).load(res).into(iv);
+    }
+
+    /**
+     * Load images from external uri
+     * @param context
+     * @param uri for images
+     * @param iv
+     */
+    public static void loadImage(Context context, Uri uri, ImageView iv){
+        if (context == null || uri == null || iv == null)
+            return;
+        Glide.with(context).load(uri).into(iv);
     }
 
     /**
@@ -630,5 +652,11 @@ public class Tools {
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT, msg);
         startActivity(context, intent);
+    }
+
+    public static void log(String s) {
+        if (s != null && BuildConfig.DEBUG){
+            Log.i("devJava", s);
+        }
     }
 }

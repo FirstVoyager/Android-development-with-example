@@ -1,10 +1,12 @@
 package limitless.android.androiddevelopment.Adapter;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,21 +14,22 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
+import limitless.android.androiddevelopment.Interface.Listener;
 import limitless.android.androiddevelopment.Interface.StringListener;
-import limitless.android.androiddevelopment.Model.PhotoModel;
+import limitless.android.androiddevelopment.Model.Photo;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
 public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.PhotoViewHolder> {
 
     private Context context;
-    private List<PhotoModel> list;
-    private StringListener stringListener;
+    private List<Photo> list;
+    private Listener<Uri> uriListener;
 
-    public PhotoAdapter(Context context, List<PhotoModel> list, StringListener stringListener) {
+    public PhotoAdapter(Context context, List<Photo> list, Listener<Uri> uriListener) {
         this.context = context;
         this.list = list;
-        this.stringListener = stringListener;
+        this.uriListener = uriListener;
     }
 
     @NonNull
@@ -50,7 +53,7 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.PhotoViewHol
         }
     }
 
-    public void setData(List<PhotoModel> models){
+    public void setData(List<Photo> models){
         if (models == null)
             return;
         if (list == null)
@@ -77,15 +80,15 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.PhotoViewHol
             tvTitle = itemView.findViewById(R.id.textView_title);
         }
 
-        void bindView(PhotoModel pm){
-            Tools.loadImage(context, pm.data, ivMain);
+        void bindView(Photo pm){
+            Tools.loadImage(context, pm.uri, ivMain);
             tvTitle.setText(pm.title);
         }
 
         @Override
         public void onClick(View v) {
-            if (stringListener != null){
-                stringListener.string(list.get(getAdapterPosition()).data);
+            if (uriListener != null){
+                uriListener.data(list.get(getAdapterPosition()).uri);
             }
         }
     }

@@ -8,6 +8,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import limitless.android.androiddevelopment.Activity.CodeMore.ImageEffectsActivity;
+import limitless.android.androiddevelopment.Activity.UIMore.Article.CircleAvatarActivity;
 import limitless.android.androiddevelopment.Dialog.AboutDialog;
 import limitless.android.androiddevelopment.Fragment.MainFragment;
 import limitless.android.androiddevelopment.Fragment.ProjectsFragment;
@@ -43,7 +44,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         // Load ads
         AdView adView = findViewById(R.id.adView);
         adView.loadAd(Ads.adRequest());
-//        startActivity(new Intent(this, ImageEffectsActivity.class));
+        startActivity(new Intent(this, CircleAvatarActivity.class));
     }
 
     @Override

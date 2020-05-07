@@ -8,7 +8,7 @@ import limitless.android.androiddevelopment.Activity.BaseActivity;
 import limitless.android.androiddevelopment.Adapter.PhotoAdapter;
 import limitless.android.androiddevelopment.Dialog.DialogSort;
 import limitless.android.androiddevelopment.Interface.StringListener;
-import limitless.android.androiddevelopment.Model.PhotoModel;
+import limitless.android.androiddevelopment.Model.Photo;
 import limitless.android.androiddevelopment.Data.Data;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
@@ -51,7 +51,7 @@ public class ReadPhotosActivity extends BaseActivity implements SwipeRefreshLayo
     private void init() {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         rv = findViewById(R.id.recyclerView);
-        photoAdapter = new PhotoAdapter(this, new ArrayList<PhotoModel>(), null);
+        photoAdapter = new PhotoAdapter(this, new ArrayList<Photo>(), null);
         sfl = findViewById(R.id.swipeRefreshLayout);
 
         rv.setLayoutManager(new GridLayoutManager(this, 3, RecyclerView.VERTICAL, false));
@@ -115,18 +115,18 @@ public class ReadPhotosActivity extends BaseActivity implements SwipeRefreshLayo
         getData();
     }
 
-    private class GetPhotos extends AsyncTask<Void, Void, List<PhotoModel>>{
+    private class GetPhotos extends AsyncTask<Void, Void, List<Photo>>{
 
         @Override
-        protected List<PhotoModel> doInBackground(Void... voids) {
+        protected List<Photo> doInBackground(Void... voids) {
             return Data.getAllPhotos(ReadPhotosActivity.this, sortPhotos);
         }
 
         @Override
-        protected void onPostExecute(List<PhotoModel> photoModels) {
+        protected void onPostExecute(List<Photo> photos) {
             sfl.setRefreshing(false);
-            photoAdapter.setData(photoModels);
-            super.onPostExecute(photoModels);
+            photoAdapter.setData(photos);
+            super.onPostExecute(photos);
         }
     }
 }

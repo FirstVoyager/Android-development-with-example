@@ -2,6 +2,7 @@ package limitless.android.androiddevelopment.BottomSheet;
 
 import android.Manifest;
 import android.app.Dialog;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -22,8 +23,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import limitless.android.androiddevelopment.Adapter.PhotoAdapter;
 import limitless.android.androiddevelopment.Adapter.SongsAdapter;
 import limitless.android.androiddevelopment.Adapter.VideoAdapter;
-import limitless.android.androiddevelopment.Interface.StringListener;
-import limitless.android.androiddevelopment.Model.PhotoModel;
+import limitless.android.androiddevelopment.Interface.Listener;
+import limitless.android.androiddevelopment.Model.Photo;
 import limitless.android.androiddevelopment.Model.SongModel;
 import limitless.android.androiddevelopment.Model.VideoModel;
 import limitless.android.androiddevelopment.Data.Data;
@@ -32,7 +33,7 @@ import limitless.android.androiddevelopment.R;
 
 public class SelectBottomSheet extends BottomSheetDialogFragment implements View.OnClickListener {
 
-    private StringListener stringListener;
+    private Listener<Uri> uriListener;
     private RecyclerView recyclerView;
     private AppBarLayout appBarLayout;
     private AppCompatTextView tvTitle;
@@ -41,8 +42,8 @@ public class SelectBottomSheet extends BottomSheetDialogFragment implements View
     private int appBarHeight = 0;
     private int type;
 
-    public SelectBottomSheet(StringListener stringListener, int type){
-        this.stringListener = stringListener;
+    public SelectBottomSheet(Listener<Uri> uriListener, int type){
+        this.uriListener = uriListener;
         this.type = type;
     }
 
@@ -123,11 +124,11 @@ public class SelectBottomSheet extends BottomSheetDialogFragment implements View
             }
         }
     };
-    private StringListener stringListenerClose = new StringListener() {
+    private Listener<Uri> uriListenerAdapter = new Listener<Uri>() {
         @Override
-        public void string(String s) {
-            if (stringListener != null)
-                stringListener.string(s);
+        public void data(Uri uri) {
+            if (uriListener != null)
+                uriListener.data(uri);
             dismiss();
         }
     };
@@ -165,11 +166,11 @@ public class SelectBottomSheet extends BottomSheetDialogFragment implements View
             vNoFile.setVisibility(View.GONE);
             recyclerView.setVisibility(View.VISIBLE);
             if (type == 0)
-                recyclerView.setAdapter(new PhotoAdapter(getContext(), (List<PhotoModel>) objects, stringListenerClose));
+                recyclerView.setAdapter(new PhotoAdapter(getContext(), (List<Photo>) objects, uriListenerAdapter));
             if (type == 1)
-                recyclerView.setAdapter(new SongsAdapter(getContext(), (List<SongModel>) objects, stringListenerClose));
+                recyclerView.setAdapter(new SongsAdapter(getContext(), (List<SongModel>) objects, uriListenerAdapter));
             if (type == 2)
-                recyclerView.setAdapter(new VideoAdapter(getContext(), (List<VideoModel>) objects, stringListenerClose));
+                recyclerView.setAdapter(new VideoAdapter(getContext(), (List<VideoModel>) objects, uriListenerAdapter));
             if (type == 3)
                 return;
         }
