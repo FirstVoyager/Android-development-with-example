@@ -28,7 +28,15 @@ public class Photo {
     }
 
     public Photo() {
-
+        this.id = -1;
+        this.height = -1;
+        this.width = -1;
+        this.size = -1;
+        this.dateAdded = -1;
+        this.title = "";
+        this.des = "";
+        this.latitude = "";
+        this.longitude = "";
     }
 
 }

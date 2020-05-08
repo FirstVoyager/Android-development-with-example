@@ -22,7 +22,7 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.RecyclerView;
 import limitless.android.androiddevelopment.Interface.Listener;
-import limitless.android.androiddevelopment.Model.VideoModel;
+import limitless.android.androiddevelopment.Model.Video;
 import limitless.android.androiddevelopment.Data.Data;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
@@ -30,10 +30,10 @@ import limitless.android.androiddevelopment.R;
 public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHolder> {
 
     private Context context;
-    private List<VideoModel> list;
+    private List<Video> list;
     private Listener<Uri> uriListener;
 
-    public VideoAdapter(Context context, List<VideoModel> list, Listener<Uri> uriListener) {
+    public VideoAdapter(Context context, List<Video> list, Listener<Uri> uriListener) {
         this.context = context;
         this.list = list;
         this.uriListener = uriListener;
@@ -60,7 +60,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
         }
     }
 
-    public void setData(List<VideoModel> models){
+    public void setData(List<Video> models){
         if (models == null)
             return;
         if (list == null)
@@ -92,7 +92,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
             btnMore.setOnClickListener(this);
         }
 
-        void bindView(VideoModel vm){
+        void bindView(Video vm){
             tvTitle.setText(vm.title);
             tvDuration.setText(Tools.displayDuration(vm.duration));
             ivCover.setImageResource(R.drawable.ic_video_library_black_24dp);

@@ -8,7 +8,7 @@ import limitless.android.androiddevelopment.Activity.BaseActivity;
 import limitless.android.androiddevelopment.Adapter.SongsAdapter;
 import limitless.android.androiddevelopment.Dialog.DialogSort;
 import limitless.android.androiddevelopment.Interface.StringListener;
-import limitless.android.androiddevelopment.Model.SongModel;
+import limitless.android.androiddevelopment.Model.Song;
 import limitless.android.androiddevelopment.Data.Data;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
@@ -51,7 +51,7 @@ public class ReadSongsActivity extends BaseActivity implements SwipeRefreshLayou
 
     private void init() {
         rv = findViewById(R.id.recyclerView);
-        songsAdapter = new SongsAdapter(this, new ArrayList<SongModel>(), null);
+        songsAdapter = new SongsAdapter(this, new ArrayList<Song>(), null);
         sfl = findViewById(R.id.swipeRefreshLayout);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -59,7 +59,7 @@ public class ReadSongsActivity extends BaseActivity implements SwipeRefreshLayou
         rv.setAdapter(songsAdapter);
         sfl.setOnRefreshListener(this);
         if (! Tools.permissionGranted(this, Manifest.permission.READ_EXTERNAL_STORAGE)){
-            Tools.requestPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE, requestStorage);
+            Tools.requestPermission(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, requestStorage);
             return;
         }
         getData();
@@ -75,7 +75,7 @@ public class ReadSongsActivity extends BaseActivity implements SwipeRefreshLayou
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuItem mi = menu.add(getString(R.string.text_sort_by));
         mi.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        mi.setIcon(R.drawable.ic_sort_black_24dp);
+        mi.setIcon(R.drawable.ic_sort_white_24dp);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -114,18 +114,18 @@ public class ReadSongsActivity extends BaseActivity implements SwipeRefreshLayou
         getData();
     }
 
-    private class GetSongs extends AsyncTask<Void, Void, List<SongModel>>{
+    private class GetSongs extends AsyncTask<Void, Void, List<Song>>{
 
         @Override
-        protected List<SongModel> doInBackground(Void... voids) {
+        protected List<Song> doInBackground(Void... voids) {
             return Data.getAllSongs(ReadSongsActivity.this, sortSongs);
         }
 
         @Override
-        protected void onPostExecute(List<SongModel> songModels) {
-            super.onPostExecute(songModels);
+        protected void onPostExecute(List<Song> songs) {
+            super.onPostExecute(songs);
             sfl.setRefreshing(false);
-            songsAdapter.setData(songModels);
+            songsAdapter.setData(songs);
         }
     }
 

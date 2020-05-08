@@ -1,5 +1,6 @@
 package limitless.android.androiddevelopment.Activity.CodeMore.GoogleMap;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import limitless.android.androiddevelopment.Activity.BaseActivity;
@@ -7,6 +8,7 @@ import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -27,6 +29,14 @@ public class DarkStyleMapActivity extends BaseActivity implements OnMapReadyCall
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         SupportMapFragment fragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         fragment.getMapAsync(this);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home){
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

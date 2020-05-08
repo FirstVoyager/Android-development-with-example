@@ -59,7 +59,7 @@ public class ReadPhotosActivity extends BaseActivity implements SwipeRefreshLayo
         sfl.setOnRefreshListener(this);
 
         if (! Tools.permissionGranted(this, Manifest.permission.READ_EXTERNAL_STORAGE)){
-            Tools.requestPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE, storagePermission);
+            Tools.requestPermission(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, storagePermission);
             return;
         }
         getData();

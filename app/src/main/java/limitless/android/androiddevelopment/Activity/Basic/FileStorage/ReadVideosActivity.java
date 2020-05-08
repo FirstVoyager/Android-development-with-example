@@ -8,7 +8,7 @@ import limitless.android.androiddevelopment.Activity.BaseActivity;
 import limitless.android.androiddevelopment.Adapter.VideoAdapter;
 import limitless.android.androiddevelopment.Dialog.DialogSort;
 import limitless.android.androiddevelopment.Interface.StringListener;
-import limitless.android.androiddevelopment.Model.VideoModel;
+import limitless.android.androiddevelopment.Model.Video;
 import limitless.android.androiddevelopment.Data.Data;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
@@ -57,12 +57,12 @@ public class ReadVideosActivity extends BaseActivity implements SwipeRefreshLayo
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         sfl = findViewById(R.id.swipeRefreshLayout);
         rv = findViewById(R.id.recyclerView);
-        videoAdapter = new VideoAdapter(this, new ArrayList<VideoModel>(), null);
+        videoAdapter = new VideoAdapter(this, new ArrayList<Video>(), null);
         rv.setLayoutManager(new GridLayoutManager(this, 2, RecyclerView.VERTICAL, false));
         rv.setAdapter(videoAdapter);
         sfl.setOnRefreshListener(this);
         if (! Tools.permissionGranted(this, Manifest.permission.READ_EXTERNAL_STORAGE)){
-            Tools.requestPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE, requestStorage);
+            Tools.requestPermission(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, requestStorage);
             return;
         }
         getData();
@@ -117,7 +117,7 @@ public class ReadVideosActivity extends BaseActivity implements SwipeRefreshLayo
         getData();
     }
 
-    private class GetVideos extends AsyncTask<ContentResolver, Void, List<VideoModel>>{
+    private class GetVideos extends AsyncTask<ContentResolver, Void, List<Video>>{
 
         private String sort;
 
@@ -126,15 +126,15 @@ public class ReadVideosActivity extends BaseActivity implements SwipeRefreshLayo
         }
 
         @Override
-        protected List<VideoModel> doInBackground(ContentResolver... contentResolvers) {
+        protected List<Video> doInBackground(ContentResolver... contentResolvers) {
             return Data.getAllVideos(contentResolvers[0], sort);
         }
 
         @Override
-        protected void onPostExecute(List<VideoModel> videoModels) {
-            super.onPostExecute(videoModels);
+        protected void onPostExecute(List<Video> videos) {
+            super.onPostExecute(videos);
             sfl.setRefreshing(false);
-            videoAdapter.setData(videoModels);
+            videoAdapter.setData(videos);
         }
     }
 

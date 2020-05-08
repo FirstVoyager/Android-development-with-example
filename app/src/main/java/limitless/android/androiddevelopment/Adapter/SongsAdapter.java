@@ -22,18 +22,17 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.RecyclerView;
 import limitless.android.androiddevelopment.Interface.Listener;
-import limitless.android.androiddevelopment.Interface.StringListener;
-import limitless.android.androiddevelopment.Model.SongModel;
+import limitless.android.androiddevelopment.Model.Song;
 import limitless.android.androiddevelopment.Data.Data;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
 
 public class SongsAdapter extends RecyclerView.Adapter<SongsAdapter.AudioViewHolder> {
     public Context context;
-    public List<SongModel> list;
+    public List<Song> list;
     private Listener<Uri> uriListener;
 
-    public SongsAdapter(Context context, List<SongModel> list, Listener<Uri> uriListener) {
+    public SongsAdapter(Context context, List<Song> list, Listener<Uri> uriListener) {
         this.context = context;
         this.list = list;
         this.uriListener = uriListener;
@@ -60,7 +59,7 @@ public class SongsAdapter extends RecyclerView.Adapter<SongsAdapter.AudioViewHol
         }
     }
 
-    public void setData(List<SongModel> models){
+    public void setData(List<Song> models){
         if (models == null)
             return;
         if (list == null)
@@ -91,13 +90,21 @@ public class SongsAdapter extends RecyclerView.Adapter<SongsAdapter.AudioViewHol
             btnMore.setOnClickListener(this);
         }
 
-        void bindView(SongModel am){
+        void bindView(Song am){
             tvTitle.setText(am.title);
-            tvDes.setText(am.artist);
-            tvDes.append(", ");
-            tvDes.append(am.album);
+            if (am.artist == null && am.album == null)
+                tvDes.setVisibility(View.GONE);
+            else {
+                try {
+                    tvDes.setText(am.artist);
+                    tvDes.append(", ");
+                    tvDes.append(am.album);
+                }catch (Exception e){
+                    Tools.error(e);
+                }
+            }
             ivCover.setImageResource(R.drawable.ic_music_note_black_24dp);
-            new GetCoverPhoto(ivCover, getAdapterPosition()).execute(am.data);
+            new GetCoverPhoto(ivCover, getAdapterPosition()).execute(am.uri);
         }
 
         @Override
@@ -106,7 +113,7 @@ public class SongsAdapter extends RecyclerView.Adapter<SongsAdapter.AudioViewHol
                 showPopupMenu(v);
             }else {
                 if (uriListener != null)
-                    uriListener.data(list.get(getAdapterPosition()).data);
+                    uriListener.data(list.get(getAdapterPosition()).uri);
             }
         }
 

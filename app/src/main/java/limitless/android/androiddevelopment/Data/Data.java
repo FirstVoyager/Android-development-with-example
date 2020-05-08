@@ -13,9 +13,9 @@ import android.provider.MediaStore;
 import java.util.ArrayList;
 import java.util.List;
 
-import limitless.android.androiddevelopment.Model.SongModel;
+import limitless.android.androiddevelopment.Model.Song;
 import limitless.android.androiddevelopment.Model.Photo;
-import limitless.android.androiddevelopment.Model.VideoModel;
+import limitless.android.androiddevelopment.Model.Video;
 
 public class Data {
 
@@ -67,7 +67,7 @@ public class Data {
         return null;
     }
 
-    public static List<SongModel> getAllSongs(Context context, String sort){
+    public static List<Song> getAllSongs(Context context, String sort){
         if (context == null)
             return null;
         Uri uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
@@ -87,7 +87,7 @@ public class Data {
             return null;
         if (cursor.getCount() <= 0 || ! cursor.moveToFirst())
             return null;
-        List<SongModel> list = new ArrayList<>();
+        List<Song> list = new ArrayList<>();
         int title = cursor.getColumnIndex(MediaStore.Audio.AudioColumns.TITLE);
         int album = cursor.getColumnIndex(MediaStore.Audio.AudioColumns.ALBUM);
         int artist = cursor.getColumnIndex(MediaStore.Audio.AudioColumns.ARTIST);
@@ -98,7 +98,7 @@ public class Data {
         int size = cursor.getColumnIndex(MediaStore.Audio.AudioColumns.SIZE);
         int dateAdded = cursor.getColumnIndex(MediaStore.Audio.AudioColumns.DATE_ADDED);
         do {
-            list.add(new SongModel(
+            list.add(new Song(
                     cursor.getString(title),
                     ContentUris.withAppendedId(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, cursor.getInt(id)),
                     cursor.getString(album),
@@ -115,7 +115,7 @@ public class Data {
         return list;
     }
 
-    public static List<VideoModel> getAllVideos(ContentResolver cr, String sort){
+    public static List<Video> getAllVideos(ContentResolver cr, String sort){
         if (cr == null)
             return null;
         Uri uri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
@@ -137,7 +137,7 @@ public class Data {
             return null;
         if (cursor.getCount() <= 0 || ! cursor.moveToFirst())
             return null;
-        List<VideoModel> list = new ArrayList<>();
+        List<Video> list = new ArrayList<>();
         int title = cursor.getColumnIndex(MediaStore.Video.VideoColumns.TITLE);
         int album = cursor.getColumnIndex(MediaStore.Video.VideoColumns.ALBUM);
         int artist = cursor.getColumnIndex(MediaStore.Video.VideoColumns.ARTIST);
@@ -150,7 +150,7 @@ public class Data {
         int size = cursor.getColumnIndex(MediaStore.Video.VideoColumns.SIZE);
         int dataAdded = cursor.getColumnIndex(MediaStore.Video.VideoColumns.DATE_ADDED);
         do {
-            list.add(new VideoModel(
+            list.add(new Video(
                     cursor.getString(title),
                     ContentUris.withAppendedId(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, cursor.getInt(id)),
                     cursor.getString(album),

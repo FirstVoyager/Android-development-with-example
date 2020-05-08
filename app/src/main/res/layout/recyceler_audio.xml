@@ -39,6 +39,7 @@
             android:textColor="@color/color_black"
             tools:text="this a name"
             android:lines="1"
+            style="@style/TextAppearance.AppCompat.Title"
             android:singleLine="true"
             android:gravity="center_vertical"
             android:id="@+id/textView_title"/>

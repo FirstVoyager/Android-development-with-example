@@ -44,7 +44,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         // Load ads
         AdView adView = findViewById(R.id.adView);
         adView.loadAd(Ads.adRequest());
-        startActivity(new Intent(this, CircleAvatarActivity.class));
+//        startActivity(new Intent(this, CircleAvatarActivity.class));
     }
 
     @Override

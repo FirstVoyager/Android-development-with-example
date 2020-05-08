@@ -61,7 +61,7 @@ public class AudioRecorderActivity extends BaseActivity implements View.OnClickL
                     twoPermission);
         }
         if (! storage){
-            Tools.requestPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE, storagePermission);
+            Tools.requestPermission(this, new String[]{Manifest.permission.RECORD_AUDIO, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, storagePermission);
         }
         if (! record){
             Tools.requestPermission(this, Manifest.permission.RECORD_AUDIO, recordPermission);
@@ -70,7 +70,7 @@ public class AudioRecorderActivity extends BaseActivity implements View.OnClickL
 
     private void initMediaPlayer() {
         if (Tools.permissionGranted(this, Manifest.permission.RECORD_AUDIO)){
-            pathName = Environment.getExternalStorageDirectory().getAbsolutePath() + "/androidAudioDevTestFile.3gp";
+            pathName = getExternalFilesDir(Environment.DIRECTORY_MUSIC).getAbsolutePath() + "/androidAudioDevTestFile.3gp";;
             mediaRecorder = new MediaRecorder();
             mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
             mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);

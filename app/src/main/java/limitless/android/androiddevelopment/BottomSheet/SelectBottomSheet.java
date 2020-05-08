@@ -25,8 +25,8 @@ import limitless.android.androiddevelopment.Adapter.SongsAdapter;
 import limitless.android.androiddevelopment.Adapter.VideoAdapter;
 import limitless.android.androiddevelopment.Interface.Listener;
 import limitless.android.androiddevelopment.Model.Photo;
-import limitless.android.androiddevelopment.Model.SongModel;
-import limitless.android.androiddevelopment.Model.VideoModel;
+import limitless.android.androiddevelopment.Model.Song;
+import limitless.android.androiddevelopment.Model.Video;
 import limitless.android.androiddevelopment.Data.Data;
 import limitless.android.androiddevelopment.Other.Tools;
 import limitless.android.androiddevelopment.R;
@@ -168,9 +168,9 @@ public class SelectBottomSheet extends BottomSheetDialogFragment implements View
             if (type == 0)
                 recyclerView.setAdapter(new PhotoAdapter(getContext(), (List<Photo>) objects, uriListenerAdapter));
             if (type == 1)
-                recyclerView.setAdapter(new SongsAdapter(getContext(), (List<SongModel>) objects, uriListenerAdapter));
+                recyclerView.setAdapter(new SongsAdapter(getContext(), (List<Song>) objects, uriListenerAdapter));
             if (type == 2)
-                recyclerView.setAdapter(new VideoAdapter(getContext(), (List<VideoModel>) objects, uriListenerAdapter));
+                recyclerView.setAdapter(new VideoAdapter(getContext(), (List<Video>) objects, uriListenerAdapter));
             if (type == 3)
                 return;
         }
