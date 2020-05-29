@@ -1,6 +1,7 @@
 # Android development with Java
 
-Demo on [Google play](https://play.google.com/store/apps/details?id=limitless.android.androiddevelopmentjava)
+## Download App
+[![Get it on Google Play](misc/playstore_badge_new.png)](https://play.google.com/store/apps/details?id=limitless.android.androiddevelopmentjava)
 
 # Basic :
 1. App manifest
